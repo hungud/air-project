@@ -1,0 +1,559 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap-env:Envelope xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/"><soap-env:Header><eb:MessageHeader xmlns:eb="http://www.ebxml.org/namespaces/messageHeader" eb:version="1.0" soap-env:mustUnderstand="1"><eb:From><eb:PartyId eb:type="URI">123123</eb:PartyId></eb:From><eb:To><eb:PartyId eb:type="urn: x12.org:IO5: 01">999999</eb:PartyId></eb:To><eb:CPAId>3RT2</eb:CPAId><eb:ConversationId>1111111111111111111</eb:ConversationId><eb:Service eb:type="sabreXML">OTA_AirPriceLLSRQ</eb:Service><eb:Action>OTA_AirPriceLLSRS</eb:Action><eb:MessageData><eb:MessageId>983960088937201391</eb:MessageId><eb:Timestamp>2018-11-05T02:28:14</eb:Timestamp><eb:RefToMessageId>mid:0_2014-09-22T21:43:40m</eb:RefToMessageId></eb:MessageData></eb:MessageHeader><wsse:Security xmlns:wsse="http://schemas.xmlsoap.org/ws/2002/12/secext"><wsse:BinarySecurityToken valueType="String" EncodingType="wsse:Base64Binary">Shared/IDL:IceSess\/SessMgr:1\.0.IDL/Common/!ICESMS\/RESA!ICESMSLB\/RES.LB!1541384881771!7500706!655361</wsse:BinarySecurityToken></wsse:Security></soap-env:Header><soap-env:Body><OTA_AirPriceRS xmlns="http://webservices.sabre.com/sabreXML/2011/10" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:stl="http://services.sabre.com/STL/v01" Version="2.14.0">
+ <stl:ApplicationResults status="Complete">
+  <stl:Success timeStamp="2018-11-04T20:28:14-06:00"/>
+ </stl:ApplicationResults>
+ <PriceQuote>
+  <MiscInformation>
+   <BaggageInfo>
+    <SubCodeProperties RPH="1" SolutionSequenceNmbr="1">
+     <AncillaryFeeGroupCode>BG</AncillaryFeeGroupCode>
+     <CommercialNameofBaggageItemType>UPTO50LB 23KG AND62LI 158LCM</CommercialNameofBaggageItemType>
+     <DescriptionOne Code="23">
+      <Text>UP TO 50 POUNDS/23 KILOGRAMS</Text>
+     </DescriptionOne>
+     <DescriptionTwo Code="6U">
+      <Text>UP TO 62 LINEAR INCHES/158 LINEAR CENTIMETERS</Text>
+     </DescriptionTwo>
+     <EMD_Type>4</EMD_Type>
+     <ExtendedSubCodeKey>0GOACUA</ExtendedSubCodeKey>
+     <SizeWeightInfo>
+      <MaximumSizeInAlternate Units="C">158</MaximumSizeInAlternate>
+      <MaximumSize Units="I">62</MaximumSize>
+      <MaximumWeightInAlternate Units="K">23</MaximumWeightInAlternate>
+      <MaximumWeight Units="L">50</MaximumWeight>
+     </SizeWeightInfo>
+    </SubCodeProperties>
+    <SubCodeProperties RPH="2" SolutionSequenceNmbr="1">
+     <AncillaryFeeGroupCode>BG</AncillaryFeeGroupCode>
+     <AncillaryService SubGroupCode="CY">
+      <Text>CARRY ON HAND BAGGAGE</Text>
+     </AncillaryService>
+     <CommercialNameofBaggageItemType>CARRYON HAND BAGGAGE ALLOWANCE</CommercialNameofBaggageItemType>
+     <EMD_Type>4</EMD_Type>
+     <ExtendedSubCodeKey>0LNABUA</ExtendedSubCodeKey>
+    </SubCodeProperties>
+    <SubCodeProperties RPH="3" SolutionSequenceNmbr="1">
+     <AncillaryFeeGroupCode>BG</AncillaryFeeGroupCode>
+     <AncillaryService SubGroupCode="CY">
+      <Text>CARRY ON HAND BAGGAGE</Text>
+     </AncillaryService>
+     <CommercialNameofBaggageItemType>CARRYON HAND BAGGAGE ALLOWANCE</CommercialNameofBaggageItemType>
+     <EMD_Type>4</EMD_Type>
+     <ExtendedSubCodeKey>0LNABLH</ExtendedSubCodeKey>
+    </SubCodeProperties>
+    <SubCodeProperties RPH="4" SolutionSequenceNmbr="1">
+     <AncillaryFeeGroupCode>BG</AncillaryFeeGroupCode>
+     <AncillaryService SubGroupCode="CY">
+      <Text>CARRY ON HAND BAGGAGE</Text>
+     </AncillaryService>
+     <CommercialNameofBaggageItemType>CARRY8KG 18LB UPTO46LI 118LCM</CommercialNameofBaggageItemType>
+     <DescriptionOne Code="08">
+      <Text>UP TO 18 POUNDS/8 KILOGRAMS</Text>
+     </DescriptionOne>
+     <DescriptionTwo Code="4Y">
+      <Text>UP TO 46 LINEAR INCHES/118 LINEAR CENTIMETERS</Text>
+     </DescriptionTwo>
+     <EMD_Type>2</EMD_Type>
+     <ExtendedSubCodeKey>0M1ACLH</ExtendedSubCodeKey>
+     <RFIC>C</RFIC>
+     <SizeWeightInfo>
+      <MaximumSizeInAlternate Units="C">118</MaximumSizeInAlternate>
+      <MaximumSize Units="I">46</MaximumSize>
+      <MaximumWeightInAlternate Units="K">8</MaximumWeightInAlternate>
+      <MaximumWeight Units="L">18</MaximumWeight>
+     </SizeWeightInfo>
+    </SubCodeProperties>
+    <SubCodeProperties RPH="5" SolutionSequenceNmbr="1">
+     <AncillaryFeeGroupCode>BG</AncillaryFeeGroupCode>
+     <CommercialNameofBaggageItemType>FREE BAGGAGE ALLOWANCE</CommercialNameofBaggageItemType>
+     <EMD_Type>4</EMD_Type>
+     <ExtendedSubCodeKey>0DFAAUA</ExtendedSubCodeKey>
+    </SubCodeProperties>
+   </BaggageInfo>
+   <HeaderInformation SolutionSequenceNmbr="1">
+    <DepartureDate>2019-03-08</DepartureDate>
+    <LastTicketingDate>11-06T23:59</LastTicketingDate>
+    <Text>VALIDATING CARRIER - UA</Text>
+    <Text>BAG ALLOWANCE     -AUSDEL-01P/UA/EACH PIECE UP TO 50 POUNDS/23</Text>
+    <Text>KILOGRAMS AND UP TO 62 LINEAR INCHES/158 LINEAR CENTIMETERS</Text>
+    <Text>2NDCHECKED BAG FEE-AUSDEL-CAD131.00/UA/UP TO 50 POUNDS/23 KILOG</Text>
+    <Text>RAMS AND UP TO 62 LINEAR INCHES/158 LINEAR CENTIMETERS**</Text>
+    <Text>BAG ALLOWANCE     -DELAUS-01P/UA/EACH PIECE UP TO 50 POUNDS/23</Text>
+    <Text>KILOGRAMS AND UP TO 62 LINEAR INCHES/158 LINEAR CENTIMETERS</Text>
+    <Text>2NDCHECKED BAG FEE-DELAUS-CAD131.00/UA/UP TO 50 POUNDS/23 KILOG</Text>
+    <Text>RAMS AND UP TO 62 LINEAR INCHES/158 LINEAR CENTIMETERS**</Text>
+    <Text>**BAG FEES APPLY AT EACH CHECK IN LOCATION</Text>
+    <Text>CARRY ON ALLOWANCE</Text>
+    <Text>AUSDEN MUCIAH IAHAUS-01P/UA</Text>
+    <Text>DENMUC MUCDEL DELMUC-01P/LH</Text>
+    <Text>01/UP TO 18 POUNDS/8 KILOGRAMS AND UP TO 46 LINEAR INCHES/118 L</Text>
+    <Text>INEAR CENTIMETERS</Text>
+    <Text>CARRY ON CHARGES</Text>
+    <Text>AUSDEN MUCIAH IAHAUS-UA-CARRY ON FEES UNKNOWN-CONTACT CARRIER</Text>
+    <Text>DENMUC MUCDEL DELMUC-LH</Text>
+    <Text>UP TO 18 POUNDS/8 KILOGRAMS AND UP TO 46 LINEAR INCHES/118 LINE</Text>
+    <Text>AR CENTIMETERS-NOT PERMITTED</Text>
+    <Text>ADDITIONAL ALLOWANCES AND/OR DISCOUNTS MAY APPLY DEPENDING ON</Text>
+    <Text>FLYER-SPECIFIC FACTORS /E.G. FREQUENT FLYER STATUS/MILITARY/</Text>
+    <Text>CREDIT CARD FORM OF PAYMENT/EARLY PURCHASE OVER INTERNET,ETC./</Text>
+    <Text>08MAR DEPARTURE DATE-----LAST DAY TO PURCHASE 06NOV/2359</Text>
+    <ValidatingCarrier Code="UA"/>
+   </HeaderInformation>
+   <SolutionInformation SolutionSequenceNmbr="1">
+    <CurrencyCode>CAD</CurrencyCode>
+    <RequiresRebook>false</RequiresRebook>
+    <TicketNumber>0</TicketNumber>
+    <TotalAmount>1673.85</TotalAmount>
+   </SolutionInformation>
+  </MiscInformation>
+  <PricedItinerary AlternativePricing="false" CurrencyCode="CAD" MultiTicket="false" TotalAmount="1673.85">
+   <AirItineraryPricingInfo SolutionSequenceNmbr="1">
+    <BaggageProvisions RPH="1">
+     <Associations>
+      <CarrierCode RPH="1">UA</CarrierCode>
+      <CarrierCode RPH="2">UA</CarrierCode>
+      <CarrierCode RPH="3">UA</CarrierCode>
+      <CountForSegmentAssociatedID>3</CountForSegmentAssociatedID>
+      <DepartureDate RPH="1">2019-03-08</DepartureDate>
+      <DepartureDate RPH="2">2019-03-08</DepartureDate>
+      <DepartureDate RPH="3">2019-03-09</DepartureDate>
+      <DestinationLocation LocationCode="DEN" RPH="1"/>
+      <DestinationLocation LocationCode="MUC" RPH="2"/>
+      <DestinationLocation LocationCode="DEL" RPH="3"/>
+      <FlightNumber RPH="1">456</FlightNumber>
+      <FlightNumber RPH="2">9458</FlightNumber>
+      <FlightNumber RPH="3">9236</FlightNumber>
+      <OriginLocation LocationCode="AUS" RPH="1"/>
+      <OriginLocation LocationCode="DEN" RPH="2"/>
+      <OriginLocation LocationCode="MUC" RPH="3"/>
+      <PNR_Segment RPH="1">2</PNR_Segment>
+      <PNR_Segment RPH="2">3</PNR_Segment>
+      <PNR_Segment RPH="3">4</PNR_Segment>
+      <ResBookDesigCode RPH="1">T</ResBookDesigCode>
+      <ResBookDesigCode RPH="2">T</ResBookDesigCode>
+      <ResBookDesigCode RPH="3">T</ResBookDesigCode>
+      <StatusCode RPH="1">SS</StatusCode>
+      <StatusCode RPH="2">SS</StatusCode>
+      <StatusCode RPH="3">SS</StatusCode>
+     </Associations>
+     <CarrierWhoseBaggageProvisionsApply>UA</CarrierWhoseBaggageProvisionsApply>
+     <NumPiecesBDI>1</NumPiecesBDI>
+     <NumPiecesITR>1</NumPiecesITR>
+     <ProvisionType>A</ProvisionType>
+     <SubCodeInfo>
+      <SubCodeForAllowance RPH="1">0GOACUA</SubCodeForAllowance>
+      <SubCodeForChargesOthers>0DFAAUA</SubCodeForChargesOthers>
+     </SubCodeInfo>
+    </BaggageProvisions>
+    <BaggageProvisions RPH="2">
+     <Associations>
+      <CarrierCode RPH="1">UA</CarrierCode>
+      <CarrierCode RPH="2">UA</CarrierCode>
+      <CarrierCode RPH="3">UA</CarrierCode>
+      <CountForSegmentAssociatedID>3</CountForSegmentAssociatedID>
+      <DepartureDate RPH="1">2019-03-08</DepartureDate>
+      <DepartureDate RPH="2">2019-03-08</DepartureDate>
+      <DepartureDate RPH="3">2019-03-09</DepartureDate>
+      <DestinationLocation LocationCode="DEN" RPH="1"/>
+      <DestinationLocation LocationCode="MUC" RPH="2"/>
+      <DestinationLocation LocationCode="DEL" RPH="3"/>
+      <FlightNumber RPH="1">456</FlightNumber>
+      <FlightNumber RPH="2">9458</FlightNumber>
+      <FlightNumber RPH="3">9236</FlightNumber>
+      <OriginLocation LocationCode="AUS" RPH="1"/>
+      <OriginLocation LocationCode="DEN" RPH="2"/>
+      <OriginLocation LocationCode="MUC" RPH="3"/>
+      <PNR_Segment RPH="1">2</PNR_Segment>
+      <PNR_Segment RPH="2">3</PNR_Segment>
+      <PNR_Segment RPH="3">4</PNR_Segment>
+      <ResBookDesigCode RPH="1">T</ResBookDesigCode>
+      <ResBookDesigCode RPH="2">T</ResBookDesigCode>
+      <ResBookDesigCode RPH="3">T</ResBookDesigCode>
+      <StatusCode RPH="1">SS</StatusCode>
+      <StatusCode RPH="2">SS</StatusCode>
+      <StatusCode RPH="3">SS</StatusCode>
+     </Associations>
+     <CarrierWhoseBaggageProvisionsApply>UA</CarrierWhoseBaggageProvisionsApply>
+     <Commissionable>N</Commissionable>
+     <FeeApplicationIndicator>3</FeeApplicationIndicator>
+     <FeeNotGuaranteedIndicator>N</FeeNotGuaranteedIndicator>
+     <FirstOccurrence>1</FirstOccurrence>
+     <LastOccurrence>1</LastOccurrence>
+     <PassengerType Code="ADT"/>
+     <PriceInformation>
+      <Base Amount="100.00" CurrencyCode="USD"/>
+      <Equiv Amount="131.00" CurrencyCode="CAD"/>
+      <TaxIndicator>X</TaxIndicator>
+      <Total>131.00</Total>
+     </PriceInformation>
+     <ProvisionType>C</ProvisionType>
+     <RefundReissue>N</RefundReissue>
+     <SubCodeInfo>
+      <SubCodeForChargesOthers>0GOACUA</SubCodeForChargesOthers>
+     </SubCodeInfo>
+    </BaggageProvisions>
+    <BaggageProvisions RPH="3">
+     <Associations>
+      <CarrierCode RPH="1">UA</CarrierCode>
+      <CarrierCode RPH="2">UA</CarrierCode>
+      <CarrierCode RPH="3">UA</CarrierCode>
+      <CountForSegmentAssociatedID>3</CountForSegmentAssociatedID>
+      <DepartureDate RPH="1">2019-03-22</DepartureDate>
+      <DepartureDate RPH="2">2019-03-22</DepartureDate>
+      <DepartureDate RPH="3">2019-03-22</DepartureDate>
+      <DestinationLocation LocationCode="MUC" RPH="1"/>
+      <DestinationLocation LocationCode="IAH" RPH="2"/>
+      <DestinationLocation LocationCode="AUS" RPH="3"/>
+      <FlightNumber RPH="1">9237</FlightNumber>
+      <FlightNumber RPH="2">160</FlightNumber>
+      <FlightNumber RPH="3">2038</FlightNumber>
+      <OriginLocation LocationCode="DEL" RPH="1"/>
+      <OriginLocation LocationCode="MUC" RPH="2"/>
+      <OriginLocation LocationCode="IAH" RPH="3"/>
+      <PNR_Segment RPH="1">5</PNR_Segment>
+      <PNR_Segment RPH="2">6</PNR_Segment>
+      <PNR_Segment RPH="3">7</PNR_Segment>
+      <ResBookDesigCode RPH="1">T</ResBookDesigCode>
+      <ResBookDesigCode RPH="2">T</ResBookDesigCode>
+      <ResBookDesigCode RPH="3">T</ResBookDesigCode>
+      <StatusCode RPH="1">SS</StatusCode>
+      <StatusCode RPH="2">SS</StatusCode>
+      <StatusCode RPH="3">SS</StatusCode>
+     </Associations>
+     <CarrierWhoseBaggageProvisionsApply>UA</CarrierWhoseBaggageProvisionsApply>
+     <NumPiecesBDI>1</NumPiecesBDI>
+     <NumPiecesITR>1</NumPiecesITR>
+     <ProvisionType>A</ProvisionType>
+     <SubCodeInfo>
+      <SubCodeForAllowance RPH="1">0GOACUA</SubCodeForAllowance>
+      <SubCodeForChargesOthers>0DFAAUA</SubCodeForChargesOthers>
+     </SubCodeInfo>
+    </BaggageProvisions>
+    <BaggageProvisions RPH="4">
+     <Associations>
+      <CarrierCode RPH="1">UA</CarrierCode>
+      <CarrierCode RPH="2">UA</CarrierCode>
+      <CarrierCode RPH="3">UA</CarrierCode>
+      <CountForSegmentAssociatedID>3</CountForSegmentAssociatedID>
+      <DepartureDate RPH="1">2019-03-22</DepartureDate>
+      <DepartureDate RPH="2">2019-03-22</DepartureDate>
+      <DepartureDate RPH="3">2019-03-22</DepartureDate>
+      <DestinationLocation LocationCode="MUC" RPH="1"/>
+      <DestinationLocation LocationCode="IAH" RPH="2"/>
+      <DestinationLocation LocationCode="AUS" RPH="3"/>
+      <FlightNumber RPH="1">9237</FlightNumber>
+      <FlightNumber RPH="2">160</FlightNumber>
+      <FlightNumber RPH="3">2038</FlightNumber>
+      <OriginLocation LocationCode="DEL" RPH="1"/>
+      <OriginLocation LocationCode="MUC" RPH="2"/>
+      <OriginLocation LocationCode="IAH" RPH="3"/>
+      <PNR_Segment RPH="1">5</PNR_Segment>
+      <PNR_Segment RPH="2">6</PNR_Segment>
+      <PNR_Segment RPH="3">7</PNR_Segment>
+      <ResBookDesigCode RPH="1">T</ResBookDesigCode>
+      <ResBookDesigCode RPH="2">T</ResBookDesigCode>
+      <ResBookDesigCode RPH="3">T</ResBookDesigCode>
+      <StatusCode RPH="1">SS</StatusCode>
+      <StatusCode RPH="2">SS</StatusCode>
+      <StatusCode RPH="3">SS</StatusCode>
+     </Associations>
+     <CarrierWhoseBaggageProvisionsApply>UA</CarrierWhoseBaggageProvisionsApply>
+     <Commissionable>N</Commissionable>
+     <FeeApplicationIndicator>3</FeeApplicationIndicator>
+     <FeeNotGuaranteedIndicator>N</FeeNotGuaranteedIndicator>
+     <FirstOccurrence>1</FirstOccurrence>
+     <LastOccurrence>1</LastOccurrence>
+     <PassengerType Code="ADT"/>
+     <PriceInformation>
+      <Base Amount="100.00" CurrencyCode="USD"/>
+      <Equiv Amount="131.00" CurrencyCode="CAD"/>
+      <TaxIndicator>X</TaxIndicator>
+      <Total>131.00</Total>
+     </PriceInformation>
+     <ProvisionType>C</ProvisionType>
+     <RefundReissue>N</RefundReissue>
+     <SubCodeInfo>
+      <SubCodeForChargesOthers>0GOACUA</SubCodeForChargesOthers>
+     </SubCodeInfo>
+    </BaggageProvisions>
+    <BaggageProvisions RPH="5">
+     <Associations>
+      <CarrierCode RPH="1">UA</CarrierCode>
+      <CarrierCode RPH="2">UA</CarrierCode>
+      <CarrierCode RPH="3">UA</CarrierCode>
+      <CountForSegmentAssociatedID>3</CountForSegmentAssociatedID>
+      <DepartureDate RPH="1">2019-03-08</DepartureDate>
+      <DepartureDate RPH="2">2019-03-22</DepartureDate>
+      <DepartureDate RPH="3">2019-03-22</DepartureDate>
+      <DestinationLocation LocationCode="DEN" RPH="1"/>
+      <DestinationLocation LocationCode="IAH" RPH="2"/>
+      <DestinationLocation LocationCode="AUS" RPH="3"/>
+      <FlightNumber RPH="1">456</FlightNumber>
+      <FlightNumber RPH="2">160</FlightNumber>
+      <FlightNumber RPH="3">2038</FlightNumber>
+      <OriginLocation LocationCode="AUS" RPH="1"/>
+      <OriginLocation LocationCode="MUC" RPH="2"/>
+      <OriginLocation LocationCode="IAH" RPH="3"/>
+      <PNR_Segment RPH="1">2</PNR_Segment>
+      <PNR_Segment RPH="2">6</PNR_Segment>
+      <PNR_Segment RPH="3">7</PNR_Segment>
+      <ResBookDesigCode RPH="1">T</ResBookDesigCode>
+      <ResBookDesigCode RPH="2">T</ResBookDesigCode>
+      <ResBookDesigCode RPH="3">T</ResBookDesigCode>
+      <StatusCode RPH="1">SS</StatusCode>
+      <StatusCode RPH="2">SS</StatusCode>
+      <StatusCode RPH="3">SS</StatusCode>
+     </Associations>
+     <CarrierWhoseBaggageProvisionsApply>UA</CarrierWhoseBaggageProvisionsApply>
+     <NumPiecesBDI>1</NumPiecesBDI>
+     <ProvisionType>B</ProvisionType>
+     <SubCodeInfo>
+      <SubCodeForChargesOthers>0LNABUA</SubCodeForChargesOthers>
+     </SubCodeInfo>
+    </BaggageProvisions>
+    <BaggageProvisions RPH="6">
+     <Associations>
+      <CarrierCode RPH="1">UA</CarrierCode>
+      <CarrierCode RPH="2">UA</CarrierCode>
+      <CarrierCode RPH="3">UA</CarrierCode>
+      <CountForSegmentAssociatedID>3</CountForSegmentAssociatedID>
+      <DepartureDate RPH="1">2019-03-08</DepartureDate>
+      <DepartureDate RPH="2">2019-03-09</DepartureDate>
+      <DepartureDate RPH="3">2019-03-22</DepartureDate>
+      <DestinationLocation LocationCode="MUC" RPH="1"/>
+      <DestinationLocation LocationCode="DEL" RPH="2"/>
+      <DestinationLocation LocationCode="MUC" RPH="3"/>
+      <FlightNumber RPH="1">9458</FlightNumber>
+      <FlightNumber RPH="2">9236</FlightNumber>
+      <FlightNumber RPH="3">9237</FlightNumber>
+      <OriginLocation LocationCode="DEN" RPH="1"/>
+      <OriginLocation LocationCode="MUC" RPH="2"/>
+      <OriginLocation LocationCode="DEL" RPH="3"/>
+      <PNR_Segment RPH="1">3</PNR_Segment>
+      <PNR_Segment RPH="2">4</PNR_Segment>
+      <PNR_Segment RPH="3">5</PNR_Segment>
+      <ResBookDesigCode RPH="1">T</ResBookDesigCode>
+      <ResBookDesigCode RPH="2">T</ResBookDesigCode>
+      <ResBookDesigCode RPH="3">T</ResBookDesigCode>
+      <StatusCode RPH="1">SS</StatusCode>
+      <StatusCode RPH="2">SS</StatusCode>
+      <StatusCode RPH="3">SS</StatusCode>
+     </Associations>
+     <CarrierWhoseBaggageProvisionsApply>LH</CarrierWhoseBaggageProvisionsApply>
+     <NumPiecesBDI>1</NumPiecesBDI>
+     <NumPiecesITR>1</NumPiecesITR>
+     <ProvisionType>B</ProvisionType>
+     <SubCodeInfo>
+      <SubCodeForAllowance RPH="1">0M1ACLH</SubCodeForAllowance>
+      <SubCodeForChargesOthers>0LNABLH</SubCodeForChargesOthers>
+     </SubCodeInfo>
+    </BaggageProvisions>
+    <BaggageProvisions RPH="7">
+     <Associations>
+      <CarrierCode RPH="1">UA</CarrierCode>
+      <CarrierCode RPH="2">UA</CarrierCode>
+      <CarrierCode RPH="3">UA</CarrierCode>
+      <CountForSegmentAssociatedID>3</CountForSegmentAssociatedID>
+      <DepartureDate RPH="1">2019-03-08</DepartureDate>
+      <DepartureDate RPH="2">2019-03-09</DepartureDate>
+      <DepartureDate RPH="3">2019-03-22</DepartureDate>
+      <DestinationLocation LocationCode="MUC" RPH="1"/>
+      <DestinationLocation LocationCode="DEL" RPH="2"/>
+      <DestinationLocation LocationCode="MUC" RPH="3"/>
+      <FlightNumber RPH="1">9458</FlightNumber>
+      <FlightNumber RPH="2">9236</FlightNumber>
+      <FlightNumber RPH="3">9237</FlightNumber>
+      <OriginLocation LocationCode="DEN" RPH="1"/>
+      <OriginLocation LocationCode="MUC" RPH="2"/>
+      <OriginLocation LocationCode="DEL" RPH="3"/>
+      <PNR_Segment RPH="1">3</PNR_Segment>
+      <PNR_Segment RPH="2">4</PNR_Segment>
+      <PNR_Segment RPH="3">5</PNR_Segment>
+      <ResBookDesigCode RPH="1">T</ResBookDesigCode>
+      <ResBookDesigCode RPH="2">T</ResBookDesigCode>
+      <ResBookDesigCode RPH="3">T</ResBookDesigCode>
+      <StatusCode RPH="1">SS</StatusCode>
+      <StatusCode RPH="2">SS</StatusCode>
+      <StatusCode RPH="3">SS</StatusCode>
+     </Associations>
+     <CarrierWhoseBaggageProvisionsApply>LH</CarrierWhoseBaggageProvisionsApply>
+     <Commissionable>N</Commissionable>
+     <FeeNotGuaranteedIndicator>Y</FeeNotGuaranteedIndicator>
+     <FirstOccurrence>1</FirstOccurrence>
+     <NoChargeNotAvailableIndicator>X</NoChargeNotAvailableIndicator>
+     <PassengerType Code="ADT"/>
+     <PriceInformation>
+      <Base Amount="0.00"/>
+      <Equiv CurrencyCode="CAD"/>
+     </PriceInformation>
+     <ProvisionType>CC</ProvisionType>
+     <SubCodeInfo>
+      <SubCodeForChargesOthers>0M1ACLH</SubCodeForChargesOthers>
+     </SubCodeInfo>
+    </BaggageProvisions>
+    <FareCalculation>
+     <Text>AUS UA X/DEN UA X/MUC UA DEL305.50UA X/MUC UA X/HOU UA AUS305.50NUC611.00END ROE1.00 XFDEN4.5</Text>
+    </FareCalculation>
+    <FareCalculationBreakdown>
+     <Departure AirlineCode="UA" AirportCode="AUS" ArrivalAirportCode="DEN" ArrivalCityCode="DEN" CityCode="AUS" GenericInd="X"/>
+     <FareBasis Cabin="Y" Code="TLWNC1NS" FilingCarrier="UA"/>
+     <FreeBaggageAllowance>PC001</FreeBaggageAllowance>
+    </FareCalculationBreakdown>
+    <FareCalculationBreakdown>
+     <Departure AirlineCode="UA" AirportCode="DEN" ArrivalAirportCode="MUC" ArrivalCityCode="MUC" CityCode="DEN" GenericInd="X"/>
+     <FareBasis Cabin="Y" Code="TLWNC1NS" FilingCarrier="UA"/>
+     <FreeBaggageAllowance>PC001</FreeBaggageAllowance>
+    </FareCalculationBreakdown>
+    <FareCalculationBreakdown>
+     <Branch FirstJointCarrier="UA" PCC="3RT2"/>
+     <Departure AirlineCode="UA" AirportCode="MUC" ArrivalAirportCode="DEL" ArrivalCityCode="DEL" CityCode="MUC" GenericInd="O"/>
+     <FareBasis Cabin="Y" Code="TLWNC1NS" FareAmount="305.50" FarePassengerType="ADT" FareType="P" FilingCarrier="UA" GlobalInd="AT" Market="AUSDEL" TripTypeInd="R"/>
+     <FreeBaggageAllowance>PC001</FreeBaggageAllowance>
+     <RuleCategoryIndicator>2</RuleCategoryIndicator>
+     <RuleCategoryIndicator>3</RuleCategoryIndicator>
+     <RuleCategoryIndicator>4</RuleCategoryIndicator>
+     <RuleCategoryIndicator>5</RuleCategoryIndicator>
+     <RuleCategoryIndicator>6</RuleCategoryIndicator>
+     <RuleCategoryIndicator>7</RuleCategoryIndicator>
+     <RuleCategoryIndicator>8</RuleCategoryIndicator>
+     <RuleCategoryIndicator>9</RuleCategoryIndicator>
+     <RuleCategoryIndicator>10</RuleCategoryIndicator>
+     <RuleCategoryIndicator>15</RuleCategoryIndicator>
+     <RuleCategoryIndicator>16</RuleCategoryIndicator>
+     <RuleCategoryIndicator>18</RuleCategoryIndicator>
+    </FareCalculationBreakdown>
+    <FareCalculationBreakdown>
+     <Departure AirlineCode="UA" AirportCode="DEL" ArrivalAirportCode="MUC" ArrivalCityCode="MUC" CityCode="DEL" GenericInd="X"/>
+     <FareBasis Cabin="Y" Code="TLWNC1NS" FilingCarrier="UA"/>
+     <FreeBaggageAllowance>PC001</FreeBaggageAllowance>
+    </FareCalculationBreakdown>
+    <FareCalculationBreakdown>
+     <Departure AirlineCode="UA" AirportCode="MUC" ArrivalAirportCode="IAH" ArrivalCityCode="HOU" CityCode="MUC" GenericInd="X"/>
+     <FareBasis Cabin="Y" Code="TLWNC1NS" FilingCarrier="UA"/>
+     <FreeBaggageAllowance>PC001</FreeBaggageAllowance>
+    </FareCalculationBreakdown>
+    <FareCalculationBreakdown>
+     <Branch FirstJointCarrier="UA" PCC="3RT2"/>
+     <Departure AirlineCode="UA" AirportCode="IAH" ArrivalAirportCode="AUS" ArrivalCityCode="AUS" CityCode="HOU" GenericInd="O"/>
+     <FareBasis Cabin="Y" Code="TLWNC1NS" FareAmount="305.50" FarePassengerType="ADT" FareType="P" FilingCarrier="UA" GlobalInd="AT" Market="AUSDEL" TripTypeInd="R"/>
+     <FreeBaggageAllowance>PC001</FreeBaggageAllowance>
+     <RuleCategoryIndicator>2</RuleCategoryIndicator>
+     <RuleCategoryIndicator>3</RuleCategoryIndicator>
+     <RuleCategoryIndicator>4</RuleCategoryIndicator>
+     <RuleCategoryIndicator>5</RuleCategoryIndicator>
+     <RuleCategoryIndicator>6</RuleCategoryIndicator>
+     <RuleCategoryIndicator>7</RuleCategoryIndicator>
+     <RuleCategoryIndicator>8</RuleCategoryIndicator>
+     <RuleCategoryIndicator>9</RuleCategoryIndicator>
+     <RuleCategoryIndicator>10</RuleCategoryIndicator>
+     <RuleCategoryIndicator>15</RuleCategoryIndicator>
+     <RuleCategoryIndicator>16</RuleCategoryIndicator>
+     <RuleCategoryIndicator>18</RuleCategoryIndicator>
+    </FareCalculationBreakdown>
+    <ItinTotalFare NonRefundableInd="N">
+     <BaggageInfo>
+      <US_DOT_Disclosure>
+       <Text>BAG ALLOWANCE     -AUSDEL-01P/UA/EACH PIECE UP TO 50 POUNDS/23</Text>
+       <Text>KILOGRAMS AND UP TO 62 LINEAR INCHES/158 LINEAR CENTIMETERS</Text>
+       <Text>2NDCHECKED BAG FEE-AUSDEL-CAD131.00/UA/UP TO 50 POUNDS/23 KILOG</Text>
+       <Text>RAMS AND UP TO 62 LINEAR INCHES/158 LINEAR CENTIMETERS**</Text>
+       <Text>BAG ALLOWANCE     -DELAUS-01P/UA/EACH PIECE UP TO 50 POUNDS/23</Text>
+       <Text>KILOGRAMS AND UP TO 62 LINEAR INCHES/158 LINEAR CENTIMETERS</Text>
+       <Text>2NDCHECKED BAG FEE-DELAUS-CAD131.00/UA/UP TO 50 POUNDS/23 KILOG</Text>
+       <Text>RAMS AND UP TO 62 LINEAR INCHES/158 LINEAR CENTIMETERS**</Text>
+       <Text>**BAG FEES APPLY AT EACH CHECK IN LOCATION</Text>
+       <Text>CARRY ON ALLOWANCE</Text>
+       <Text>AUSDEN MUCIAH IAHAUS-01P/UA</Text>
+       <Text>DENMUC MUCDEL DELMUC-01P/LH</Text>
+       <Text>01/UP TO 18 POUNDS/8 KILOGRAMS AND UP TO 46 LINEAR INCHES/118 L</Text>
+       <Text>INEAR CENTIMETERS</Text>
+       <Text>CARRY ON CHARGES</Text>
+       <Text>AUSDEN MUCIAH IAHAUS-UA-CARRY ON FEES UNKNOWN-CONTACT CARRIER</Text>
+       <Text>DENMUC MUCDEL DELMUC-LH</Text>
+       <Text>UP TO 18 POUNDS/8 KILOGRAMS AND UP TO 46 LINEAR INCHES/118 LINE</Text>
+       <Text>AR CENTIMETERS-NOT PERMITTED</Text>
+       <Text>ADDITIONAL ALLOWANCES AND/OR DISCOUNTS MAY APPLY DEPENDING ON</Text>
+       <Text>FLYER-SPECIFIC FACTORS /E.G. FREQUENT FLYER STATUS/MILITARY/</Text>
+       <Text>CREDIT CARD FORM OF PAYMENT/EARLY PURCHASE OVER INTERNET,ETC./</Text>
+      </US_DOT_Disclosure>
+     </BaggageInfo>
+     <BaseFare Amount="611.00" CurrencyCode="USD"/>
+     <Endorsements>
+      <Text>NONREF/0VALUAFTDPT/CHGFEE</Text>
+     </Endorsements>
+     <EquivFare Amount="801.00" CurrencyCode="CAD"/>
+     <Taxes TotalAmount="872.85">
+      <Tax Amount="708.04" TaxCode="YQI" TaxName="SERVICE FEE - INSURANCE" TicketingTaxCode="YQ"/>
+      <Tax Amount="47.98" TaxCode="US2" TaxName="TRANSPORTATION TAX INTERNATION" TicketingTaxCode="US"/>
+      <Tax Amount="7.57" TaxCode="YC" TaxName="CUSTOMS USER FEE" TicketingTaxCode="YC"/>
+      <Tax Amount="9.18" TaxCode="XY2" TaxName="IMMIGRATION USER FEE" TicketingTaxCode="XY"/>
+      <Tax Amount="5.19" TaxCode="XA" TaxName="APHIS PASSENGER FEE PASSENGERS" TicketingTaxCode="XA"/>
+      <Tax Amount="14.68" TaxCode="AY" TaxName="PASSENGER CIVIL AVIATION SECUR" TicketingTaxCode="AY"/>
+      <Tax Amount="10.95" TaxCode="DE" TaxName="AIRPORT SECURITY CHARGE" TicketingTaxCode="DE"/>
+      <Tax Amount="56.94" TaxCode="RA2" TaxName="PASSENGER SERVICE CHARGE INTER" TicketingTaxCode="RA"/>
+      <Tax Amount="4.98" TaxCode="WO" TaxName="PASSENGER SERVICE FEE" TicketingTaxCode="WO"/>
+      <Tax Amount="1.44" TaxCode="IN" TaxName="USER DEVELOPMENT FEE DEPARTURE" TicketingTaxCode="IN"/>
+      <Tax Amount="5.90" TaxCode="XF" TaxName="PASSENGER FACILITY CHARGE" TicketingTaxCode="XF"/>
+     </Taxes>
+     <TotalFare Amount="1673.85" CurrencyCode="CAD"/>
+     <Warnings>
+      <Warning ShortText="BAG ALLOWANCE     -AUSDEL-01P/UA/EACH PIECE UP TO 50 POUNDS/23"/>
+      <Warning ShortText="KILOGRAMS AND UP TO 62 LINEAR INCHES/158 LINEAR CENTIMETERS"/>
+      <Warning ShortText="2NDCHECKED BAG FEE-AUSDEL-CAD131.00/UA/UP TO 50 POUNDS/23 KILOG"/>
+      <Warning ShortText="RAMS AND UP TO 62 LINEAR INCHES/158 LINEAR CENTIMETERS**"/>
+      <Warning ShortText="BAG ALLOWANCE     -DELAUS-01P/UA/EACH PIECE UP TO 50 POUNDS/23"/>
+      <Warning ShortText="KILOGRAMS AND UP TO 62 LINEAR INCHES/158 LINEAR CENTIMETERS"/>
+      <Warning ShortText="2NDCHECKED BAG FEE-DELAUS-CAD131.00/UA/UP TO 50 POUNDS/23 KILOG"/>
+      <Warning ShortText="RAMS AND UP TO 62 LINEAR INCHES/158 LINEAR CENTIMETERS**"/>
+      <Warning ShortText="**BAG FEES APPLY AT EACH CHECK IN LOCATION"/>
+      <Warning ShortText="CARRY ON ALLOWANCE"/>
+      <Warning ShortText="AUSDEN MUCIAH IAHAUS-01P/UA"/>
+      <Warning ShortText="DENMUC MUCDEL DELMUC-01P/LH"/>
+      <Warning ShortText="01/UP TO 18 POUNDS/8 KILOGRAMS AND UP TO 46 LINEAR INCHES/118 L"/>
+      <Warning ShortText="INEAR CENTIMETERS"/>
+      <Warning ShortText="CARRY ON CHARGES"/>
+      <Warning ShortText="AUSDEN MUCIAH IAHAUS-UA-CARRY ON FEES UNKNOWN-CONTACT CARRIER"/>
+      <Warning ShortText="DENMUC MUCDEL DELMUC-LH"/>
+      <Warning ShortText="UP TO 18 POUNDS/8 KILOGRAMS AND UP TO 46 LINEAR INCHES/118 LINE"/>
+      <Warning ShortText="AR CENTIMETERS-NOT PERMITTED"/>
+      <Warning ShortText="ADDITIONAL ALLOWANCES AND/OR DISCOUNTS MAY APPLY DEPENDING ON"/>
+      <Warning ShortText="FLYER-SPECIFIC FACTORS /E.G. FREQUENT FLYER STATUS/MILITARY/"/>
+      <Warning ShortText="CREDIT CARD FORM OF PAYMENT/EARLY PURCHASE OVER INTERNET,ETC./"/>
+     </Warnings>
+    </ItinTotalFare>
+    <PassengerTypeQuantity Code="ADT" Quantity="1"/>
+    <PTC_FareBreakdown>
+     <Cabin>Y</Cabin>
+     <FareBasis Code="TLWNC1NS" FilingCarrier="UA"/>
+     <FreeBaggageAllowance>PC001</FreeBaggageAllowance>
+    </PTC_FareBreakdown>
+    <PTC_FareBreakdown>
+     <Cabin>Y</Cabin>
+     <FareBasis Code="TLWNC1NS" FilingCarrier="UA"/>
+     <FreeBaggageAllowance>PC001</FreeBaggageAllowance>
+    </PTC_FareBreakdown>
+    <PTC_FareBreakdown>
+     <Cabin>Y</Cabin>
+     <FareBasis Code="TLWNC1NS" FareAmount="305.50" FarePassengerType="ADT" FareType="P" FilingCarrier="UA" GlobalInd="AT" Market="AUSDEL"/>
+     <FreeBaggageAllowance>PC001</FreeBaggageAllowance>
+    </PTC_FareBreakdown>
+    <PTC_FareBreakdown>
+     <Cabin>Y</Cabin>
+     <FareBasis Code="TLWNC1NS" FilingCarrier="UA"/>
+     <FreeBaggageAllowance>PC001</FreeBaggageAllowance>
+    </PTC_FareBreakdown>
+    <PTC_FareBreakdown>
+     <Cabin>Y</Cabin>
+     <FareBasis Code="TLWNC1NS" FilingCarrier="UA"/>
+     <FreeBaggageAllowance>PC001</FreeBaggageAllowance>
+    </PTC_FareBreakdown>
+    <PTC_FareBreakdown>
+     <Cabin>Y</Cabin>
+     <FareBasis Code="TLWNC1NS" FareAmount="305.50" FarePassengerType="ADT" FareType="P" FilingCarrier="UA" GlobalInd="AT" Market="AUSDEL"/>
+     <FreeBaggageAllowance>PC001</FreeBaggageAllowance>
+    </PTC_FareBreakdown>
+   </AirItineraryPricingInfo>
+  </PricedItinerary>
+ </PriceQuote>
+</OTA_AirPriceRS></soap-env:Body></soap-env:Envelope>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap-env:Envelope xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/"><soap-env:Header><eb:MessageHeader xmlns:eb="http://www.ebxml.org/namespaces/messageHeader" eb:version="1.0" soap-env:mustUnderstand="1"><eb:From><eb:PartyId eb:type="URI">123123</eb:PartyId></eb:From><eb:To><eb:PartyId eb:type="urn: x12.org:IO5: 01">999999</eb:PartyId></eb:To><eb:CPAId>3RT2</eb:CPAId><eb:ConversationId>1111111111111111111</eb:ConversationId><eb:Service eb:type="sabreXML">EndTransactionLLSRQ</eb:Service><eb:Action>EndTransactionLLSRS</eb:Action><eb:MessageData><eb:MessageId>7185055626343810224</eb:MessageId><eb:Timestamp>2018-10-23T17:23:54</eb:Timestamp><eb:RefToMessageId>mid:0_2014-09-22T21:43:40m</eb:RefToMessageId></eb:MessageData></eb:MessageHeader><wsse:Security xmlns:wsse="http://schemas.xmlsoap.org/ws/2002/12/secext"><wsse:BinarySecurityToken valueType="String" EncodingType="wsse:Base64Binary">Shared/IDL:IceSess\/SessMgr:1\.0.IDL/Common/!ICESMS\/RESD!ICESMSLB\/RES.LB!-3089594002348142718!1269867!0</wsse:BinarySecurityToken></wsse:Security></soap-env:Header><soap-env:Body><EndTransactionRS xmlns="http://webservices.sabre.com/sabreXML/2011/10" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:stl="http://services.sabre.com/STL/v01" Version="2.0.5">
+ <stl:ApplicationResults status="Complete">
+  <stl:Success timeStamp="2018-10-23T12:23:54-05:00"/>
+  <stl:Warning type="BusinessLogic">
+   <stl:SystemSpecificResults>
+    <stl:Message>TTY REQ PEND</stl:Message>
+    <stl:ShortText>WARN.SWS.HOST.WARNING_RESPONSE</stl:ShortText>
+   </stl:SystemSpecificResults>
+  </stl:Warning>
+ </stl:ApplicationResults>
+ <ItineraryRef ID="XLBOFL">
+  <Source CreateDateTime="2018-10-23T12:23"/>
+ </ItineraryRef>
+ <Text>OK 1223 XLBOFL TTY REQ PEND</Text>
+</EndTransactionRS></soap-env:Body></soap-env:Envelope>

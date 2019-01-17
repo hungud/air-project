@@ -1,0 +1,102 @@
+﻿@{
+    ViewBag.Title = "InstaFlightsSearch";
+    ViewBag.ActiveTab = "InstaFlightsSearch";
+    Layout = "~/Views/Shared/_MasterLayoutMain.cshtml";
+}
+<script src="~/Scripts/App/InstaFlightsSearchScript.js"></script>
+<div class="row">
+    <div class="col-xs-12 col-sm-12">
+        <div class="widget-box">
+            <div class="widget-header widget-header-blue widget-header-flat">
+                <h4 id="notforpshead" class="widget-title lighter">Insta Flights Search</h4>
+                <div class="widget-toolbar no-border">
+                </div>
+            </div>
+            <div class="widget-body">
+                <div class="widget-main padding-2">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12">
+                            <div class="form-horizontal">
+                                <div class="row form-group">
+                                    <div class="col-md-3">
+                                        Origin
+                                          <input type="text" id="txtOrigin" name="txtOrigin" placeholder="Please Enter Origin" value="JFK" class="col-xs-10 col-sm-5" style="width: 100%;" maxlength="4" />
+                                    </div>
+                                    <div class="col-md-3">
+                                        Destination:
+                                          <input type="text" id="txtDestination" name="txtDestination" placeholder="Please Enter Destination" value="LAX" class="col-xs-10 col-sm-5" style="width: 100%;" maxlength="4" />
+                                    </div>
+                                    <div class="col-md-3">
+                                        Departure Date
+                                        <div class="input-group col-xs-12 col-sm-12">
+                                            <input class="form-control  date-picker  Restrictinput " id="txtdepartureDate" type="text" name="date-range-picker" data-date-format="yyyy-MMM-dd" />
+                                            <span class="input-group-addon" id="col_departureDate">
+                                                <i class="fa fa-calendar bigger-80"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        Return Date
+                                         <div class="input-group col-xs-12 col-sm-12">
+                                             <input class="form-control  date-picker  Restrictinput " id="txtreturnDate" type="text" name="date-range-picker" data-date-format="yyyy-MMM-dd" />
+                                             <span class="input-group-addon" id="col_returnDate">
+                                                 <i class="fa fa-calendar bigger-80"></i>
+                                             </span>
+                                         </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="space-4"></div>
+                    <div class="space-4"></div>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12">
+                            <div class="col-sm-12">
+                                <input type="submit" value="Search" class="btn btn-success pull-right" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="space-4"></div>
+                    <div class="row SearchJSONResult">
+                        <div class="col-xs-12 col-sm-12">
+                            <div class="col-sm-12">
+                                <div class="widget-box">
+                                    <div class="widget-header">
+                                        <h5 class="widget-title"><i class="fa fa-bar-chart-o"></i>Search Result</h5>
+                                    </div>
+                                    <div class="widget-body">
+                                        <div class="widget-main">
+                                            <div id="Page-josn-result" class="wrapword JSONResultContentScroll"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="space-4"></div>
+                    <div class="row SearchJSONResult">
+                        <div class="col-xs-12 col-sm-12">
+                            <div class="col-sm-12">
+                                <div class="widget-box">
+                                    <div class="widget-header">
+                                        <h5 class="widget-title"><i class="fa fa-bar-chart-o"></i>Search Result Table</h5>
+                                    </div>
+                                    <div class="widget-body">
+                                        <div class="widget-main">
+                                            <div class="space-8"></div>
+                                            <div id="Page-josn-result1" class="wrapword JSONResultContentScroll"></div>
+                                            <div class="space-8"></div>
+                                            <div id="Page-josn-result2" class="wrapword JSONResultContentScroll"></div>
+                                            <div class="space-8"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

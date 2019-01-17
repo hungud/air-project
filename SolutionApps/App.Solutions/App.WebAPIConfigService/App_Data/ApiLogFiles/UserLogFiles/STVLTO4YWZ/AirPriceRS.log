@@ -1,0 +1,637 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap-env:Envelope xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/"><soap-env:Header><eb:MessageHeader xmlns:eb="http://www.ebxml.org/namespaces/messageHeader" eb:version="1.0" soap-env:mustUnderstand="1"><eb:From><eb:PartyId eb:type="URI">123123</eb:PartyId></eb:From><eb:To><eb:PartyId eb:type="urn: x12.org:IO5: 01">999999</eb:PartyId></eb:To><eb:CPAId>3RT2</eb:CPAId><eb:ConversationId>1111111111111111111</eb:ConversationId><eb:Service eb:type="sabreXML">OTA_AirPriceLLSRQ</eb:Service><eb:Action>OTA_AirPriceLLSRS</eb:Action><eb:MessageData><eb:MessageId>3509281319261220233</eb:MessageId><eb:Timestamp>2018-12-24T08:52:07</eb:Timestamp><eb:RefToMessageId>mid:0_2014-09-22T21:43:40m</eb:RefToMessageId></eb:MessageData></eb:MessageHeader><wsse:Security xmlns:wsse="http://schemas.xmlsoap.org/ws/2002/12/secext"><wsse:BinarySecurityToken valueType="String" EncodingType="wsse:Base64Binary">Shared/IDL:IceSess\/SessMgr:1\.0.IDL/Common/!ICESMS\/RESB!ICESMSLB\/RES.LB!1545641512862!3089!37</wsse:BinarySecurityToken></wsse:Security></soap-env:Header><soap-env:Body><OTA_AirPriceRS xmlns="http://webservices.sabre.com/sabreXML/2011/10" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:stl="http://services.sabre.com/STL/v01" Version="2.14.0">
+ <stl:ApplicationResults status="Complete">
+  <stl:Success timeStamp="2018-12-24T02:52:07-06:00"/>
+ </stl:ApplicationResults>
+ <PriceQuote>
+  <MiscInformation>
+   <BaggageInfo>
+    <SubCodeProperties RPH="1" SolutionSequenceNmbr="1">
+     <AncillaryFeeGroupCode>BG</AncillaryFeeGroupCode>
+     <CommercialNameofBaggageItemType>FREE BAGGAGE ALLOWANCE</CommercialNameofBaggageItemType>
+     <EMD_Type>4</EMD_Type>
+     <ExtendedSubCodeKey>0DFAAAF</ExtendedSubCodeKey>
+    </SubCodeProperties>
+    <SubCodeProperties RPH="2" SolutionSequenceNmbr="1">
+     <AncillaryFeeGroupCode>BG</AncillaryFeeGroupCode>
+     <CommercialNameofBaggageItemType>UPTO50LB 23KG AND62LI 158LCM</CommercialNameofBaggageItemType>
+     <DescriptionOne Code="23">
+      <Text>UP TO 50 POUNDS/23 KILOGRAMS</Text>
+     </DescriptionOne>
+     <DescriptionTwo Code="6U">
+      <Text>UP TO 62 LINEAR INCHES/158 LINEAR CENTIMETERS</Text>
+     </DescriptionTwo>
+     <EMD_Type>4</EMD_Type>
+     <ExtendedSubCodeKey>0GOACAF</ExtendedSubCodeKey>
+     <SizeWeightInfo>
+      <MaximumSizeInAlternate Units="C">158</MaximumSizeInAlternate>
+      <MaximumSize Units="I">62</MaximumSize>
+      <MaximumWeightInAlternate Units="K">23</MaximumWeightInAlternate>
+      <MaximumWeight Units="L">50</MaximumWeight>
+     </SizeWeightInfo>
+    </SubCodeProperties>
+    <SubCodeProperties RPH="3" SolutionSequenceNmbr="1">
+     <AncillaryFeeGroupCode>BG</AncillaryFeeGroupCode>
+     <AncillaryService SubGroupCode="CY">
+      <Text>CARRY ON HAND BAGGAGE</Text>
+     </AncillaryService>
+     <CommercialNameofBaggageItemType>CARRYON HAND BAGGAGE ALLOWANCE</CommercialNameofBaggageItemType>
+     <EMD_Type>4</EMD_Type>
+     <ExtendedSubCodeKey>0LNABAF</ExtendedSubCodeKey>
+    </SubCodeProperties>
+    <SubCodeProperties RPH="4" SolutionSequenceNmbr="1">
+     <AncillaryFeeGroupCode>BG</AncillaryFeeGroupCode>
+     <AncillaryService SubGroupCode="CY">
+      <Text>CARRY ON HAND BAGGAGE</Text>
+     </AncillaryService>
+     <BookingMethod>04</BookingMethod>
+     <CommercialNameofBaggageItemType>CABIN BAGGAGE 12KG 1PC 115CM</CommercialNameofBaggageItemType>
+     <DescriptionOne Code="12">
+      <Text>UP TO 26 POUNDS/12 KILOGRAMS</Text>
+     </DescriptionOne>
+     <DescriptionTwo Code="4U">
+      <Text>UP TO 45 LINEAR INCHES/115 LINEAR CENTIMETERS</Text>
+     </DescriptionTwo>
+     <EMD_Type>4</EMD_Type>
+     <ExtendedSubCodeKey>0MRACAF</ExtendedSubCodeKey>
+     <SizeWeightInfo>
+      <MaximumSizeInAlternate Units="C">115</MaximumSizeInAlternate>
+      <MaximumSize Units="I">45</MaximumSize>
+      <MaximumWeightInAlternate Units="K">12</MaximumWeightInAlternate>
+      <MaximumWeight Units="L">26</MaximumWeight>
+     </SizeWeightInfo>
+    </SubCodeProperties>
+    <SubCodeProperties RPH="5" SolutionSequenceNmbr="1">
+     <AncillaryFeeGroupCode>BG</AncillaryFeeGroupCode>
+     <CommercialNameofBaggageItemType>OVER70LB 32KG BAGGAGE</CommercialNameofBaggageItemType>
+     <DescriptionOne Code="7X">
+      <Text>OVER 70 POUNDS/32 KILOGRAMS</Text>
+     </DescriptionOne>
+     <EMD_Type>4</EMD_Type>
+     <ExtendedSubCodeKey>0ESAEDL</ExtendedSubCodeKey>
+     <SizeWeightInfo>
+      <MinimumWeightInAlternate Units="K">32</MinimumWeightInAlternate>
+      <MinimumWeight Units="L">70</MinimumWeight>
+     </SizeWeightInfo>
+    </SubCodeProperties>
+    <SubCodeProperties RPH="6" SolutionSequenceNmbr="1">
+     <AncillaryFeeGroupCode>BG</AncillaryFeeGroupCode>
+     <AncillaryService SubGroupCode="SP">
+      <Text>SPORTING EQUIPMENT</Text>
+     </AncillaryService>
+     <CommercialNameofBaggageItemType>POLE VAULT EQUIPMENT</CommercialNameofBaggageItemType>
+     <DescriptionOne Code="PV">
+      <Text>POLE VAULT EQUIPMENT</Text>
+     </DescriptionOne>
+     <EMD_Type>4</EMD_Type>
+     <ExtendedSubCodeKey>0F3AEDL</ExtendedSubCodeKey>
+    </SubCodeProperties>
+    <SubCodeProperties RPH="7" SolutionSequenceNmbr="1">
+     <AncillaryFeeGroupCode>BG</AncillaryFeeGroupCode>
+     <AncillaryService SubGroupCode="SP">
+      <Text>SPORTING EQUIPMENT</Text>
+     </AncillaryService>
+     <CommercialNameofBaggageItemType>CANOE KAYAK OARS</CommercialNameofBaggageItemType>
+     <DescriptionOne Code="CK">
+      <Text>CANOE/KAYAK</Text>
+     </DescriptionOne>
+     <EMD_Type>4</EMD_Type>
+     <ExtendedSubCodeKey>0FTAEDL</ExtendedSubCodeKey>
+    </SubCodeProperties>
+    <SubCodeProperties RPH="8" SolutionSequenceNmbr="1">
+     <AncillaryFeeGroupCode>BG</AncillaryFeeGroupCode>
+     <AncillaryService SubGroupCode="CY">
+      <Text>CARRY ON HAND BAGGAGE</Text>
+     </AncillaryService>
+     <CommercialNameofBaggageItemType>CARRY ON HAND BAGGAGE</CommercialNameofBaggageItemType>
+     <EMD_Type>4</EMD_Type>
+     <ExtendedSubCodeKey>0L5ACDL</ExtendedSubCodeKey>
+     <RFIC>C</RFIC>
+    </SubCodeProperties>
+    <SubCodeProperties RPH="9" SolutionSequenceNmbr="1">
+     <AncillaryFeeGroupCode>BG</AncillaryFeeGroupCode>
+     <AncillaryService SubGroupCode="CY">
+      <Text>CARRY ON HAND BAGGAGE</Text>
+     </AncillaryService>
+     <CommercialNameofBaggageItemType>CARRYON HAND BAGGAGE ALLOWANCE</CommercialNameofBaggageItemType>
+     <EMD_Type>4</EMD_Type>
+     <ExtendedSubCodeKey>0LNABDL</ExtendedSubCodeKey>
+     <RFIC>C</RFIC>
+    </SubCodeProperties>
+    <SubCodeProperties RPH="10" SolutionSequenceNmbr="1">
+     <AncillaryFeeGroupCode>BG</AncillaryFeeGroupCode>
+     <AncillaryService SubGroupCode="CY">
+      <Text>CARRY ON HAND BAGGAGE</Text>
+     </AncillaryService>
+     <CommercialNameofBaggageItemType>CARRY ON UP TO 45 LI 115 LCM</CommercialNameofBaggageItemType>
+     <DescriptionOne Code="4U">
+      <Text>UP TO 45 LINEAR INCHES/115 LINEAR CENTIMETERS</Text>
+     </DescriptionOne>
+     <EMD_Type>4</EMD_Type>
+     <ExtendedSubCodeKey>0MUACDL</ExtendedSubCodeKey>
+     <RFIC>C</RFIC>
+     <SizeWeightInfo>
+      <MaximumSizeInAlternate Units="C">115</MaximumSizeInAlternate>
+      <MaximumSize Units="I">45</MaximumSize>
+     </SizeWeightInfo>
+    </SubCodeProperties>
+   </BaggageInfo>
+   <HeaderInformation SolutionSequenceNmbr="1">
+    <DepartureDate>2019-05-01</DepartureDate>
+    <LastTicketingDate>12-27T03:52</LastTicketingDate>
+    <Text>VALIDATING CARRIER - AF</Text>
+    <Text>BAG ALLOWANCE     -YYZCDG-01P/AF/EACH PIECE UP TO 50 POUNDS/23</Text>
+    <Text>KILOGRAMS AND UP TO 62 LINEAR INCHES/158 LINEAR CENTIMETERS</Text>
+    <Text>2NDCHECKED BAG FEE-YYZCDG-CAD120.00/AF/UP TO 50 POUNDS/23 KILOG</Text>
+    <Text>RAMS AND UP TO 62 LINEAR INCHES/158 LINEAR CENTIMETERS</Text>
+    <Text>BAG ALLOWANCE     -FCOZRH-01P/AF/EACH PIECE UP TO 50 POUNDS/23</Text>
+    <Text>KILOGRAMS AND UP TO 62 LINEAR INCHES/158 LINEAR CENTIMETERS</Text>
+    <Text>2NDCHECKED BAG FEE-FCOZRH-CAD120.00/AF/UP TO 50 POUNDS/23 KILOG</Text>
+    <Text>RAMS AND UP TO 62 LINEAR INCHES/158 LINEAR CENTIMETERS</Text>
+    <Text>CARRY ON ALLOWANCE</Text>
+    <Text>YYZJFK JFKCDG-01P/DL</Text>
+    <Text>01/CARRY ON HAND BAGGAGE</Text>
+    <Text>01/UP TO 45 LINEAR INCHES/115 LINEAR CENTIMETERS</Text>
+    <Text>FCOCDG CDGZRH-01P/AF</Text>
+    <Text>01/UP TO 26 POUNDS/12 KILOGRAMS AND UP TO 45 LINEAR INCHES/115</Text>
+    <Text>LINEAR CENTIMETERS</Text>
+    <Text>CARRY ON CHARGES</Text>
+    <Text>YYZJFK JFKCDG-DL-CARRY ON FEES UNKNOWN-CONTACT CARRIER</Text>
+    <Text>FCOCDG CDGZRH-AF-CARRY ON FEES UNKNOWN-CONTACT CARRIER</Text>
+    <Text>ADDITIONAL ALLOWANCES AND/OR DISCOUNTS MAY APPLY DEPENDING ON</Text>
+    <Text>FLYER-SPECIFIC FACTORS /E.G. FREQUENT FLYER STATUS/MILITARY/</Text>
+    <Text>CREDIT CARD FORM OF PAYMENT/EARLY PURCHASE OVER INTERNET,ETC./</Text>
+    <Text>EMBARGOES-APPLY TO EACH PASSENGER</Text>
+    <Text>YYZJFK-DL</Text>
+    <Text>SPORTING EQUIPMENT/POLE VAULT EQUIPMENT NOT PERMITTED</Text>
+    <Text>SPORTING EQUIPMENT/CANOE/KAYAK NOT PERMITTED</Text>
+    <Text>JFKCDG-DL</Text>
+    <Text>OVER 70 POUNDS/32 KILOGRAMS NOT PERMITTED</Text>
+    <Text>SPORTING EQUIPMENT/POLE VAULT EQUIPMENT NOT PERMITTED</Text>
+    <Text>SPORTING EQUIPMENT/CANOE/KAYAK NOT PERMITTED</Text>
+    <Text>01MAY DEPARTURE DATE-----LAST DAY TO PURCHASE 27DEC/0352</Text>
+    <ValidatingCarrier Code="AF"/>
+   </HeaderInformation>
+   <SolutionInformation SolutionSequenceNmbr="1">
+    <CurrencyCode>CAD</CurrencyCode>
+    <RequiresRebook>false</RequiresRebook>
+    <TicketNumber>0</TicketNumber>
+    <TotalAmount>1940.04</TotalAmount>
+   </SolutionInformation>
+  </MiscInformation>
+  <PricedItinerary AlternativePricing="false" CurrencyCode="CAD" MultiTicket="false" TotalAmount="1940.04">
+   <AirItineraryPricingInfo SolutionSequenceNmbr="1">
+    <BaggageProvisions RPH="1">
+     <Associations>
+      <CarrierCode RPH="1">AF</CarrierCode>
+      <CarrierCode RPH="2">AF</CarrierCode>
+      <CountForSegmentAssociatedID>2</CountForSegmentAssociatedID>
+      <DepartureDate RPH="1">2019-05-01</DepartureDate>
+      <DepartureDate RPH="2">2019-05-01</DepartureDate>
+      <DestinationLocation LocationCode="JFK" RPH="1"/>
+      <DestinationLocation LocationCode="CDG" RPH="2"/>
+      <FlightNumber RPH="1">2389</FlightNumber>
+      <FlightNumber RPH="2">3577</FlightNumber>
+      <OriginLocation LocationCode="YYZ" RPH="1"/>
+      <OriginLocation LocationCode="JFK" RPH="2"/>
+      <PNR_Segment RPH="1">2</PNR_Segment>
+      <PNR_Segment RPH="2">3</PNR_Segment>
+      <ResBookDesigCode RPH="1">M</ResBookDesigCode>
+      <ResBookDesigCode RPH="2">M</ResBookDesigCode>
+      <StatusCode RPH="1">SS</StatusCode>
+      <StatusCode RPH="2">SS</StatusCode>
+     </Associations>
+     <CarrierWhoseBaggageProvisionsApply>AF</CarrierWhoseBaggageProvisionsApply>
+     <NumPiecesBDI>1</NumPiecesBDI>
+     <NumPiecesITR>1</NumPiecesITR>
+     <ProvisionType>A</ProvisionType>
+     <SubCodeInfo>
+      <SubCodeForAllowance RPH="1">0GOACAF</SubCodeForAllowance>
+      <SubCodeForChargesOthers>0DFAAAF</SubCodeForChargesOthers>
+     </SubCodeInfo>
+    </BaggageProvisions>
+    <BaggageProvisions RPH="2">
+     <Associations>
+      <CarrierCode RPH="1">AF</CarrierCode>
+      <CarrierCode RPH="2">AF</CarrierCode>
+      <CountForSegmentAssociatedID>2</CountForSegmentAssociatedID>
+      <DepartureDate RPH="1">2019-05-01</DepartureDate>
+      <DepartureDate RPH="2">2019-05-01</DepartureDate>
+      <DestinationLocation LocationCode="JFK" RPH="1"/>
+      <DestinationLocation LocationCode="CDG" RPH="2"/>
+      <FlightNumber RPH="1">2389</FlightNumber>
+      <FlightNumber RPH="2">3577</FlightNumber>
+      <OriginLocation LocationCode="YYZ" RPH="1"/>
+      <OriginLocation LocationCode="JFK" RPH="2"/>
+      <PNR_Segment RPH="1">2</PNR_Segment>
+      <PNR_Segment RPH="2">3</PNR_Segment>
+      <ResBookDesigCode RPH="1">M</ResBookDesigCode>
+      <ResBookDesigCode RPH="2">M</ResBookDesigCode>
+      <StatusCode RPH="1">SS</StatusCode>
+      <StatusCode RPH="2">SS</StatusCode>
+     </Associations>
+     <CarrierWhoseBaggageProvisionsApply>AF</CarrierWhoseBaggageProvisionsApply>
+     <Commissionable>N</Commissionable>
+     <FeeApplicationIndicator>4</FeeApplicationIndicator>
+     <FeeNotGuaranteedIndicator>N</FeeNotGuaranteedIndicator>
+     <FirstOccurrence>1</FirstOccurrence>
+     <Interlineable>Y</Interlineable>
+     <LastOccurrence>1</LastOccurrence>
+     <PassengerType Code="ADT"/>
+     <PriceInformation>
+      <Base Amount="120.00" CurrencyCode="CAD"/>
+      <Equiv Amount="120.00" CurrencyCode="CAD"/>
+      <TaxIndicator>X</TaxIndicator>
+      <Total>120.00</Total>
+     </PriceInformation>
+     <ProvisionType>C</ProvisionType>
+     <RefundReissue>N</RefundReissue>
+     <SubCodeInfo>
+      <SubCodeForChargesOthers>0GOACAF</SubCodeForChargesOthers>
+     </SubCodeInfo>
+    </BaggageProvisions>
+    <BaggageProvisions RPH="3">
+     <Associations>
+      <CarrierCode RPH="1">AF</CarrierCode>
+      <CarrierCode RPH="2">AF</CarrierCode>
+      <CountForSegmentAssociatedID>2</CountForSegmentAssociatedID>
+      <DepartureDate RPH="1">2019-05-31</DepartureDate>
+      <DepartureDate RPH="2">2019-05-31</DepartureDate>
+      <DestinationLocation LocationCode="CDG" RPH="1"/>
+      <DestinationLocation LocationCode="ZRH" RPH="2"/>
+      <FlightNumber RPH="1">1105</FlightNumber>
+      <FlightNumber RPH="2">1814</FlightNumber>
+      <OriginLocation LocationCode="FCO" RPH="1"/>
+      <OriginLocation LocationCode="CDG" RPH="2"/>
+      <PNR_Segment RPH="1">4</PNR_Segment>
+      <PNR_Segment RPH="2">5</PNR_Segment>
+      <ResBookDesigCode RPH="1">Y</ResBookDesigCode>
+      <ResBookDesigCode RPH="2">Y</ResBookDesigCode>
+      <StatusCode RPH="1">SS</StatusCode>
+      <StatusCode RPH="2">SS</StatusCode>
+     </Associations>
+     <CarrierWhoseBaggageProvisionsApply>AF</CarrierWhoseBaggageProvisionsApply>
+     <NumPiecesBDI>1</NumPiecesBDI>
+     <NumPiecesITR>1</NumPiecesITR>
+     <ProvisionType>A</ProvisionType>
+     <SubCodeInfo>
+      <SubCodeForAllowance RPH="1">0GOACAF</SubCodeForAllowance>
+      <SubCodeForChargesOthers>0DFAAAF</SubCodeForChargesOthers>
+     </SubCodeInfo>
+    </BaggageProvisions>
+    <BaggageProvisions RPH="4">
+     <Associations>
+      <CarrierCode RPH="1">AF</CarrierCode>
+      <CarrierCode RPH="2">AF</CarrierCode>
+      <CountForSegmentAssociatedID>2</CountForSegmentAssociatedID>
+      <DepartureDate RPH="1">2019-05-31</DepartureDate>
+      <DepartureDate RPH="2">2019-05-31</DepartureDate>
+      <DestinationLocation LocationCode="CDG" RPH="1"/>
+      <DestinationLocation LocationCode="ZRH" RPH="2"/>
+      <FlightNumber RPH="1">1105</FlightNumber>
+      <FlightNumber RPH="2">1814</FlightNumber>
+      <OriginLocation LocationCode="FCO" RPH="1"/>
+      <OriginLocation LocationCode="CDG" RPH="2"/>
+      <PNR_Segment RPH="1">4</PNR_Segment>
+      <PNR_Segment RPH="2">5</PNR_Segment>
+      <ResBookDesigCode RPH="1">Y</ResBookDesigCode>
+      <ResBookDesigCode RPH="2">Y</ResBookDesigCode>
+      <StatusCode RPH="1">SS</StatusCode>
+      <StatusCode RPH="2">SS</StatusCode>
+     </Associations>
+     <CarrierWhoseBaggageProvisionsApply>AF</CarrierWhoseBaggageProvisionsApply>
+     <Commissionable>N</Commissionable>
+     <FeeApplicationIndicator>4</FeeApplicationIndicator>
+     <FeeNotGuaranteedIndicator>N</FeeNotGuaranteedIndicator>
+     <FirstOccurrence>1</FirstOccurrence>
+     <Interlineable>Y</Interlineable>
+     <LastOccurrence>1</LastOccurrence>
+     <PassengerType Code="ADT"/>
+     <PriceInformation>
+      <Base Amount="120.00" CurrencyCode="CAD"/>
+      <Equiv Amount="120.00" CurrencyCode="CAD"/>
+      <TaxIndicator>X</TaxIndicator>
+      <Total>120.00</Total>
+     </PriceInformation>
+     <ProvisionType>C</ProvisionType>
+     <RefundReissue>N</RefundReissue>
+     <SubCodeInfo>
+      <SubCodeForChargesOthers>0GOACAF</SubCodeForChargesOthers>
+     </SubCodeInfo>
+    </BaggageProvisions>
+    <BaggageProvisions RPH="5">
+     <Associations>
+      <CarrierCode RPH="1">AF</CarrierCode>
+      <CarrierCode RPH="2">AF</CarrierCode>
+      <CountForSegmentAssociatedID>2</CountForSegmentAssociatedID>
+      <DepartureDate RPH="1">2019-05-01</DepartureDate>
+      <DepartureDate RPH="2">2019-05-01</DepartureDate>
+      <DestinationLocation LocationCode="JFK" RPH="1"/>
+      <DestinationLocation LocationCode="CDG" RPH="2"/>
+      <FlightNumber RPH="1">2389</FlightNumber>
+      <FlightNumber RPH="2">3577</FlightNumber>
+      <OriginLocation LocationCode="YYZ" RPH="1"/>
+      <OriginLocation LocationCode="JFK" RPH="2"/>
+      <PNR_Segment RPH="1">2</PNR_Segment>
+      <PNR_Segment RPH="2">3</PNR_Segment>
+      <ResBookDesigCode RPH="1">M</ResBookDesigCode>
+      <ResBookDesigCode RPH="2">M</ResBookDesigCode>
+      <StatusCode RPH="1">SS</StatusCode>
+      <StatusCode RPH="2">SS</StatusCode>
+     </Associations>
+     <CarrierWhoseBaggageProvisionsApply>DL</CarrierWhoseBaggageProvisionsApply>
+     <NumPiecesBDI>1</NumPiecesBDI>
+     <NumPiecesITR>1</NumPiecesITR>
+     <NumPiecesITR>1</NumPiecesITR>
+     <ProvisionType>B</ProvisionType>
+     <SubCodeInfo>
+      <SubCodeForAllowance RPH="1">0L5ACDL</SubCodeForAllowance>
+      <SubCodeForAllowance RPH="2">0MUACDL</SubCodeForAllowance>
+      <SubCodeForChargesOthers>0LNABDL</SubCodeForChargesOthers>
+     </SubCodeInfo>
+    </BaggageProvisions>
+    <BaggageProvisions RPH="6">
+     <Associations>
+      <CarrierCode RPH="1">AF</CarrierCode>
+      <CarrierCode RPH="2">AF</CarrierCode>
+      <CountForSegmentAssociatedID>2</CountForSegmentAssociatedID>
+      <DepartureDate RPH="1">2019-05-31</DepartureDate>
+      <DepartureDate RPH="2">2019-05-31</DepartureDate>
+      <DestinationLocation LocationCode="CDG" RPH="1"/>
+      <DestinationLocation LocationCode="ZRH" RPH="2"/>
+      <FlightNumber RPH="1">1105</FlightNumber>
+      <FlightNumber RPH="2">1814</FlightNumber>
+      <OriginLocation LocationCode="FCO" RPH="1"/>
+      <OriginLocation LocationCode="CDG" RPH="2"/>
+      <PNR_Segment RPH="1">4</PNR_Segment>
+      <PNR_Segment RPH="2">5</PNR_Segment>
+      <ResBookDesigCode RPH="1">Y</ResBookDesigCode>
+      <ResBookDesigCode RPH="2">Y</ResBookDesigCode>
+      <StatusCode RPH="1">SS</StatusCode>
+      <StatusCode RPH="2">SS</StatusCode>
+     </Associations>
+     <CarrierWhoseBaggageProvisionsApply>AF</CarrierWhoseBaggageProvisionsApply>
+     <NumPiecesBDI>1</NumPiecesBDI>
+     <NumPiecesITR>1</NumPiecesITR>
+     <ProvisionType>B</ProvisionType>
+     <SubCodeInfo>
+      <SubCodeForAllowance RPH="1">0MRACAF</SubCodeForAllowance>
+      <SubCodeForChargesOthers>0LNABAF</SubCodeForChargesOthers>
+     </SubCodeInfo>
+    </BaggageProvisions>
+    <BaggageProvisions RPH="7">
+     <Associations>
+      <CarrierCode RPH="1">AF</CarrierCode>
+      <CarrierCode RPH="2">AF</CarrierCode>
+      <CountForSegmentAssociatedID>2</CountForSegmentAssociatedID>
+      <DepartureDate RPH="1">2019-05-01</DepartureDate>
+      <DepartureDate RPH="2">2019-05-01</DepartureDate>
+      <DestinationLocation LocationCode="JFK" RPH="1"/>
+      <DestinationLocation LocationCode="CDG" RPH="2"/>
+      <FlightNumber RPH="1">2389</FlightNumber>
+      <FlightNumber RPH="2">3577</FlightNumber>
+      <OriginLocation LocationCode="YYZ" RPH="1"/>
+      <OriginLocation LocationCode="JFK" RPH="2"/>
+      <PNR_Segment RPH="1">2</PNR_Segment>
+      <PNR_Segment RPH="2">3</PNR_Segment>
+      <ResBookDesigCode RPH="1">M</ResBookDesigCode>
+      <ResBookDesigCode RPH="2">M</ResBookDesigCode>
+      <StatusCode RPH="1">SS</StatusCode>
+      <StatusCode RPH="2">SS</StatusCode>
+     </Associations>
+     <CarrierWhoseBaggageProvisionsApply>DL</CarrierWhoseBaggageProvisionsApply>
+     <Commissionable>N</Commissionable>
+     <FeeNotGuaranteedIndicator>Y</FeeNotGuaranteedIndicator>
+     <NoChargeNotAvailableIndicator>X</NoChargeNotAvailableIndicator>
+     <PassengerType Code="ADT"/>
+     <PriceInformation>
+      <Base Amount="0.00"/>
+      <Equiv CurrencyCode="CAD"/>
+     </PriceInformation>
+     <ProvisionType>E</ProvisionType>
+     <SubCodeInfo>
+      <SubCodeForChargesOthers>0F3AEDL</SubCodeForChargesOthers>
+     </SubCodeInfo>
+    </BaggageProvisions>
+    <BaggageProvisions RPH="8">
+     <Associations>
+      <CarrierCode RPH="1">AF</CarrierCode>
+      <CarrierCode RPH="2">AF</CarrierCode>
+      <CountForSegmentAssociatedID>2</CountForSegmentAssociatedID>
+      <DepartureDate RPH="1">2019-05-01</DepartureDate>
+      <DepartureDate RPH="2">2019-05-01</DepartureDate>
+      <DestinationLocation LocationCode="JFK" RPH="1"/>
+      <DestinationLocation LocationCode="CDG" RPH="2"/>
+      <FlightNumber RPH="1">2389</FlightNumber>
+      <FlightNumber RPH="2">3577</FlightNumber>
+      <OriginLocation LocationCode="YYZ" RPH="1"/>
+      <OriginLocation LocationCode="JFK" RPH="2"/>
+      <PNR_Segment RPH="1">2</PNR_Segment>
+      <PNR_Segment RPH="2">3</PNR_Segment>
+      <ResBookDesigCode RPH="1">M</ResBookDesigCode>
+      <ResBookDesigCode RPH="2">M</ResBookDesigCode>
+      <StatusCode RPH="1">SS</StatusCode>
+      <StatusCode RPH="2">SS</StatusCode>
+     </Associations>
+     <CarrierWhoseBaggageProvisionsApply>DL</CarrierWhoseBaggageProvisionsApply>
+     <Commissionable>N</Commissionable>
+     <FeeNotGuaranteedIndicator>Y</FeeNotGuaranteedIndicator>
+     <NoChargeNotAvailableIndicator>X</NoChargeNotAvailableIndicator>
+     <PassengerType Code="ADT"/>
+     <PriceInformation>
+      <Base Amount="0.00"/>
+      <Equiv CurrencyCode="CAD"/>
+     </PriceInformation>
+     <ProvisionType>E</ProvisionType>
+     <SubCodeInfo>
+      <SubCodeForChargesOthers>0FTAEDL</SubCodeForChargesOthers>
+     </SubCodeInfo>
+    </BaggageProvisions>
+    <BaggageProvisions RPH="9">
+     <Associations>
+      <CarrierCode RPH="1">AF</CarrierCode>
+      <CountForSegmentAssociatedID>1</CountForSegmentAssociatedID>
+      <DepartureDate RPH="1">2019-05-01</DepartureDate>
+      <DestinationLocation LocationCode="CDG" RPH="1"/>
+      <FlightNumber RPH="1">3577</FlightNumber>
+      <OriginLocation LocationCode="JFK" RPH="1"/>
+      <PNR_Segment RPH="1">3</PNR_Segment>
+      <ResBookDesigCode RPH="1">M</ResBookDesigCode>
+      <StatusCode RPH="1">SS</StatusCode>
+     </Associations>
+     <CarrierWhoseBaggageProvisionsApply>DL</CarrierWhoseBaggageProvisionsApply>
+     <Commissionable>N</Commissionable>
+     <FeeNotGuaranteedIndicator>Y</FeeNotGuaranteedIndicator>
+     <NoChargeNotAvailableIndicator>X</NoChargeNotAvailableIndicator>
+     <PassengerType Code="ADT"/>
+     <PriceInformation>
+      <Base Amount="0.00"/>
+      <Equiv CurrencyCode="CAD"/>
+     </PriceInformation>
+     <ProvisionType>E</ProvisionType>
+     <SubCodeInfo>
+      <SubCodeForChargesOthers>0ESAEDL</SubCodeForChargesOthers>
+     </SubCodeInfo>
+    </BaggageProvisions>
+    <FareCalculation>
+     <Text>YTO AF X/E/NYC AF PAR//ROM AF X/PAR AF ZRH Q YTOZRH13.34M1131.70NUC1145.04END ROE1.311295 XFJFK4.5</Text>
+    </FareCalculation>
+    <FareCalculationBreakdown>
+     <Departure AirlineCode="AF" AirportCode="YYZ" ArrivalAirportCode="JFK" ArrivalCityCode="NYC" CityCode="YTO" GenericInd="X"/>
+     <FareBasis Cabin="Y" Code="MN1H09M1" FilingCarrier="AF"/>
+     <FreeBaggageAllowance>PC001</FreeBaggageAllowance>
+     <Mileage ExtraAllowanceInd="E"/>
+    </FareCalculationBreakdown>
+    <FareCalculationBreakdown>
+     <Departure AirlineCode="AF" AirportCode="JFK" ArrivalAirportCode="CDG" ArrivalCityCode="PAR" CityCode="NYC" GenericInd="O"/>
+     <FareBasis Cabin="Y" Code="MN1H09M1" FilingCarrier="AF"/>
+     <FreeBaggageAllowance>PC001</FreeBaggageAllowance>
+    </FareCalculationBreakdown>
+    <FareCalculationBreakdown>
+     <Departure AirlineCode="AF" AirportCode="CDG" ArrivalAirportCode="FCO" ArrivalCityCode="ROM" CityCode="PAR" GenericInd="O"/>
+     <FareBasis Cabin="Y" FilingCarrier="AF" SurfaceSegment="/-"/>
+    </FareCalculationBreakdown>
+    <FareCalculationBreakdown>
+     <Departure AirlineCode="AF" AirportCode="FCO" ArrivalAirportCode="CDG" ArrivalCityCode="PAR" CityCode="ROM" GenericInd="X"/>
+     <FareBasis Cabin="Y" Code="MN1H09M1" FilingCarrier="AF"/>
+     <FreeBaggageAllowance>PC001</FreeBaggageAllowance>
+     <Surcharges Ind="Q" Type="UNK">13.34</Surcharges>
+    </FareCalculationBreakdown>
+    <FareCalculationBreakdown>
+     <Branch FirstJointCarrier="AF" PCC="3RT2"/>
+     <Departure AirlineCode="AF" AirportCode="CDG" ArrivalAirportCode="ZRH" ArrivalCityCode="ZRH" CityCode="PAR" GenericInd="O"/>
+     <FareBasis Cabin="Y" Code="MN1H09M1" FareAmount="1131.70" FarePassengerType="ADT" FareType="P" FilingCarrier="AF" GlobalInd="AT" Market="YTOZRH" TripTypeInd="O"/>
+     <FreeBaggageAllowance>PC001</FreeBaggageAllowance>
+     <Mileage MileageSymbol="M"/>
+     <RuleCategoryIndicator>2</RuleCategoryIndicator>
+     <RuleCategoryIndicator>3</RuleCategoryIndicator>
+     <RuleCategoryIndicator>4</RuleCategoryIndicator>
+     <RuleCategoryIndicator>5</RuleCategoryIndicator>
+     <RuleCategoryIndicator>8</RuleCategoryIndicator>
+     <RuleCategoryIndicator>9</RuleCategoryIndicator>
+     <RuleCategoryIndicator>10</RuleCategoryIndicator>
+     <RuleCategoryIndicator>11</RuleCategoryIndicator>
+     <RuleCategoryIndicator>12</RuleCategoryIndicator>
+     <RuleCategoryIndicator>16</RuleCategoryIndicator>
+     <RuleCategoryIndicator>18</RuleCategoryIndicator>
+    </FareCalculationBreakdown>
+    <ItinTotalFare NonRefundableInd="O">
+     <BaggageInfo>
+      <US_DOT_Disclosure>
+       <Text>BAG ALLOWANCE     -YYZCDG-01P/AF/EACH PIECE UP TO 50 POUNDS/23</Text>
+       <Text>KILOGRAMS AND UP TO 62 LINEAR INCHES/158 LINEAR CENTIMETERS</Text>
+       <Text>2NDCHECKED BAG FEE-YYZCDG-CAD120.00/AF/UP TO 50 POUNDS/23 KILOG</Text>
+       <Text>RAMS AND UP TO 62 LINEAR INCHES/158 LINEAR CENTIMETERS</Text>
+       <Text>BAG ALLOWANCE     -FCOZRH-01P/AF/EACH PIECE UP TO 50 POUNDS/23</Text>
+       <Text>KILOGRAMS AND UP TO 62 LINEAR INCHES/158 LINEAR CENTIMETERS</Text>
+       <Text>2NDCHECKED BAG FEE-FCOZRH-CAD120.00/AF/UP TO 50 POUNDS/23 KILOG</Text>
+       <Text>RAMS AND UP TO 62 LINEAR INCHES/158 LINEAR CENTIMETERS</Text>
+       <Text>CARRY ON ALLOWANCE</Text>
+       <Text>YYZJFK JFKCDG-01P/DL</Text>
+       <Text>01/CARRY ON HAND BAGGAGE</Text>
+       <Text>01/UP TO 45 LINEAR INCHES/115 LINEAR CENTIMETERS</Text>
+       <Text>FCOCDG CDGZRH-01P/AF</Text>
+       <Text>01/UP TO 26 POUNDS/12 KILOGRAMS AND UP TO 45 LINEAR INCHES/115</Text>
+       <Text>LINEAR CENTIMETERS</Text>
+       <Text>CARRY ON CHARGES</Text>
+       <Text>YYZJFK JFKCDG-DL-CARRY ON FEES UNKNOWN-CONTACT CARRIER</Text>
+       <Text>FCOCDG CDGZRH-AF-CARRY ON FEES UNKNOWN-CONTACT CARRIER</Text>
+       <Text>ADDITIONAL ALLOWANCES AND/OR DISCOUNTS MAY APPLY DEPENDING ON</Text>
+       <Text>FLYER-SPECIFIC FACTORS /E.G. FREQUENT FLYER STATUS/MILITARY/</Text>
+       <Text>CREDIT CARD FORM OF PAYMENT/EARLY PURCHASE OVER INTERNET,ETC./</Text>
+       <Text>EMBARGOES-APPLY TO EACH PASSENGER</Text>
+       <Text>YYZJFK-DL</Text>
+       <Text>SPORTING EQUIPMENT/POLE VAULT EQUIPMENT NOT PERMITTED</Text>
+       <Text>SPORTING EQUIPMENT/CANOE/KAYAK NOT PERMITTED</Text>
+       <Text>JFKCDG-DL</Text>
+       <Text>OVER 70 POUNDS/32 KILOGRAMS NOT PERMITTED</Text>
+       <Text>SPORTING EQUIPMENT/POLE VAULT EQUIPMENT NOT PERMITTED</Text>
+       <Text>SPORTING EQUIPMENT/CANOE/KAYAK NOT PERMITTED</Text>
+      </US_DOT_Disclosure>
+     </BaggageInfo>
+     <BaseFare Amount="1501.00" CurrencyCode="CAD"/>
+     <Endorsements>
+      <Text>REF WITH FEE/CHG FEE APPLIES</Text>
+     </Endorsements>
+     <Taxes TotalAmount="439.04">
+      <Tax Amount="16.00" TaxCode="YQI" TaxName="SERVICE FEE - INSURANCE" TicketingTaxCode="YQ"/>
+      <Tax Amount="255.00" TaxCode="YRI" TaxName="SERVICE FEE - CARRIER-IMPOSED" TicketingTaxCode="YR"/>
+      <Tax Amount="25.91" TaxCode="CA4" TaxName="AIR TRAVELLERS SECURITY CHARGE" TicketingTaxCode="CA"/>
+      <Tax Amount="25.00" TaxCode="SQ" TaxName="AIRPORT IMPROVEMENT FEE  AIF" TicketingTaxCode="SQ"/>
+      <Tax Amount="3.25" TaxCode="RC2" TaxName="HARMONIZED SALES TAX HST ON SQ" TicketingTaxCode="RC"/>
+      <Tax Amount="7.78" TaxCode="YC" TaxName="CUSTOMS USER FEE" TicketingTaxCode="YC"/>
+      <Tax Amount="9.44" TaxCode="XY2" TaxName="IMMIGRATION USER FEE" TicketingTaxCode="XY"/>
+      <Tax Amount="5.34" TaxCode="XA" TaxName="APHIS PASSENGER FEE PASSENGERS" TicketingTaxCode="XA"/>
+      <Tax Amount="7.55" TaxCode="AY" TaxName="PASSENGER CIVIL AVIATION SECUR" TicketingTaxCode="AY"/>
+      <Tax Amount="12.03" TaxCode="FR7" TaxName="AIRPORT TAX DOMESTIC AND INTER" TicketingTaxCode="FR"/>
+      <Tax Amount="16.35" TaxCode="QX" TaxName="PASSENGER SERVICE CHARGE INTER" TicketingTaxCode="QX"/>
+      <Tax Amount="3.87" TaxCode="EX" TaxName="SECURITY BAG CHARGE" TicketingTaxCode="EX"/>
+      <Tax Amount="27.16" TaxCode="IT3" TaxName="EMBARKATION TAX" TicketingTaxCode="IT"/>
+      <Tax Amount="4.90" TaxCode="VT" TaxName="SECURITY CHARGE" TicketingTaxCode="VT"/>
+      <Tax Amount="12.06" TaxCode="HB" TaxName="COUNCIL CITY TAX" TicketingTaxCode="HB"/>
+      <Tax Amount="1.33" TaxCode="MJ" TaxName="PASSENGER SERVICE CHARGE DEPAR" TicketingTaxCode="MJ"/>
+      <Tax Amount="6.07" TaxCode="XF" TaxName="PASSENGER FACILITY CHARGE" TicketingTaxCode="XF"/>
+     </Taxes>
+     <TotalFare Amount="1940.04" CurrencyCode="CAD"/>
+     <Warnings>
+      <Warning ShortText="BAG ALLOWANCE     -YYZCDG-01P/AF/EACH PIECE UP TO 50 POUNDS/23"/>
+      <Warning ShortText="KILOGRAMS AND UP TO 62 LINEAR INCHES/158 LINEAR CENTIMETERS"/>
+      <Warning ShortText="2NDCHECKED BAG FEE-YYZCDG-CAD120.00/AF/UP TO 50 POUNDS/23 KILOG"/>
+      <Warning ShortText="RAMS AND UP TO 62 LINEAR INCHES/158 LINEAR CENTIMETERS"/>
+      <Warning ShortText="BAG ALLOWANCE     -FCOZRH-01P/AF/EACH PIECE UP TO 50 POUNDS/23"/>
+      <Warning ShortText="KILOGRAMS AND UP TO 62 LINEAR INCHES/158 LINEAR CENTIMETERS"/>
+      <Warning ShortText="2NDCHECKED BAG FEE-FCOZRH-CAD120.00/AF/UP TO 50 POUNDS/23 KILOG"/>
+      <Warning ShortText="RAMS AND UP TO 62 LINEAR INCHES/158 LINEAR CENTIMETERS"/>
+      <Warning ShortText="CARRY ON ALLOWANCE"/>
+      <Warning ShortText="YYZJFK JFKCDG-01P/DL"/>
+      <Warning ShortText="01/CARRY ON HAND BAGGAGE"/>
+      <Warning ShortText="01/UP TO 45 LINEAR INCHES/115 LINEAR CENTIMETERS"/>
+      <Warning ShortText="FCOCDG CDGZRH-01P/AF"/>
+      <Warning ShortText="01/UP TO 26 POUNDS/12 KILOGRAMS AND UP TO 45 LINEAR INCHES/115"/>
+      <Warning ShortText="LINEAR CENTIMETERS"/>
+      <Warning ShortText="CARRY ON CHARGES"/>
+      <Warning ShortText="YYZJFK JFKCDG-DL-CARRY ON FEES UNKNOWN-CONTACT CARRIER"/>
+      <Warning ShortText="FCOCDG CDGZRH-AF-CARRY ON FEES UNKNOWN-CONTACT CARRIER"/>
+      <Warning ShortText="ADDITIONAL ALLOWANCES AND/OR DISCOUNTS MAY APPLY DEPENDING ON"/>
+      <Warning ShortText="FLYER-SPECIFIC FACTORS /E.G. FREQUENT FLYER STATUS/MILITARY/"/>
+      <Warning ShortText="CREDIT CARD FORM OF PAYMENT/EARLY PURCHASE OVER INTERNET,ETC./"/>
+      <Warning ShortText="EMBARGOES-APPLY TO EACH PASSENGER"/>
+      <Warning ShortText="YYZJFK-DL"/>
+      <Warning ShortText="SPORTING EQUIPMENT/POLE VAULT EQUIPMENT NOT PERMITTED"/>
+      <Warning ShortText="SPORTING EQUIPMENT/CANOE/KAYAK NOT PERMITTED"/>
+      <Warning ShortText="JFKCDG-DL"/>
+      <Warning ShortText="OVER 70 POUNDS/32 KILOGRAMS NOT PERMITTED"/>
+      <Warning ShortText="SPORTING EQUIPMENT/POLE VAULT EQUIPMENT NOT PERMITTED"/>
+      <Warning ShortText="SPORTING EQUIPMENT/CANOE/KAYAK NOT PERMITTED"/>
+     </Warnings>
+    </ItinTotalFare>
+    <PassengerTypeQuantity Code="ADT" Quantity="1"/>
+    <PTC_FareBreakdown>
+     <Cabin>Y</Cabin>
+     <FareBasis Code="MN1H09M1" FilingCarrier="AF"/>
+     <FreeBaggageAllowance>PC001</FreeBaggageAllowance>
+    </PTC_FareBreakdown>
+    <PTC_FareBreakdown>
+     <Cabin>Y</Cabin>
+     <FareBasis Code="MN1H09M1" FilingCarrier="AF"/>
+     <FreeBaggageAllowance>PC001</FreeBaggageAllowance>
+    </PTC_FareBreakdown>
+    <PTC_FareBreakdown>
+     <Cabin>Y</Cabin>
+     <FareBasis FilingCarrier="AF" SurfaceSegment="/-"/>
+    </PTC_FareBreakdown>
+    <PTC_FareBreakdown>
+     <Cabin>Y</Cabin>
+     <FareBasis Code="MN1H09M1" FilingCarrier="AF"/>
+     <FreeBaggageAllowance>PC001</FreeBaggageAllowance>
+     <Surcharges Ind="Q" Type="UNK">13.34</Surcharges>
+    </PTC_FareBreakdown>
+    <PTC_FareBreakdown>
+     <Cabin>Y</Cabin>
+     <FareBasis Code="MN1H09M1" FareAmount="1131.70" FarePassengerType="ADT" FareType="P" FilingCarrier="AF" GlobalInd="AT" Market="YTOZRH"/>
+     <FreeBaggageAllowance>PC001</FreeBaggageAllowance>
+    </PTC_FareBreakdown>
+   </AirItineraryPricingInfo>
+  </PricedItinerary>
+ </PriceQuote>
+</OTA_AirPriceRS></soap-env:Body></soap-env:Envelope>

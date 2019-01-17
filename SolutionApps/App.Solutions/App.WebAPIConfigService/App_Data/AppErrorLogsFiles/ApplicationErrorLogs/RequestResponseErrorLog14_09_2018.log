@@ -1,0 +1,30 @@
+|| EXMESSAGE ||:- A circular reference was detected while serializing an object of type 'System.Reflection.RuntimeModule'.  || EXSOURCE ||:- System.Web.Extensions || EXTARGETSITE ||:- Void SerializeValueInternal(System.Object, System.Text.StringBuilder, Int32, System.Collections.Hashtable, SerializationFormat, System.Reflection.MemberInfo)  ||  EXData ||:- System.Collections.ListDictionaryInternal
+
+
+||EXInnerException||:-  
+   :::   18:38:27.3034603
+
+|| EXMESSAGE ||:- A circular reference was detected while serializing an object of type 'System.Reflection.RuntimeModule'.  || EXSOURCE ||:- System.Web.Extensions || EXTARGETSITE ||:- Void SerializeValueInternal(System.Object, System.Text.StringBuilder, Int32, System.Collections.Hashtable, SerializationFormat, System.Reflection.MemberInfo)  ||  EXData ||:- System.Collections.ListDictionaryInternal
+
+
+||EXInnerException||:-  
+   :::   18:40:55.9357222
+
+|| EXMESSAGE ||:- A circular reference was detected while serializing an object of type 'System.Reflection.RuntimeModule'.  || EXSOURCE ||:- System.Web.Extensions || EXTARGETSITE ||:- Void SerializeValueInternal(System.Object, System.Text.StringBuilder, Int32, System.Collections.Hashtable, SerializationFormat, System.Reflection.MemberInfo)  ||  EXData ||:- System.Collections.ListDictionaryInternal
+
+
+||EXInnerException||:-  
+   :::   18:41:44.9470225
+
+|| EXMESSAGE ||:- A circular reference was detected while serializing an object of type 'System.Reflection.RuntimeModule'.  || EXSOURCE ||:- System.Web.Extensions || EXTARGETSITE ||:- Void SerializeValueInternal(System.Object, System.Text.StringBuilder, Int32, System.Collections.Hashtable, SerializationFormat, System.Reflection.MemberInfo)  ||  EXData ||:- System.Collections.ListDictionaryInternal
+
+
+||EXInnerException||:-  
+   :::   18:43:20.2964108
+
+|| EXMESSAGE ||:- A circular reference was detected while serializing an object of type 'System.Reflection.RuntimeModule'.  || EXSOURCE ||:- System.Web.Extensions || EXTARGETSITE ||:- Void SerializeValueInternal(System.Object, System.Text.StringBuilder, Int32, System.Collections.Hashtable, SerializationFormat, System.Reflection.MemberInfo)  ||  EXData ||:- System.Collections.ListDictionaryInternal
+
+
+||EXInnerException||:-  
+   :::   18:58:49.7324148
+

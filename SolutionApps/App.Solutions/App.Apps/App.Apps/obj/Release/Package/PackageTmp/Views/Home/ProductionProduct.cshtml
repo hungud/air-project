@@ -1,0 +1,76 @@
+﻿@{
+    ViewBag.Title = "Contact";
+    ViewBag.ActiveTab = "ProductionProduct";
+    Layout = "~/Views/Shared/_MasterLayoutMain.cshtml";
+}
+<script src="~/Scripts/App/ProductionProductScript.js"></script>
+<div class="row">
+    <div class="col-xs-12 col-sm-12">
+        <div class="widget-box">
+            <div class="widget-header widget-header-blue widget-header-flat">
+                <h4 id="notforpshead" class="widget-title lighter">Welcome to Production Product</h4>
+                <div class="widget-toolbar no-border">
+                </div>
+            </div>
+            <div class="widget-body">
+                <div class="widget-main padding-2">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12">
+                            <div class="col-xs-12 col-sm-6">
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        Product ID:
+                                    </div>
+                                    <div class="col-sm-9">
+                                        <input id="ProductID" type="text" name="ProductID" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-6">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <input type="submit" value="Search" class="btn btn-success" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="space-4"></div>
+                    <div class="row SearchResult  hide">
+                        <div class="col-xs-12 col-sm-12">
+                            <div class="col-sm-12">
+                                <div class="widget-box">
+                                    <div class="widget-header">
+                                        <h5 class="widget-title"><i class="fa fa-bar-chart-o"></i> Search Result</h5>
+                                    </div>
+                                    <div class="widget-body">
+                                        <div class="widget-main">
+                                            <div id="Page-DataTable-result"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="space-4"></div>
+                    <div class="row SearchJSONResult hide">
+                        <div class="col-xs-12 col-sm-12">
+                            <div class="col-sm-12">
+                                <div class="widget-box">
+                                    <div class="widget-header">
+                                        <h5 class="widget-title"><i class="fa fa-bar-chart-o"></i> Search JSON Result</h5>
+                                    </div>
+                                    <div class="widget-body">
+                                        <div class="widget-main">
+                                            <div id="Page-josn-result" class="wrapword JSONResultContentScroll"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

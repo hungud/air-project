@@ -1,0 +1,65 @@
+﻿@{
+    Layout = "~/Views/Shared/_MasterLayoutMain.cshtml";
+}
+@*<link rel="stylesheet" href="//www.fuelcdn.com/fuelux/3.4.0/css/fuelux.min.css">*@
+@*<script src="//www.fuelcdn.com/fuelux/3.4.0/js/fuelux.min.js"></script>*@
+
+<script src="@Url.Content("~/Scripts/Payment/PaymentScript.js?version="+Guid.NewGuid())"></script>
+<script src="@Url.Content("~/Scripts/Search/BFMXAutoComplete.js?@@25A64A08-E65A-4ED5-A8C0-A13FBF3A5A79@@")"></script>
+<link href="@Url.Content("~/Content/NanoJot/css/PaymentsStyle.css?@@25A64A08-E65A-4ED5-A8C0-A13FBF3A5A79@@")" rel="stylesheet" />
+@*<script src="@Url.Content("~/Content/NanoJot/js/CreditCardFormat.js")"></script>*@
+<style>
+    .demo-container {
+        width: 100%;
+        max-width: 350px;
+        margin: 150px auto;
+    }
+
+    form {
+        margin: 0px;
+    }
+
+    input {
+        width: 200px;
+        margin: 10px auto;
+        display: block;
+    }
+
+    .without_tab.table {
+        border: none;
+    }
+
+    ul#ui-id-1 li {
+        width: 100%;
+    }
+</style>
+
+<div class="row">
+    <div class="col-xs-12 col-sm-12">
+        <div class="widget-body">
+            <div class="widget-main">
+                <div class="row AirBokingPayment-Panel  hidden">
+                    <!-- #section:Air_BookingPaymentProcess -->
+                    @Html.Partial("Air_BookingPaymentProcess")
+                    <!-- /section:Air_BookingPaymentProcess -->
+                </div>
+                <div class="row">
+                    <div class="space-8"></div>
+                </div>
+                <div class="row AirBokingConfirmation-Panel  hidden">
+                    <!-- #section:Air_BookingReservationConfurmation -->
+                    @Html.Partial("Air_BookingReservationConfurmation")
+                    <!-- /section:Air_BookingReservationConfurmation -->
+                </div>
+                
+            </div>
+        </div>
+    </div>
+   
+</div>
+
+<!-- Start Autocomplete Partial View -->
+@Html.Partial("_Autocomplete")
+
+<!-- End Autocomplete Partial View -->
+

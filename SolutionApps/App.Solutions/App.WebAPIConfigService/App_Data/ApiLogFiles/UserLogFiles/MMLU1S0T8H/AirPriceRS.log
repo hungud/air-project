@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap-env:Envelope xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/"><soap-env:Header><eb:MessageHeader xmlns:eb="http://www.ebxml.org/namespaces/messageHeader" eb:version="1.0" soap-env:mustUnderstand="1"><eb:From><eb:PartyId eb:type="URI">123123</eb:PartyId></eb:From><eb:To><eb:PartyId eb:type="urn: x12.org:IO5: 01">999999</eb:PartyId></eb:To><eb:CPAId>6DTH</eb:CPAId><eb:ConversationId>1111111111111111111</eb:ConversationId><eb:Service eb:type="sabreXML">OTA_AirPriceLLSRQ</eb:Service><eb:Action>OTA_AirPriceLLSRS</eb:Action><eb:MessageData><eb:MessageId>1721163626892600150</eb:MessageId><eb:Timestamp>2018-09-05T17:24:50</eb:Timestamp><eb:RefToMessageId>mid:0_2014-09-22T21:43:40m</eb:RefToMessageId></eb:MessageData></eb:MessageHeader><wsse:Security xmlns:wsse="http://schemas.xmlsoap.org/ws/2002/12/secext"><wsse:BinarySecurityToken valueType="String" EncodingType="wsse:Base64Binary">Shared/IDL:IceSess\/SessMgr:1\.0.IDL/Common/!ICESMS\/ACPCRTC!ICESMSLB\/CRT.LB!1536168237334!2775199!131073</wsse:BinarySecurityToken></wsse:Security></soap-env:Header><soap-env:Body><OTA_AirPriceRS xmlns="http://webservices.sabre.com/sabreXML/2011/10" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:stl="http://services.sabre.com/STL/v01" Version="2.14.0">
+ <stl:ApplicationResults status="Complete">
+  <stl:Success timeStamp="2018-09-05T12:24:50-05:00"/>
+ </stl:ApplicationResults>
+ <PriceQuote>
+  <MiscInformation>
+   <BaggageInfo>
+    <SubCodeProperties RPH="1" SolutionSequenceNmbr="1">
+     <AncillaryFeeGroupCode>BG</AncillaryFeeGroupCode>
+     <CommercialNameofBaggageItemType>FREE BAGGAGE ALLOWANCE</CommercialNameofBaggageItemType>
+     <EMD_Type>4</EMD_Type>
+     <ExtendedSubCodeKey>0DFAAAM</ExtendedSubCodeKey>
+    </SubCodeProperties>
+    <SubCodeProperties RPH="2" SolutionSequenceNmbr="1">
+     <AncillaryFeeGroupCode>BG</AncillaryFeeGroupCode>
+     <CommercialNameofBaggageItemType>UPTO50LB 23KG AND62LI 158LCM</CommercialNameofBaggageItemType>
+     <DescriptionOne Code="23">
+      <Text>UP TO 50 POUNDS/23 KILOGRAMS</Text>
+     </DescriptionOne>
+     <DescriptionTwo Code="6U">
+      <Text>UP TO 62 LINEAR INCHES/158 LINEAR CENTIMETERS</Text>
+     </DescriptionTwo>
+     <EMD_Type>2</EMD_Type>
+     <ExtendedSubCodeKey>0GOACAM</ExtendedSubCodeKey>
+     <RFIC>C</RFIC>
+     <SizeWeightInfo>
+      <MaximumSizeInAlternate Units="C">158</MaximumSizeInAlternate>
+      <MaximumSize Units="I">62</MaximumSize>
+      <MaximumWeightInAlternate Units="K">23</MaximumWeightInAlternate>
+      <MaximumWeight Units="L">50</MaximumWeight>
+     </SizeWeightInfo>
+    </SubCodeProperties>
+    <SubCodeProperties RPH="3" SolutionSequenceNmbr="1">
+     <AncillaryFeeGroupCode>BG</AncillaryFeeGroupCode>
+     <AncillaryService SubGroupCode="CY">
+      <Text>CARRY ON HAND BAGGAGE</Text>
+     </AncillaryService>
+     <CommercialNameofBaggageItemType>CARRYON HAND BAGGAGE ALLOWANCE</CommercialNameofBaggageItemType>
+     <EMD_Type>4</EMD_Type>
+     <ExtendedSubCodeKey>0LNABAM</ExtendedSubCodeKey>
+    </SubCodeProperties>
+    <SubCodeProperties RPH="4" SolutionSequenceNmbr="1">
+     <AncillaryFeeGroupCode>BG</AncillaryFeeGroupCode>
+     <AncillaryService SubGroupCode="CY">
+      <Text>CARRY ON HAND BAGGAGE</Text>
+     </AncillaryService>
+     <CommercialNameofBaggageItemType>CARRY ON BAGGAGE 10 KG</CommercialNameofBaggageItemType>
+     <DescriptionOne Code="10">
+      <Text>UP TO 22 POUNDS/10 KILOGRAMS</Text>
+     </DescriptionOne>
+     <DescriptionTwo Code="4U">
+      <Text>UP TO 45 LINEAR INCHES/115 LINEAR CENTIMETERS</Text>
+     </DescriptionTwo>
+     <EMD_Type>4</EMD_Type>
+     <ExtendedSubCodeKey>0MJACAM</ExtendedSubCodeKey>
+     <SizeWeightInfo>
+      <MaximumSizeInAlternate Units="C">115</MaximumSizeInAlternate>
+      <MaximumSize Units="I">45</MaximumSize>
+      <MaximumWeightInAlternate Units="K">10</MaximumWeightInAlternate>
+      <MaximumWeight Units="L">22</MaximumWeight>
+     </SizeWeightInfo>
+    </SubCodeProperties>
+   </BaggageInfo>
+   <HeaderInformation SolutionSequenceNmbr="1">
+    <DepartureDate>2018-11-06</DepartureDate>
+    <LastTicketingDate>09-05T23:59</LastTicketingDate>
+    <Text>VALIDATING CARRIER - AM</Text>
+    <Text>CAT 15 SALES RESTRICTIONS FREE TEXT FOUND - VERIFY RULES</Text>
+    <Text>BAG ALLOWANCE     -MAMLHR-01P/AM/EACH PIECE UP TO 50 POUNDS/23</Text>
+    <Text>KILOGRAMS AND UP TO 62 LINEAR INCHES/158 LINEAR CENTIMETERS</Text>
+    <Text>2NDCHECKED BAG FEE-MAMLHR-CAD105.00/AM/UP TO 50 POUNDS/23 KILOG</Text>
+    <Text>RAMS AND UP TO 62 LINEAR INCHES/158 LINEAR CENTIMETERS</Text>
+    <Text>BAG ALLOWANCE     -LHRMAM-01P/AM/EACH PIECE UP TO 50 POUNDS/23</Text>
+    <Text>KILOGRAMS AND UP TO 62 LINEAR INCHES/158 LINEAR CENTIMETERS</Text>
+    <Text>2NDCHECKED BAG FEE-LHRMAM-CAD105.00/AM/UP TO 50 POUNDS/23 KILOG</Text>
+    <Text>RAMS AND UP TO 62 LINEAR INCHES/158 LINEAR CENTIMETERS</Text>
+    <Text>CARRY ON ALLOWANCE</Text>
+    <Text>MAMMEX MEXLHR LHRMEX MEXMAM-01P/10KG/AM</Text>
+    <Text>01/UP TO 22 POUNDS/10 KILOGRAMS AND UP TO 45 LINEAR INCHES/115</Text>
+    <Text>LINEAR CENTIMETERS</Text>
+    <Text>LGWLHR-9B-CARRY ON ALLOWANCE UNKNOWN-CONTACT CARRIER</Text>
+    <Text>CARRY ON CHARGES</Text>
+    <Text>MAMMEX MEXLHR LHRMEX MEXMAM-AM</Text>
+    <Text>UP TO 22 POUNDS/10 KILOGRAMS AND UP TO 45 LINEAR INCHES/115 LIN</Text>
+    <Text>EAR CENTIMETERS-CAD0.00</Text>
+    <Text>LGWLHR-9B-CARRY ON FEES UNKNOWN-CONTACT CARRIER</Text>
+    <Text>ADDITIONAL ALLOWANCES AND/OR DISCOUNTS MAY APPLY DEPENDING ON</Text>
+    <Text>FLYER-SPECIFIC FACTORS /E.G. FREQUENT FLYER STATUS/MILITARY/</Text>
+    <Text>CREDIT CARD FORM OF PAYMENT/EARLY PURCHASE OVER INTERNET,ETC./</Text>
+    <Text>06NOV DEPARTURE DATE-----LAST DAY TO PURCHASE 05SEP/2359</Text>
+    <ValidatingCarrier Code="AM"/>
+   </HeaderInformation>
+   <SolutionInformation SolutionSequenceNmbr="1">
+    <CurrencyCode>CAD</CurrencyCode>
+    <RequiresRebook>false</RequiresRebook>
+    <TicketNumber>0</TicketNumber>
+    <TotalAmount>1223.52</TotalAmount>
+   </SolutionInformation>
+  </MiscInformation>
+  <PricedItinerary AlternativePricing="false" CurrencyCode="CAD" MultiTicket="false" TotalAmount="1223.52">
+   <AirItineraryPricingInfo SolutionSequenceNmbr="1">
+    <BaggageProvisions RPH="1">
+     <Associations>
+      <CarrierCode RPH="1">AM</CarrierCode>
+      <CarrierCode RPH="2">AM</CarrierCode>
+      <CountForSegmentAssociatedID>2</CountForSegmentAssociatedID>
+      <DepartureDate RPH="1">2018-11-06</DepartureDate>
+      <DepartureDate RPH="2">2018-11-06</DepartureDate>
+      <DestinationLocation LocationCode="MEX" RPH="1"/>
+      <DestinationLocation LocationCode="LHR" RPH="2"/>
+      <FlightNumber RPH="1">2421</FlightNumber>
+      <FlightNumber RPH="2">7</FlightNumber>
+      <OriginLocation LocationCode="MAM" RPH="1"/>
+      <OriginLocation LocationCode="MEX" RPH="2"/>
+      <PNR_Segment RPH="1">2</PNR_Segment>
+      <PNR_Segment RPH="2">3</PNR_Segment>
+      <ResBookDesigCode RPH="1">V</ResBookDesigCode>
+      <ResBookDesigCode RPH="2">V</ResBookDesigCode>
+      <StatusCode RPH="1">SS</StatusCode>
+      <StatusCode RPH="2">SS</StatusCode>
+     </Associations>
+     <CarrierWhoseBaggageProvisionsApply>AM</CarrierWhoseBaggageProvisionsApply>
+     <NumPiecesBDI>1</NumPiecesBDI>
+     <NumPiecesITR>1</NumPiecesITR>
+     <ProvisionType>A</ProvisionType>
+     <SubCodeInfo>
+      <SubCodeForAllowance RPH="1">0GOACAM</SubCodeForAllowance>
+      <SubCodeForChargesOthers>0DFAAAM</SubCodeForChargesOthers>
+     </SubCodeInfo>
+    </BaggageProvisions>
+    <BaggageProvisions RPH="2">
+     <Associations>
+      <CarrierCode RPH="1">AM</CarrierCode>
+      <CarrierCode RPH="2">AM</CarrierCode>
+      <CountForSegmentAssociatedID>2</CountForSegmentAssociatedID>
+      <DepartureDate RPH="1">2018-11-06</DepartureDate>
+      <DepartureDate RPH="2">2018-11-06</DepartureDate>
+      <DestinationLocation LocationCode="MEX" RPH="1"/>
+      <DestinationLocation LocationCode="LHR" RPH="2"/>
+      <FlightNumber RPH="1">2421</FlightNumber>
+      <FlightNumber RPH="2">7</FlightNumber>
+      <OriginLocation LocationCode="MAM" RPH="1"/>
+      <OriginLocation LocationCode="MEX" RPH="2"/>
+      <PNR_Segment RPH="1">2</PNR_Segment>
+      <PNR_Segment RPH="2">3</PNR_Segment>
+      <ResBookDesigCode RPH="1">V</ResBookDesigCode>
+      <ResBookDesigCode RPH="2">V</ResBookDesigCode>
+      <StatusCode RPH="1">SS</StatusCode>
+      <StatusCode RPH="2">SS</StatusCode>
+     </Associations>
+     <CarrierWhoseBaggageProvisionsApply>AM</CarrierWhoseBaggageProvisionsApply>
+     <Commissionable>N</Commissionable>
+     <FeeApplicationIndicator>4</FeeApplicationIndicator>
+     <FeeNotGuaranteedIndicator>N</FeeNotGuaranteedIndicator>
+     <FirstOccurrence>1</FirstOccurrence>
+     <Interlineable>Y</Interlineable>
+     <LastOccurrence>1</LastOccurrence>
+     <PassengerType Code="ADT"/>
+     <PriceInformation>
+      <Base Amount="80.00" CurrencyCode="USD"/>
+      <Equiv Amount="105.00" CurrencyCode="CAD"/>
+      <Total>105.00</Total>
+     </PriceInformation>
+     <ProvisionType>C</ProvisionType>
+     <RefundReissue>R</RefundReissue>
+     <SubCodeInfo>
+      <SubCodeForChargesOthers>0GOACAM</SubCodeForChargesOthers>
+     </SubCodeInfo>
+    </BaggageProvisions>
+    <BaggageProvisions RPH="3">
+     <Associations>
+      <CarrierCode RPH="1">AM</CarrierCode>
+      <CarrierCode RPH="2">AM</CarrierCode>
+      <CountForSegmentAssociatedID>2</CountForSegmentAssociatedID>
+      <DepartureDate RPH="1">2018-11-27</DepartureDate>
+      <DepartureDate RPH="2">2018-11-28</DepartureDate>
+      <DestinationLocation LocationCode="MEX" RPH="1"/>
+      <DestinationLocation LocationCode="MAM" RPH="2"/>
+      <FlightNumber RPH="1">8</FlightNumber>
+      <FlightNumber RPH="2">2420</FlightNumber>
+      <OriginLocation LocationCode="LHR" RPH="1"/>
+      <OriginLocation LocationCode="MEX" RPH="2"/>
+      <PNR_Segment RPH="1">5</PNR_Segment>
+      <PNR_Segment RPH="2">6</PNR_Segment>
+      <ResBookDesigCode RPH="1">V</ResBookDesigCode>
+      <ResBookDesigCode RPH="2">V</ResBookDesigCode>
+      <StatusCode RPH="1">SS</StatusCode>
+      <StatusCode RPH="2">SS</StatusCode>
+     </Associations>
+     <CarrierWhoseBaggageProvisionsApply>AM</CarrierWhoseBaggageProvisionsApply>
+     <NumPiecesBDI>1</NumPiecesBDI>
+     <NumPiecesITR>1</NumPiecesITR>
+     <ProvisionType>A</ProvisionType>
+     <SubCodeInfo>
+      <SubCodeForAllowance RPH="1">0GOACAM</SubCodeForAllowance>
+      <SubCodeForChargesOthers>0DFAAAM</SubCodeForChargesOthers>
+     </SubCodeInfo>
+    </BaggageProvisions>
+    <BaggageProvisions RPH="4">
+     <Associations>
+      <CarrierCode RPH="1">AM</CarrierCode>
+      <CarrierCode RPH="2">AM</CarrierCode>
+      <CountForSegmentAssociatedID>2</CountForSegmentAssociatedID>
+      <DepartureDate RPH="1">2018-11-27</DepartureDate>
+      <DepartureDate RPH="2">2018-11-28</DepartureDate>
+      <DestinationLocation LocationCode="MEX" RPH="1"/>
+      <DestinationLocation LocationCode="MAM" RPH="2"/>
+      <FlightNumber RPH="1">8</FlightNumber>
+      <FlightNumber RPH="2">2420</FlightNumber>
+      <OriginLocation LocationCode="LHR" RPH="1"/>
+      <OriginLocation LocationCode="MEX" RPH="2"/>
+      <PNR_Segment RPH="1">5</PNR_Segment>
+      <PNR_Segment RPH="2">6</PNR_Segment>
+      <ResBookDesigCode RPH="1">V</ResBookDesigCode>
+      <ResBookDesigCode RPH="2">V</ResBookDesigCode>
+      <StatusCode RPH="1">SS</StatusCode>
+      <StatusCode RPH="2">SS</StatusCode>
+     </Associations>
+     <CarrierWhoseBaggageProvisionsApply>AM</CarrierWhoseBaggageProvisionsApply>
+     <Commissionable>N</Commissionable>
+     <FeeApplicationIndicator>4</FeeApplicationIndicator>
+     <FeeNotGuaranteedIndicator>N</FeeNotGuaranteedIndicator>
+     <FirstOccurrence>1</FirstOccurrence>
+     <Interlineable>Y</Interlineable>
+     <LastOccurrence>1</LastOccurrence>
+     <PassengerType Code="ADT"/>
+     <PriceInformation>
+      <Base Amount="80.00" CurrencyCode="USD"/>
+      <Equiv Amount="105.00" CurrencyCode="CAD"/>
+      <Total>105.00</Total>
+     </PriceInformation>
+     <ProvisionType>C</ProvisionType>
+     <RefundReissue>R</RefundReissue>
+     <SubCodeInfo>
+      <SubCodeForChargesOthers>0GOACAM</SubCodeForChargesOthers>
+     </SubCodeInfo>
+    </BaggageProvisions>
+    <BaggageProvisions RPH="5">
+     <Associations>
+      <CarrierCode RPH="1">AM</CarrierCode>
+      <CarrierCode RPH="2">AM</CarrierCode>
+      <CarrierCode RPH="3">AM</CarrierCode>
+      <CarrierCode RPH="4">AM</CarrierCode>
+      <CountForSegmentAssociatedID>4</CountForSegmentAssociatedID>
+      <DepartureDate RPH="1">2018-11-06</DepartureDate>
+      <DepartureDate RPH="2">2018-11-06</DepartureDate>
+      <DepartureDate RPH="3">2018-11-27</DepartureDate>
+      <DepartureDate RPH="4">2018-11-28</DepartureDate>
+      <DestinationLocation LocationCode="MEX" RPH="1"/>
+      <DestinationLocation LocationCode="LHR" RPH="2"/>
+      <DestinationLocation LocationCode="MEX" RPH="3"/>
+      <DestinationLocation LocationCode="MAM" RPH="4"/>
+      <FlightNumber RPH="1">2421</FlightNumber>
+      <FlightNumber RPH="2">7</FlightNumber>
+      <FlightNumber RPH="3">8</FlightNumber>
+      <FlightNumber RPH="4">2420</FlightNumber>
+      <OriginLocation LocationCode="MAM" RPH="1"/>
+      <OriginLocation LocationCode="MEX" RPH="2"/>
+      <OriginLocation LocationCode="LHR" RPH="3"/>
+      <OriginLocation LocationCode="MEX" RPH="4"/>
+      <PNR_Segment RPH="1">2</PNR_Segment>
+      <PNR_Segment RPH="2">3</PNR_Segment>
+      <PNR_Segment RPH="3">5</PNR_Segment>
+      <PNR_Segment RPH="4">6</PNR_Segment>
+      <ResBookDesigCode RPH="1">V</ResBookDesigCode>
+      <ResBookDesigCode RPH="2">V</ResBookDesigCode>
+      <ResBookDesigCode RPH="3">V</ResBookDesigCode>
+      <ResBookDesigCode RPH="4">V</ResBookDesigCode>
+      <StatusCode RPH="1">SS</StatusCode>
+      <StatusCode RPH="2">SS</StatusCode>
+      <StatusCode RPH="3">SS</StatusCode>
+      <StatusCode RPH="4">SS</StatusCode>
+     </Associations>
+     <CarrierWhoseBaggageProvisionsApply>AM</CarrierWhoseBaggageProvisionsApply>
+     <NumPiecesBDI>1</NumPiecesBDI>
+     <NumPiecesITR>1</NumPiecesITR>
+     <ProvisionType>B</ProvisionType>
+     <SubCodeInfo>
+      <SubCodeForAllowance RPH="1">0MJACAM</SubCodeForAllowance>
+      <SubCodeForChargesOthers>0LNABAM</SubCodeForChargesOthers>
+     </SubCodeInfo>
+     <WeightLimit Units="K">10</WeightLimit>
+    </BaggageProvisions>
+    <BaggageProvisions RPH="6">
+     <Associations>
+      <CarrierCode RPH="1">AM</CarrierCode>
+      <CarrierCode RPH="2">AM</CarrierCode>
+      <CarrierCode RPH="3">AM</CarrierCode>
+      <CarrierCode RPH="4">AM</CarrierCode>
+      <CountForSegmentAssociatedID>4</CountForSegmentAssociatedID>
+      <DepartureDate RPH="1">2018-11-06</DepartureDate>
+      <DepartureDate RPH="2">2018-11-06</DepartureDate>
+      <DepartureDate RPH="3">2018-11-27</DepartureDate>
+      <DepartureDate RPH="4">2018-11-28</DepartureDate>
+      <DestinationLocation LocationCode="MEX" RPH="1"/>
+      <DestinationLocation LocationCode="LHR" RPH="2"/>
+      <DestinationLocation LocationCode="MEX" RPH="3"/>
+      <DestinationLocation LocationCode="MAM" RPH="4"/>
+      <FlightNumber RPH="1">2421</FlightNumber>
+      <FlightNumber RPH="2">7</FlightNumber>
+      <FlightNumber RPH="3">8</FlightNumber>
+      <FlightNumber RPH="4">2420</FlightNumber>
+      <OriginLocation LocationCode="MAM" RPH="1"/>
+      <OriginLocation LocationCode="MEX" RPH="2"/>
+      <OriginLocation LocationCode="LHR" RPH="3"/>
+      <OriginLocation LocationCode="MEX" RPH="4"/>
+      <PNR_Segment RPH="1">2</PNR_Segment>
+      <PNR_Segment RPH="2">3</PNR_Segment>
+      <PNR_Segment RPH="3">5</PNR_Segment>
+      <PNR_Segment RPH="4">6</PNR_Segment>
+      <ResBookDesigCode RPH="1">V</ResBookDesigCode>
+      <ResBookDesigCode RPH="2">V</ResBookDesigCode>
+      <ResBookDesigCode RPH="3">V</ResBookDesigCode>
+      <ResBookDesigCode RPH="4">V</ResBookDesigCode>
+      <StatusCode RPH="1">SS</StatusCode>
+      <StatusCode RPH="2">SS</StatusCode>
+      <StatusCode RPH="3">SS</StatusCode>
+      <StatusCode RPH="4">SS</StatusCode>
+     </Associations>
+     <CarrierWhoseBaggageProvisionsApply>AM</CarrierWhoseBaggageProvisionsApply>
+     <Commissionable>N</Commissionable>
+     <FeeNotGuaranteedIndicator>N</FeeNotGuaranteedIndicator>
+     <NoChargeNotAvailableIndicator>F</NoChargeNotAvailableIndicator>
+     <PassengerType Code="ADT"/>
+     <PriceInformation>
+      <Base Amount="0.00"/>
+      <Equiv CurrencyCode="CAD"/>
+     </PriceInformation>
+     <ProvisionType>CC</ProvisionType>
+     <RefundReissue>R</RefundReissue>
+     <SubCodeInfo>
+      <SubCodeForChargesOthers>0MJACAM</SubCodeForChargesOthers>
+     </SubCodeInfo>
+    </BaggageProvisions>
+    <FareCalculation>
+     <Text>MAM AM X/MEX AM LON Q MAMLON189.00M165.00 9B X/LON AM X/MEX AM MAM Q LGWMAM189.00M165.00NUC708.00END ROE1.00</Text>
+    </FareCalculation>
+    <FareCalculationBreakdown>
+     <Departure AirlineCode="AM" AirportCode="MAM" ArrivalAirportCode="MEX" ArrivalCityCode="MEX" CityCode="MAM" GenericInd="X"/>
+     <FareBasis Cabin="Y" Code="VRLX7BG" FilingCarrier="AM"/>
+     <FreeBaggageAllowance>PC001</FreeBaggageAllowance>
+     <Surcharges Ind="Q" Type="FUEL">189.00</Surcharges>
+    </FareCalculationBreakdown>
+    <FareCalculationBreakdown>
+     <Branch FirstJointCarrier="AM" PCC="6DTH"/>
+     <Departure AirlineCode="AM" AirportCode="MEX" ArrivalAirportCode="LHR" ArrivalCityCode="LON" CityCode="MEX" GenericInd="O"/>
+     <FareBasis Cabin="Y" Code="VRLX7BG" FareAmount="165.00" FarePassengerType="ADT" FareType="P" FilingCarrier="AM" GlobalInd="AT" Market="MAMLON" TripTypeInd="R"/>
+     <FreeBaggageAllowance>PC001</FreeBaggageAllowance>
+     <Mileage MileageSymbol="M"/>
+     <RuleCategoryIndicator>2</RuleCategoryIndicator>
+     <RuleCategoryIndicator>3</RuleCategoryIndicator>
+     <RuleCategoryIndicator>4</RuleCategoryIndicator>
+     <RuleCategoryIndicator>5</RuleCategoryIndicator>
+     <RuleCategoryIndicator>6</RuleCategoryIndicator>
+     <RuleCategoryIndicator>7</RuleCategoryIndicator>
+     <RuleCategoryIndicator>9</RuleCategoryIndicator>
+     <RuleCategoryIndicator>10</RuleCategoryIndicator>
+     <RuleCategoryIndicator>12</RuleCategoryIndicator>
+     <RuleCategoryIndicator>15</RuleCategoryIndicator>
+     <RuleCategoryIndicator>16</RuleCategoryIndicator>
+     <RuleCategoryIndicator>18</RuleCategoryIndicator>
+    </FareCalculationBreakdown>
+    <FareCalculationBreakdown>
+     <Departure AirlineCode="AM" AirportCode="LGW" ArrivalAirportCode="LHR" ArrivalCityCode="LON" CityCode="LON" GenericInd="X"/>
+     <FareBasis Cabin="Y" Code="VRLX7BG" FilingCarrier="AM"/>
+    </FareCalculationBreakdown>
+    <FareCalculationBreakdown>
+     <Departure AirlineCode="AM" AirportCode="LHR" ArrivalAirportCode="MEX" ArrivalCityCode="MEX" CityCode="LON" GenericInd="X"/>
+     <FareBasis Cabin="Y" Code="VRLX7BG" FilingCarrier="AM"/>
+     <FreeBaggageAllowance>PC001</FreeBaggageAllowance>
+     <Surcharges Ind="Q" Type="FUEL">189.00</Surcharges>
+    </FareCalculationBreakdown>
+    <FareCalculationBreakdown>
+     <Branch FirstJointCarrier="AM" PCC="6DTH"/>
+     <Departure AirlineCode="AM" AirportCode="MEX" ArrivalAirportCode="MAM" ArrivalCityCode="MAM" CityCode="MEX" GenericInd="O"/>
+     <FareBasis Cabin="Y" Code="VRLX7BG" FareAmount="165.00" FarePassengerType="ADT" FareType="P" FilingCarrier="AM" GlobalInd="AT" Market="MAMLON" TripTypeInd="R"/>
+     <FreeBaggageAllowance>PC001</FreeBaggageAllowance>
+     <Mileage MileageSymbol="M"/>
+     <RuleCategoryIndicator>2</RuleCategoryIndicator>
+     <RuleCategoryIndicator>3</RuleCategoryIndicator>
+     <RuleCategoryIndicator>4</RuleCategoryIndicator>
+     <RuleCategoryIndicator>5</RuleCategoryIndicator>
+     <RuleCategoryIndicator>6</RuleCategoryIndicator>
+     <RuleCategoryIndicator>7</RuleCategoryIndicator>
+     <RuleCategoryIndicator>9</RuleCategoryIndicator>
+     <RuleCategoryIndicator>10</RuleCategoryIndicator>
+     <RuleCategoryIndicator>12</RuleCategoryIndicator>
+     <RuleCategoryIndicator>15</RuleCategoryIndicator>
+     <RuleCategoryIndicator>16</RuleCategoryIndicator>
+     <RuleCategoryIndicator>18</RuleCategoryIndicator>
+    </FareCalculationBreakdown>
+    <ItinTotalFare NonRefundableInd="N">
+     <BaggageInfo>
+      <NonUS_DOT_Disclosure>
+       <Text>BAG ALLOWANCE     -MAMLHR-01P/AM/EACH PIECE UP TO 50 POUNDS/23</Text>
+       <Text>KILOGRAMS AND UP TO 62 LINEAR INCHES/158 LINEAR CENTIMETERS</Text>
+       <Text>2NDCHECKED BAG FEE-MAMLHR-CAD105.00/AM/UP TO 50 POUNDS/23 KILOG</Text>
+       <Text>RAMS AND UP TO 62 LINEAR INCHES/158 LINEAR CENTIMETERS</Text>
+       <Text>BAG ALLOWANCE     -LHRMAM-01P/AM/EACH PIECE UP TO 50 POUNDS/23</Text>
+       <Text>KILOGRAMS AND UP TO 62 LINEAR INCHES/158 LINEAR CENTIMETERS</Text>
+       <Text>2NDCHECKED BAG FEE-LHRMAM-CAD105.00/AM/UP TO 50 POUNDS/23 KILOG</Text>
+       <Text>RAMS AND UP TO 62 LINEAR INCHES/158 LINEAR CENTIMETERS</Text>
+       <Text>CARRY ON ALLOWANCE</Text>
+       <Text>MAMMEX MEXLHR LHRMEX MEXMAM-01P/10KG/AM</Text>
+       <Text>01/UP TO 22 POUNDS/10 KILOGRAMS AND UP TO 45 LINEAR INCHES/115</Text>
+       <Text>LINEAR CENTIMETERS</Text>
+       <Text>LGWLHR-9B-CARRY ON ALLOWANCE UNKNOWN-CONTACT CARRIER</Text>
+       <Text>CARRY ON CHARGES</Text>
+       <Text>MAMMEX MEXLHR LHRMEX MEXMAM-AM</Text>
+       <Text>UP TO 22 POUNDS/10 KILOGRAMS AND UP TO 45 LINEAR INCHES/115 LIN</Text>
+       <Text>EAR CENTIMETERS-CAD0.00</Text>
+       <Text>LGWLHR-9B-CARRY ON FEES UNKNOWN-CONTACT CARRIER</Text>
+       <Text>ADDITIONAL ALLOWANCES AND/OR DISCOUNTS MAY APPLY DEPENDING ON</Text>
+       <Text>FLYER-SPECIFIC FACTORS /E.G. FREQUENT FLYER STATUS/MILITARY/</Text>
+       <Text>CREDIT CARD FORM OF PAYMENT/EARLY PURCHASE OVER INTERNET,ETC./</Text>
+      </NonUS_DOT_Disclosure>
+     </BaggageInfo>
+     <BaseFare Amount="708.00" CurrencyCode="USD"/>
+     <Endorsements>
+      <Text>NONEND/NONREF/CHG/CXL - FEE APPLIES</Text>
+     </Endorsements>
+     <EquivFare Amount="926.00" CurrencyCode="CAD"/>
+     <Taxes TotalAmount="297.52">
+      <Tax Amount="37.04" TaxCode="XO" TaxName="TRANSPORTATION TAX IVA INTERNA" TicketingTaxCode="XO"/>
+      <Tax Amount="34.91" TaxCode="XD" TaxName="AIRPORT DEPARTURE TAX   TUA  I" TicketingTaxCode="XD"/>
+      <Tax Amount="37.05" TaxCode="UK2" TaxName="TOURISM TAX  DERECHO NO INMIGR" TicketingTaxCode="UK"/>
+      <Tax Amount="131.49" TaxCode="GB" TaxName="AIR PASSENGER DUTY APD" TicketingTaxCode="GB"/>
+      <Tax Amount="57.03" TaxCode="UB" TaxName="PASSENGER SERVICE CHARGE DEPAR" TicketingTaxCode="UB"/>
+     </Taxes>
+     <TotalFare Amount="1223.52" CurrencyCode="CAD"/>
+    </ItinTotalFare>
+    <PassengerTypeQuantity Code="ADT" Quantity="1"/>
+    <PTC_FareBreakdown>
+     <Cabin>Y</Cabin>
+     <FareBasis Code="VRLX7BG" FilingCarrier="AM"/>
+     <FreeBaggageAllowance>PC001</FreeBaggageAllowance>
+     <Surcharges Ind="Q" Type="FUEL">189.00</Surcharges>
+    </PTC_FareBreakdown>
+    <PTC_FareBreakdown>
+     <Cabin>Y</Cabin>
+     <FareBasis Code="VRLX7BG" FareAmount="165.00" FarePassengerType="ADT" FareType="P" FilingCarrier="AM" GlobalInd="AT" Market="MAMLON"/>
+     <FreeBaggageAllowance>PC001</FreeBaggageAllowance>
+    </PTC_FareBreakdown>
+    <PTC_FareBreakdown>
+     <Cabin>Y</Cabin>
+     <FareBasis Code="VRLX7BG" FilingCarrier="AM"/>
+    </PTC_FareBreakdown>
+    <PTC_FareBreakdown>
+     <Cabin>Y</Cabin>
+     <FareBasis Code="VRLX7BG" FilingCarrier="AM"/>
+     <FreeBaggageAllowance>PC001</FreeBaggageAllowance>
+     <Surcharges Ind="Q" Type="FUEL">189.00</Surcharges>
+    </PTC_FareBreakdown>
+    <PTC_FareBreakdown>
+     <Cabin>Y</Cabin>
+     <FareBasis Code="VRLX7BG" FareAmount="165.00" FarePassengerType="ADT" FareType="P" FilingCarrier="AM" GlobalInd="AT" Market="MAMLON"/>
+     <FreeBaggageAllowance>PC001</FreeBaggageAllowance>
+    </PTC_FareBreakdown>
+   </AirItineraryPricingInfo>
+  </PricedItinerary>
+ </PriceQuote>
+</OTA_AirPriceRS></soap-env:Body></soap-env:Envelope>

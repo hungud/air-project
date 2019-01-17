@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Envelope><Header><MessageHeader><From><PartyId type="URI">123123</PartyId></From><To><PartyId type="urn: x12.org:IO5: 01">999999</PartyId></To><CPAId>3RT2</CPAId><ConversationId>1111111111111111111</ConversationId><Service type="sabreXML">AddRemarkLLSRQ</Service><Action>AddRemarkLLSRS</Action><MessageData><MessageId>6792845606233310194</MessageId><Timestamp>2018-10-25T16:50:24</Timestamp><RefToMessageId>mid:0_2014-09-22T21:43:40m</RefToMessageId></MessageData></MessageHeader><Security><BinarySecurityToken valueType="String" EncodingType="Base64Binary">Shared/IDL:IceSess\/SessMgr:1\.0.IDL/Common/!ICESMS\/RESB!ICESMSLB\/RES.LB!-3088894445047612284!1858529!0</BinarySecurityToken></Security></Header><Body><AddRemarkRS xmlns="http://webservices.sabre.com/sabreXML/2011/10" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:stl="http://services.sabre.com/STL/v01" Version="2.1.1">
+ <ApplicationResults status="Complete">
+  <Success timeStamp="2018-10-25T11:50:24-05:00"/>
+ </ApplicationResults>
+</AddRemarkRS></Body></Envelope>

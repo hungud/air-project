@@ -1,0 +1,65 @@
+﻿@model register_functionlity.DB.Model.BookingsModel
+@{
+    ViewBag.Title = "About";
+    Layout = "~/Views/Shared/_MasterLayoutMain.cshtml";
+}
+
+<div class="row">
+    <div class="col-xs-12 col-sm-12">
+        <div class="widget-body">
+            <div class="widget-main">
+                <div class="row">
+                    <div class="container">
+                        <h2>Booking Detail</h2>
+
+                        <table id="dataTable" class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Locator</th>
+                                    <th>Destination</th>
+                                    <th>Departure</th>
+                                    <th>ReservationDate</th>
+                                    <th>DepartureDate</th>
+                                    <th>Amount</th>
+                                    <th>Billing Email</th>
+                                    <th>Billing Phone</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @{
+                                    var item = Model;
+                                    <tr>
+                                        <td>
+                                            <a href="/Home/Detail/@item.Id">@item.Locator</a>
+                                        </td>
+                                        <td>@item.Destination</td>
+                                        <td>@item.Departure</td>
+                                        <td>
+                                            @{
+                                                var date = item.ReservationDate; if (date.HasValue)
+                                                {
+                                                    <div>@date.Value.ToString("dd-MM-yyyy")</div>
+                                                }
+                                            }
+                                        </td>
+                                        <td>
+                                            @{
+                                                date = item.DepartureDate; if (date.HasValue)
+                                                {
+                                                    <div>@date.Value.ToString("dd-MM-yyyy")</div>
+                                                }
+                                            }
+                                        </td>
+                                        <td>@item.Amount</td>
+                                        <td>@item.BillingEmail</td>
+                                        <td>@item.BillingPhone</td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

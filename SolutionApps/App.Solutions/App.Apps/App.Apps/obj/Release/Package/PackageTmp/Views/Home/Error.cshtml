@@ -1,0 +1,37 @@
+﻿@model System.Web.Mvc.HandleErrorInfo
+@{
+    ViewBag.Title = "Error";
+}
+<!-- PAGE CONTENT BEGINS -->
+<div class="page-content">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="errorBox">
+                <div class="errorBox-header">
+                    <img src="~/Content/assets/images/error-app.png" height="90" width="110" />
+                </div>
+                <!--./errorBox-header-->
+                <div class="errorBox-body">
+                    <h5 class="widget-title no-margin-top pink">We regret your inconvenience as the Application page you are attempting to retrieve is currently not available.</h5>
+                    <div class="errorBox-main">
+                        <p class="no-margin"><b>Some reasons why this page is not available may be:</b></p>
+                        <ul>
+                            <li>The page has been moved, renamed or deleted.</li>
+                            <li>There is a typographical error in the requested URL.</li>
+                            <li>The requested file is currently under maintenance or upgradation</li>
+                        </ul>
+                        <p class="no-margin"><b>Troubleshooter:</b></p>
+                        <ul>
+                            <li>Check the address for typing errors- use spellcheck.</li>
+                            <li>Check your computer's network connection, firewalls and proxy settings.</li>
+                        </ul>
+                        <p><a href="~/Dashboard/Dashboard" class="blue bolder">GO &nbsp; <i class="fa fa-home bigger-180"></i></a></p>
+                    </div>
+                </div>
+                <!--./errorBox-body-->
+            </div>
+            <!--./errorBox-->
+        </div>
+    </div>
+</div>
+

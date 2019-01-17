@@ -1,0 +1,24 @@
+|| EXMESSAGE ||:- A task was canceled.  || EXSOURCE ||:- mscorlib || EXTARGETSITE ||:- Void ThrowForNonSuccess(System.Threading.Tasks.Task)  ||  EXData ||:- System.Collections.ListDictionaryInternal
+
+
+||EXInnerException||:-  
+   :::   20:14:26.7164535
+
+|| EXMESSAGE ||:- The request was aborted: The operation has timed out.  || EXSOURCE ||:- System || EXTARGETSITE ||:- System.Net.WebResponse GetResponse()  ||  EXData ||:- System.Collections.ListDictionaryInternal
+
+
+||EXInnerException||:-  
+   :::   20:32:58.0392437
+
+|| EXMESSAGE ||:- A task was canceled.  || EXSOURCE ||:- mscorlib || EXTARGETSITE ||:- Void ThrowForNonSuccess(System.Threading.Tasks.Task)  ||  EXData ||:- System.Collections.ListDictionaryInternal
+
+
+||EXInnerException||:-  
+   :::   20:32:58.3556377
+
+|| EXMESSAGE ||:- A task was canceled.  || EXSOURCE ||:- mscorlib || EXTARGETSITE ||:- Void ThrowForNonSuccess(System.Threading.Tasks.Task)  ||  EXData ||:- System.Collections.ListDictionaryInternal
+
+
+||EXInnerException||:-  
+   :::   22:12:12.5452192
+

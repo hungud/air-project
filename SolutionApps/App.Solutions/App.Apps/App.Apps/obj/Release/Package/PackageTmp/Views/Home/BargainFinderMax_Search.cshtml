@@ -1,0 +1,285 @@
+﻿@{
+    ViewBag.Title = "BargainFinderMaxSearch";
+    ViewBag.ActiveTab = "BargainFinderMaxSearch";
+    Layout = "~/Views/Shared/_MasterLayoutMain.cshtml";
+}
+<script src="~/Scripts/App/BargainFinderMaxSearchScript.js"></script>
+<div class="row">
+    <div class="col-xs-12 col-sm-12">
+        <div class="widget-box">
+            <div class="widget-header widget-header-blue widget-header-flat">
+                <h4 id="notforpshead" class="widget-title lighter">Bargain Finder Max Search</h4>
+                <div class="widget-toolbar no-border">
+                </div>
+            </div>
+            <div class="widget-body">
+                <div class="widget-main padding-4">
+
+                    <!-- /.Main-container -->
+                    <div class="space-4"></div>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6">
+                            <div class="row form-group">
+                                <div class="col-md-2">
+                                    <input type="radio" name="radioSelectionName" value="1" checked="checked" /> One Way <br />
+                                </div>
+                                <div class="col-md-2">
+                                    <input type="radio" name="radioSelectionName" value="2" /> Round Trip <br />
+                                </div>
+                                <div class="col-md-2">
+                                    <input type="radio" name="radioSelectionName" value="3" /> MultiCity <br />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.Main-container -->
+
+                    <!-- /.Main-container -->
+                    <div class="space-4"></div>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12">
+                            <div class="form-horizontal">
+                                <div class="row form-group">
+                                    <div class="col-md-3">
+                                        Origin
+                                        <input type="text" id="txtOrigin" name="txtOrigin" placeholder="Please Enter Origin" value="JFK" class="col-xs-10 col-sm-5" style="width: 100%;" maxlength="4" />
+                                    </div>
+                                    <div class="col-md-3">
+                                        Destination:
+                                        <input type="text" id="txtDestination" name="txtDestination" placeholder="Please Enter Destination" value="LAX" class="col-xs-10 col-sm-5 Restrictinput" style="width: 100%;" maxlength="4" />
+                                    </div>
+                                    <div class="col-md-3">
+                                        Departure Date
+                                        <div class="input-group col-xs-12 col-sm-12">
+                                            <input class="form-control  date-picker  Restrictinput " id="txtdepartureDate" type="text" name="date-range-picker" data-date-format="yyyy-MMM-dd" />
+                                            <span class="input-group-addon" id="col_departureDate">
+                                                <i class="fa fa-calendar bigger-80"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        Return Date
+                                        <div class="input-group col-xs-12 col-sm-12">
+                                            <input class="form-control  date-picker  Restrictinput " id="txtreturnDate" type="text" name="date-range-picker" data-date-format="yyyy-MMM-dd" />
+                                            <span class="input-group-addon" id="col_returnDate">
+                                                <i class="fa fa-calendar bigger-80"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.Main-container -->
+                    <!-- /.Main-container -->
+                    <div class="space-4"></div>
+                    <div class="row myrow_1 hide">
+                        <div class="col-xs-12 col-sm-12">
+                            <div class="form-horizontal">
+                                <div class="row form-group">
+                                    <div class="col-md-3">
+                                        Origin
+                                        <input type="text" id="txtOrigin_1" name="txtOrigin_1" placeholder="Please Enter Origin" value="JFK" class="col-xs-10 col-sm-5" style="width: 100%;" maxlength="4" />
+                                    </div>
+                                    <div class="col-md-3">
+                                        Destination:
+                                        <input type="text" id="txtDestination_1" name="txtDestination_1" placeholder="Please Enter Destination" value="LAX" class="col-xs-10 col-sm-5 Restrictinput" style="width: 100%;" maxlength="4" />
+                                    </div>
+                                    <div class="col-md-3">
+                                        Departure Date
+                                        <div class="input-group col-xs-12 col-sm-12">
+                                            <input class="form-control  date-picker  Restrictinput " id="txtdepartureDate_1" type="text" name="date-range-picker" data-date-format="yyyy-MMM-dd" />
+                                            <span class="input-group-addon" id="col_departureDate_1">
+                                                <i class="fa fa-calendar bigger-80"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="input-group col-xs-12 col-sm-12 ">
+                                            <div class="col-sm-12">
+                                                <br />
+                                                <input type="submit" value="Add More +" class="btn btn-success add_more_field_button pull-left pull_up " />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.Main-container -->
+                    <!-- /.Main-container -->
+                    <div class="space-4"></div>
+                    <div class="row myrow_2  hide">
+                        <div class="col-xs-12 col-sm-12">
+                            <div class="form-horizontal">
+                                <div class="row form-group">
+                                    <div class="col-md-3">
+                                        Origin
+                                        <input type="text" id="txtOrigin_2" name="txtOrigin_2" placeholder="Please Enter Origin" value="JFK" class="col-xs-10 col-sm-5" style="width: 100%;" maxlength="4" />
+                                    </div>
+                                    <div class="col-md-3">
+                                        Destination:
+                                        <input type="text" id="txtDestination_2" name="txtDestination_2" placeholder="Please Enter Destination" value="LAX" class="col-xs-10 col-sm-5 Restrictinput" style="width: 100%;" maxlength="4" />
+                                    </div>
+                                    <div class="col-md-3">
+                                        Departure Date
+                                        <div class="input-group col-xs-12 col-sm-12">
+                                            <input class="form-control  date-picker  Restrictinput " id="txtdepartureDate_2" type="text" name="date-range-picker" data-date-format="yyyy-MMM-dd" />
+                                            <span class="input-group-addon" id="col_departureDate_2">
+                                                <i class="fa fa-calendar bigger-80"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.Main-container -->
+                    <!-- /.Main-container -->
+                    <div class="space-4"></div>
+                    <div class="row myrow_3  hide">
+                        <div class="col-xs-12 col-sm-12">
+                            <div class="form-horizontal">
+                                <div class="row form-group">
+                                    <div class="col-md-3">
+                                        Origin
+                                        <input type="text" id="txtOrigin_3" name="txtOrigin_3" placeholder="Please Enter Origin" value="JFK" class="col-xs-10 col-sm-5" style="width: 100%;" maxlength="4" />
+                                    </div>
+                                    <div class="col-md-3">
+                                        Destination:
+                                        <input type="text" id="txtDestination_3" name="txtDestination_3" placeholder="Please Enter Destination" value="LAX" class="col-xs-10 col-sm-5 Restrictinput" style="width: 100%;" maxlength="4" />
+                                    </div>
+                                    <div class="col-md-3">
+                                        Departure Date
+                                        <div class="input-group col-xs-12 col-sm-12">
+                                            <input class="form-control  date-picker  Restrictinput " id="txtdepartureDate_3" type="text" name="date-range-picker" data-date-format="yyyy-MMM-dd" />
+                                            <span class="input-group-addon" id="col_departureDate_3">
+                                                <i class="fa fa-calendar bigger-80"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.Main-container -->
+                    <!-- /.Main-container -->
+                    <div class="space-4"></div>
+                    <div class="row myrow_4  hide">
+                        <div class="col-xs-12 col-sm-12">
+                            <div class="form-horizontal">
+                                <div class="row form-group">
+                                    <div class="col-md-3">
+                                        Origin
+                                        <input type="text" id="txtOrigin_4" name="txtOrigin_4" placeholder="Please Enter Origin" value="JFK" class="col-xs-10 col-sm-5" style="width: 100%;" maxlength="4" />
+                                    </div>
+                                    <div class="col-md-3">
+                                        Destination:
+                                        <input type="text" id="txtDestination_4" name="txtDestination_4" placeholder="Please Enter Destination" value="LAX" class="col-xs-10 col-sm-5 Restrictinput" style="width: 100%;" maxlength="4" />
+                                    </div>
+                                    <div class="col-md-3">
+                                        Departure Date
+                                        <div class="input-group col-xs-12 col-sm-12">
+                                            <input class="form-control  date-picker  Restrictinput " id="txtdepartureDate_4" type="text" name="date-range-picker" data-date-format="yyyy-MMM-dd" />
+                                            <span class="input-group-addon" id="col_departureDate_4">
+                                                <i class="fa fa-calendar bigger-80"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.Main-container -->
+                    <!-- /.Main-container -->
+                    <div class="space-4"></div>
+                    <div class="row myrow_5  hide">
+                        <div class="col-xs-12 col-sm-12">
+                            <div class="form-horizontal">
+                                <div class="row form-group">
+                                    <div class="col-md-3">
+                                        Origin
+                                        <input type="text" id="txtOrigin_5" name="txtOrigin_5" placeholder="Please Enter Origin" value="JFK" class="col-xs-10 col-sm-5" style="width: 100%;" maxlength="4" />
+                                    </div>
+                                    <div class="col-md-3">
+                                        Destination:
+                                        <input type="text" id="txtDestination_5" name="txtDestination_5" placeholder="Please Enter Destination" value="LAX" class="col-xs-10 col-sm-5 Restrictinput" style="width: 100%;" maxlength="4" />
+                                    </div>
+                                    <div class="col-md-3">
+                                        Departure Date
+                                        <div class="input-group col-xs-12 col-sm-12">
+                                            <input class="form-control  date-picker  Restrictinput " id="txtdepartureDate_5" type="text" name="date-range-picker" data-date-format="yyyy-MMM-dd" />
+                                            <span class="input-group-addon" id="col_departureDate_5">
+                                                <i class="fa fa-calendar bigger-80"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.Main-container -->
+
+                    <div class="space-6"></div>
+                    <div class="space-6"></div>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12">
+                            <div class="col-sm-12">
+                                <input type="submit" value="Search" class="btn btn-success pull-right" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="space-4"></div>
+                    <div class="row SearchJSONResult">
+                        <div class="col-xs-12 col-sm-12">
+                            <div class="col-sm-12">
+                                <div class="widget-box">
+                                    <div class="widget-header">
+                                        <h5 class="widget-title"><i class="fa fa-bar-chart-o"></i>Search Result</h5>
+                                    </div>
+                                    <div class="widget-body">
+                                        <div class="widget-main">
+                                            <div id="Page-josn-result" class="wrapword JSONResultContentScroll"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="space-4"></div>
+                    <div class="row SearchJSONResult">
+                        <div class="col-xs-12 col-sm-12">
+                            <div class="col-sm-12">
+                                <div class="widget-box">
+                                    <div class="widget-header">
+                                        <h5 class="widget-title"><i class="fa fa-bar-chart-o"></i>Search Result Table</h5>
+                                    </div>
+                                    <div class="widget-body">
+                                        <div class="widget-main">
+                                            <div class="space-8"></div>
+                                            <div id="Page-josn-result1" class="wrapword JSONResultContentScroll"></div>
+                                            <div class="space-8"></div>
+                                            <div id="Page-josn-result2" class="wrapword JSONResultContentScroll"></div>
+                                            <div class="space-8"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

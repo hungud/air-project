@@ -1,0 +1,26 @@
+|| EXMESSAGE ||:- String was not recognized as a valid DateTime.  || EXSOURCE ||:- mscorlib || EXTARGETSITE ||:- System.DateTime Parse(System.String, System.Globalization.DateTimeFormatInfo, System.Globalization.DateTimeStyles)  ||  EXData ||:- System.Collections.ListDictionaryInternal
+
+
+||EXInnerException||:-  
+   :::   00:26:42.8150496
+
+|| EXMESSAGE ||:- String was not recognized as a valid DateTime.  || EXSOURCE ||:- mscorlib || EXTARGETSITE ||:- System.DateTime Parse(System.String, System.Globalization.DateTimeFormatInfo, System.Globalization.DateTimeStyles)  ||  EXData ||:- System.Collections.ListDictionaryInternal
+
+
+||EXInnerException||:-  
+   :::   00:30:43.3991588
+
+|| EXMESSAGE ||:- The parameters dictionary contains a null entry for parameter 'Id' of non-nullable type 'System.Int32' for method 'System.Threading.Tasks.Task`1[System.Web.Mvc.ActionResult] GetBookingDetails(Int32)' in 'App.Apps.Controllers.HomeController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters  || EXSOURCE ||:- System.Web.Mvc || EXTARGETSITE ||:- System.Object ExtractParameterFromDictionary(System.Reflection.ParameterInfo, System.Collections.Generic.IDictionary`2[System.String,System.Object], System.Reflection.MethodInfo)  ||  EXData ||:- System.Collections.ListDictionaryInternal
+
+
+||EXInnerException||:-  
+   :::   18:05:44.2916817
+
+|| EXMESSAGE ||:- The parameters dictionary contains a null entry for parameter 'Id' of non-nullable type 'System.Int32' for method 'System.Threading.Tasks.Task`1[System.Web.Mvc.ActionResult] GetBookingDetails(Int32)' in 'App.Apps.Controllers.HomeController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters  || EXSOURCE ||:- System.Web.Mvc || EXTARGETSITE ||:- System.Object ExtractParameterFromDictionary(System.Reflection.ParameterInfo, System.Collections.Generic.IDictionary`2[System.String,System.Object], System.Reflection.MethodInfo)  ||  EXData ||:- System.Collections.ListDictionaryInternal
+
+
+||EXInnerException||:-  
+   :::   18:40:23.2962728
+

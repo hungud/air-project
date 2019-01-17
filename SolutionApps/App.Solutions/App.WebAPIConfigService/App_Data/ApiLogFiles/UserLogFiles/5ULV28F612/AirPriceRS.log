@@ -1,0 +1,649 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap-env:Envelope xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/"><soap-env:Header><eb:MessageHeader xmlns:eb="http://www.ebxml.org/namespaces/messageHeader" eb:version="1.0" soap-env:mustUnderstand="1"><eb:From><eb:PartyId eb:type="URI">123123</eb:PartyId></eb:From><eb:To><eb:PartyId eb:type="urn: x12.org:IO5: 01">999999</eb:PartyId></eb:To><eb:CPAId>3RT2</eb:CPAId><eb:ConversationId>1111111111111111111</eb:ConversationId><eb:Service eb:type="sabreXML">OTA_AirPriceLLSRQ</eb:Service><eb:Action>OTA_AirPriceLLSRS</eb:Action><eb:MessageData><eb:MessageId>7776573715255060250</eb:MessageId><eb:Timestamp>2018-12-24T19:52:06</eb:Timestamp><eb:RefToMessageId>mid:0_2014-09-22T21:43:40m</eb:RefToMessageId></eb:MessageData></eb:MessageHeader><wsse:Security xmlns:wsse="http://schemas.xmlsoap.org/ws/2002/12/secext"><wsse:BinarySecurityToken valueType="String" EncodingType="wsse:Base64Binary">Shared/IDL:IceSess\/SessMgr:1\.0.IDL/Common/!ICESMS\/RESB!ICESMSLB\/RES.LB!1545681108972!628!33</wsse:BinarySecurityToken></wsse:Security></soap-env:Header><soap-env:Body><OTA_AirPriceRS xmlns="http://webservices.sabre.com/sabreXML/2011/10" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:stl="http://services.sabre.com/STL/v01" Version="2.14.0">
+ <stl:ApplicationResults status="Complete">
+  <stl:Success timeStamp="2018-12-24T13:52:06-06:00"/>
+ </stl:ApplicationResults>
+ <PriceQuote>
+  <MiscInformation>
+   <BaggageInfo>
+    <SubCodeProperties RPH="1" SolutionSequenceNmbr="1">
+     <AncillaryFeeGroupCode>BG</AncillaryFeeGroupCode>
+     <AncillaryService SubGroupCode="CY">
+      <Text>CARRY ON HAND BAGGAGE</Text>
+     </AncillaryService>
+     <CommercialNameofBaggageItemType>MUSICAL INSTRUMENT</CommercialNameofBaggageItemType>
+     <DescriptionOne Code="MU">
+      <Text>MUSICAL INSTRUMENT</Text>
+     </DescriptionOne>
+     <EMD_Type>2</EMD_Type>
+     <ExtendedSubCodeKey>03VACKM</ExtendedSubCodeKey>
+     <RFIC>C</RFIC>
+     <SSR_Code>ASVC</SSR_Code>
+    </SubCodeProperties>
+    <SubCodeProperties RPH="2" SolutionSequenceNmbr="1">
+     <AncillaryFeeGroupCode>BG</AncillaryFeeGroupCode>
+     <BookingMethod>01</BookingMethod>
+     <CommercialNameofBaggageItemType>23KG BAG</CommercialNameofBaggageItemType>
+     <DescriptionOne Code="23">
+      <Text>UP TO 50 POUNDS/23 KILOGRAMS</Text>
+     </DescriptionOne>
+     <EMD_Type>2</EMD_Type>
+     <ExtendedSubCodeKey>0C3ACKM</ExtendedSubCodeKey>
+     <RFIC>C</RFIC>
+     <SizeWeightInfo>
+      <MaximumWeightInAlternate Units="K">23</MaximumWeightInAlternate>
+      <MaximumWeight Units="L">50</MaximumWeight>
+     </SizeWeightInfo>
+     <SSR_Code>XBAG</SSR_Code>
+    </SubCodeProperties>
+    <SubCodeProperties RPH="3" SolutionSequenceNmbr="1">
+     <AncillaryFeeGroupCode>BG</AncillaryFeeGroupCode>
+     <CommercialNameofBaggageItemType>FREE BAGGAGE ALLOWANCE</CommercialNameofBaggageItemType>
+     <EMD_Type>4</EMD_Type>
+     <ExtendedSubCodeKey>0DFAAKM</ExtendedSubCodeKey>
+    </SubCodeProperties>
+    <SubCodeProperties RPH="4" SolutionSequenceNmbr="1">
+     <AncillaryFeeGroupCode>BG</AncillaryFeeGroupCode>
+     <AncillaryService SubGroupCode="CY">
+      <Text>CARRY ON HAND BAGGAGE</Text>
+     </AncillaryService>
+     <CommercialNameofBaggageItemType>CARRYON HAND BAGGAGE ALLOWANCE</CommercialNameofBaggageItemType>
+     <EMD_Type>4</EMD_Type>
+     <ExtendedSubCodeKey>0LNABKM</ExtendedSubCodeKey>
+    </SubCodeProperties>
+    <SubCodeProperties RPH="5" SolutionSequenceNmbr="1">
+     <AncillaryFeeGroupCode>BG</AncillaryFeeGroupCode>
+     <AncillaryService SubGroupCode="CY">
+      <Text>CARRY ON HAND BAGGAGE</Text>
+     </AncillaryService>
+     <CommercialNameofBaggageItemType>CARRY10KG 22LBUPTO 45LI 115LCM</CommercialNameofBaggageItemType>
+     <DescriptionOne Code="10">
+      <Text>UP TO 22 POUNDS/10 KILOGRAMS</Text>
+     </DescriptionOne>
+     <DescriptionTwo Code="4U">
+      <Text>UP TO 45 LINEAR INCHES/115 LINEAR CENTIMETERS</Text>
+     </DescriptionTwo>
+     <EMD_Type>2</EMD_Type>
+     <ExtendedSubCodeKey>0MJACKM</ExtendedSubCodeKey>
+     <RFIC>C</RFIC>
+     <SizeWeightInfo>
+      <MaximumSizeInAlternate Units="C">115</MaximumSizeInAlternate>
+      <MaximumSize Units="I">45</MaximumSize>
+      <MaximumWeightInAlternate Units="K">10</MaximumWeightInAlternate>
+      <MaximumWeight Units="L">22</MaximumWeight>
+     </SizeWeightInfo>
+    </SubCodeProperties>
+   </BaggageInfo>
+   <HeaderInformation SolutionSequenceNmbr="1">
+    <DepartureDate>2019-08-06</DepartureDate>
+    <LastTicketingDate>12-25T14:52</LastTicketingDate>
+    <Text>VALIDATING CARRIER - KM</Text>
+    <Text>BAG ALLOWANCE     -FCOZRH-01P/KM/EACH PIECE UP TO 50 POUNDS/23</Text>
+    <Text>KILOGRAMS</Text>
+    <Text>2NDCHECKED BAG FEE-FCOZRH-CAD88.00/KM/UP TO 50 POUNDS/23 KILOGR</Text>
+    <Text>AMS</Text>
+    <Text>CARRY ON ALLOWANCE</Text>
+    <Text>FCOMLA MLAZRH-01P/10KG/KM</Text>
+    <Text>01/UP TO 22 POUNDS/10 KILOGRAMS AND UP TO 45 LINEAR INCHES/115</Text>
+    <Text>LINEAR CENTIMETERS</Text>
+    <Text>CARRY ON CHARGES</Text>
+    <Text>FCOMLA MLAZRH-KM</Text>
+    <Text>MUSICAL INSTRUMENT-CAD67.00</Text>
+    <Text>ADDITIONAL ALLOWANCES AND/OR DISCOUNTS MAY APPLY DEPENDING ON</Text>
+    <Text>FLYER-SPECIFIC FACTORS /E.G. FREQUENT FLYER STATUS/MILITARY/</Text>
+    <Text>CREDIT CARD FORM OF PAYMENT/EARLY PURCHASE OVER INTERNET,ETC./</Text>
+    <Text>06AUG DEPARTURE DATE-----LAST DAY TO PURCHASE 25DEC/1452</Text>
+    <ValidatingCarrier Code="KM"/>
+   </HeaderInformation>
+   <SolutionInformation SolutionSequenceNmbr="1">
+    <CurrencyCode>CAD</CurrencyCode>
+    <RequiresRebook>false</RequiresRebook>
+    <TicketNumber>0</TicketNumber>
+    <TotalAmount>198.34</TotalAmount>
+   </SolutionInformation>
+  </MiscInformation>
+  <PricedItinerary AlternativePricing="false" CurrencyCode="CAD" MultiTicket="false" TotalAmount="198.34">
+   <AirItineraryPricingInfo SolutionSequenceNmbr="1">
+    <BaggageProvisions RPH="1">
+     <Associations>
+      <CarrierCode RPH="1">KM</CarrierCode>
+      <CarrierCode RPH="2">KM</CarrierCode>
+      <CountForSegmentAssociatedID>2</CountForSegmentAssociatedID>
+      <DepartureDate RPH="1">2019-08-06</DepartureDate>
+      <DepartureDate RPH="2">2019-08-06</DepartureDate>
+      <DestinationLocation LocationCode="MLA" RPH="1"/>
+      <DestinationLocation LocationCode="ZRH" RPH="2"/>
+      <FlightNumber RPH="1">613</FlightNumber>
+      <FlightNumber RPH="2">490</FlightNumber>
+      <OriginLocation LocationCode="FCO" RPH="1"/>
+      <OriginLocation LocationCode="MLA" RPH="2"/>
+      <PNR_Segment RPH="1">2</PNR_Segment>
+      <PNR_Segment RPH="2">3</PNR_Segment>
+      <ResBookDesigCode RPH="1">R</ResBookDesigCode>
+      <ResBookDesigCode RPH="2">R</ResBookDesigCode>
+      <StatusCode RPH="1">SS</StatusCode>
+      <StatusCode RPH="2">SS</StatusCode>
+     </Associations>
+     <CarrierWhoseBaggageProvisionsApply>KM</CarrierWhoseBaggageProvisionsApply>
+     <NumPiecesBDI>1</NumPiecesBDI>
+     <NumPiecesITR>1</NumPiecesITR>
+     <ProvisionType>A</ProvisionType>
+     <SubCodeInfo>
+      <SubCodeForAllowance RPH="1">0C3ACKM</SubCodeForAllowance>
+      <SubCodeForChargesOthers>0DFAAKM</SubCodeForChargesOthers>
+     </SubCodeInfo>
+    </BaggageProvisions>
+    <BaggageProvisions RPH="2">
+     <Associations>
+      <CarrierCode RPH="1">KM</CarrierCode>
+      <CarrierCode RPH="2">KM</CarrierCode>
+      <CountForSegmentAssociatedID>2</CountForSegmentAssociatedID>
+      <DepartureDate RPH="1">2019-08-06</DepartureDate>
+      <DepartureDate RPH="2">2019-08-06</DepartureDate>
+      <DestinationLocation LocationCode="MLA" RPH="1"/>
+      <DestinationLocation LocationCode="ZRH" RPH="2"/>
+      <FlightNumber RPH="1">613</FlightNumber>
+      <FlightNumber RPH="2">490</FlightNumber>
+      <OriginLocation LocationCode="FCO" RPH="1"/>
+      <OriginLocation LocationCode="MLA" RPH="2"/>
+      <PNR_Segment RPH="1">2</PNR_Segment>
+      <PNR_Segment RPH="2">3</PNR_Segment>
+      <ResBookDesigCode RPH="1">R</ResBookDesigCode>
+      <ResBookDesigCode RPH="2">R</ResBookDesigCode>
+      <StatusCode RPH="1">SS</StatusCode>
+      <StatusCode RPH="2">SS</StatusCode>
+     </Associations>
+     <CarrierWhoseBaggageProvisionsApply>KM</CarrierWhoseBaggageProvisionsApply>
+     <Commissionable>N</Commissionable>
+     <FeeApplicationIndicator>4</FeeApplicationIndicator>
+     <FeeNotGuaranteedIndicator>N</FeeNotGuaranteedIndicator>
+     <FirstOccurrence>1</FirstOccurrence>
+     <Interlineable>Y</Interlineable>
+     <LastOccurrence>1</LastOccurrence>
+     <PassengerType Code="ADT"/>
+     <PriceInformation>
+      <Base Amount="65.00" CurrencyCode="USD"/>
+      <Equiv Amount="88.00" CurrencyCode="CAD"/>
+      <TaxIndicator>X</TaxIndicator>
+      <Total>88.00</Total>
+     </PriceInformation>
+     <ProvisionType>C</ProvisionType>
+     <RefundReissue>R</RefundReissue>
+     <SubCodeInfo>
+      <SubCodeForChargesOthers>0C3ACKM</SubCodeForChargesOthers>
+     </SubCodeInfo>
+    </BaggageProvisions>
+    <BaggageProvisions RPH="3">
+     <Associations>
+      <CarrierCode RPH="1">KM</CarrierCode>
+      <CarrierCode RPH="2">KM</CarrierCode>
+      <CountForSegmentAssociatedID>2</CountForSegmentAssociatedID>
+      <DepartureDate RPH="1">2019-08-06</DepartureDate>
+      <DepartureDate RPH="2">2019-08-06</DepartureDate>
+      <DestinationLocation LocationCode="MLA" RPH="1"/>
+      <DestinationLocation LocationCode="ZRH" RPH="2"/>
+      <FlightNumber RPH="1">613</FlightNumber>
+      <FlightNumber RPH="2">490</FlightNumber>
+      <OriginLocation LocationCode="FCO" RPH="1"/>
+      <OriginLocation LocationCode="MLA" RPH="2"/>
+      <PNR_Segment RPH="1">2</PNR_Segment>
+      <PNR_Segment RPH="2">3</PNR_Segment>
+      <ResBookDesigCode RPH="1">R</ResBookDesigCode>
+      <ResBookDesigCode RPH="2">R</ResBookDesigCode>
+      <StatusCode RPH="1">SS</StatusCode>
+      <StatusCode RPH="2">SS</StatusCode>
+     </Associations>
+     <CarrierWhoseBaggageProvisionsApply>KM</CarrierWhoseBaggageProvisionsApply>
+     <NumPiecesBDI>1</NumPiecesBDI>
+     <NumPiecesITR>1</NumPiecesITR>
+     <ProvisionType>B</ProvisionType>
+     <SubCodeInfo>
+      <SubCodeForAllowance RPH="1">0MJACKM</SubCodeForAllowance>
+      <SubCodeForChargesOthers>0LNABKM</SubCodeForChargesOthers>
+     </SubCodeInfo>
+     <WeightLimit Units="K">10</WeightLimit>
+    </BaggageProvisions>
+    <BaggageProvisions RPH="4">
+     <Associations>
+      <CarrierCode RPH="1">KM</CarrierCode>
+      <CarrierCode RPH="2">KM</CarrierCode>
+      <CountForSegmentAssociatedID>2</CountForSegmentAssociatedID>
+      <DepartureDate RPH="1">2019-08-06</DepartureDate>
+      <DepartureDate RPH="2">2019-08-06</DepartureDate>
+      <DestinationLocation LocationCode="MLA" RPH="1"/>
+      <DestinationLocation LocationCode="ZRH" RPH="2"/>
+      <FlightNumber RPH="1">613</FlightNumber>
+      <FlightNumber RPH="2">490</FlightNumber>
+      <OriginLocation LocationCode="FCO" RPH="1"/>
+      <OriginLocation LocationCode="MLA" RPH="2"/>
+      <PNR_Segment RPH="1">2</PNR_Segment>
+      <PNR_Segment RPH="2">3</PNR_Segment>
+      <ResBookDesigCode RPH="1">R</ResBookDesigCode>
+      <ResBookDesigCode RPH="2">R</ResBookDesigCode>
+      <StatusCode RPH="1">SS</StatusCode>
+      <StatusCode RPH="2">SS</StatusCode>
+     </Associations>
+     <CarrierWhoseBaggageProvisionsApply>KM</CarrierWhoseBaggageProvisionsApply>
+     <Commissionable>N</Commissionable>
+     <FeeApplicationIndicator>4</FeeApplicationIndicator>
+     <FeeNotGuaranteedIndicator>N</FeeNotGuaranteedIndicator>
+     <Interlineable>Y</Interlineable>
+     <PassengerType Code="ADT"/>
+     <PriceInformation>
+      <Base Amount="50.00" CurrencyCode="USD"/>
+      <Equiv Amount="67.00" CurrencyCode="CAD"/>
+      <TaxIndicator>X</TaxIndicator>
+      <Total>67.00</Total>
+     </PriceInformation>
+     <ProvisionType>CC</ProvisionType>
+     <RefundReissue>R</RefundReissue>
+     <SubCodeInfo>
+      <SubCodeForChargesOthers>03VACKM</SubCodeForChargesOthers>
+     </SubCodeInfo>
+    </BaggageProvisions>
+    <FareCalculation>
+     <Text>ROM KM MLA35.37KM ZRH36.51NUC71.88END ROE0.876291</Text>
+    </FareCalculation>
+    <FareCalculationBreakdown>
+     <Branch FirstJointCarrier="KM" PCC="3RT2"/>
+     <Departure AirlineCode="KM" AirportCode="FCO" ArrivalAirportCode="MLA" ArrivalCityCode="MLA" CityCode="ROM" GenericInd="O"/>
+     <FareBasis Cabin="Y" Code="RKMON2" FareAmount="35.37" FarePassengerType="ADT" FareType="P" FilingCarrier="KM" GlobalInd="EH" Market="ROMMLA" TripTypeInd="R"/>
+     <FreeBaggageAllowance>PC001</FreeBaggageAllowance>
+     <RuleCategoryIndicator>4</RuleCategoryIndicator>
+     <RuleCategoryIndicator>5</RuleCategoryIndicator>
+     <RuleCategoryIndicator>7</RuleCategoryIndicator>
+     <RuleCategoryIndicator>8</RuleCategoryIndicator>
+     <RuleCategoryIndicator>10</RuleCategoryIndicator>
+     <RuleCategoryIndicator>15</RuleCategoryIndicator>
+     <RuleCategoryIndicator>16</RuleCategoryIndicator>
+     <RuleCategoryIndicator>18</RuleCategoryIndicator>
+    </FareCalculationBreakdown>
+    <FareCalculationBreakdown>
+     <Branch FirstJointCarrier="KM" PCC="3RT2"/>
+     <Departure AirlineCode="KM" AirportCode="MLA" ArrivalAirportCode="ZRH" ArrivalCityCode="ZRH" CityCode="MLA" GenericInd="O"/>
+     <FareBasis Cabin="Y" Code="RKMON1" FareAmount="36.51" FarePassengerType="ADT" FareType="P" FilingCarrier="KM" GlobalInd="EH" Market="MLAZRH" TripTypeInd="R"/>
+     <FreeBaggageAllowance>PC001</FreeBaggageAllowance>
+     <RuleCategoryIndicator>4</RuleCategoryIndicator>
+     <RuleCategoryIndicator>5</RuleCategoryIndicator>
+     <RuleCategoryIndicator>7</RuleCategoryIndicator>
+     <RuleCategoryIndicator>8</RuleCategoryIndicator>
+     <RuleCategoryIndicator>10</RuleCategoryIndicator>
+     <RuleCategoryIndicator>15</RuleCategoryIndicator>
+     <RuleCategoryIndicator>16</RuleCategoryIndicator>
+     <RuleCategoryIndicator>18</RuleCategoryIndicator>
+    </FareCalculationBreakdown>
+    <ItinTotalFare NonRefundableInd="N">
+     <BaggageInfo>
+      <NonUS_DOT_Disclosure>
+       <Text>BAG ALLOWANCE     -FCOZRH-01P/KM/EACH PIECE UP TO 50 POUNDS/23</Text>
+       <Text>KILOGRAMS</Text>
+       <Text>2NDCHECKED BAG FEE-FCOZRH-CAD88.00/KM/UP TO 50 POUNDS/23 KILOGR</Text>
+       <Text>AMS</Text>
+       <Text>CARRY ON ALLOWANCE</Text>
+       <Text>FCOMLA MLAZRH-01P/10KG/KM</Text>
+       <Text>01/UP TO 22 POUNDS/10 KILOGRAMS AND UP TO 45 LINEAR INCHES/115</Text>
+       <Text>LINEAR CENTIMETERS</Text>
+       <Text>CARRY ON CHARGES</Text>
+       <Text>FCOMLA MLAZRH-KM</Text>
+       <Text>MUSICAL INSTRUMENT-CAD67.00</Text>
+       <Text>ADDITIONAL ALLOWANCES AND/OR DISCOUNTS MAY APPLY DEPENDING ON</Text>
+       <Text>FLYER-SPECIFIC FACTORS /E.G. FREQUENT FLYER STATUS/MILITARY/</Text>
+       <Text>CREDIT CARD FORM OF PAYMENT/EARLY PURCHASE OVER INTERNET,ETC./</Text>
+      </NonUS_DOT_Disclosure>
+     </BaggageInfo>
+     <BaseFare Amount="63.00" CurrencyCode="EUR"/>
+     <Endorsements>
+      <Text>NON-END / NO REFUND/VALID KM FARES ONLY/ADD FEE FOR CHANGES</Text>
+     </Endorsements>
+     <EquivFare Amount="97.00" CurrencyCode="CAD"/>
+     <Taxes TotalAmount="101.34">
+      <Tax Amount="23.13" TaxCode="YRI" TaxName="SERVICE FEE - CARRIER-IMPOSED" TicketingTaxCode="YR"/>
+      <Tax Amount="3.87" TaxCode="EX" TaxName="SECURITY BAG CHARGE" TicketingTaxCode="EX"/>
+      <Tax Amount="27.16" TaxCode="IT3" TaxName="EMBARKATION TAX" TicketingTaxCode="IT"/>
+      <Tax Amount="4.90" TaxCode="VT" TaxName="SECURITY CHARGE" TicketingTaxCode="VT"/>
+      <Tax Amount="12.06" TaxCode="HB" TaxName="COUNCIL CITY TAX" TicketingTaxCode="HB"/>
+      <Tax Amount="1.33" TaxCode="MJ" TaxName="PASSENGER SERVICE CHARGE DEPAR" TicketingTaxCode="MJ"/>
+      <Tax Amount="25.51" TaxCode="UF" TaxName="PASSENGER SERVICE CHARGE   INT" TicketingTaxCode="UF"/>
+      <Tax Amount="3.38" TaxCode="DB" TaxName="AIRPORT SECURITY CHARGE" TicketingTaxCode="DB"/>
+     </Taxes>
+     <TotalFare Amount="198.34" CurrencyCode="CAD"/>
+    </ItinTotalFare>
+    <PassengerTypeQuantity Code="ADT" Quantity="1"/>
+    <PTC_FareBreakdown>
+     <Cabin>Y</Cabin>
+     <FareBasis Code="RKMON2" FareAmount="35.37" FarePassengerType="ADT" FareType="P" FilingCarrier="KM" GlobalInd="EH" Market="ROMMLA"/>
+     <FreeBaggageAllowance>PC001</FreeBaggageAllowance>
+    </PTC_FareBreakdown>
+    <PTC_FareBreakdown>
+     <Cabin>Y</Cabin>
+     <FareBasis Code="RKMON1" FareAmount="36.51" FarePassengerType="ADT" FareType="P" FilingCarrier="KM" GlobalInd="EH" Market="MLAZRH"/>
+     <FreeBaggageAllowance>PC001</FreeBaggageAllowance>
+    </PTC_FareBreakdown>
+   </AirItineraryPricingInfo>
+  </PricedItinerary>
+ </PriceQuote>
+</OTA_AirPriceRS></soap-env:Body></soap-env:Envelope><?xml version="1.0" encoding="UTF-8"?>
+<soap-env:Envelope xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/"><soap-env:Header><eb:MessageHeader xmlns:eb="http://www.ebxml.org/namespaces/messageHeader" eb:version="1.0" soap-env:mustUnderstand="1"><eb:From><eb:PartyId eb:type="URI">123123</eb:PartyId></eb:From><eb:To><eb:PartyId eb:type="urn: x12.org:IO5: 01">999999</eb:PartyId></eb:To><eb:CPAId>3RT2</eb:CPAId><eb:ConversationId>1111111111111111111</eb:ConversationId><eb:Service eb:type="sabreXML">OTA_AirPriceLLSRQ</eb:Service><eb:Action>OTA_AirPriceLLSRS</eb:Action><eb:MessageData><eb:MessageId>7808662719309690540</eb:MessageId><eb:Timestamp>2018-12-24T19:58:52</eb:Timestamp><eb:RefToMessageId>mid:0_2014-09-22T21:43:40m</eb:RefToMessageId></eb:MessageData></eb:MessageHeader><wsse:Security xmlns:wsse="http://schemas.xmlsoap.org/ws/2002/12/secext"><wsse:BinarySecurityToken valueType="String" EncodingType="wsse:Base64Binary">Shared/IDL:IceSess\/SessMgr:1\.0.IDL/Common/!ICESMS\/RESA!ICESMSLB\/RES.LB!1545681515406!8062!17</wsse:BinarySecurityToken></wsse:Security></soap-env:Header><soap-env:Body><OTA_AirPriceRS xmlns="http://webservices.sabre.com/sabreXML/2011/10" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:stl="http://services.sabre.com/STL/v01" Version="2.14.0">
+ <stl:ApplicationResults status="Complete">
+  <stl:Success timeStamp="2018-12-24T13:58:52-06:00"/>
+ </stl:ApplicationResults>
+ <PriceQuote>
+  <MiscInformation>
+   <BaggageInfo>
+    <SubCodeProperties RPH="1" SolutionSequenceNmbr="1">
+     <AncillaryFeeGroupCode>BG</AncillaryFeeGroupCode>
+     <CommercialNameofBaggageItemType>FREE BAGGAGE ALLOWANCE</CommercialNameofBaggageItemType>
+     <EMD_Type>4</EMD_Type>
+     <ExtendedSubCodeKey>0DFAAKM</ExtendedSubCodeKey>
+    </SubCodeProperties>
+    <SubCodeProperties RPH="2" SolutionSequenceNmbr="1">
+     <AncillaryFeeGroupCode>BG</AncillaryFeeGroupCode>
+     <AncillaryService SubGroupCode="CY">
+      <Text>CARRY ON HAND BAGGAGE</Text>
+     </AncillaryService>
+     <CommercialNameofBaggageItemType>CARRYON HAND BAGGAGE ALLOWANCE</CommercialNameofBaggageItemType>
+     <EMD_Type>4</EMD_Type>
+     <ExtendedSubCodeKey>0LNABKM</ExtendedSubCodeKey>
+    </SubCodeProperties>
+    <SubCodeProperties RPH="3" SolutionSequenceNmbr="1">
+     <AncillaryFeeGroupCode>BG</AncillaryFeeGroupCode>
+     <AncillaryService SubGroupCode="CY">
+      <Text>CARRY ON HAND BAGGAGE</Text>
+     </AncillaryService>
+     <CommercialNameofBaggageItemType>CARRY10KG 22LBUPTO 45LI 115LCM</CommercialNameofBaggageItemType>
+     <DescriptionOne Code="10">
+      <Text>UP TO 22 POUNDS/10 KILOGRAMS</Text>
+     </DescriptionOne>
+     <DescriptionTwo Code="4U">
+      <Text>UP TO 45 LINEAR INCHES/115 LINEAR CENTIMETERS</Text>
+     </DescriptionTwo>
+     <EMD_Type>2</EMD_Type>
+     <ExtendedSubCodeKey>0MJACKM</ExtendedSubCodeKey>
+     <RFIC>C</RFIC>
+     <SizeWeightInfo>
+      <MaximumSizeInAlternate Units="C">115</MaximumSizeInAlternate>
+      <MaximumSize Units="I">45</MaximumSize>
+      <MaximumWeightInAlternate Units="K">10</MaximumWeightInAlternate>
+      <MaximumWeight Units="L">22</MaximumWeight>
+     </SizeWeightInfo>
+    </SubCodeProperties>
+    <SubCodeProperties RPH="4" SolutionSequenceNmbr="1">
+     <AncillaryFeeGroupCode>BG</AncillaryFeeGroupCode>
+     <AncillaryService SubGroupCode="CY">
+      <Text>CARRY ON HAND BAGGAGE</Text>
+     </AncillaryService>
+     <CommercialNameofBaggageItemType>MUSICAL INSTRUMENT</CommercialNameofBaggageItemType>
+     <DescriptionOne Code="MU">
+      <Text>MUSICAL INSTRUMENT</Text>
+     </DescriptionOne>
+     <EMD_Type>2</EMD_Type>
+     <ExtendedSubCodeKey>03VACKM</ExtendedSubCodeKey>
+     <RFIC>C</RFIC>
+     <SSR_Code>ASVC</SSR_Code>
+    </SubCodeProperties>
+    <SubCodeProperties RPH="5" SolutionSequenceNmbr="1">
+     <AncillaryFeeGroupCode>BG</AncillaryFeeGroupCode>
+     <BookingMethod>01</BookingMethod>
+     <CommercialNameofBaggageItemType>23KG BAG</CommercialNameofBaggageItemType>
+     <DescriptionOne Code="23">
+      <Text>UP TO 50 POUNDS/23 KILOGRAMS</Text>
+     </DescriptionOne>
+     <EMD_Type>2</EMD_Type>
+     <ExtendedSubCodeKey>0C3ACKM</ExtendedSubCodeKey>
+     <RFIC>C</RFIC>
+     <SizeWeightInfo>
+      <MaximumWeightInAlternate Units="K">23</MaximumWeightInAlternate>
+      <MaximumWeight Units="L">50</MaximumWeight>
+     </SizeWeightInfo>
+     <SSR_Code>XBAG</SSR_Code>
+    </SubCodeProperties>
+   </BaggageInfo>
+   <HeaderInformation SolutionSequenceNmbr="1">
+    <DepartureDate>2019-08-06</DepartureDate>
+    <LastTicketingDate>12-25T14:58</LastTicketingDate>
+    <Text>VALIDATING CARRIER - KM</Text>
+    <Text>BAG ALLOWANCE     -FCOZRH-01P/KM/EACH PIECE UP TO 50 POUNDS/23</Text>
+    <Text>KILOGRAMS</Text>
+    <Text>2NDCHECKED BAG FEE-FCOZRH-CAD88.00/KM/UP TO 50 POUNDS/23 KILOGR</Text>
+    <Text>AMS</Text>
+    <Text>CARRY ON ALLOWANCE</Text>
+    <Text>FCOMLA MLAZRH-01P/10KG/KM</Text>
+    <Text>01/UP TO 22 POUNDS/10 KILOGRAMS AND UP TO 45 LINEAR INCHES/115</Text>
+    <Text>LINEAR CENTIMETERS</Text>
+    <Text>CARRY ON CHARGES</Text>
+    <Text>FCOMLA MLAZRH-KM</Text>
+    <Text>MUSICAL INSTRUMENT-CAD67.00</Text>
+    <Text>ADDITIONAL ALLOWANCES AND/OR DISCOUNTS MAY APPLY DEPENDING ON</Text>
+    <Text>FLYER-SPECIFIC FACTORS /E.G. FREQUENT FLYER STATUS/MILITARY/</Text>
+    <Text>CREDIT CARD FORM OF PAYMENT/EARLY PURCHASE OVER INTERNET,ETC./</Text>
+    <Text>06AUG DEPARTURE DATE-----LAST DAY TO PURCHASE 25DEC/1458</Text>
+    <ValidatingCarrier Code="KM"/>
+   </HeaderInformation>
+   <SolutionInformation SolutionSequenceNmbr="1">
+    <CurrencyCode>CAD</CurrencyCode>
+    <RequiresRebook>false</RequiresRebook>
+    <TicketNumber>0</TicketNumber>
+    <TotalAmount>198.34</TotalAmount>
+   </SolutionInformation>
+  </MiscInformation>
+  <PricedItinerary AlternativePricing="false" CurrencyCode="CAD" MultiTicket="false" TotalAmount="198.34">
+   <AirItineraryPricingInfo SolutionSequenceNmbr="1">
+    <BaggageProvisions RPH="1">
+     <Associations>
+      <CarrierCode RPH="1">KM</CarrierCode>
+      <CarrierCode RPH="2">KM</CarrierCode>
+      <CountForSegmentAssociatedID>2</CountForSegmentAssociatedID>
+      <DepartureDate RPH="1">2019-08-06</DepartureDate>
+      <DepartureDate RPH="2">2019-08-06</DepartureDate>
+      <DestinationLocation LocationCode="MLA" RPH="1"/>
+      <DestinationLocation LocationCode="ZRH" RPH="2"/>
+      <FlightNumber RPH="1">613</FlightNumber>
+      <FlightNumber RPH="2">490</FlightNumber>
+      <OriginLocation LocationCode="FCO" RPH="1"/>
+      <OriginLocation LocationCode="MLA" RPH="2"/>
+      <PNR_Segment RPH="1">2</PNR_Segment>
+      <PNR_Segment RPH="2">3</PNR_Segment>
+      <ResBookDesigCode RPH="1">R</ResBookDesigCode>
+      <ResBookDesigCode RPH="2">R</ResBookDesigCode>
+      <StatusCode RPH="1">SS</StatusCode>
+      <StatusCode RPH="2">SS</StatusCode>
+     </Associations>
+     <CarrierWhoseBaggageProvisionsApply>KM</CarrierWhoseBaggageProvisionsApply>
+     <NumPiecesBDI>1</NumPiecesBDI>
+     <NumPiecesITR>1</NumPiecesITR>
+     <ProvisionType>A</ProvisionType>
+     <SubCodeInfo>
+      <SubCodeForAllowance RPH="1">0C3ACKM</SubCodeForAllowance>
+      <SubCodeForChargesOthers>0DFAAKM</SubCodeForChargesOthers>
+     </SubCodeInfo>
+    </BaggageProvisions>
+    <BaggageProvisions RPH="2">
+     <Associations>
+      <CarrierCode RPH="1">KM</CarrierCode>
+      <CarrierCode RPH="2">KM</CarrierCode>
+      <CountForSegmentAssociatedID>2</CountForSegmentAssociatedID>
+      <DepartureDate RPH="1">2019-08-06</DepartureDate>
+      <DepartureDate RPH="2">2019-08-06</DepartureDate>
+      <DestinationLocation LocationCode="MLA" RPH="1"/>
+      <DestinationLocation LocationCode="ZRH" RPH="2"/>
+      <FlightNumber RPH="1">613</FlightNumber>
+      <FlightNumber RPH="2">490</FlightNumber>
+      <OriginLocation LocationCode="FCO" RPH="1"/>
+      <OriginLocation LocationCode="MLA" RPH="2"/>
+      <PNR_Segment RPH="1">2</PNR_Segment>
+      <PNR_Segment RPH="2">3</PNR_Segment>
+      <ResBookDesigCode RPH="1">R</ResBookDesigCode>
+      <ResBookDesigCode RPH="2">R</ResBookDesigCode>
+      <StatusCode RPH="1">SS</StatusCode>
+      <StatusCode RPH="2">SS</StatusCode>
+     </Associations>
+     <CarrierWhoseBaggageProvisionsApply>KM</CarrierWhoseBaggageProvisionsApply>
+     <Commissionable>N</Commissionable>
+     <FeeApplicationIndicator>4</FeeApplicationIndicator>
+     <FeeNotGuaranteedIndicator>N</FeeNotGuaranteedIndicator>
+     <FirstOccurrence>1</FirstOccurrence>
+     <Interlineable>Y</Interlineable>
+     <LastOccurrence>1</LastOccurrence>
+     <PassengerType Code="ADT"/>
+     <PriceInformation>
+      <Base Amount="65.00" CurrencyCode="USD"/>
+      <Equiv Amount="88.00" CurrencyCode="CAD"/>
+      <TaxIndicator>X</TaxIndicator>
+      <Total>88.00</Total>
+     </PriceInformation>
+     <ProvisionType>C</ProvisionType>
+     <RefundReissue>R</RefundReissue>
+     <SubCodeInfo>
+      <SubCodeForChargesOthers>0C3ACKM</SubCodeForChargesOthers>
+     </SubCodeInfo>
+    </BaggageProvisions>
+    <BaggageProvisions RPH="3">
+     <Associations>
+      <CarrierCode RPH="1">KM</CarrierCode>
+      <CarrierCode RPH="2">KM</CarrierCode>
+      <CountForSegmentAssociatedID>2</CountForSegmentAssociatedID>
+      <DepartureDate RPH="1">2019-08-06</DepartureDate>
+      <DepartureDate RPH="2">2019-08-06</DepartureDate>
+      <DestinationLocation LocationCode="MLA" RPH="1"/>
+      <DestinationLocation LocationCode="ZRH" RPH="2"/>
+      <FlightNumber RPH="1">613</FlightNumber>
+      <FlightNumber RPH="2">490</FlightNumber>
+      <OriginLocation LocationCode="FCO" RPH="1"/>
+      <OriginLocation LocationCode="MLA" RPH="2"/>
+      <PNR_Segment RPH="1">2</PNR_Segment>
+      <PNR_Segment RPH="2">3</PNR_Segment>
+      <ResBookDesigCode RPH="1">R</ResBookDesigCode>
+      <ResBookDesigCode RPH="2">R</ResBookDesigCode>
+      <StatusCode RPH="1">SS</StatusCode>
+      <StatusCode RPH="2">SS</StatusCode>
+     </Associations>
+     <CarrierWhoseBaggageProvisionsApply>KM</CarrierWhoseBaggageProvisionsApply>
+     <NumPiecesBDI>1</NumPiecesBDI>
+     <NumPiecesITR>1</NumPiecesITR>
+     <ProvisionType>B</ProvisionType>
+     <SubCodeInfo>
+      <SubCodeForAllowance RPH="1">0MJACKM</SubCodeForAllowance>
+      <SubCodeForChargesOthers>0LNABKM</SubCodeForChargesOthers>
+     </SubCodeInfo>
+     <WeightLimit Units="K">10</WeightLimit>
+    </BaggageProvisions>
+    <BaggageProvisions RPH="4">
+     <Associations>
+      <CarrierCode RPH="1">KM</CarrierCode>
+      <CarrierCode RPH="2">KM</CarrierCode>
+      <CountForSegmentAssociatedID>2</CountForSegmentAssociatedID>
+      <DepartureDate RPH="1">2019-08-06</DepartureDate>
+      <DepartureDate RPH="2">2019-08-06</DepartureDate>
+      <DestinationLocation LocationCode="MLA" RPH="1"/>
+      <DestinationLocation LocationCode="ZRH" RPH="2"/>
+      <FlightNumber RPH="1">613</FlightNumber>
+      <FlightNumber RPH="2">490</FlightNumber>
+      <OriginLocation LocationCode="FCO" RPH="1"/>
+      <OriginLocation LocationCode="MLA" RPH="2"/>
+      <PNR_Segment RPH="1">2</PNR_Segment>
+      <PNR_Segment RPH="2">3</PNR_Segment>
+      <ResBookDesigCode RPH="1">R</ResBookDesigCode>
+      <ResBookDesigCode RPH="2">R</ResBookDesigCode>
+      <StatusCode RPH="1">SS</StatusCode>
+      <StatusCode RPH="2">SS</StatusCode>
+     </Associations>
+     <CarrierWhoseBaggageProvisionsApply>KM</CarrierWhoseBaggageProvisionsApply>
+     <Commissionable>N</Commissionable>
+     <FeeApplicationIndicator>4</FeeApplicationIndicator>
+     <FeeNotGuaranteedIndicator>N</FeeNotGuaranteedIndicator>
+     <Interlineable>Y</Interlineable>
+     <PassengerType Code="ADT"/>
+     <PriceInformation>
+      <Base Amount="50.00" CurrencyCode="USD"/>
+      <Equiv Amount="67.00" CurrencyCode="CAD"/>
+      <TaxIndicator>X</TaxIndicator>
+      <Total>67.00</Total>
+     </PriceInformation>
+     <ProvisionType>CC</ProvisionType>
+     <RefundReissue>R</RefundReissue>
+     <SubCodeInfo>
+      <SubCodeForChargesOthers>03VACKM</SubCodeForChargesOthers>
+     </SubCodeInfo>
+    </BaggageProvisions>
+    <FareCalculation>
+     <Text>ROM KM MLA35.37KM ZRH36.51NUC71.88END ROE0.876291</Text>
+    </FareCalculation>
+    <FareCalculationBreakdown>
+     <Branch FirstJointCarrier="KM" PCC="3RT2"/>
+     <Departure AirlineCode="KM" AirportCode="FCO" ArrivalAirportCode="MLA" ArrivalCityCode="MLA" CityCode="ROM" GenericInd="O"/>
+     <FareBasis Cabin="Y" Code="RKMON2" FareAmount="35.37" FarePassengerType="ADT" FareType="P" FilingCarrier="KM" GlobalInd="EH" Market="ROMMLA" TripTypeInd="R"/>
+     <FreeBaggageAllowance>PC001</FreeBaggageAllowance>
+     <RuleCategoryIndicator>4</RuleCategoryIndicator>
+     <RuleCategoryIndicator>5</RuleCategoryIndicator>
+     <RuleCategoryIndicator>7</RuleCategoryIndicator>
+     <RuleCategoryIndicator>8</RuleCategoryIndicator>
+     <RuleCategoryIndicator>10</RuleCategoryIndicator>
+     <RuleCategoryIndicator>15</RuleCategoryIndicator>
+     <RuleCategoryIndicator>16</RuleCategoryIndicator>
+     <RuleCategoryIndicator>18</RuleCategoryIndicator>
+    </FareCalculationBreakdown>
+    <FareCalculationBreakdown>
+     <Branch FirstJointCarrier="KM" PCC="3RT2"/>
+     <Departure AirlineCode="KM" AirportCode="MLA" ArrivalAirportCode="ZRH" ArrivalCityCode="ZRH" CityCode="MLA" GenericInd="O"/>
+     <FareBasis Cabin="Y" Code="RKMON1" FareAmount="36.51" FarePassengerType="ADT" FareType="P" FilingCarrier="KM" GlobalInd="EH" Market="MLAZRH" TripTypeInd="R"/>
+     <FreeBaggageAllowance>PC001</FreeBaggageAllowance>
+     <RuleCategoryIndicator>4</RuleCategoryIndicator>
+     <RuleCategoryIndicator>5</RuleCategoryIndicator>
+     <RuleCategoryIndicator>7</RuleCategoryIndicator>
+     <RuleCategoryIndicator>8</RuleCategoryIndicator>
+     <RuleCategoryIndicator>10</RuleCategoryIndicator>
+     <RuleCategoryIndicator>15</RuleCategoryIndicator>
+     <RuleCategoryIndicator>16</RuleCategoryIndicator>
+     <RuleCategoryIndicator>18</RuleCategoryIndicator>
+    </FareCalculationBreakdown>
+    <ItinTotalFare NonRefundableInd="N">
+     <BaggageInfo>
+      <NonUS_DOT_Disclosure>
+       <Text>BAG ALLOWANCE     -FCOZRH-01P/KM/EACH PIECE UP TO 50 POUNDS/23</Text>
+       <Text>KILOGRAMS</Text>
+       <Text>2NDCHECKED BAG FEE-FCOZRH-CAD88.00/KM/UP TO 50 POUNDS/23 KILOGR</Text>
+       <Text>AMS</Text>
+       <Text>CARRY ON ALLOWANCE</Text>
+       <Text>FCOMLA MLAZRH-01P/10KG/KM</Text>
+       <Text>01/UP TO 22 POUNDS/10 KILOGRAMS AND UP TO 45 LINEAR INCHES/115</Text>
+       <Text>LINEAR CENTIMETERS</Text>
+       <Text>CARRY ON CHARGES</Text>
+       <Text>FCOMLA MLAZRH-KM</Text>
+       <Text>MUSICAL INSTRUMENT-CAD67.00</Text>
+       <Text>ADDITIONAL ALLOWANCES AND/OR DISCOUNTS MAY APPLY DEPENDING ON</Text>
+       <Text>FLYER-SPECIFIC FACTORS /E.G. FREQUENT FLYER STATUS/MILITARY/</Text>
+       <Text>CREDIT CARD FORM OF PAYMENT/EARLY PURCHASE OVER INTERNET,ETC./</Text>
+      </NonUS_DOT_Disclosure>
+     </BaggageInfo>
+     <BaseFare Amount="63.00" CurrencyCode="EUR"/>
+     <Endorsements>
+      <Text>NON-END / NO REFUND/VALID KM FARES ONLY/ADD FEE FOR CHANGES</Text>
+     </Endorsements>
+     <EquivFare Amount="97.00" CurrencyCode="CAD"/>
+     <Taxes TotalAmount="101.34">
+      <Tax Amount="23.13" TaxCode="YRI" TaxName="SERVICE FEE - CARRIER-IMPOSED" TicketingTaxCode="YR"/>
+      <Tax Amount="3.87" TaxCode="EX" TaxName="SECURITY BAG CHARGE" TicketingTaxCode="EX"/>
+      <Tax Amount="27.16" TaxCode="IT3" TaxName="EMBARKATION TAX" TicketingTaxCode="IT"/>
+      <Tax Amount="4.90" TaxCode="VT" TaxName="SECURITY CHARGE" TicketingTaxCode="VT"/>
+      <Tax Amount="12.06" TaxCode="HB" TaxName="COUNCIL CITY TAX" TicketingTaxCode="HB"/>
+      <Tax Amount="1.33" TaxCode="MJ" TaxName="PASSENGER SERVICE CHARGE DEPAR" TicketingTaxCode="MJ"/>
+      <Tax Amount="25.51" TaxCode="UF" TaxName="PASSENGER SERVICE CHARGE   INT" TicketingTaxCode="UF"/>
+      <Tax Amount="3.38" TaxCode="DB" TaxName="AIRPORT SECURITY CHARGE" TicketingTaxCode="DB"/>
+     </Taxes>
+     <TotalFare Amount="198.34" CurrencyCode="CAD"/>
+    </ItinTotalFare>
+    <PassengerTypeQuantity Code="ADT" Quantity="1"/>
+    <PTC_FareBreakdown>
+     <Cabin>Y</Cabin>
+     <FareBasis Code="RKMON2" FareAmount="35.37" FarePassengerType="ADT" FareType="P" FilingCarrier="KM" GlobalInd="EH" Market="ROMMLA"/>
+     <FreeBaggageAllowance>PC001</FreeBaggageAllowance>
+    </PTC_FareBreakdown>
+    <PTC_FareBreakdown>
+     <Cabin>Y</Cabin>
+     <FareBasis Code="RKMON1" FareAmount="36.51" FarePassengerType="ADT" FareType="P" FilingCarrier="KM" GlobalInd="EH" Market="MLAZRH"/>
+     <FreeBaggageAllowance>PC001</FreeBaggageAllowance>
+    </PTC_FareBreakdown>
+   </AirItineraryPricingInfo>
+  </PricedItinerary>
+ </PriceQuote>
+</OTA_AirPriceRS></soap-env:Body></soap-env:Envelope>

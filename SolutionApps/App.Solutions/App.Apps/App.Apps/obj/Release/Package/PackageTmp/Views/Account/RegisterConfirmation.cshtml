@@ -1,0 +1,39 @@
+﻿@{
+    ViewBag.Title = "Register Success Confirmation";
+    Layout = "~/Views/Shared/_MasterLayoutMain.cshtml";
+}
+
+
+
+<div class="row">
+    <div class="col-xs-12 col-sm-12">
+        <div class="widget-body">
+            <div class="widget-main">
+                <div class="row">
+                    <div class="container">
+
+                        <h2>Your Registration has been successfully completed. Registration approval will be sent via email</h2>
+                        <center><a href="#" id="btn-register-confirm" class="btn btn-primary text-center">Ok</a></center>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+                    <script>
+                        $(document).ready(function () {
+
+                            $('#btn-register-confirm').click(function () {
+
+                                var domainurl = localStorage.getItem("domain");
+                                if (domainurl == "flypapa.com") {
+                                    domainurl = "http://"+domainurl + "/myindex.html";
+                                }
+
+                                window.location.href = domainurl;
+                            });
+
+                        });
+                    </script>
+

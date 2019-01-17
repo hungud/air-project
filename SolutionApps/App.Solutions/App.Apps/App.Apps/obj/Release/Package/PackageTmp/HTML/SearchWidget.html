@@ -1,0 +1,1287 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0055)http://cheapairfaresweb.com/nanosearchengine/index.html -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Search Widget</title>
+    <link rel="stylesheet" href="./Search Widget_files/font-awesome.min.css" />
+    <link rel="stylesheet" href="./Search Widget_files/bootstrap.min.css" />
+    <link rel="stylesheet" href="./Search Widget_files/datepicker.css" />
+    <script src="./Search Widget_files/jquery.min.js"></script>
+    <style type="text/css">
+        a {
+            -webkit-transition: all 200ms linear;
+            -moz-transition: all 200ms linear;
+            -o-transition: all 200ms linear;
+            transition: all 200ms linear;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+            a:hover, a:active {
+                text-decoration: none;
+                text-decoration: none;
+            }
+
+            a:focus {
+                outline: none;
+                text-decoration: none;
+            }
+
+        ::-moz-selection {
+            color: #fff;
+            background: #000;
+        }
+
+        ::selection {
+            color: #fff;
+            background: #000;
+        }
+
+        .clearfix05 {
+            display: block;
+            clear: both;
+            height: 5px;
+        }
+
+        .clearfix10 {
+            display: block;
+            clear: both;
+            height: 10px;
+        }
+
+        .clearfix15 {
+            display: block;
+            clear: both;
+            height: 15px;
+        }
+
+        .clearfix20 {
+            display: block;
+            clear: both;
+            height: 20px;
+        }
+
+        body {
+            margin: 5px;
+            padding: 0px;
+        }
+        /*
+        body iframe#myform body{overflow-x:hidden !important;}
+        body .form_section iframe#myform body{overflow-x:hidden !important;}
+        body .form_section iframe body{overflow-x:hidden !important;}
+        .datepicker.dropdown-menu{z-index:9999 !important;}
+        */
+        .datepicker > div {
+            padding: 4px 10px !important;
+        }
+
+        th.switch, th.prev, th.next {
+            padding: 0px 5px !important;
+        }
+
+        td.day {
+            padding: 0px 5px !important;
+        }
+
+        .form-control {
+            height: 30px !important;
+            font-size: 12px !important;
+        }
+
+        .select_option select {
+            height: 28px !important;
+        }
+
+        .select_option:after {
+            font: normal normal normal 14px/26px FontAwesome !important;
+            height: 28px !important;
+        }
+
+        .select_option {
+            height: 30px !important;
+        }
+
+        .search_widget_main .checkbox {
+            margin-bottom: 0 !important;
+        }
+
+        button#btnSearch {
+            padding: 6px 16px !important;
+        }
+
+        /* anil 14th nov 2016 */
+        ul#ui-id-1, ul#ui-id-2, ul#ui-id-3, ul#ui-id-9, ul#ui-id-10, ul#ui-id-11, ul#ui-id-12, ul#ui-id-13 {
+            background: #fff;
+            border: 1px solid #66afe9;
+            width: 325px !important;
+            max-width: auto;
+            padding: 0px;
+            z-index: 999;
+            list-style: none;
+            min-height: 50px;
+            max-height: 250px;
+            overflow-y: auto;
+        }
+
+        li.ui-menu-item {
+            padding-left: 10px;
+        }
+
+            li.ui-menu-item:hover {
+                background: #66afe9;
+                cursor: pointer;
+            }
+        /* anil 14th nov 2016 */
+
+        .search_tab {
+            display: block;
+            height: 44px;
+            margin: 0px;
+            padding: 0px;
+            list-style: none;
+            border-top: 1px solid #ccc;
+        }
+
+            .search_tab li {
+                display: inline;
+            }
+
+                .search_tab li a {
+                    display: block;
+                    background: #f9f9f9;
+                    position: relative;
+                    padding: 10px 0px;
+                    text-align: center;
+                    float: left;
+                    width: 33.33%;
+                    border-right: 1px solid #ccc;
+                    border-bottom: 2px solid #ccc;
+                    font-size: 16px;
+                    font-weight: bold;
+                    color: #337ab7;
+                    text-decoration: none;
+                    -webkit-transition: all 50ms linear;
+                    -moz-transition: all 50ms linear;
+                    -o-transition: all 50ms linear;
+                    transition: all 50ms linear;
+                }
+
+                .search_tab li:first-child a {
+                    border-left: 1px solid #ccc;
+                }
+
+                .search_tab li.active a {
+                    background: #337ab7;
+                    border-bottom: 2px solid #337ab7;
+                    border-right: 1px solid #337ab7;
+                    color: #fff;
+                }
+
+                .search_tab li.active:first-child a {
+                    border-left: 1px solid #337ab7;
+                }
+
+                .search_tab li.active a:after, .search_tab li.active a:before {
+                    top: 100%;
+                    left: 50%;
+                    border: solid transparent;
+                    content: " ";
+                    height: 0;
+                    width: 0;
+                    position: absolute;
+                    pointer-events: none;
+                }
+
+                .search_tab li.active a:after {
+                    border-color: rgba(51, 122, 183, 0);
+                    border-top-color: #337ab7;
+                    border-width: 10px;
+                    margin-left: -10px;
+                }
+
+                .search_tab li.active a:before {
+                    border-color: rgba(51, 122, 183, 0);
+                    border-top-color: #337ab7;
+                    border-width: 13px;
+                    margin-left: -13px;
+                }
+
+        .search_widget_main {
+            display: block;
+            padding: 20px;
+            background: #f9f9f9;
+            border: 1px solid #ccc;
+            border-bottom: 2px solid #ccc;
+            border-top: none;
+            margin: 0px auto;
+            width: 100%;
+        }
+
+            .search_widget_main .search_widget_head {
+                display: block;
+                padding: 15px 5px 10px 5px;
+                margin: -30px -20px 5px -20px;
+                background: #fff;
+                border-bottom: 1px solid #ccc;
+                text-align: center;
+            }
+
+            .search_widget_main .row {
+                margin-left: -10px;
+                margin-right: -10px;
+            }
+
+                .search_widget_main .row .col-xs-12, .search_widget_main .row .col-xs-6, .search_widget_main .row .col-xs-4 {
+                    padding-left: 10px;
+                    padding-right: 10px;
+                }
+
+            .search_widget_main i {
+                color: #337ab7;
+            }
+
+        .search_widget_title {
+            display: block;
+            padding: 0px;
+            margin: 0px;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .search_widget_subTitle {
+            display: block;
+            padding: 0px 0px 15px 0px;
+            margin: 0px 0px 15px 0px;
+            font-size: 18px;
+            font-weight: bold;
+            border-bottom: 1px solid #ddd;
+            position: relative;
+        }
+
+            .search_widget_subTitle i {
+                position: absolute;
+                top: 3px;
+                right: 0;
+                color: #ccc;
+            }
+
+        .search_widget .form-control {
+            border-radius: 0px;
+            margin-bottom: 5px;
+        }
+
+            .search_widget .form-control:focus {
+                -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.2);
+                box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.2);
+            }
+
+        .search_widget .btn {
+            border-radius: 0px;
+            -webkit-transition: all 200ms linear;
+            -moz-transition: all 200ms linear;
+            -o-transition: all 200ms linear;
+            transition: all 200ms linear;
+        }
+
+        .search_widget hr {
+            clear: both;
+            margin: 10px;
+            border-top-color: #ddd;
+        }
+
+        .search_widget_main .search_widget_footer {
+            display: block;
+            padding: 5px 20px 5px 20px;
+            margin: 5px -20px -20px -20px;
+            background: #fff;
+            border-top: 1px solid #ccc;
+            text-align: center;
+        }
+
+        .tooltip-inner {
+            border-radius: 0px;
+        }
+
+        .search_widget_main i.tooltip-info {
+            color: #bbb;
+        }
+
+        /* ---------- Start autocomplete Css ---------- */
+        .autocomplete-suggestions {
+            border: 1px solid #ccc;
+            background: #FFF;
+            cursor: default;
+            overflow: auto;
+            -webkit-box-shadow: 3px 3px 3px 0px rgba(0,0,0,0.25);
+            -moz-box-shadow: 3px 3px 3px 0px rgba(0,0,0,0.25);
+            box-shadow: 3px 3px 3px 0px rgba(0,0,0,0.25);
+        }
+
+        .autocomplete-suggestion {
+            padding: 2px 5px;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+
+        .autocomplete-no-suggestion {
+            padding: 2px 5px;
+        }
+
+        .autocomplete-selected {
+            background: #f7f7f7;
+        }
+
+        .autocomplete-suggestions strong {
+            font-weight: bold;
+            color: #337ab7;
+        }
+
+        .autocomplete-group {
+            padding: 2px 5px;
+        }
+
+            .autocomplete-group strong {
+                font-weight: bold;
+                font-size: 16px;
+                display: block;
+                border-bottom: 1px solid #ccc;
+            }
+        /* ---------- Start autocomplete Css ---------- */
+
+        /* ---------- Start Radio, checkbox, Select Input Css ---------- */
+
+        .search_widget_main .radio, .search_widget_main .checkbox {
+            display: inline-block;
+            margin-top: 0px;
+            margin-bottom: 15px;
+        }
+
+        .search_widget_main .search_widget_head .radio {
+            margin-bottom: 0px;
+            margin-top: 10px;
+        }
+
+        .search_widget_main .radio label, .search_widget_main .checkbox label {
+            display: inline-block;
+            padding-left: 25px;
+            margin-right: 15px;
+            position: relative;
+        }
+
+        .search_widget_main .checkbox.label_block {
+            display: block;
+        }
+
+        input[type=radio], input[type=checkbox] {
+            display: none;
+        }
+
+        .radio label:before, .checkbox label:before {
+            content: "";
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            margin-right: 10px;
+            position: absolute;
+            left: 0;
+            top: 2px;
+            background: #fff;
+            border: 1px solid #ccc;
+            -webkit-box-shadow: inset 1px 1px 1px 0px rgba(0,0,0,0.1);
+            -moz-box-shadow: inset 1px 1px 1px 0px rgba(0,0,0,0.1);
+            box-shadow: inset 1px 1px 1px 0px rgba(0,0,0,0.1);
+        }
+
+        .radio label:before {
+            width: 18px;
+            height: 18px;
+            bottom: 2px;
+            border-radius: 9px;
+        }
+
+        .radio label:before {
+            border-radius: 10px;
+        }
+
+        input[type=radio]:checked + label:before {
+            content: "\f058";
+            font: normal normal normal 14px/16px FontAwesome;
+            text-align: center;
+            color: #337ab7;
+        }
+
+        input[type=checkbox]:checked + label:before {
+            content: "\f00c";
+            font: normal normal normal 11px/14px FontAwesome;
+            text-align: center;
+            color: #337ab7;
+        }
+
+        .select_option {
+            display: block;
+            border: 1px solid #ced8df;
+            height: 36px;
+            margin-bottom: 5px;
+            position: relative;
+        }
+
+            .select_option select {
+                border: none;
+            }
+
+            .select_option:after {
+                background: #fff;
+                color: #999;
+                content: "\f0d7";
+                font: normal normal normal 14px/34px FontAwesome;
+                pointer-events: none;
+                position: absolute;
+                height: 34px;
+                right: 0px;
+                text-align: center;
+                top: 0px;
+                bottom: 0px;
+                width: 26px;
+                z-index: 2;
+                -webkit-box-shadow: inset -1px 1px 1px 0px rgba(0,0,0,0.1);
+                -moz-box-shadow: inset -1px 1px 1px 0px rgba(0,0,0,0.1);
+                box-shadow: inset -1px 1px 1px 0px rgba(0,0,0,0.1);
+            }
+        /* ---------- End Radio, checkbox, Select Input Css ---------- */
+        .ui-helper-hidden-accessible {
+            display: none;
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            $('#btnSearchHotel').click(function () {
+                var adults = 0;
+                var children = 0;
+                var infants = "";
+                var rooms = 0;
+
+                if ($('#room1').is(':visible')) {
+                    adults += parseInt($('#r1adults').val());
+                    rooms += parseInt(1);
+                }
+                if ($('#room2').is(':visible')) {
+                    adults += parseInt($('#r2adults').val());
+                    rooms += parseInt(1);
+                }
+                if ($('#room3').is(':visible')) {
+                    adults += parseInt($('#r3adults').val());
+                    rooms += parseInt(1);
+                }
+                if ($('#room4').is(':visible')) {
+                    adults += parseInt($('#r4adults').val());
+                    rooms += parseInt(1);
+                }
+
+                $(".children").each(function () {
+                    children += parseInt($(this).val());
+                });
+                $(".infants").each(function () {
+                    if (parseInt($(this).val()) > 0) {
+                        infants = infants + $(this).val() + ':,';
+                    }
+
+                });
+                if (infants == "") {
+                    infants = '1:,';
+                }
+
+                var cityval = $('#hotelDestination').val();
+                var city = cityval.split(',')[0];
+                var country = cityval.split(',')[1];
+                var checkinval = $('#checkIn').val();
+                var checkoutval = $('#checkOut').val();
+                var domainname = 'http://hotel.nanojot.com/quote.html?';
+
+                window.location.href = domainname + 'cityName=' + cityval + '&city=' + country + ' &fcity=' + city + '&findcheckin=' + checkinval + '&findcheckout=' + checkoutval + '&findadults=' + adults + '&findchildrens=' + children + '&findrooms=' + rooms + '&findstarrating=0&chlds=' + infants + ' &Uid=undefined&Currency=CAD&chldages';
+
+                return false;
+            });
+            $('#btnSearchCar').click(function () {
+
+                var cityval = $('#pickUp').val();
+                var city = cityval.split(',')[0];
+                var country = cityval.split(',')[1];
+                var countrycode = cityval.split(',')[2];
+
+                var pickUpDate = $('#Pick-upDate').val();
+
+                var pickmonth = pickUpDate.split('/')[0];
+                var pickday = pickUpDate.split('/')[1];
+                var pickyear = pickUpDate.split('/')[2];
+
+                var dropOffDate = $('#Drop-OffDate').val();
+
+                var dropmonth = pickUpDate.split('/')[0];
+                var dropday = pickUpDate.split('/')[1];
+                var dropyear = pickUpDate.split('/')[2];
+
+                var pickUpTime = $('#Pick-upTime').val();
+                var dropOffTime = $('#Drop-offTime').val();
+
+                /*===
+                http://www.autoeurope.ca/booking/car.cfm?aff=CHEAPAFW &pucode=FR&pucity=PARIS&puloclist=2113650-2792-1395775-3142-1351275-2041750-29683-2711250-10991-16818-2230000-30704&pumonth=12&puday=30&puyear=2016&putime=10&pumin=00&domonth=1&doday=2&doyear=2017&dotime=10&domin=00&oneway=false&xreq=y
+                ===*/
+
+                var domainname = 'http://www.autoeurope.ca/booking/car.cfm?aff=CHEAPAFW';
+
+                window.location.href = domainname + '&pucode=' + countrycode + '&pucity=' + city + '&puloclist= &pumonth=' + pickmonth + '&puday=' + pickday + '&puyear=' + pickyear + '&putime=10&pumin=00&domonth=' + dropmonth + '&doday=' + dropday + '&doyear=' + dropyear + '&dotime=10&domin=00&oneway=false&xreq=y';
+
+                return false;
+            });
+        });
+    </script>
+</head>
+<body style="overflow-x:hidden;">
+    <div class="row">
+        <div class="col-xs-12 col-sm-4 col-md-4">
+        </div>
+        <div class="col-xs-12 col-sm-4 col-md-4">
+
+            <!-- Start Search -->
+            <ul class="search_tab">
+                <li class="active"><a href="http://cheapairfaresweb.com/nanosearchengine/index.html#airWidget">Air</a></li>
+                <li><a href="http://cheapairfaresweb.com/nanosearchengine/index.html#hotelWidget">Hotel</a></li>
+                <li><a href="http://cheapairfaresweb.com/nanosearchengine/index.html#carWidget">Car</a></li>
+            </ul>
+            <div class="search_widget_main">
+                <!-- Start Air Section -->
+                <div class="search_widget" id="airWidget" style="display: block;">
+                    <div>
+                        <div class="search_widget_head">
+                            <h2 class="search_widget_title"><i class="fa fa-plane"></i> Search Flights</h2>
+                            <div class="radio">
+                                <input type="radio" name="radioval" id="rreturn" value="R" checked="checked" />
+                                <label for="rreturn">Return</label>
+                            </div>
+                            <div class="radio">
+                                <input type="radio" name="radioval" id="roneway" value="O" />
+                                <label for="roneway">One Way</label>
+                            </div>
+                            <div class="radio">
+                                <input type="radio" name="radioval" id="rmulticity" value="M" />
+                                <label for="rmulticity">Multicity</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <label for="OBdep1"><i class="fa fa-map-marker"></i> From</label>
+                                <input type="text" value="JFK" required="" id="OBdep1" class="form-control cityselect ui-autocomplete-input" placeholder="City or airport" name="OBdep" autocomplete="off" />
+                            </div>
+                            <div class="col-xs-6">
+                                <label for="OBarr1"><i class="fa fa-map-marker"></i> To</label>
+                                <input type="text" value="LAX"  required="" id="OBarr1" class="form-control cityselect ui-autocomplete-input" placeholder="City or airport" name="OBarr" autocomplete="off" />
+                            </div>
+                            <div class="col-xs-6">
+                                <label for="DepDt"><i class="fa fa-calendar"></i> Departure Date</label>
+                                <input type="text" required="" class="form-control" autocomplete="off" value="" name="DepDate" id="DepDt" />
+                            </div>
+                            <div class="multicity_options" style="display: none;">
+                                <hr />
+                                <div class="col-xs-6">
+                                    <label for="OBdep2"><i class="fa fa-map-marker"></i> From</label>
+                                    <input type="text" id="OBdep2" class="form-control cityselect ui-autocomplete-input" placeholder="City or airport" name="OBdep" autocomplete="off" />
+                                </div>
+                                <div class="col-xs-6">
+                                    <label for="OBarr2"><i class="fa fa-map-marker"></i> To</label>
+                                    <input type="text" id="OBarr2" class="form-control cityselect ui-autocomplete-input" placeholder="City or airport" name="OBarr" autocomplete="off" />
+                                </div>
+                                <div class="col-xs-6">
+                                    <label for="DepDt2"><i class="fa fa-calendar"></i> Departure Date</label>
+                                    <input type="text" class="form-control" autocomplete="off" value="" name="DepDate2" id="DepDt2" />
+                                </div>
+                                <hr />
+                                <div class="col-xs-6">
+                                    <label for="OBdep3"><i class="fa fa-map-marker"></i> From</label>
+                                    <input type="text" id="OBdep3" class="form-control cityselect ui-autocomplete-input" placeholder="City or airport" name="OBdep" autocomplete="off" />
+                                </div>
+                                <div class="col-xs-6">
+                                    <label for="OBarr3"><i class="fa fa-map-marker"></i> To</label>
+                                    <input type="text" id="OBarr3" class="form-control cityselect ui-autocomplete-input" placeholder="City or airport" name="OBarr" autocomplete="off" />
+                                </div>
+                                <div class="col-xs-6">
+                                    <label for="DepDt3"><i class="fa fa-calendar"></i> Departure Date</label>
+                                    <input type="text" class="form-control" autocomplete="off" value="" name="DepDate3" id="DepDt3" />
+                                </div>
+                                <hr />
+                                <div class="col-xs-6">
+                                    <label for="OBdep4"><i class="fa fa-map-marker"></i> From</label>
+                                    <input type="text" id="OBdep4" class="form-control cityselect ui-autocomplete-input" placeholder="City or airport" name="OBdep" autocomplete="off" />
+                                </div>
+                                <div class="col-xs-6">
+                                    <label for="OBarr4"><i class="fa fa-map-marker"></i> To</label>
+                                    <input type="text" id="OBarr4" class="form-control cityselect ui-autocomplete-input" placeholder="City or airport" name="OBarr" autocomplete="off" />
+                                </div>
+                                <div class="col-xs-6">
+                                    <label for="DepDt4"><i class="fa fa-calendar"></i> Departure Date</label>
+                                    <input type="text" class="form-control" autocomplete="off" value="" name="DepDate4" id="DepDt4" />
+                                </div>
+                                <hr />
+                            </div>
+                            <!--
+                            <div class="col-xs-6 multicity">
+                                <label for="OBtime"><i class="fa fa-clock-o"></i> Departure Time</label>
+                                <div class="select_option">
+                                <select class="form-control" id="OBtime" name="OBtime">
+                                  <option value="">Anytime</option>
+                                  <option value="23000900">12am-9am</option>
+                                  <option value="06001300">6am-noon</option>
+                                  <option value="10001400">10am-2pm</option>
+                                  <option value="11001700">noon-5pm</option>
+                                  <option value="16002000">4pm-8pm</option>
+                                  <option value="18002359">6pm-12am</option>
+                                  <option value="23590200">1 am</option>
+                                  <option value="01000300">2 am</option>
+                                  <option value="02000400">3 am</option>
+                                  <option value="03000500">4 am</option>
+                                  <option value="04000600">5 am</option>
+                                  <option value="05000700">6 am</option>
+                                  <option value="06000800">7 am</option>
+                                  <option value="07000900">8 am</option>
+                                  <option value="08001000">9 am</option>
+                                  <option value="09001100">10 am</option>
+                                  <option value="10001300">11 am</option>
+                                  <option value="11001300">Noon</option>
+                                  <option value="12001400">1 pm</option>
+                                  <option value="13001500">2 pm</option>
+                                  <option value="14001600">3 pm</option>
+                                  <option value="15001700">4 pm</option>
+                                  <option value="16001800">5 pm</option>
+                                  <option value="17001900">6 pm</option>
+                                  <option value="18002000">7 pm</option>
+                                  <option value="19002100">8 pm</option>
+                                  <option value="20002200">9 pm</option>
+                                  <option value="21002300">10 pm</option>
+                                  <option value="22002359">11 pm</option>
+                                  <option value="23000100">Midnight</option>
+                                </select>
+                            </div>
+                            </div>
+                            -->
+                            <div class="col-xs-6 one_way">
+                                <label for="ArrDt"><i class="fa fa-calendar"></i> Return Date</label>
+                                <input type="text" required="" class="form-control" autocomplete="off" name="ArrDate" id="ArrDt" />
+                            </div>
+
+                            <!--
+                            <div class="col-xs-6 one_way">
+                                <label for="IBtime"><i class="fa fa-clock-o"></i> Return Time</label>
+                                <div class="select_option">
+                                <select name="IBtime" class="form-control" id="IBtime">
+                                    <option value="">Anytime</option>
+                                    <option value="23000900">12am-9am</option>
+                                    <option value="06001300">6am-noon</option>
+                                    <option value="10001400">10am-2pm</option>
+                                    <option value="11001700">noon-5pm</option>
+                                    <option value="16002000">4pm-8pm</option>
+                                    <option value="18002359">6pm-12am</option>
+                                    <option value="23590200">1 am</option>
+                                    <option value="01000300">2 am</option>
+                                    <option value="02000400">3 am</option>
+                                    <option value="03000500">4 am</option>
+                                    <option value="04000600">5 am</option>
+                                    <option value="05000700">6 am</option>
+                                    <option value="06000800">7 am</option>
+                                    <option value="07000900">8 am</option>
+                                    <option value="08001000">9 am</option>
+                                    <option value="09001100">10 am</option>
+                                    <option value="10001300">11 am</option>
+                                    <option value="11001300">Noon</option>
+                                    <option value="12001400">1 pm</option>
+                                    <option value="13001500">2 pm</option>
+                                    <option value="14001600">3 pm</option>
+                                    <option value="15001700">4 pm</option>
+                                    <option value="16001800">5 pm</option>
+                                    <option value="17001900">6 pm</option>
+                                    <option value="18002000">7 pm</option>
+                                    <option value="19002100">8 pm</option>
+                                    <option value="20002200">9 pm</option>
+                                    <option value="21002300">10 pm</option>
+                                    <option value="22002359">11 pm</option>
+                                    <option value="23000100">Midnight</option>
+                                </select>
+                                </div>
+                            </div>
+                            -->
+
+                            <div class="col-xs-6">
+                                <label for="Airline"><i class="fa fa-plane"></i> Airline:</label>
+                                <div class="select_option">
+                                    <select id="Airline" name="Airline" class="form-control" style="width: 182px;">
+                                        <option selected="" value="">All</option>
+                                        <option value="SU">Aeroflot Russian Airlines</option>
+                                        <option value="VV">Aerosvit Airlines</option>
+                                        <option value="AC">Air Canada</option>
+                                        <option value="AF">Air France</option>
+                                        <option value="AI">Air India</option>
+                                        <option value="FJ">Air Pacific</option>
+                                        <option value="AZ">Alitalia</option>
+                                        <option value="AA">American Airlines</option>
+                                        <option value="OS">Austrian Airlines</option>
+                                        <option value="BA">British Airways</option>
+                                        <option value="BD">British Midland</option>
+                                        <option value="CX">Cathay Pacific</option>
+                                        <option value="CI">China Airlines</option>
+                                        <option value="CO">Continental</option>
+                                        <option value="OK">Czech Airline</option>
+                                        <option value="DL">Delta</option>
+                                        <option value="MS">Egypt Air</option>
+                                        <option value="LY">El Al Israel Airlines</option>
+                                        <option value="EK">Emirates</option>
+                                        <option value="ET">Ethiopian Airlines</option>
+                                        <option value="EY">Etihad Airways</option>
+                                        <option value="BR">Eva Airways</option>
+                                        <option value="AY">Finn Air</option>
+                                        <option value="IB">Iberia</option>
+                                        <option value="FI">Iceland Air</option>
+                                        <option value="JL">Japan AirLines</option>
+                                        <option value="9W">Jet Airways</option>
+                                        <option value="KQ">Kenya Airways</option>
+                                        <option value="KL">KLM Royal Dutch Airlines</option>
+                                        <option value="KE">Korean Air</option>
+                                        <option value="KU">Kuwait Airways</option>
+                                        <option value="LR">Lacsa</option>
+                                        <option value="LA">Lan Chile</option>
+                                        <option value="LP">Lan Peru S.A.</option>
+                                        <option value="LO">LOT Polish Airlines</option>
+                                        <option value="LH">Lufthansa</option>
+                                        <option value="MH">Malaysia Airline</option>
+                                        <option value="MA">Malev Hungarian</option>
+                                        <option value="MX">Mexicana</option>
+                                        <option value="NW">Northwest Airlines</option>
+                                        <option value="OA">Olympic Airways</option>
+                                        <option value="PR">Philippine Air Lines</option>
+                                        <option value="QF">Qantas Airways</option>
+                                        <option value="QR">Qatar Airways</option>
+                                        <option value="RJ">Royal Jordanian</option>
+                                        <option value="SV">Saudi Arabian Airlines</option>
+                                        <option value="SK">Scandinavian Airlines</option>
+                                        <option value="SQ">Singapore Airlines</option>
+                                        <option value="SN">SN Brussels Airlines</option>
+                                        <option value="SA">South African Airways</option>
+                                        <option value="LX">Swiss</option>
+                                        <option value="TK">Turkish Airlines</option>
+                                        <option value="UA">United Airlines</option>
+                                        <option value="US">US Air</option>
+                                        <option value="WS">West Jet</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-xs-6">
+                                <label for="FareType"><i class="fa fa-cubes"></i> Cabin</label>
+                                <div class="select_option">
+                                    <select id="FareType" name="FareType" class="form-control" style="width: 182px;">
+                                        <option value="*">All</option>
+                                        <option selected="" value="E">Economy</option>
+                                        <option value="B">Business</option>
+                                        <option value="F">First</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-xs-4">
+                                <label for="numadults"><i class="fa fa-male"></i> Adults</label>
+                                <div class="select_option">
+                                    <select class="form-control" id="numadults" name="nbadults" style="width: 114px;">
+                                        <option selected="selected" value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-xs-4">
+                                <label for="numchildren"><i class="fa fa-child"></i> Children <i class="fa fa-info-circle tooltip-info" data-toggle="tooltip" data-original-title="Child age from 2 to 11 years"></i></label>
+                                <div class="select_option">
+                                    <select id="numchildren" name="nbchilds" class="form-control" style="width: 114px;">
+                                        <option selected="" value="0">0</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-xs-4">
+                                <label for="numinfants"><i class="fa fa-smile-o"></i> Infants <i class="fa fa-info-circle tooltip-info" data-toggle="tooltip" data-original-title="Child age Below 2 years"></i></label>
+                                <div class="select_option">
+                                    <select class="form-control" id="numinfants" name="nbinfants" style="width: 114px;">
+                                        <option selected="" value="0">0</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="checkbox label_block">
+                            <input type="checkbox" id="directOnly" />
+                            <label for="directOnly">Direct Flights Only</label>
+                        </div>
+                        <div class="search_widget_footer">
+                            <button class="btn btn-primary btn-block btn-lg" id="btnSearch" type="submit">Search Now</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Air Section -->
+                <!-- Start Hotel Section -->
+                <div class="search_widget" id="hotelWidget" style="display: none;">
+                    <form method="post" id="formhotels">
+                        <div class="search_widget_head">
+                            <h2 class="search_widget_title"><i class="fa fa-hospital-o"></i> Search Hotels</h2>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <label for="hotelDestination"><i class="fa fa-map-marker"></i> Destination</label>
+                                <input type="text" required="" id="hotelDestination" class="form-control cityselect ui-autocomplete-input" placeholder="City or hotel name" name="hotelDestination" autocomplete="off" />
+                            </div>
+                            <div class="col-xs-6">
+                                <label for="checkIn"><i class="fa fa-calendar"></i> Check In</label>
+                                <input type="text" required="" class="form-control" autocomplete="off" value="" name="checkIn" id="checkIn" />
+                            </div>
+                            <div class="col-xs-6">
+                                <label for="checkOut"><i class="fa fa-calendar"></i> Check Out</label>
+                                <input type="text" required="" class="form-control" autocomplete="off" value="" name="checkOut" id="checkOut" />
+                            </div>
+                        </div>
+
+                        <div id="room1">
+                            <h2 class="search_widget_subTitle"><i class="fa fa-long-arrow-down"></i> Room 1</h2>
+                            <div class="row">
+                                <div class="col-xs-4">
+                                    <label for="r1adults"><i class="fa fa-male"></i> Adults</label>
+                                    <div class="select_option">
+                                        <select name="r1adults" id="r1adults" class="form-control" style="width: 0px;">
+                                            <option value="1" selected="selected">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-xs-4">
+                                    <label for="r1Children"><i class="fa fa-child"></i> Children <i class="fa fa-info-circle tooltip-info" data-toggle="tooltip" data-original-title="Child age from 2 to 11 years"></i></label>
+                                    <div class="select_option">
+                                        <select name="r1Children" id="r1Children" class="form-control children" style="width: 0px;">
+                                            <option value="0" selected="selected">0</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-xs-4">
+                                    <label for="r1Infants"><i class="fa fa-smile-o"></i> Infants <i class="fa fa-info-circle tooltip-info" data-toggle="tooltip" data-original-title="Child age Below 2 years"></i></label>
+                                    <div class="select_option">
+                                        <select name="r1Infants" id="r1Infants" class="form-control infants" style="width: 0px;">
+                                            <option value="0" selected="selected">0</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+                        </div>
+
+                        <div id="room2" style="display: none;">
+                            <h2 class="search_widget_subTitle"><i class="fa fa-long-arrow-down"></i> Room 2</h2>
+                            <div class="row">
+                                <div class="col-xs-4">
+                                    <label for="r2adults"><i class="fa fa-male"></i> Adults</label>
+                                    <div class="select_option">
+                                        <select name="r1adults" id="r2adults" class="form-control" style="width: 0px;">
+                                            <option value="1" selected="selected">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-xs-4">
+                                    <label for="r1Children"><i class="fa fa-child"></i> Children <i class="fa fa-info-circle tooltip-info" data-toggle="tooltip" data-original-title="Child age from 2 to 11 years"></i></label>
+                                    <div class="select_option">
+                                        <select name="r1Children" id="r1Children" class="form-control children" style="width: 0px;">
+                                            <option value="0" selected="selected">0</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-xs-4">
+                                    <label for="r1Infants"><i class="fa fa-smile-o"></i> Infants <i class="fa fa-info-circle tooltip-info" data-toggle="tooltip" data-original-title="Child age Below 2 years"></i></label>
+                                    <div class="select_option">
+                                        <select name="r1Infants" id="r1Infants" class="form-control infants" style="width: 0px;">
+                                            <option value="0" selected="selected">0</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+
+
+
+                            </div>
+                        </div>
+
+                        <div id="room3" style="display: none;">
+                            <h2 class="search_widget_subTitle"><i class="fa fa-long-arrow-down"></i> Room 3</h2>
+                            <div class="row">
+                                <div class="col-xs-4">
+                                    <label for="r3adults"><i class="fa fa-male"></i> Adults</label>
+                                    <div class="select_option">
+                                        <select name="r1adults" id="r3adults" class="form-control" style="width: 0px;">
+                                            <option value="1" selected="selected">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-xs-4">
+                                    <label for="r1Children"><i class="fa fa-child"></i> Children <i class="fa fa-info-circle tooltip-info" data-toggle="tooltip" data-original-title="Child age from 2 to 11 years"></i></label>
+                                    <div class="select_option">
+                                        <select name="r1Children" id="r1Children" class="form-control children" style="width: 0px;">
+                                            <option value="0" selected="selected">0</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-xs-4">
+                                    <label for="r1Infants"><i class="fa fa-smile-o"></i> Infants <i class="fa fa-info-circle tooltip-info" data-toggle="tooltip" data-original-title="Child age Below 2 years"></i></label>
+                                    <div class="select_option">
+                                        <select name="r1Infants" id="r1Infants" class="form-control infants" style="width: 0px;">
+                                            <option value="0" selected="selected">0</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+
+
+
+                            </div>
+                        </div>
+
+                        <div id="room4" style="display: none;">
+                            <h2 class="search_widget_subTitle"><i class="fa fa-long-arrow-down"></i> Room 4</h2>
+                            <div class="row">
+                                <div class="col-xs-4">
+                                    <label for="r4adults"><i class="fa fa-male"></i> Adults</label>
+                                    <div class="select_option">
+                                        <select name="r1adults" id="r4adults" class="form-control" style="width: 0px;">
+                                            <option value="1" selected="selected">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-xs-4">
+                                    <label for="r1Children"><i class="fa fa-child"></i> Children <i class="fa fa-info-circle tooltip-info" data-toggle="tooltip" data-original-title="Child age from 2 to 11 years"></i></label>
+                                    <div class="select_option">
+                                        <select name="r1Children" id="r1Children" class="form-control children" style="width: 0px;">
+                                            <option value="0" selected="selected">0</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-xs-4">
+                                    <label for="r1Infants"><i class="fa fa-smile-o"></i> Infants <i class="fa fa-info-circle tooltip-info" data-toggle="tooltip" data-original-title="Child age Below 2 years"></i></label>
+                                    <div class="select_option">
+                                        <select name="r1Infants" id="r1Infants" class="form-control infants" style="width: 0px;">
+                                            <option value="0" selected="selected">0</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+
+
+
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <a href="javascript:void(0)" class="addRoom room1Opt"><i class="fa fa-plus-square"></i> Add Room</a>
+                            </div>
+                            <div class="col-xs-6 text-right">
+                                <a href="javascript:void(0)" class="deleteRoom" style="display: none;"><i class="fa fa-minus-square"></i> Delete Room</a>
+                            </div>
+                        </div>
+
+
+                        <div class="search_widget_footer">
+                            <button class="btn btn-primary btn-block btn-lg" id="btnSearchHotel" type="submit">Search Now</button>
+                        </div>
+
+                    </form>
+                </div>
+                <!-- End Hotel Section -->
+                <!-- Start Car Section -->
+                <div class="search_widget" id="carWidget" style="display: none;">
+                    <!--<form method="post" id="formcars">-->
+                    <form method="post"  id="formcars">
+                        <div class="search_widget_head">
+                            <h2 class="search_widget_title"><i class="fa fa-car"></i> Search Cars</h2>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <label for="pickUp"><i class="fa fa-map-marker"></i> Pick-up City</label>
+                                <input type="text" required="" id="pickUp" class="form-control cityselect ui-autocomplete-input" placeholder="Ender a city/country/iata" name="pickUpCity" autocomplete="off" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <!--<div class="col-xs-12">
+                            <label for="pickUp"><i class="fa fa-map-marker"></i> Pick-up Location</label>
+                            <input type="text" required="" id="pickUp" class="form-control cityselect" placeholder="Enter a city/airport/zip or postal code" name="pickUp" autocomplete="off">
+                            </div> -->
+                            <div class="col-xs-12 Drop-off-Location" style="display: none;">
+                                <label for="dropOff"><i class="fa fa-map-marker"></i> Drop-off City</label>
+                                <input type="text" required="" id="dropOff" class="form-control cityselect ui-autocomplete-input" placeholder="Drop off City" name="dropOffCity" autocomplete="off" />
+                            </div>
+                            <!-- <div class="col-xs-12 Drop-off-Location">
+                            <label for="dropOff"><i class="fa fa-map-marker"></i> Drop-off Location</label>
+                            <input type="text" required="" id="dropOff" class="form-control cityselect" placeholder="Enter a city/airport/zip or postal code" name="dropOff" autocomplete="off">
+                            </div> -->
+                        </div>
+                        <a href="javascript:void(0)" class="PickDropLocation"><span class="different-location"><i class="fa fa-plus-square"></i> Need a different drop-off location?</span><span class="same-location" style="display: none;"><i class="fa fa-minus-square"></i> Drop off at same location?</span></a>
+                        <div class="row">
+                            <hr />
+                            <div class="col-xs-6">
+                                <label for="Pick-upDate"><i class="fa fa-calendar"></i> Pick-up Date</label>
+                                <input type="text" required="" class="form-control" autocomplete="off" value="" name="Pick-upDate" id="Pick-upDate" />
+                            </div>
+                            <div class="col-xs-6">
+                                <label for="Pick-upTime"><i class="fa fa-clock-o"></i> Pick-up Time</label>
+                                <div class="select_option">
+                                    <select name="Pick-upTime" id="Pick-upTime" class="form-control" style="width: 0px;">
+                                        <option value="23000900">12am-9am</option>
+                                        <option value="06001300">6am-noon</option>
+                                        <option value="10001400">10am-2pm</option>
+                                        <option value="11001700">noon-5pm</option>
+                                        <option value="16002000">4pm-8pm</option>
+                                        <option value="18002359">6pm-12am</option>
+                                        <option value="23590200">1 am</option>
+                                        <option value="01000300">2 am</option>
+                                        <option value="02000400">3 am</option>
+                                        <option value="03000500">4 am</option>
+                                        <option value="04000600">5 am</option>
+                                        <option value="05000700">6 am</option>
+                                        <option value="06000800">7 am</option>
+                                        <option value="07000900">8 am</option>
+                                        <option value="08001000">9 am</option>
+                                        <option value="09001100" selected="selected">10 am</option>
+                                        <option value="10001300">11 am</option>
+                                        <option value="11001300">Noon</option>
+                                        <option value="12001400">1 pm</option>
+                                        <option value="13001500">2 pm</option>
+                                        <option value="14001600">3 pm</option>
+                                        <option value="15001700">4 pm</option>
+                                        <option value="16001800">5 pm</option>
+                                        <option value="17001900">6 pm</option>
+                                        <option value="18002000">7 pm</option>
+                                        <option value="19002100">8 pm</option>
+                                        <option value="20002200">9 pm</option>
+                                        <option value="21002300">10 pm</option>
+                                        <option value="22002359">11 pm</option>
+                                        <option value="23000100">Midnight</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-xs-6">
+                                <label for="Drop-OffDate"><i class="fa fa-calendar"></i> Drop-off Date</label>
+                                <input type="text" required="" class="form-control" autocomplete="off" value="" name="Drop-OffDate" id="Drop-OffDate" />
+                            </div>
+                            <div class="col-xs-6">
+                                <label for="Drop-offTime"><i class="fa fa-clock-o"></i> Drop-off Time</label>
+                                <div class="select_option">
+                                    <select name="Drop-offTime" id="Drop-offTime" class="form-control" style="width: 0px;">
+                                        <option value="23000900">12am-9am</option>
+                                        <option value="06001300">6am-noon</option>
+                                        <option value="10001400">10am-2pm</option>
+                                        <option value="11001700">noon-5pm</option>
+                                        <option value="16002000">4pm-8pm</option>
+                                        <option value="18002359">6pm-12am</option>
+                                        <option value="23590200">1 am</option>
+                                        <option value="01000300">2 am</option>
+                                        <option value="02000400">3 am</option>
+                                        <option value="03000500">4 am</option>
+                                        <option value="04000600">5 am</option>
+                                        <option value="05000700">6 am</option>
+                                        <option value="06000800">7 am</option>
+                                        <option value="07000900">8 am</option>
+                                        <option value="08001000">9 am</option>
+                                        <option value="09001100" selected="selected">10 am</option>
+                                        <option value="10001300">11 am</option>
+                                        <option value="11001300">Noon</option>
+                                        <option value="12001400">1 pm</option>
+                                        <option value="13001500">2 pm</option>
+                                        <option value="14001600">3 pm</option>
+                                        <option value="15001700">4 pm</option>
+                                        <option value="16001800">5 pm</option>
+                                        <option value="17001900">6 pm</option>
+                                        <option value="18002000">7 pm</option>
+                                        <option value="19002100">8 pm</option>
+                                        <option value="20002200">9 pm</option>
+                                        <option value="21002300">10 pm</option>
+                                        <option value="22002359">11 pm</option>
+                                        <option value="23000100">Midnight</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row CarOption" style="display: none;">
+                            <div class="col-xs-6">
+                                <label for="CarCompany"><i class="fa fa-taxi"></i> Car Company</label>
+                                <div class="select_option">
+                                    <select name="CarCompany" id="CarCompany" class="form-control" style="width: 0px;">
+                                        <option value="Default">All car rental</option>
+                                        <option value="AC"> Ace Rent a Car </option>
+                                        <option value="AO"> Aco Rent a Car </option>
+                                        <option value="AD"> Advantage </option>
+                                        <option value="AG"> Aga Rent a Car </option>
+                                        <option value="AL"> Alamo Rent a Car </option>
+                                        <option value="AT"> Atesa Car Rental </option>
+                                        <option value="ZU"> Auto Europe </option>
+                                        <option value="AR"> Autorent </option>
+                                        <option value="ZI"> Avis Rent a Car </option>
+                                        <option value="BV"> Bidvest Car Rental </option>
+                                        <option value="BW"> Blueway Car Rental </option>
+                                        <option value="ZD"> Budget Rent a Car </option>
+                                        <option value="CT"> Centauro </option>
+                                        <option value="DS"> Discount Rentals </option>
+                                        <option value="ZR"> Dollar Rent a Car </option>
+                                        <option value="DF"> Driving Force </option>
+                                        <option value="ES"> Easirent </option>
+                                        <option value="EY"> Economy Rent a Car </option>
+                                        <option value="ET"> Enterprise Rent a Car </option>
+                                        <option value="EM"> Euromobil </option>
+                                        <option value="EP"> Europcar </option>
+                                        <option value="EX"> Express Rent a Car </option>
+                                        <option value="EZ"> EZ Rent a Car </option>
+                                        <option value="FF"> Firefly Car Rental </option>
+                                        <option value="FR"> First Car </option>
+                                        <option value="FC"> First Car Rental </option>
+                                        <option value="FL"> Flightcar </option>
+                                        <option value="FX"> Fox Rent a Car </option>
+                                        <option value="GM"> Green Motion </option>
+                                        <option value="ZE"> Hertz Rent a Car </option>
+                                        <option value="LL"> Localiza Rent a Car </option>
+                                        <option value="MX"> Mex Rent a Car </option>
+                                        <option value="MW"> Midway Rent a Car </option>
+                                        <option value="MO"> Movida Rent a car </option>
+                                        <option value="ZL"> National Car Rental </option>
+                                        <option value="NC"> Nextcar </option>
+                                        <option value="NU"> NU Car Rentals </option>
+                                        <option value="ZA"> Payless Car Rental </option>
+                                        <option value="PR"> Priceless </option>
+                                        <option value="PC"> Punta Car </option>
+                                        <option value="RW"> Rent a Wreck </option>
+                                        <option value="RM"> RentMax Car Rental </option>
+                                        <option value="RO"> Routes </option>
+                                        <option value="SC"> Silvercar </option>
+                                        <option value="SX"> Sixt Auto </option>
+                                        <option value="SL"> Solmar </option>
+                                        <option value="ZT"> Thrifty Car Rental </option>
+                                        <option value="TF"> Tu Florida Rental car </option>
+                                        <option value="SV"> Usave Auto </option>
+                                        <option value="WF"> Woodford </option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-xs-6">
+                                <label for="CarType"><i class="fa fa-map-signs"></i> Car Type</label>
+                                <div class="select_option">
+                                    <select name="CarType" id="CarType" class="form-control" style="width: 0px;">
+                                        <option value="Default">All Car Sizes</option>
+                                        <optgroup label="Regular Cars">
+                                            <option value="EC"> Economy </option>
+                                            <option value="CC"> Compact </option>
+                                            <option value="IC"> Midsize </option>
+                                            <option value="SC"> Standard </option>
+                                            <option value="FC"> Fullsize </option>
+                                            <option value="PC"> Premium </option>
+                                            <option value="LC"> Luxury </option>
+                                            <option value="MC"> Mini </option>
+                                        </optgroup>
+                                        <optgroup label="Others">
+                                            <option value="MV"> Minivan </option>
+                                            <option value="SF"> 4 x 4 </option>
+                                            <option value="ST"> Convertible </option>
+                                            <option value="APUP"> Any Pick Up </option>
+                                            <option value="AGRN"> Green </option>
+                                        </optgroup>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="javascript:void(0)" class="car-options"><span class="more-options"><i class="fa fa-plus-square"></i> More Options</span><span class="less-options" style="display: none;"><i class="fa fa-minus-square"></i> Less Options</span></a>
+
+                        <div class="search_widget_footer">
+                            <button class="btn btn-primary btn-block btn-lg" id="btnSearchCar" type="submit">Search Now</button>
+                        </div>
+                    </form>
+                </div>
+                <!-- End Car Section -->
+            </div>
+            <!-- End Search -->
+        </div>
+        <div class="col-xs-12 col-sm-4 col-md-4">
+        </div>
+    </div>
+    <script src="./Search Widget_files/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./Search Widget_files/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="./Search Widget_files/jquery-ui.min.js"></script>
+    <script src="./Search Widget_files/bootstrap-datepicker.js"></script>
+    <script src="./Search Widget_files/custom.js"></script><div class="datepicker dropdown-menu" style="display: none; top: 239px; left: 488px;"><div class="datepicker-days" style="display: block;"><table class=" table-condensed"><thead><tr><th class="prev">‹</th><th colspan="5" class="switch">January 2017</th><th class="next">›</th></tr><tr><th class="dow">Su</th><th class="dow">Mo</th><th class="dow">Tu</th><th class="dow">We</th><th class="dow">Th</th><th class="dow">Fr</th><th class="dow">Sa</th></tr></thead><tbody><tr><td class="day disabled old">25</td><td class="day disabled old">26</td><td class="day disabled old">27</td><td class="day disabled old">28</td><td class="day disabled old">29</td><td class="day disabled old">30</td><td class="day disabled old">31</td></tr><tr><td class="day disabled">1</td><td class="day disabled">2</td><td class="day disabled">3</td><td class="day disabled">4</td><td class="day disabled">5</td><td class="day  active">6</td><td class="day ">7</td></tr><tr><td class="day ">8</td><td class="day ">9</td><td class="day ">10</td><td class="day ">11</td><td class="day ">12</td><td class="day ">13</td><td class="day ">14</td></tr><tr><td class="day ">15</td><td class="day ">16</td><td class="day ">17</td><td class="day ">18</td><td class="day ">19</td><td class="day ">20</td><td class="day ">21</td></tr><tr><td class="day ">22</td><td class="day ">23</td><td class="day ">24</td><td class="day ">25</td><td class="day ">26</td><td class="day ">27</td><td class="day ">28</td></tr><tr><td class="day ">29</td><td class="day ">30</td><td class="day ">31</td><td class="day  new">1</td><td class="day  new">2</td><td class="day  new">3</td><td class="day  new">4</td></tr></tbody></table></div><div class="datepicker-months" style="display: none;"><table class="table-condensed"><thead><tr><th class="prev">‹</th><th colspan="5" class="switch">2017</th><th class="next">›</th></tr></thead><tbody><tr><td colspan="7"><span class="month active">Jan</span><span class="month">Feb</span><span class="month">Mar</span><span class="month">Apr</span><span class="month">May</span><span class="month">Jun</span><span class="month">Jul</span><span class="month">Aug</span><span class="month">Sep</span><span class="month">Oct</span><span class="month">Nov</span><span class="month">Dec</span></td></tr></tbody></table></div><div class="datepicker-years" style="display: none;"><table class="table-condensed"><thead><tr><th class="prev">‹</th><th colspan="5" class="switch">2010-2019</th><th class="next">›</th></tr></thead><tbody><tr><td colspan="7"><span class="year old">2009</span><span class="year">2010</span><span class="year">2011</span><span class="year">2012</span><span class="year">2013</span><span class="year">2014</span><span class="year">2015</span><span class="year">2016</span><span class="year active">2017</span><span class="year">2018</span><span class="year">2019</span><span class="year old">2020</span></td></tr></tbody></table></div></div><div class="datepicker dropdown-menu"><div class="datepicker-days" style="display: block;"><table class=" table-condensed"><thead><tr><th class="prev">‹</th><th colspan="5" class="switch">January 2017</th><th class="next">›</th></tr><tr><th class="dow">Su</th><th class="dow">Mo</th><th class="dow">Tu</th><th class="dow">We</th><th class="dow">Th</th><th class="dow">Fr</th><th class="dow">Sa</th></tr></thead><tbody><tr><td class="day disabled old">25</td><td class="day disabled old">26</td><td class="day disabled old">27</td><td class="day disabled old">28</td><td class="day disabled old">29</td><td class="day disabled old">30</td><td class="day disabled old">31</td></tr><tr><td class="day disabled">1</td><td class="day disabled">2</td><td class="day disabled">3</td><td class="day disabled">4</td><td class="day disabled">5</td><td class="day disabled active">6</td><td class="day ">7</td></tr><tr><td class="day ">8</td><td class="day ">9</td><td class="day ">10</td><td class="day ">11</td><td class="day ">12</td><td class="day ">13</td><td class="day ">14</td></tr><tr><td class="day ">15</td><td class="day ">16</td><td class="day ">17</td><td class="day ">18</td><td class="day ">19</td><td class="day ">20</td><td class="day ">21</td></tr><tr><td class="day ">22</td><td class="day ">23</td><td class="day ">24</td><td class="day ">25</td><td class="day ">26</td><td class="day ">27</td><td class="day ">28</td></tr><tr><td class="day ">29</td><td class="day ">30</td><td class="day ">31</td><td class="day  new">1</td><td class="day  new">2</td><td class="day  new">3</td><td class="day  new">4</td></tr></tbody></table></div><div class="datepicker-months" style="display: none;"><table class="table-condensed"><thead><tr><th class="prev">‹</th><th colspan="5" class="switch">2017</th><th class="next">›</th></tr></thead><tbody><tr><td colspan="7"><span class="month active">Jan</span><span class="month">Feb</span><span class="month">Mar</span><span class="month">Apr</span><span class="month">May</span><span class="month">Jun</span><span class="month">Jul</span><span class="month">Aug</span><span class="month">Sep</span><span class="month">Oct</span><span class="month">Nov</span><span class="month">Dec</span></td></tr></tbody></table></div><div class="datepicker-years" style="display: none;"><table class="table-condensed"><thead><tr><th class="prev">‹</th><th colspan="5" class="switch">2010-2019</th><th class="next">›</th></tr></thead><tbody><tr><td colspan="7"><span class="year old">2009</span><span class="year">2010</span><span class="year">2011</span><span class="year">2012</span><span class="year">2013</span><span class="year">2014</span><span class="year">2015</span><span class="year">2016</span><span class="year active">2017</span><span class="year">2018</span><span class="year">2019</span><span class="year old">2020</span></td></tr></tbody></table></div></div><div class="datepicker dropdown-menu"><div class="datepicker-days" style="display: block;"><table class=" table-condensed"><thead><tr><th class="prev">‹</th><th colspan="5" class="switch">January 2017</th><th class="next">›</th></tr><tr><th class="dow">Su</th><th class="dow">Mo</th><th class="dow">Tu</th><th class="dow">We</th><th class="dow">Th</th><th class="dow">Fr</th><th class="dow">Sa</th></tr></thead><tbody><tr><td class="day disabled old">25</td><td class="day disabled old">26</td><td class="day disabled old">27</td><td class="day disabled old">28</td><td class="day disabled old">29</td><td class="day disabled old">30</td><td class="day disabled old">31</td></tr><tr><td class="day disabled">1</td><td class="day disabled">2</td><td class="day disabled">3</td><td class="day disabled">4</td><td class="day disabled">5</td><td class="day  active">6</td><td class="day ">7</td></tr><tr><td class="day ">8</td><td class="day ">9</td><td class="day ">10</td><td class="day ">11</td><td class="day ">12</td><td class="day ">13</td><td class="day ">14</td></tr><tr><td class="day ">15</td><td class="day ">16</td><td class="day ">17</td><td class="day ">18</td><td class="day ">19</td><td class="day ">20</td><td class="day ">21</td></tr><tr><td class="day ">22</td><td class="day ">23</td><td class="day ">24</td><td class="day ">25</td><td class="day ">26</td><td class="day ">27</td><td class="day ">28</td></tr><tr><td class="day ">29</td><td class="day ">30</td><td class="day ">31</td><td class="day  new">1</td><td class="day  new">2</td><td class="day  new">3</td><td class="day  new">4</td></tr></tbody></table></div><div class="datepicker-months" style="display: none;"><table class="table-condensed"><thead><tr><th class="prev">‹</th><th colspan="5" class="switch">2017</th><th class="next">›</th></tr></thead><tbody><tr><td colspan="7"><span class="month active">Jan</span><span class="month">Feb</span><span class="month">Mar</span><span class="month">Apr</span><span class="month">May</span><span class="month">Jun</span><span class="month">Jul</span><span class="month">Aug</span><span class="month">Sep</span><span class="month">Oct</span><span class="month">Nov</span><span class="month">Dec</span></td></tr></tbody></table></div><div class="datepicker-years" style="display: none;"><table class="table-condensed"><thead><tr><th class="prev">‹</th><th colspan="5" class="switch">2010-2019</th><th class="next">›</th></tr></thead><tbody><tr><td colspan="7"><span class="year old">2009</span><span class="year">2010</span><span class="year">2011</span><span class="year">2012</span><span class="year">2013</span><span class="year">2014</span><span class="year">2015</span><span class="year">2016</span><span class="year active">2017</span><span class="year">2018</span><span class="year">2019</span><span class="year old">2020</span></td></tr></tbody></table></div></div><div class="datepicker dropdown-menu"><div class="datepicker-days" style="display: block;"><table class=" table-condensed"><thead><tr><th class="prev">‹</th><th colspan="5" class="switch">January 2017</th><th class="next">›</th></tr><tr><th class="dow">Su</th><th class="dow">Mo</th><th class="dow">Tu</th><th class="dow">We</th><th class="dow">Th</th><th class="dow">Fr</th><th class="dow">Sa</th></tr></thead><tbody><tr><td class="day disabled old">25</td><td class="day disabled old">26</td><td class="day disabled old">27</td><td class="day disabled old">28</td><td class="day disabled old">29</td><td class="day disabled old">30</td><td class="day disabled old">31</td></tr><tr><td class="day disabled">1</td><td class="day disabled">2</td><td class="day disabled">3</td><td class="day disabled">4</td><td class="day disabled">5</td><td class="day  active">6</td><td class="day ">7</td></tr><tr><td class="day ">8</td><td class="day ">9</td><td class="day ">10</td><td class="day ">11</td><td class="day ">12</td><td class="day ">13</td><td class="day ">14</td></tr><tr><td class="day ">15</td><td class="day ">16</td><td class="day ">17</td><td class="day ">18</td><td class="day ">19</td><td class="day ">20</td><td class="day ">21</td></tr><tr><td class="day ">22</td><td class="day ">23</td><td class="day ">24</td><td class="day ">25</td><td class="day ">26</td><td class="day ">27</td><td class="day ">28</td></tr><tr><td class="day ">29</td><td class="day ">30</td><td class="day ">31</td><td class="day  new">1</td><td class="day  new">2</td><td class="day  new">3</td><td class="day  new">4</td></tr></tbody></table></div><div class="datepicker-months" style="display: none;"><table class="table-condensed"><thead><tr><th class="prev">‹</th><th colspan="5" class="switch">2017</th><th class="next">›</th></tr></thead><tbody><tr><td colspan="7"><span class="month active">Jan</span><span class="month">Feb</span><span class="month">Mar</span><span class="month">Apr</span><span class="month">May</span><span class="month">Jun</span><span class="month">Jul</span><span class="month">Aug</span><span class="month">Sep</span><span class="month">Oct</span><span class="month">Nov</span><span class="month">Dec</span></td></tr></tbody></table></div><div class="datepicker-years" style="display: none;"><table class="table-condensed"><thead><tr><th class="prev">‹</th><th colspan="5" class="switch">2010-2019</th><th class="next">›</th></tr></thead><tbody><tr><td colspan="7"><span class="year old">2009</span><span class="year">2010</span><span class="year">2011</span><span class="year">2012</span><span class="year">2013</span><span class="year">2014</span><span class="year">2015</span><span class="year">2016</span><span class="year active">2017</span><span class="year">2018</span><span class="year">2019</span><span class="year old">2020</span></td></tr></tbody></table></div></div><div class="datepicker dropdown-menu"><div class="datepicker-days" style="display: block;"><table class=" table-condensed"><thead><tr><th class="prev">‹</th><th colspan="5" class="switch">January 2017</th><th class="next">›</th></tr><tr><th class="dow">Su</th><th class="dow">Mo</th><th class="dow">Tu</th><th class="dow">We</th><th class="dow">Th</th><th class="dow">Fr</th><th class="dow">Sa</th></tr></thead><tbody><tr><td class="day disabled old">25</td><td class="day disabled old">26</td><td class="day disabled old">27</td><td class="day disabled old">28</td><td class="day disabled old">29</td><td class="day disabled old">30</td><td class="day disabled old">31</td></tr><tr><td class="day disabled">1</td><td class="day disabled">2</td><td class="day disabled">3</td><td class="day disabled">4</td><td class="day disabled">5</td><td class="day  active">6</td><td class="day ">7</td></tr><tr><td class="day ">8</td><td class="day ">9</td><td class="day ">10</td><td class="day ">11</td><td class="day ">12</td><td class="day ">13</td><td class="day ">14</td></tr><tr><td class="day ">15</td><td class="day ">16</td><td class="day ">17</td><td class="day ">18</td><td class="day ">19</td><td class="day ">20</td><td class="day ">21</td></tr><tr><td class="day ">22</td><td class="day ">23</td><td class="day ">24</td><td class="day ">25</td><td class="day ">26</td><td class="day ">27</td><td class="day ">28</td></tr><tr><td class="day ">29</td><td class="day ">30</td><td class="day ">31</td><td class="day  new">1</td><td class="day  new">2</td><td class="day  new">3</td><td class="day  new">4</td></tr></tbody></table></div><div class="datepicker-months" style="display: none;"><table class="table-condensed"><thead><tr><th class="prev">‹</th><th colspan="5" class="switch">2017</th><th class="next">›</th></tr></thead><tbody><tr><td colspan="7"><span class="month active">Jan</span><span class="month">Feb</span><span class="month">Mar</span><span class="month">Apr</span><span class="month">May</span><span class="month">Jun</span><span class="month">Jul</span><span class="month">Aug</span><span class="month">Sep</span><span class="month">Oct</span><span class="month">Nov</span><span class="month">Dec</span></td></tr></tbody></table></div><div class="datepicker-years" style="display: none;"><table class="table-condensed"><thead><tr><th class="prev">‹</th><th colspan="5" class="switch">2010-2019</th><th class="next">›</th></tr></thead><tbody><tr><td colspan="7"><span class="year old">2009</span><span class="year">2010</span><span class="year">2011</span><span class="year">2012</span><span class="year">2013</span><span class="year">2014</span><span class="year">2015</span><span class="year">2016</span><span class="year active">2017</span><span class="year">2018</span><span class="year">2019</span><span class="year old">2020</span></td></tr></tbody></table></div></div><div class="datepicker dropdown-menu"><div class="datepicker-days" style="display: block;"><table class=" table-condensed"><thead><tr><th class="prev">‹</th><th colspan="5" class="switch">January 2017</th><th class="next">›</th></tr><tr><th class="dow">Su</th><th class="dow">Mo</th><th class="dow">Tu</th><th class="dow">We</th><th class="dow">Th</th><th class="dow">Fr</th><th class="dow">Sa</th></tr></thead><tbody><tr><td class="day disabled old">25</td><td class="day disabled old">26</td><td class="day disabled old">27</td><td class="day disabled old">28</td><td class="day disabled old">29</td><td class="day disabled old">30</td><td class="day disabled old">31</td></tr><tr><td class="day disabled">1</td><td class="day disabled">2</td><td class="day disabled">3</td><td class="day disabled">4</td><td class="day disabled">5</td><td class="day  active">6</td><td class="day ">7</td></tr><tr><td class="day ">8</td><td class="day ">9</td><td class="day ">10</td><td class="day ">11</td><td class="day ">12</td><td class="day ">13</td><td class="day ">14</td></tr><tr><td class="day ">15</td><td class="day ">16</td><td class="day ">17</td><td class="day ">18</td><td class="day ">19</td><td class="day ">20</td><td class="day ">21</td></tr><tr><td class="day ">22</td><td class="day ">23</td><td class="day ">24</td><td class="day ">25</td><td class="day ">26</td><td class="day ">27</td><td class="day ">28</td></tr><tr><td class="day ">29</td><td class="day ">30</td><td class="day ">31</td><td class="day  new">1</td><td class="day  new">2</td><td class="day  new">3</td><td class="day  new">4</td></tr></tbody></table></div><div class="datepicker-months" style="display: none;"><table class="table-condensed"><thead><tr><th class="prev">‹</th><th colspan="5" class="switch">2017</th><th class="next">›</th></tr></thead><tbody><tr><td colspan="7"><span class="month active">Jan</span><span class="month">Feb</span><span class="month">Mar</span><span class="month">Apr</span><span class="month">May</span><span class="month">Jun</span><span class="month">Jul</span><span class="month">Aug</span><span class="month">Sep</span><span class="month">Oct</span><span class="month">Nov</span><span class="month">Dec</span></td></tr></tbody></table></div><div class="datepicker-years" style="display: none;"><table class="table-condensed"><thead><tr><th class="prev">‹</th><th colspan="5" class="switch">2010-2019</th><th class="next">›</th></tr></thead><tbody><tr><td colspan="7"><span class="year old">2009</span><span class="year">2010</span><span class="year">2011</span><span class="year">2012</span><span class="year">2013</span><span class="year">2014</span><span class="year">2015</span><span class="year">2016</span><span class="year active">2017</span><span class="year">2018</span><span class="year">2019</span><span class="year old">2020</span></td></tr></tbody></table></div></div><div class="datepicker dropdown-menu"><div class="datepicker-days" style="display: block;"><table class=" table-condensed"><thead><tr><th class="prev">‹</th><th colspan="5" class="switch">January 2017</th><th class="next">›</th></tr><tr><th class="dow">Su</th><th class="dow">Mo</th><th class="dow">Tu</th><th class="dow">We</th><th class="dow">Th</th><th class="dow">Fr</th><th class="dow">Sa</th></tr></thead><tbody><tr><td class="day disabled old">25</td><td class="day disabled old">26</td><td class="day disabled old">27</td><td class="day disabled old">28</td><td class="day disabled old">29</td><td class="day disabled old">30</td><td class="day disabled old">31</td></tr><tr><td class="day disabled">1</td><td class="day disabled">2</td><td class="day disabled">3</td><td class="day disabled">4</td><td class="day disabled">5</td><td class="day disabled active">6</td><td class="day ">7</td></tr><tr><td class="day ">8</td><td class="day ">9</td><td class="day ">10</td><td class="day ">11</td><td class="day ">12</td><td class="day ">13</td><td class="day ">14</td></tr><tr><td class="day ">15</td><td class="day ">16</td><td class="day ">17</td><td class="day ">18</td><td class="day ">19</td><td class="day ">20</td><td class="day ">21</td></tr><tr><td class="day ">22</td><td class="day ">23</td><td class="day ">24</td><td class="day ">25</td><td class="day ">26</td><td class="day ">27</td><td class="day ">28</td></tr><tr><td class="day ">29</td><td class="day ">30</td><td class="day ">31</td><td class="day  new">1</td><td class="day  new">2</td><td class="day  new">3</td><td class="day  new">4</td></tr></tbody></table></div><div class="datepicker-months" style="display: none;"><table class="table-condensed"><thead><tr><th class="prev">‹</th><th colspan="5" class="switch">2017</th><th class="next">›</th></tr></thead><tbody><tr><td colspan="7"><span class="month active">Jan</span><span class="month">Feb</span><span class="month">Mar</span><span class="month">Apr</span><span class="month">May</span><span class="month">Jun</span><span class="month">Jul</span><span class="month">Aug</span><span class="month">Sep</span><span class="month">Oct</span><span class="month">Nov</span><span class="month">Dec</span></td></tr></tbody></table></div><div class="datepicker-years" style="display: none;"><table class="table-condensed"><thead><tr><th class="prev">‹</th><th colspan="5" class="switch">2010-2019</th><th class="next">›</th></tr></thead><tbody><tr><td colspan="7"><span class="year old">2009</span><span class="year">2010</span><span class="year">2011</span><span class="year">2012</span><span class="year">2013</span><span class="year">2014</span><span class="year">2015</span><span class="year">2016</span><span class="year active">2017</span><span class="year">2018</span><span class="year">2019</span><span class="year old">2020</span></td></tr></tbody></table></div></div><div class="datepicker dropdown-menu"><div class="datepicker-days" style="display: block;"><table class=" table-condensed"><thead><tr><th class="prev">‹</th><th colspan="5" class="switch">January 2017</th><th class="next">›</th></tr><tr><th class="dow">Su</th><th class="dow">Mo</th><th class="dow">Tu</th><th class="dow">We</th><th class="dow">Th</th><th class="dow">Fr</th><th class="dow">Sa</th></tr></thead><tbody><tr><td class="day disabled old">25</td><td class="day disabled old">26</td><td class="day disabled old">27</td><td class="day disabled old">28</td><td class="day disabled old">29</td><td class="day disabled old">30</td><td class="day disabled old">31</td></tr><tr><td class="day disabled">1</td><td class="day disabled">2</td><td class="day disabled">3</td><td class="day disabled">4</td><td class="day disabled">5</td><td class="day  active">6</td><td class="day ">7</td></tr><tr><td class="day ">8</td><td class="day ">9</td><td class="day ">10</td><td class="day ">11</td><td class="day ">12</td><td class="day ">13</td><td class="day ">14</td></tr><tr><td class="day ">15</td><td class="day ">16</td><td class="day ">17</td><td class="day ">18</td><td class="day ">19</td><td class="day ">20</td><td class="day ">21</td></tr><tr><td class="day ">22</td><td class="day ">23</td><td class="day ">24</td><td class="day ">25</td><td class="day ">26</td><td class="day ">27</td><td class="day ">28</td></tr><tr><td class="day ">29</td><td class="day ">30</td><td class="day ">31</td><td class="day  new">1</td><td class="day  new">2</td><td class="day  new">3</td><td class="day  new">4</td></tr></tbody></table></div><div class="datepicker-months" style="display: none;"><table class="table-condensed"><thead><tr><th class="prev">‹</th><th colspan="5" class="switch">2017</th><th class="next">›</th></tr></thead><tbody><tr><td colspan="7"><span class="month active">Jan</span><span class="month">Feb</span><span class="month">Mar</span><span class="month">Apr</span><span class="month">May</span><span class="month">Jun</span><span class="month">Jul</span><span class="month">Aug</span><span class="month">Sep</span><span class="month">Oct</span><span class="month">Nov</span><span class="month">Dec</span></td></tr></tbody></table></div><div class="datepicker-years" style="display: none;"><table class="table-condensed"><thead><tr><th class="prev">‹</th><th colspan="5" class="switch">2010-2019</th><th class="next">›</th></tr></thead><tbody><tr><td colspan="7"><span class="year old">2009</span><span class="year">2010</span><span class="year">2011</span><span class="year">2012</span><span class="year">2013</span><span class="year">2014</span><span class="year">2015</span><span class="year">2016</span><span class="year active">2017</span><span class="year">2018</span><span class="year">2019</span><span class="year old">2020</span></td></tr></tbody></table></div></div><div class="datepicker dropdown-menu"><div class="datepicker-days" style="display: block;"><table class=" table-condensed"><thead><tr><th class="prev">‹</th><th colspan="5" class="switch">January 2017</th><th class="next">›</th></tr><tr><th class="dow">Su</th><th class="dow">Mo</th><th class="dow">Tu</th><th class="dow">We</th><th class="dow">Th</th><th class="dow">Fr</th><th class="dow">Sa</th></tr></thead><tbody><tr><td class="day disabled old">25</td><td class="day disabled old">26</td><td class="day disabled old">27</td><td class="day disabled old">28</td><td class="day disabled old">29</td><td class="day disabled old">30</td><td class="day disabled old">31</td></tr><tr><td class="day disabled">1</td><td class="day disabled">2</td><td class="day disabled">3</td><td class="day disabled">4</td><td class="day disabled">5</td><td class="day disabled active">6</td><td class="day ">7</td></tr><tr><td class="day ">8</td><td class="day ">9</td><td class="day ">10</td><td class="day ">11</td><td class="day ">12</td><td class="day ">13</td><td class="day ">14</td></tr><tr><td class="day ">15</td><td class="day ">16</td><td class="day ">17</td><td class="day ">18</td><td class="day ">19</td><td class="day ">20</td><td class="day ">21</td></tr><tr><td class="day ">22</td><td class="day ">23</td><td class="day ">24</td><td class="day ">25</td><td class="day ">26</td><td class="day ">27</td><td class="day ">28</td></tr><tr><td class="day ">29</td><td class="day ">30</td><td class="day ">31</td><td class="day  new">1</td><td class="day  new">2</td><td class="day  new">3</td><td class="day  new">4</td></tr></tbody></table></div><div class="datepicker-months" style="display: none;"><table class="table-condensed"><thead><tr><th class="prev">‹</th><th colspan="5" class="switch">2017</th><th class="next">›</th></tr></thead><tbody><tr><td colspan="7"><span class="month active">Jan</span><span class="month">Feb</span><span class="month">Mar</span><span class="month">Apr</span><span class="month">May</span><span class="month">Jun</span><span class="month">Jul</span><span class="month">Aug</span><span class="month">Sep</span><span class="month">Oct</span><span class="month">Nov</span><span class="month">Dec</span></td></tr></tbody></table></div><div class="datepicker-years" style="display: none;"><table class="table-condensed"><thead><tr><th class="prev">‹</th><th colspan="5" class="switch">2010-2019</th><th class="next">›</th></tr></thead><tbody><tr><td colspan="7"><span class="year old">2009</span><span class="year">2010</span><span class="year">2011</span><span class="year">2012</span><span class="year">2013</span><span class="year">2014</span><span class="year">2015</span><span class="year">2016</span><span class="year active">2017</span><span class="year">2018</span><span class="year">2019</span><span class="year old">2020</span></td></tr></tbody></table></div></div>
+    <script type="text/javascript" src="./Search Widget_files/jquery.mockjax.js"></script>
+    <script type="text/javascript" src="./Search Widget_files/autocomplete.js"></script>
+    <div role="log" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div><div role="log" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div><div role="log" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div><div role="log" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div><div role="log" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div><div role="log" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div><div role="log" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div><div role="log" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div><div role="log" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div><div role="log" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div><ul id="ui-id-1" tabindex="0" class="ui-menu ui-widget ui-widget-content ui-autocomplete ui-front" style="display: none;"></ul><div role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div><ul id="ui-id-2" tabindex="0" class="ui-menu ui-widget ui-widget-content ui-autocomplete ui-front" style="display: none;"></ul><div role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div><ul id="ui-id-3" tabindex="0" class="ui-menu ui-widget ui-widget-content ui-autocomplete ui-front" style="display: none;"></ul><div role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div><ul id="ui-id-4" tabindex="0" class="ui-menu ui-widget ui-widget-content ui-autocomplete ui-front" style="display: none;"></ul><div role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div><ul id="ui-id-5" tabindex="0" class="ui-menu ui-widget ui-widget-content ui-autocomplete ui-front" style="display: none;"></ul><div role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div><ul id="ui-id-6" tabindex="0" class="ui-menu ui-widget ui-widget-content ui-autocomplete ui-front" style="display: none;"></ul><div role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div><ul id="ui-id-7" tabindex="0" class="ui-menu ui-widget ui-widget-content ui-autocomplete ui-front" style="display: none;"></ul><div role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div><ul id="ui-id-8" tabindex="0" class="ui-menu ui-widget ui-widget-content ui-autocomplete ui-front" style="display: none;"></ul><div role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div><ul id="ui-id-9" tabindex="0" class="ui-menu ui-widget ui-widget-content ui-autocomplete ui-front" style="display: none;"></ul><div role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div><ul id="ui-id-10" tabindex="0" class="ui-menu ui-widget ui-widget-content ui-autocomplete ui-front" style="display: none;"></ul><div role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div><ul id="ui-id-11" tabindex="0" class="ui-menu ui-widget ui-widget-content ui-autocomplete ui-front" style="display: none;"></ul><div role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div>
+</body>
+</html>

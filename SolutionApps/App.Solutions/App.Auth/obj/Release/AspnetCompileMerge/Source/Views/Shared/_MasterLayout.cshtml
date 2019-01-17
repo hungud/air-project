@@ -1,0 +1,133 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta http-equiv="Content-Script-Type" content="text/javascript" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=5,6,7,8,9,10,11,12">
+    <meta charset="utf-8" />
+    <title>@ViewBag.PageTitle</title>
+    <link rel="icon" href="~/Content/assets/images/svfavicon.ico" />
+    <meta name="description" content="overview &amp; stats" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+    @*Style*@
+    <link href="@Url.Content("~/Content/assets/css/bootstrap.min.css?@@25A64A08-E65A-4ED5-A8C0-A13FBF3A5A79@@")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/assets/css/select2.css?@@25A64A08-E65A-4ED5-A8C0-A13FBF3A5A79@@")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/assets/css/font-awesome.min.css?@@25A64A08-E65A-4ED5-A8C0-A13FBF3A5A79@@")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/assets/css/jquery-ui.custom.min.css?@@25A64A08-E65A-4ED5-A8C0-A13FBF3A5A79@@")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/assets/css/datepicker.css?@@25A64A08-E65A-4ED5-A8C0-A13FBF3A5A79@@")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/assets/css/ace-fonts.css?@@25A64A08-E65A-4ED5-A8C0-A13FBF3A5A79@@")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/assets/css/ace.min.css?@@25A64A08-E65A-4ED5-A8C0-A13FBF3A5A79@@")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/assets/css/daterangepicker.css?@@25A64A08-E65A-4ED5-A8C0-A13FBF3A5A79@@")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/assets/css/user.css?@@25A64A08-E65A-4ED5-A8C0-A13FBF3A5A79@@")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/assets/css/ace-skins.min.css?@@25A64A08-E65A-4ED5-A8C0-A13FBF3A5A79@@")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/assets/css/ace-rtl.min.css?@@25A64A08-E65A-4ED5-A8C0-A13FBF3A5A79@@")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/assets/css/jquery.fileupload.css?@@25A64A08-E65A-4ED5-A8C0-A13FBF3A5A79@@")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/assets/css/DataTable-Responsive.css?@@25A64A08-E65A-4ED5-A8C0-A13FBF3A5A79@@")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/assets/css/DataTables.min.css?@@25A64A08-E65A-4ED5-A8C0-A13FBF3A5A79@@")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/AppStyle.css?@@25A64A08-E65A-4ED5-A8C0-A13FBF3A5A79@@")" rel="stylesheet" type="text/css" />
+    <script src="@Url.Content("~/Content/assets/js/jquery.min.js?@@25A64A08-E65A-4ED5-A8C0-A13FBF3A5A79@@")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/Apps/CommonConfigurations.js?@@25A64A08-E65A-4ED5-A8C0-A13FBF3A5A79@@")" type="text/javascript"></script>
+    <script type="text/javascript">
+        if ('ontouchstart' in document.documentElement) document.write("<script src='/Content/assets/js/jquery.mobile.custom.min.js?@@25A64A08-E65A-4ED5-A8C0-A13FBF3A5A79@@'>" + "<" + "/script>");
+    </script>
+    
+    <link href="@Url.Content("~/Content/NanoJot/css/jquery.datetimepicker.css?@@25A64A08-E65A-4ED5-A8C0-A13FBF3A5A79@@")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/NanoJot/css/font-awesome.min.css?@@25A64A08-E65A-4ED5-A8C0-A13FBF3A5A79@@")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/NanoJot/css/animate.min.css?@@25A64A08-E65A-4ED5-A8C0-A13FBF3A5A79@@")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/NanoJot/css/jslider.css?@@25A64A08-E65A-4ED5-A8C0-A13FBF3A5A79@@")" rel="stylesheet" type="text/css" .>
+    <link href="@Url.Content("~/Content/NanoJot/css/jslider.round.plastic.css?@@25A64A08-E65A-4ED5-A8C0-A13FBF3A5A79@@")" rel="stylesheet" type="text/css" .>
+    <link href="@Url.Content("~/Content/NanoJot/css/style.css?@@25A64A08-E65A-4ED5-A8C0-A13FBF3A5A79@@")" rel="stylesheet" type="text/css" />
+
+    <link href="@Url.Content("~/Content/assets/css/jquery-ui.css?@@25A64A08-E65A-4ED5-A8C0-A13FBF3A5A79@@")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/PluginNotify/Notify.css?@@25A64A08-E65A-4ED5-A8C0-A13FBF3A5A79@@")" rel="stylesheet" type="text/css" />
+    <script src="@Url.Content("~/Content/PluginNotify/Notify.js?@@25A64A08-E65A-4ED5-A8C0-A13FBF3A5A79@@")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Content/PluginLocalStorage/jquery.Cookie.js?@@25A64A08-E65A-4ED5-A8C0-A13FBF3A5A79@@")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Content/PluginLocalStorage/jquery.LocalStorage.js?@@25A64A08-E65A-4ED5-A8C0-A13FBF3A5A79@@")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Content/PluginLocalStorage/jquery.ClientSideLoggingToServer.js?@@25A64A08-E65A-4ED5-A8C0-A13FBF3A5A79@@")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Content/PluginLocalStorage/jquery.key.js?@@25A64A08-E65A-4ED5-A8C0-A13FBF3A5A79@@")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/Apps/MasterAppLSConfigurations.js?@@25A64A08-E65A-4ED5-A8C0-A13FBF3A5A79@@")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/Apps/MasterAppConfigurations.js?@@25A64A08-E65A-4ED5-A8C0-A13FBF3A5A79@@")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/Apps/MasterCommonConfigurationsServices.js?@@25A64A08-E65A-4ED5-A8C0-A13FBF3A5A79@@")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/Apps/CommonPreLoader.js?@@25A64A08-E65A-4ED5-A8C0-A13FBF3A5A79@@")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/Apps/CommonPreLoaderWaitingfor.js?@@25A64A08-E65A-4ED5-A8C0-A13FBF3A5A79@@")" type="text/javascript"></script>
+
+    <script>
+        jQuery.support.cors = true;
+    </script>
+</head>
+<body class="no-skin" id="APPMainPage">
+    <!-- /Application-Main-container -->
+    <!-- #section:basics/navbar.layout -->
+    @Html.Partial("_MasterHeaderMain")
+    <!-- /section:basics/navbar.layout -->
+    <!-- /.Main-container -->
+    <div class="main-container" id="main-container">
+        <!-- /Main-content -->
+        @*<div class="main-content">*@
+        <div class="main-content no-margin-left" id="AppMainPageContent">
+            @RenderBody()
+        </div>
+        <!-- /Main-content -->
+
+        <!-- #section:WidgetBox.layout -->
+        @Html.Partial("_MasterWidgetBox")
+        <!-- #section:WidgetBox.layout -->
+
+        <!--/ Footer-content -->
+        @Html.Partial("_MasterFooter")
+        <!--/ Footer-content -->
+    </div>
+    <!-- /.Main-container -->
+    <!-- /Application-Main-container -->
+    @*Script*@
+
+    <!-- /Application-Main-Script-Container -->
+    <!-- page specific plugin scripts -->
+    
+    <script src="@Url.Content("~/Content/assets/js/jquery-ui.min.js?@@25A64A08-E65A-4ED5-A8C0-A13FBF3A5A79@@")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Content/assets/js/bootstrap.min.js?@@25A64A08-E65A-4ED5-A8C0-A13FBF3A5A79@@")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Content/assets/js/bootstrap-responsive_tabs.js?@@25A64A08-E65A-4ED5-A8C0-A13FBF3A5A79@@")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Content/assets/js/jquery.inputlimiter.1.3.1.min.js?@@25A64A08-E65A-4ED5-A8C0-A13FBF3A5A79@@")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Content/assets/js/jquery-ui.custom.min.js?@@25A64A08-E65A-4ED5-A8C0-A13FBF3A5A79@@")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Content/assets/js/jquery.ui.touch-punch.min.js?@@25A64A08-E65A-4ED5-A8C0-A13FBF3A5A79@@")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Content/assets/js/jquery.dataTables.bootstrap.js?@@25A64A08-E65A-4ED5-A8C0-A13FBF3A5A79@@")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Content/assets/js/DataTable.min.js?@@25A64A08-E65A-4ED5-A8C0-A13FBF3A5A79@@")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Content/assets/js/DataTable-Responsive.js?@@25A64A08-E65A-4ED5-A8C0-A13FBF3A5A79@@")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Content/assets/js/date-time/moment.min.js?@@25A64A08-E65A-4ED5-A8C0-A13FBF3A5A79@@")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Content/assets/js/date-time/daterangepicker.min.js?@@25A64A08-E65A-4ED5-A8C0-A13FBF3A5A79@@")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Content/assets/js/date-time/bootstrap-datepicker.min.js?@@25A64A08-E65A-4ED5-A8C0-A13FBF3A5A79@@")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Content/assets/js/date-time/bootstrap-timepicker.min.js?@@25A64A08-E65A-4ED5-A8C0-A13FBF3A5A79@@")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Content/assets/js/date-time/bootstrap-datetimepicker.min.js?@@25A64A08-E65A-4ED5-A8C0-A13FBF3A5A79@@")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Content/assets/js/jquery.maskedinput.min.js?@@25A64A08-E65A-4ED5-A8C0-A13FBF3A5A79@@")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Content/assets/js/jquery.validate.min.js?@@25A64A08-E65A-4ED5-A8C0-A13FBF3A5A79@@")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Content/assets/js/fuelux/fuelux.wizard.min.js?@@25A64A08-E65A-4ED5-A8C0-A13FBF3A5A79@@")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Content/assets/js/bootbox.min.js?@@25A64A08-E65A-4ED5-A8C0-A13FBF3A5A79@@")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Content/assets/js/additional-methods.min.js?@@25A64A08-E65A-4ED5-A8C0-A13FBF3A5A79@@")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Content/assets/js/ace.min.js?@@25A64A08-E65A-4ED5-A8C0-A13FBF3A5A79@@")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Content/assets/js/ace-elements.min.js?@@25A64A08-E65A-4ED5-A8C0-A13FBF3A5A79@@")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Content/assets/js/select2.min.js?@@25A64A08-E65A-4ED5-A8C0-A13FBF3A5A79@@")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Content/assets/js/ace-extra.min.js?@@25A64A08-E65A-4ED5-A8C0-A13FBF3A5A79@@")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Content/assets/js/uncompressed/jquery.slimscroll.js?@@25A64A08-E65A-4ED5-A8C0-A13FBF3A5A79@@")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Content/assets/js/jquery.fileupload.js?@@25A64A08-E65A-4ED5-A8C0-A13FBF3A5A79@@")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Content/PluginJSONViewer/jquery.serializejson.min.js?@@25A64A08-E65A-4ED5-A8C0-A13FBF3A5A79@@")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Content/formatDateTime/jquery.formatDateTime.js?@@25A64A08-E65A-4ED5-A8C0-A13FBF3A5A79@@")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Content/formatDateTime/jqueryYearSelect.js?@@25A64A08-E65A-4ED5-A8C0-A13FBF3A5A79@@")" type="text/javascript"></script>
+    
+    <script type="text/javascript" src="@Url.Content("~/Content/NanoJot/js/jshashtable-2.1_src.js?@@25A64A08-E65A-4ED5-A8C0-A13FBF3A5A79@@")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Content/NanoJot/js/jquery.numberformatter-1.2.3.js?@@25A64A08-E65A-4ED5-A8C0-A13FBF3A5A79@@")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Content/NanoJot/js/tmpl.js?@@25A64A08-E65A-4ED5-A8C0-A13FBF3A5A79@@")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Content/NanoJot/js/jquery.dependClass-0.1.js?@@25A64A08-E65A-4ED5-A8C0-A13FBF3A5A79@@")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Content/NanoJot/js/draggable-0.1.js?@@25A64A08-E65A-4ED5-A8C0-A13FBF3A5A79@@")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Content/NanoJot/js/jquery.slider.js?@@25A64A08-E65A-4ED5-A8C0-A13FBF3A5A79@@")"></script>
+    <script src="@Url.Content("~/Content/NanoJot/js/main.js?@@25A64A08-E65A-4ED5-A8C0-A13FBF3A5A79@@")"></script>
+    @*<script src="@Url.Content("~/Scripts/Apps/ieUserAgent.js?@@25A64A08-E65A-4ED5-A8C0-A13FBF3A5A79@@")" type="text/javascript"></script>*@
+    <script src="@Url.Content("~/Scripts/Apps/CommonDialogBox.js?@@25A64A08-E65A-4ED5-A8C0-A13FBF3A5A79@@")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/Apps/CommonFunctions.js?@@25A64A08-E65A-4ED5-A8C0-A13FBF3A5A79@@")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/Apps/MasterValidation.js?@@25A64A08-E65A-4ED5-A8C0-A13FBF3A5A79@@")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/Apps/HomeFunctions.js?@@25A64A08-E65A-4ED5-A8C0-A13FBF3A5A79@@")" type="text/javascript"></script>
+   
+</body>
+</html>

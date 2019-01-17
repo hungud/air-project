@@ -1,0 +1,14 @@
+﻿<div class="navbar-collapse collapse">
+    <ul class="nav navbar-nav">
+        @*<li class="@(ViewBag.ActiveTab == "Index" ? "active" : string.Empty)">@Html.ActionLink("Home", "Index", "Home")</li>
+         <li class="@(ViewBag.ActiveTab == "About" ? "active" : string.Empty)">@Html.ActionLink("About", "About", "Home")</li>
+         <li class="@(ViewBag.ActiveTab == "Contact" ? "active" : string.Empty)">@Html.ActionLink("Contact", "Contact", "Home")</li>*@
+        <li class="@(ViewBag.ActiveTab == "InstaFlightsSearch" ? "active" : string.Empty)">@Html.ActionLink("Insta Flights Search", "InstaFlightsSearch", "Home")</li>
+        <li class="@(ViewBag.ActiveTab == "LeadPriceCalendar" ? "active" : string.Empty)">@Html.ActionLink("Lead Price Calendar", "LeadPriceCalendar", "Home")</li>        
+        <li class="@(ViewBag.ActiveTab == "BargainFinderMax" ? "active" : string.Empty)">@Html.ActionLink("Bargain Finder Max", "BargainFinderMax", "Home")</li>
+        <li class="@(ViewBag.ActiveTab == "BargainFinderMaxSearch" ? "active" : string.Empty)">@Html.ActionLink("Bargain Finder Max Search", "BargainFinderMaxSearch", "Home")</li>
+        <li class="@(ViewBag.ActiveTab == "AirBooking" ? "active" : string.Empty)">@Html.ActionLink("AirBooking", "AirBooking", "Home")</li>
+       @* <li class="@(ViewBag.ActiveTab == "ProductionProduct" ? "active" : string.Empty)">@Html.ActionLink("ProductionProduct Test", "ProductionProduct", "Home")</li>
+        <li class="@(ViewBag.ActiveTab == "SoapWorkflow" ? "active" : string.Empty)">@Html.ActionLink("SOAP Workflow", "SoapWorkflow", "Home")</li>*@
+    </ul>
+</div>

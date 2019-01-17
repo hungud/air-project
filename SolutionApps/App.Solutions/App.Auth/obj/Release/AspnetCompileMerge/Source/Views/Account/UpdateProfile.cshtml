@@ -1,0 +1,207 @@
+﻿@model register_functionlity.DB.Model.UserModel
+@{
+    ViewBag.Title = "Update Profile";
+    Layout = "~/Views/Shared/_MasterLayoutMain.cshtml";
+}
+
+<div class="row">
+    <div class="col-xs-12 col-sm-12">
+        <div class="widget-body">
+            <div class="widget-main">
+                <div class="row">
+                    <div class="container">
+                        <div class="update-profile-section>
+                            <h2>Update Profile</h2>
+
+                            @using (Html.BeginForm("UpdateProfile", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+                            {
+                                @Html.ValidationSummary("", new { @class = "text-danger" })
+                                @Html.HiddenFor(m => m.ExpiryMonth)
+                                @Html.HiddenFor(m => m.ExpiryYear)
+                                @Html.HiddenFor(m => m.UserLocation)
+                                <div class="form-group mb20">
+                                    <label class="col-md-2 control-label" for="LastName">First Name</label>
+                                    <div class="col-md-10">
+                                        @Html.TextBoxFor(m => m.FirstName, new { @class = "form-control" })
+                                    </div>
+                                </div>
+                                <div class="form-group mb20">
+                                    <label class="col-md-2 control-label" for="LastName">Last Name</label>
+                                    <div class="col-md-10">
+                                        @Html.TextBoxFor(m => m.LastName, new { @class = "form-control" })
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label" for="LastName">Phone Number</label>
+                                    <div class="col-md-10">
+                                        @Html.TextBoxFor(m => m.PhoneNumber, new { @class = "form-control" })
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label" for="EmailAddress">Email/UserName</label>
+                                    <div class="col-md-10">
+                                        @Html.TextBoxFor(m => m.EmailAddress, new { @class = "form-control", @disabled = "disabled" })
+                                    </div>
+                                </div>
+                                <div id="UserDetails">
+                                    <div class="form-group">
+                                        <label class="col-md-2 control-label" for="EmailAddress">Payment Method</label>
+                                        <div class="col-md-10">
+                                            <select class="form-control" name="selPICCType">
+                                                <option @(Model.PaymentMethod == "" ? "selected='selected'" : "")>Select a Payment Card</option>
+                                                <option value="VI" @(Model.PaymentMethod == "VI" ? "selected='selected'" : "")>VISA</option>
+                                                <option value="CA" @(Model.PaymentMethod == "CA" ? "selected='selected'" : "")>MASTER CARD</option>
+                                                <option value="AX" @(Model.PaymentMethod == "AX" ? "selected='selected'" : "")>AMERICAN EXPRESS</option>
+                                                <option value="CQ" @(Model.PaymentMethod == "CQ" ? "selected='selected'" : "")>Cheque</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-2 control-label" for="EmailAddress">Credit Card Number</label>
+                                        <div class="col-md-10">
+                                            @Html.TextBoxFor(m => m.CreditCardNumber, new { @class = "form-control", @autocomplete = "off", @maxlength = "16", @size = "16", @placeholder = "XXXX XXXX XXXX XXXX", @required = "required" })
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-2 control-label" for="EmailAddress">Name on Card</label>
+                                        <div class="col-md-10">
+                                            <div class="form-group col-md-6">
+                                                @Html.TextBoxFor(m => m.CreditCardName, new { @class = "form-control", autocomplete = "off", @placeholder = "Name On Card", @required = "required" })
+                                            </div>
+                                            <div class="form-group col-md-6 red_star2"> (As it appears on your credit card) </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-2 control-label" for="EmailAddress">Expiration Date</label>
+                                        <div class="col-md-10">
+                                            <div class="form-group col-md-3">
+                                                <select class="selectPICCMonth form-control" id="selectPICCMonth" name="ExpirationDateM"></select>
+                                            </div>
+
+                                            <div class="form-group col-md-3">
+                                                <select class="selectPICCYear form-control" id="selectPICCYear" name="ExpirationDateY"></select>
+                                            </div>
+                                            <div class="form-group col-md-6 red_star2"> (Please ensure your expiration date is correct) </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-2 control-label" for="EmailAddress">Card Verification Number</label>
+                                        <div class="col-md-10">
+                                            <div class="form-group col-md-4">
+                                                @Html.TextBoxFor(m => m.CVV, new { @class = "form-control", autocomplete = "off", maxlength = "3", size = "3", placeholder = "Security Code", @required = "required" })
+                                            </div>
+                                            <div class="form-group col-md-2 left-align"> <img src="http://air.nanojot.com/Content/NanoJot/img/cvv.jpg" alt="" /> </div>
+                                            <div class="form-group col-md-4"> <a>3 digit number from the back of your card</a> </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-2 control-label" for="EmailAddress">City/State/Country</label>
+                                        <div class="col-md-10">
+                                            <input type="text" class="form-control" name="selBCICountry" id="selBCICountry" autocomplete="off" placeholder="City, State, Country Details">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="col-md-2 control-label" for="EmailAddress">Street Address</label>
+                                        <div class="col-md-10">
+                                            @Html.TextBoxFor(m => m.UserStreetAddress, new { @class = "form-control", @autocomplete = "off" })
+                                        </div>
+                                    </div>
+
+
+                                    <div class="form-group">
+                                        <label class="col-md-2 control-label" for="EmailAddress">Zip</label>
+                                        <div class="col-md-10">
+                                            @Html.TextBoxFor(m => m.UserZip, new { @class = "form-control", autocomplete = "off", placeholder = "Zip / Postal Code", @required = "required" })
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="col-md-2 control-label" for="EmailAddress">Billing Phone (e.g 1234567890)</label>
+                                        <div class="col-md-10">
+                                            @Html.TextBoxFor(m => m.UserPhone, new { @class = "form-control", autocomplete = "off", placeholder = "Billing Phone", @required = "required" })
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="col-md-2 control-label" for="EmailAddress">Email</label>
+                                        <div class="col-md-10">
+                                            @Html.TextBoxFor(m => m.UserEmail, new { @class = "form-control", autocomplete = "off", placeholder = "Email", @required = "required" })
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="col-md-offset-2 col-md-10">
+                                        <input type="submit" class="btn btn-default" value="Update" />
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        var CompanyType = sessionStorage.getItem("CompanyTypeId");
+        if (CompanyType == "1") {
+            $("#selPICCType").children("option[value^=" + "CQ" + "]").show();
+            $('#UserDetails').css('display', 'none');
+        }
+        else {
+            $("#selPICCType").children("option[value^=" + "CQ" + "]").hide();
+            $('#UserDetails').css('display', 'block');
+
+        }
+
+        var monthShortValues = [{ "Key": "Jan (01)", "Value": "01", }, { "Key": "Feb (02)", "Value": "02", }, { "Key": "Mar (03)", "Value": "03", }, { "Key": "Apr (04)", "Value": "04", }, { "Key": "May (05)", "Value": "05", }, { "Key": "Jun (06)", "Value": "06", }, { "Key": "Jul (07)", "Value": "07", }, { "Key": "Sep (08)", "Value": "08", }, { "Key": "Sep (09)", "Value": "09", }, { "Key": "Oct (10)", "Value": "10", }, { "Key": "Nov (11)", "Value": "11", }, { "Key": "Dec (12)", "Value": "12", }];
+        $.each(monthShortValues, function (key, value) {
+            var monthdata = value;
+            $(".selectPICCMonth").append("<option value=\"" + monthdata.Value + "\">" + monthdata.Key + "</option>");
+        });
+
+        $('.selectPICCYear').yearselect({ order: 'asc' });
+        var ExpMonth = $('#ExpiryMonth').val();
+        var ExpYear = $('#ExpiryYear').val();
+        $('#selectPICCMonth  option[value="' + ExpMonth + '"]').prop("selected", true);
+        $('#selectPICCYear  option[value="' + ExpYear + '"]').prop("selected", true);
+        $('#selBCICountry').val($('#UserLocation').val());
+    });
+</script>
+
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyDPKyEPE8dWcr14Y7T1_2WZhuXK4DJKQEs"></script>
+<script type="text/javascript">
+
+    google.maps.event.addDomListener(window, 'load', function () {
+        var input = document.getElementById('selBCICountry');
+        var places = new google.maps.places.Autocomplete(input);
+
+        places.addListener('place_changed', function () {
+            var Country = "";
+            var City = "";
+            var result = places.getPlace();
+
+            for (var i = 0; i < result.address_components.length; i += 1) {
+                var addressObj = result.address_components[i];
+                for (var j = 0; j < addressObj.types.length; j += 1) {
+                    if (addressObj.types[j] === 'country') {
+                        console.log('country : ' + addressObj.long_name); // confirm that this is the country name
+                        Country = addressObj.long_name;
+                    }
+                    if (addressObj.types[j] === 'administrative_area_level_1') {
+                        console.log('state : ' + addressObj.long_name); // confirm that this is the state name
+                    }
+                    if (addressObj.types[j] === 'locality') {
+                        console.log('city : ' + addressObj.long_name); // confirm that this is the city name
+                        City = addressObj.long_name;
+                    }
+                }
+            }
+            $('#selBCICountry').val(City + " , " + Country);
+        });
+
+    });
+</script>  

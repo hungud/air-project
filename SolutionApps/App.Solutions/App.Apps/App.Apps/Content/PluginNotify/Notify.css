@@ -1,0 +1,60 @@
+#ui_qpro_notify{
+    position: fixed;
+    top: 0px;
+    /*right: 10px;*/
+    cursor: pointer;
+    -webkit-box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.5);
+    -o-box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    z-index:9999;
+}
+#ui_qpro_notify p{
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 14px;
+    padding: 0;
+    word-break: break-all;
+    margin: 5px;
+}
+.Notify_Success{
+    background-color: yellowgreen;
+    color: white;
+}
+.Notify_Error{
+    background-color: orangered;
+    color: white;
+}
+.Notify_Warning{
+    background-color: orange;
+    color: white;
+}
+.Notify_Info{
+    background-color: deepskyblue;
+    color: white;
+}
+
+ #wrap{
+	 margin:50px 0 100px 20px;
+}
+.notify_1{
+    margin-bottom:5px; 
+}
+.notify_1 {
+	background:#28597a;
+	border: 1px solid transparent;
+	box-shadow: 0 1px 0 rgba(0, 0, 0, 1);
+	color: white;
+	cursor: pointer;
+	font-family: Georgia,serif;
+	font-size: 14px;
+	padding: 5px 10px;
+	text-decoration: none;
+	text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+	vertical-align: middle;
+	width:80px;
+   }
+.notify_1:hover {
+   background: #000;
+ }

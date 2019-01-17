@@ -1,0 +1,12 @@
+|| EXMESSAGE ||:- A circular reference was detected while serializing an object of type 'System.Reflection.RuntimeModule'.  || EXSOURCE ||:- System.Web.Extensions || EXTARGETSITE ||:- Void SerializeValueInternal(System.Object, System.Text.StringBuilder, Int32, System.Collections.Hashtable, SerializationFormat, System.Reflection.MemberInfo)  ||  EXData ||:- System.Collections.ListDictionaryInternal
+
+
+||EXInnerException||:-  
+   :::   01:17:48.1946669
+
+|| EXMESSAGE ||:- A circular reference was detected while serializing an object of type 'System.Reflection.RuntimeModule'.  || EXSOURCE ||:- System.Web.Extensions || EXTARGETSITE ||:- Void SerializeValueInternal(System.Object, System.Text.StringBuilder, Int32, System.Collections.Hashtable, SerializationFormat, System.Reflection.MemberInfo)  ||  EXData ||:- System.Collections.ListDictionaryInternal
+
+
+||EXInnerException||:-  
+   :::   01:34:46.6692020
+

@@ -1,0 +1,33 @@
+﻿<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyDPKyEPE8dWcr14Y7T1_2WZhuXK4DJKQEs"></script>
+<script type="text/javascript">
+
+        google.maps.event.addDomListener(window, 'load', function () {
+            var input = document.getElementById('selBCICountry');
+            var places = new google.maps.places.Autocomplete(input);
+
+            places.addListener('place_changed', function () {
+                var Country = "";
+                var City = "";
+                var result = places.getPlace();
+
+                for (var i = 0; i < result.address_components.length; i += 1) {
+                    var addressObj = result.address_components[i];
+                    for (var j = 0; j < addressObj.types.length; j += 1) {
+                        if (addressObj.types[j] === 'country') {
+                            console.log('country : ' + addressObj.long_name); // confirm that this is the country name
+                            Country = addressObj.long_name;
+                        }
+                        if (addressObj.types[j] === 'administrative_area_level_1') {
+                            console.log('state : ' + addressObj.long_name); // confirm that this is the state name
+                        }
+                        if (addressObj.types[j] === 'locality') {
+                            console.log('city : ' + addressObj.long_name); // confirm that this is the city name
+                            City = addressObj.long_name;
+                        }
+                    }
+                }
+                $('#selBCICountry').val(City+" , "+Country);
+            });
+
+        });
+</script>  

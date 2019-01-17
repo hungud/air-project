@@ -1,0 +1,11 @@
+﻿<div class="navbar-collapse collapse">
+    <ul class="nav navbar-nav">
+        <li class="@(ViewBag.ActiveTab == "Index" ? "active" : string.Empty)">@Html.ActionLink("Home", "Index", "Test")</li>
+        <li class="@(ViewBag.ActiveTab == "About" ? "active" : string.Empty)">@Html.ActionLink("About", "About", "Test")</li>
+        <li class="@(ViewBag.ActiveTab == "Contact" ? "active" : string.Empty)">@Html.ActionLink("Contact", "Contact", "Test")</li>
+        <li class="@(ViewBag.ActiveTab == "ProductionProduct" ? "active" : string.Empty)">@Html.ActionLink("ProductionProduct", "ProductionProduct", "Test")</li>
+        <li class="@(ViewBag.ActiveTab == "AirBooking" ? "active" : string.Empty)">@Html.ActionLink("SOAP Test", "SOAPTest", "Test")</li>
+        <li class="@(ViewBag.ActiveTab == "BargainFinderMax" ? "active" : string.Empty)">@Html.ActionLink("WCF Test", "WCFTest", "Test")</li>
+        <li class="@(ViewBag.ActiveTab == "LeadPriceCalendar" ? "active" : string.Empty)">@Html.ActionLink("Web API Test", "WebAPITest", "Test")</li>
+    </ul>
+</div>

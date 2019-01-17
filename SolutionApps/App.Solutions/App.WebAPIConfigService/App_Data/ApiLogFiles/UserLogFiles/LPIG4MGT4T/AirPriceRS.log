@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap-env:Envelope xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/"><soap-env:Header><eb:MessageHeader xmlns:eb="http://www.ebxml.org/namespaces/messageHeader" eb:version="1.0" soap-env:mustUnderstand="1"><eb:From><eb:PartyId eb:type="URI">123123</eb:PartyId></eb:From><eb:To><eb:PartyId eb:type="urn: x12.org:IO5: 01">999999</eb:PartyId></eb:To><eb:CPAId>3RT2</eb:CPAId><eb:ConversationId>1111111111111111111</eb:ConversationId><eb:Service eb:type="sabreXML">OTA_AirPriceLLSRQ</eb:Service><eb:Action>OTA_AirPriceLLSRS</eb:Action><eb:MessageData><eb:MessageId>1119599539872460150</eb:MessageId><eb:Timestamp>2018-10-06T14:59:51</eb:Timestamp><eb:RefToMessageId>mid:0_2014-09-22T21:43:40m</eb:RefToMessageId></eb:MessageData></eb:MessageHeader><wsse:Security xmlns:wsse="http://schemas.xmlsoap.org/ws/2002/12/secext"><wsse:BinarySecurityToken valueType="String" EncodingType="wsse:Base64Binary">Shared/IDL:IceSess\/SessMgr:1\.0.IDL/Common/!ICESMS\/ACPCRTC!ICESMSLB\/CRT.LB!1538837967156!1401251!262145</wsse:BinarySecurityToken></wsse:Security></soap-env:Header><soap-env:Body><OTA_AirPriceRS xmlns="http://webservices.sabre.com/sabreXML/2011/10" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:stl="http://services.sabre.com/STL/v01" Version="2.14.0">
+ <stl:ApplicationResults status="Complete">
+  <stl:Success timeStamp="2018-10-06T09:59:51-05:00"/>
+ </stl:ApplicationResults>
+ <PriceQuote>
+  <MiscInformation>
+   <BaggageInfo>
+    <SubCodeProperties RPH="1" SolutionSequenceNmbr="1">
+     <AncillaryFeeGroupCode>BG</AncillaryFeeGroupCode>
+     <AncillaryService SubGroupCode="CY">
+      <Text>CARRY ON HAND BAGGAGE</Text>
+     </AncillaryService>
+     <CommercialNameofBaggageItemType>CARRY12KG UPTO 56LX45WX25CM</CommercialNameofBaggageItemType>
+     <DescriptionOne Code="10">
+      <Text>UP TO 22 POUNDS/10 KILOGRAMS</Text>
+     </DescriptionOne>
+     <EMD_Type>2</EMD_Type>
+     <ExtendedSubCodeKey>08AACWW</ExtendedSubCodeKey>
+     <RFIC>C</RFIC>
+     <SizeWeightInfo>
+      <MaximumWeightInAlternate Units="K">10</MaximumWeightInAlternate>
+      <MaximumWeight Units="L">22</MaximumWeight>
+     </SizeWeightInfo>
+     <SSR_Code>CBAG</SSR_Code>
+    </SubCodeProperties>
+    <SubCodeProperties RPH="2" SolutionSequenceNmbr="1">
+     <AncillaryFeeGroupCode>BG</AncillaryFeeGroupCode>
+     <AncillaryService SubGroupCode="CY">
+      <Text>CARRY ON HAND BAGGAGE</Text>
+     </AncillaryService>
+     <CommercialNameofBaggageItemType>CARRY12KG UPTO 56LX45WX25CM</CommercialNameofBaggageItemType>
+     <EMD_Type>4</EMD_Type>
+     <ExtendedSubCodeKey>0LNABWW</ExtendedSubCodeKey>
+     <SSR_Code>CBAG</SSR_Code>
+    </SubCodeProperties>
+   </BaggageInfo>
+   <HeaderInformation SolutionSequenceNmbr="1">
+    <DepartureDate>2018-12-07</DepartureDate>
+    <LastTicketingDate>10-09T10:59</LastTicketingDate>
+    <Text>VALIDATING CARRIER - W2 PER GSA AGREEMENT WITH WW</Text>
+    <Text>BAG ALLOWANCE     -YYZDEL-*/WW</Text>
+    <Text>*BAGGAGE ALLOWANCES/FEES UNKNOWN - CONTACT WW</Text>
+    <Text>1STCHECKED BAG FEE-YYZDEL-*/WW</Text>
+    <Text>*BAGGAGE ALLOWANCES/FEES UNKNOWN - CONTACT WW</Text>
+    <Text>2NDCHECKED BAG FEE-YYZDEL-*/WW</Text>
+    <Text>*BAGGAGE ALLOWANCES/FEES UNKNOWN - CONTACT WW</Text>
+    <Text>BAG ALLOWANCE     -DELYYZ-*/WW</Text>
+    <Text>*BAGGAGE ALLOWANCES/FEES UNKNOWN - CONTACT WW</Text>
+    <Text>1STCHECKED BAG FEE-DELYYZ-*/WW</Text>
+    <Text>*BAGGAGE ALLOWANCES/FEES UNKNOWN - CONTACT WW</Text>
+    <Text>2NDCHECKED BAG FEE-DELYYZ-*/WW</Text>
+    <Text>*BAGGAGE ALLOWANCES/FEES UNKNOWN - CONTACT WW</Text>
+    <Text>CARRY ON ALLOWANCE</Text>
+    <Text>YYZKEF KEFDEL DELKEF KEFYYZ-01P/12KG/WW</Text>
+    <Text>CARRY ON CHARGES</Text>
+    <Text>YYZKEF KEFDEL DELKEF KEFYYZ-WW</Text>
+    <Text>OVER 12KG UP TO 22 POUNDS/10 KILOGRAMS-CAD37.99</Text>
+    <Text>07DEC DEPARTURE DATE-----LAST DAY TO PURCHASE 09OCT/1059</Text>
+    <ValidatingCarrier Code="W2"/>
+   </HeaderInformation>
+   <SolutionInformation SolutionSequenceNmbr="1">
+    <CurrencyCode>CAD</CurrencyCode>
+    <RequiresRebook>false</RequiresRebook>
+    <TicketNumber>0</TicketNumber>
+    <TotalAmount>1383.59</TotalAmount>
+   </SolutionInformation>
+  </MiscInformation>
+  <PricedItinerary AlternativePricing="false" CurrencyCode="CAD" MultiTicket="false" TotalAmount="1383.59">
+   <AirItineraryPricingInfo SolutionSequenceNmbr="1">
+    <BaggageProvisions RPH="1">
+     <Associations>
+      <CarrierCode RPH="1">WW</CarrierCode>
+      <CarrierCode RPH="2">WW</CarrierCode>
+      <CarrierCode RPH="3">WW</CarrierCode>
+      <CarrierCode RPH="4">WW</CarrierCode>
+      <CountForSegmentAssociatedID>4</CountForSegmentAssociatedID>
+      <DepartureDate RPH="1">2018-12-07</DepartureDate>
+      <DepartureDate RPH="2">2018-12-08</DepartureDate>
+      <DepartureDate RPH="3">2018-12-21</DepartureDate>
+      <DepartureDate RPH="4">2018-12-21</DepartureDate>
+      <DestinationLocation LocationCode="KEF" RPH="1"/>
+      <DestinationLocation LocationCode="DEL" RPH="2"/>
+      <DestinationLocation LocationCode="KEF" RPH="3"/>
+      <DestinationLocation LocationCode="YYZ" RPH="4"/>
+      <FlightNumber RPH="1">214</FlightNumber>
+      <FlightNumber RPH="2">322</FlightNumber>
+      <FlightNumber RPH="3">323</FlightNumber>
+      <FlightNumber RPH="4">213</FlightNumber>
+      <OriginLocation LocationCode="YYZ" RPH="1"/>
+      <OriginLocation LocationCode="KEF" RPH="2"/>
+      <OriginLocation LocationCode="DEL" RPH="3"/>
+      <OriginLocation LocationCode="KEF" RPH="4"/>
+      <PNR_Segment RPH="1">6</PNR_Segment>
+      <PNR_Segment RPH="2">2</PNR_Segment>
+      <PNR_Segment RPH="3">3</PNR_Segment>
+      <PNR_Segment RPH="4">4</PNR_Segment>
+      <ResBookDesigCode RPH="1">V</ResBookDesigCode>
+      <ResBookDesigCode RPH="2">V</ResBookDesigCode>
+      <ResBookDesigCode RPH="3">U</ResBookDesigCode>
+      <ResBookDesigCode RPH="4">U</ResBookDesigCode>
+      <StatusCode RPH="1">SS</StatusCode>
+      <StatusCode RPH="2">SS</StatusCode>
+      <StatusCode RPH="3">SS</StatusCode>
+      <StatusCode RPH="4">SS</StatusCode>
+     </Associations>
+     <CarrierWhoseBaggageProvisionsApply>WW</CarrierWhoseBaggageProvisionsApply>
+     <NumPiecesBDI>1</NumPiecesBDI>
+     <ProvisionType>B</ProvisionType>
+     <SubCodeInfo>
+      <SubCodeForChargesOthers>0LNABWW</SubCodeForChargesOthers>
+     </SubCodeInfo>
+     <WeightLimit Units="K">12</WeightLimit>
+    </BaggageProvisions>
+    <BaggageProvisions RPH="2">
+     <Associations>
+      <CarrierCode RPH="1">WW</CarrierCode>
+      <CarrierCode RPH="2">WW</CarrierCode>
+      <CarrierCode RPH="3">WW</CarrierCode>
+      <CarrierCode RPH="4">WW</CarrierCode>
+      <CountForSegmentAssociatedID>4</CountForSegmentAssociatedID>
+      <DepartureDate RPH="1">2018-12-07</DepartureDate>
+      <DepartureDate RPH="2">2018-12-08</DepartureDate>
+      <DepartureDate RPH="3">2018-12-21</DepartureDate>
+      <DepartureDate RPH="4">2018-12-21</DepartureDate>
+      <DestinationLocation LocationCode="KEF" RPH="1"/>
+      <DestinationLocation LocationCode="DEL" RPH="2"/>
+      <DestinationLocation LocationCode="KEF" RPH="3"/>
+      <DestinationLocation LocationCode="YYZ" RPH="4"/>
+      <FlightNumber RPH="1">214</FlightNumber>
+      <FlightNumber RPH="2">322</FlightNumber>
+      <FlightNumber RPH="3">323</FlightNumber>
+      <FlightNumber RPH="4">213</FlightNumber>
+      <OriginLocation LocationCode="YYZ" RPH="1"/>
+      <OriginLocation LocationCode="KEF" RPH="2"/>
+      <OriginLocation LocationCode="DEL" RPH="3"/>
+      <OriginLocation LocationCode="KEF" RPH="4"/>
+      <PNR_Segment RPH="1">6</PNR_Segment>
+      <PNR_Segment RPH="2">2</PNR_Segment>
+      <PNR_Segment RPH="3">3</PNR_Segment>
+      <PNR_Segment RPH="4">4</PNR_Segment>
+      <ResBookDesigCode RPH="1">V</ResBookDesigCode>
+      <ResBookDesigCode RPH="2">V</ResBookDesigCode>
+      <ResBookDesigCode RPH="3">U</ResBookDesigCode>
+      <ResBookDesigCode RPH="4">U</ResBookDesigCode>
+      <StatusCode RPH="1">SS</StatusCode>
+      <StatusCode RPH="2">SS</StatusCode>
+      <StatusCode RPH="3">SS</StatusCode>
+      <StatusCode RPH="4">SS</StatusCode>
+     </Associations>
+     <CarrierWhoseBaggageProvisionsApply>WW</CarrierWhoseBaggageProvisionsApply>
+     <Commissionable>N</Commissionable>
+     <FeeApplicationIndicator>4</FeeApplicationIndicator>
+     <FeeNotGuaranteedIndicator>N</FeeNotGuaranteedIndicator>
+     <PassengerType Code="ADT"/>
+     <PriceInformation>
+      <Base Amount="37.99" CurrencyCode="CAD"/>
+      <Equiv Amount="37.99" CurrencyCode="CAD"/>
+      <TaxIndicator>X</TaxIndicator>
+      <Total>37.99</Total>
+     </PriceInformation>
+     <ProvisionType>CC</ProvisionType>
+     <RefundReissue>N</RefundReissue>
+     <SubCodeInfo>
+      <SubCodeForChargesOthers>08AACWW</SubCodeForChargesOthers>
+     </SubCodeInfo>
+    </BaggageProvisions>
+    <FareCalculation>
+     <Text>YTO WW X/REK WW DEL447.84WW X/REK WW YTO375.60NUC823.44END ROE1.315194</Text>
+    </FareCalculation>
+    <FareCalculationBreakdown>
+     <Departure AirlineCode="WW" AirportCode="YYZ" ArrivalAirportCode="KEF" ArrivalCityCode="REK" CityCode="YTO" GenericInd="X"/>
+     <FareBasis Cabin="Y" Code="VWOWPVR" FilingCarrier="WW"/>
+    </FareCalculationBreakdown>
+    <FareCalculationBreakdown>
+     <Branch FirstJointCarrier="WW" PCC="3RT2"/>
+     <Departure AirlineCode="WW" AirportCode="KEF" ArrivalAirportCode="DEL" ArrivalCityCode="DEL" CityCode="REK" GenericInd="O"/>
+     <FareBasis Cabin="Y" Code="VWOWPVR" FareAmount="447.84" FarePassengerType="ADT" FareType="P" FilingCarrier="WW" GlobalInd="AT" Market="YTODEL" TripTypeInd="R"/>
+     <RuleCategoryIndicator>4</RuleCategoryIndicator>
+     <RuleCategoryIndicator>5</RuleCategoryIndicator>
+     <RuleCategoryIndicator>7</RuleCategoryIndicator>
+     <RuleCategoryIndicator>8</RuleCategoryIndicator>
+     <RuleCategoryIndicator>9</RuleCategoryIndicator>
+     <RuleCategoryIndicator>10</RuleCategoryIndicator>
+     <RuleCategoryIndicator>15</RuleCategoryIndicator>
+     <RuleCategoryIndicator>16</RuleCategoryIndicator>
+     <RuleCategoryIndicator>18</RuleCategoryIndicator>
+    </FareCalculationBreakdown>
+    <FareCalculationBreakdown>
+     <Departure AirlineCode="WW" AirportCode="DEL" ArrivalAirportCode="KEF" ArrivalCityCode="REK" CityCode="DEL" GenericInd="X"/>
+     <FareBasis Cabin="Y" Code="UWOWPVR" FilingCarrier="WW"/>
+    </FareCalculationBreakdown>
+    <FareCalculationBreakdown>
+     <Branch FirstJointCarrier="WW" PCC="3RT2"/>
+     <Departure AirlineCode="WW" AirportCode="KEF" ArrivalAirportCode="YYZ" ArrivalCityCode="YTO" CityCode="REK" GenericInd="O"/>
+     <FareBasis Cabin="Y" Code="UWOWPVR" FareAmount="375.60" FarePassengerType="ADT" FareType="P" FilingCarrier="WW" GlobalInd="AT" Market="YTODEL" TripTypeInd="R"/>
+     <RuleCategoryIndicator>4</RuleCategoryIndicator>
+     <RuleCategoryIndicator>5</RuleCategoryIndicator>
+     <RuleCategoryIndicator>7</RuleCategoryIndicator>
+     <RuleCategoryIndicator>8</RuleCategoryIndicator>
+     <RuleCategoryIndicator>9</RuleCategoryIndicator>
+     <RuleCategoryIndicator>10</RuleCategoryIndicator>
+     <RuleCategoryIndicator>15</RuleCategoryIndicator>
+     <RuleCategoryIndicator>16</RuleCategoryIndicator>
+     <RuleCategoryIndicator>18</RuleCategoryIndicator>
+    </FareCalculationBreakdown>
+    <ItinTotalFare NonRefundableInd="N">
+     <BaggageInfo>
+      <US_DOT_Disclosure>
+       <Text>BAG ALLOWANCE     -YYZDEL-*/WW</Text>
+       <Text>*BAGGAGE ALLOWANCES/FEES UNKNOWN - CONTACT WW</Text>
+       <Text>1STCHECKED BAG FEE-YYZDEL-*/WW</Text>
+       <Text>*BAGGAGE ALLOWANCES/FEES UNKNOWN - CONTACT WW</Text>
+       <Text>2NDCHECKED BAG FEE-YYZDEL-*/WW</Text>
+       <Text>*BAGGAGE ALLOWANCES/FEES UNKNOWN - CONTACT WW</Text>
+       <Text>BAG ALLOWANCE     -DELYYZ-*/WW</Text>
+       <Text>*BAGGAGE ALLOWANCES/FEES UNKNOWN - CONTACT WW</Text>
+       <Text>1STCHECKED BAG FEE-DELYYZ-*/WW</Text>
+       <Text>*BAGGAGE ALLOWANCES/FEES UNKNOWN - CONTACT WW</Text>
+       <Text>2NDCHECKED BAG FEE-DELYYZ-*/WW</Text>
+       <Text>*BAGGAGE ALLOWANCES/FEES UNKNOWN - CONTACT WW</Text>
+       <Text>CARRY ON ALLOWANCE</Text>
+       <Text>YYZKEF KEFDEL DELKEF KEFYYZ-01P/12KG/WW</Text>
+       <Text>CARRY ON CHARGES</Text>
+       <Text>YYZKEF KEFDEL DELKEF KEFYYZ-WW</Text>
+       <Text>OVER 12KG UP TO 22 POUNDS/10 KILOGRAMS-CAD37.99</Text>
+      </US_DOT_Disclosure>
+     </BaggageInfo>
+     <BaseFare Amount="1083.00" CurrencyCode="CAD"/>
+     <Endorsements>
+      <Text>NONEND/NONREF/REBOOK SUB TO PENALTIES</Text>
+     </Endorsements>
+     <Taxes TotalAmount="300.59">
+      <Tax Amount="3.25" TaxCode="RC2" TaxName="HARMONIZED SALES TAX HST ON SQ" TicketingTaxCode="RC"/>
+      <Tax Amount="25.00" TaxCode="SQ" TaxName="AIRPORT IMPROVEMENT FEE  AIF" TicketingTaxCode="SQ"/>
+      <Tax Amount="25.91" TaxCode="CA4" TaxName="AIR TRAVELLERS SECURITY CHARGE" TicketingTaxCode="CA"/>
+      <Tax Amount="223.47" TaxCode="YQF" TaxName="SERVICE FEE - FUEL" TicketingTaxCode="YQ"/>
+      <Tax Amount="9.08" TaxCode="IS" TaxName="AIRPORT SERVICE CHARGE" TicketingTaxCode="IS"/>
+      <Tax Amount="7.56" TaxCode="ZU" TaxName="PASSENGER FEE  KEFLAVIK" TicketingTaxCode="ZU"/>
+      <Tax Amount="4.90" TaxCode="WO" TaxName="PASSENGER SERVICE FEE" TicketingTaxCode="WO"/>
+      <Tax Amount="1.42" TaxCode="IN" TaxName="USER DEVELOPMENT FEE DEPARTURE" TicketingTaxCode="IN"/>
+     </Taxes>
+     <TotalFare Amount="1383.59" CurrencyCode="CAD"/>
+     <Warnings>
+      <Warning ShortText="BAG ALLOWANCE     -YYZDEL-*/WW"/>
+      <Warning ShortText="*BAGGAGE ALLOWANCES/FEES UNKNOWN - CONTACT WW"/>
+      <Warning ShortText="1STCHECKED BAG FEE-YYZDEL-*/WW"/>
+      <Warning ShortText="*BAGGAGE ALLOWANCES/FEES UNKNOWN - CONTACT WW"/>
+      <Warning ShortText="2NDCHECKED BAG FEE-YYZDEL-*/WW"/>
+      <Warning ShortText="*BAGGAGE ALLOWANCES/FEES UNKNOWN - CONTACT WW"/>
+      <Warning ShortText="BAG ALLOWANCE     -DELYYZ-*/WW"/>
+      <Warning ShortText="*BAGGAGE ALLOWANCES/FEES UNKNOWN - CONTACT WW"/>
+      <Warning ShortText="1STCHECKED BAG FEE-DELYYZ-*/WW"/>
+      <Warning ShortText="*BAGGAGE ALLOWANCES/FEES UNKNOWN - CONTACT WW"/>
+      <Warning ShortText="2NDCHECKED BAG FEE-DELYYZ-*/WW"/>
+      <Warning ShortText="*BAGGAGE ALLOWANCES/FEES UNKNOWN - CONTACT WW"/>
+      <Warning ShortText="CARRY ON ALLOWANCE"/>
+      <Warning ShortText="YYZKEF KEFDEL DELKEF KEFYYZ-01P/12KG/WW"/>
+      <Warning ShortText="CARRY ON CHARGES"/>
+      <Warning ShortText="YYZKEF KEFDEL DELKEF KEFYYZ-WW"/>
+      <Warning ShortText="OVER 12KG UP TO 22 POUNDS/10 KILOGRAMS-CAD37.99"/>
+     </Warnings>
+    </ItinTotalFare>
+    <PassengerTypeQuantity Code="ADT" Quantity="1"/>
+    <PTC_FareBreakdown>
+     <Cabin>Y</Cabin>
+     <FareBasis Code="VWOWPVR" FilingCarrier="WW"/>
+    </PTC_FareBreakdown>
+    <PTC_FareBreakdown>
+     <Cabin>Y</Cabin>
+     <FareBasis Code="VWOWPVR" FareAmount="447.84" FarePassengerType="ADT" FareType="P" FilingCarrier="WW" GlobalInd="AT" Market="YTODEL"/>
+    </PTC_FareBreakdown>
+    <PTC_FareBreakdown>
+     <Cabin>Y</Cabin>
+     <FareBasis Code="UWOWPVR" FilingCarrier="WW"/>
+    </PTC_FareBreakdown>
+    <PTC_FareBreakdown>
+     <Cabin>Y</Cabin>
+     <FareBasis Code="UWOWPVR" FareAmount="375.60" FarePassengerType="ADT" FareType="P" FilingCarrier="WW" GlobalInd="AT" Market="YTODEL"/>
+    </PTC_FareBreakdown>
+   </AirItineraryPricingInfo>
+  </PricedItinerary>
+ </PriceQuote>
+</OTA_AirPriceRS></soap-env:Body></soap-env:Envelope>

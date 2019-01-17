@@ -1,0 +1,464 @@
+﻿@charset "utf-8";
+/* CSS Document */
+body {
+    padding-bottom: 20px;
+}
+
+.filter {
+    border-radius: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+    .filter h5 {
+        border-bottom: 1px solid #cecece;
+        padding-bottom: 10px;
+        font-weight: bold;
+    }
+
+        .filter h5 > span {
+            color: #bdbdbd;
+            font-weight: normal;
+            cursor: pointer;
+        }
+
+    .filter h6 {
+        font-size: 14px;
+        color: #ff8400;
+    }
+
+.header-bg {
+    background: #2d67b2;
+    color: #fff;
+    padding: 30px 25px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.search-btn {
+    background: #ff8400;
+}
+
+    .search-btn:hover {
+        color: #fff;
+        background: #000;
+        transition: all 1s ease-in-out;
+        -moz-transition: all 1s ease-in-out;
+        -ms-transition: all 1s ease-in-out;
+        -o-transition: all 1s ease-in-out;
+        -webkit-transition: all 1s ease-in-out;
+    }
+
+.sub-menu {
+    display: block;
+}
+
+.advance-option {
+    margin: 10px 0;
+}
+
+.mr-top-30 {
+    margin-top: 30px;
+}
+
+.discount {
+    background: #fec95a;
+    height: 90px;
+    border: 1px solid #f4555f;
+    border-radius: 5px;
+    padding-left: 40px;
+}
+
+    .discount > img {
+        position: absolute;
+        left: -20px;
+        top: 16px;
+    }
+
+    .discount > p {
+        font-size: 17px;
+        margin-top: 20px;
+    }
+
+.bg-gray {
+    background: #f2f2f2;
+}
+
+.table {
+    text-align: center;
+}
+
+    .table thead tr th {
+        line-height: 50px;
+    }
+
+    .table h5 {
+        font-weight: bold;
+    }
+
+        .table h5 span {
+            color: #999;
+            font-weight: normal;
+        }
+
+.txt-yellow {
+    color: #ff8400;
+}
+
+.txt-gray {
+    color: #999999;
+    font-size: 12px;
+}
+
+a:link, a:hover, a:visited, a:active {
+    color: #ff8400;
+    /*text-decoration: underline;*/
+}
+#privacy-url-link,#terms-url-link{
+    color: #ff8400;
+    text-decoration: underline;
+}
+.pd-left-0 {
+    padding-left: 0;
+}
+
+.pd-rt-0 {
+    padding-right: 0;
+}
+
+.pd-0 {
+    padding: 0;
+}
+
+.left-align {
+    text-align: left;
+}
+
+.rt-align {
+    text-align: right;
+}
+
+.arrow_box {
+    position: absolute;
+    background: #f5f5f5;
+    border: 1px solid #cccccc;
+    color: #000;
+    z-index: 1;
+    width: 900px;
+    left: -175px;
+    top: 35px;
+    padding: 15px;
+    display: none;
+}
+
+    .arrow_box:after, .arrow_box:before {
+        bottom: 100%;
+        left: 30%;
+        border: solid transparent;
+        content: " ";
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+    }
+
+    .arrow_box:after {
+        border-color: rgba(245, 245, 245, 0);
+        border-bottom-color: #f5f5f5;
+        border-width: 15px;
+        margin-left: -15px;
+    }
+
+    .arrow_box:before {
+        border-color: rgba(204, 204, 204, 0);
+        border-bottom-color: #cccccc;
+        border-width: 16px;
+        margin-left: -16px;
+    }
+
+    .arrow_box input, .arrow_box select {
+        height: 48px;
+    }
+
+.input-group .input-group-addon, .input-group input {
+    height: 28px;
+}
+
+.input-group .input-group-addon {
+    background: #fff;
+}
+
+.arrow_box > div {
+    padding: 0 5px;
+}
+
+.arrow_box a {
+    color: #000;
+}
+
+.return:after {
+    content: "|";
+    position: relative;
+    left: 25px;
+}
+
+a.advance-btn {
+    color: #fff;
+}
+
+.layout-slider {
+    margin: 25px 0;
+}
+
+.clear-filter {
+    border-color: #000;
+    border-radius: 0;
+    background: transparent;
+}
+
+li.ui-tabs-tab.ui-corner-top.ui-state-default.ui-tab {
+    display: inline;
+    background: #ffffff;
+}
+
+#tabs-1, #tabs-2, #tabs-3 {
+    display: block;
+    border: 1px solid #ff8400;
+    border-radius: 5px;
+    margin-top: -2px;
+}
+
+#tabs li a {
+    color: #000 !important;
+    outline: none;
+    text-decoration: none;
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px 5px 0 0;
+    border-bottom: 1px solid #ff8400;
+}
+
+    #tabs li a.active {
+        background: #ececec;
+        font-weight: bold;
+        border: 1px solid #ff8400;
+        border-bottom: 1px solid #ececec;
+        outline: none;
+    }
+
+#tabs table thead tr {
+    background: #ececec;
+}
+
+    #tabs table thead tr th {
+        line-height: 20px;
+        font-size: 20px;
+        padding: 15px;
+    }
+
+        #tabs table thead tr th span.gray {
+            font-size: 12px;
+            color: #999;
+        }
+
+        #tabs table thead tr th span.yellow {
+            color: #ff8400;
+        }
+
+#tabs .table > tbody > tr > td, #tabs .table > tbody > tr > th, #tabs .table > tfoot > tr > td, #tabs .table > tfoot > tr > th, #tabs .table > thead > tr > td, #tabs .table > thead > tr > th {
+    text-align: left;
+    border: 0;
+}
+
+.rt-align {
+    text-align: right !important;
+}
+
+.btn-warning {
+    background: #ff8400;
+    color: #fff;
+    font-size: 20px;
+}
+
+.txt-green {
+    color: #2ba528;
+}
+
+.pink-bg {
+    background: #fff9f2;
+}
+
+#advance.visible {
+    display: block;
+}
+
+input.date {
+    background: url(../img/calender.jpg) #fff no-repeat scroll;
+    background-position: 95% 4px;
+    padding-right: 30px;
+}
+
+input[type="search"] {
+    background: url(../img/search.jpg) #fff no-repeat scroll;
+    background-position: 95% 10px;
+    padding-right: 30px;
+}
+
+.carousel-control.left, .carousel-control.right {
+    background-image: none;
+}
+
+input {
+    outline: none !important;
+}
+
+i[class="fa-fighter-jet"] {
+    color: #ff8400;
+}
+
+.row.trvl-det div {
+    padding: 0 5px;
+}
+
+.pd_top {
+    padding-top: 10px !important;
+}
+
+ul.bullets_or {
+    margin: 0;
+    padding: 0;
+}
+
+.bullets_or li {
+    background: url(../img/bullets_or.jpg) no-repeat left 6px;
+    list-style: none;
+    padding-bottom: 5px;
+    padding-left: 15px;
+}
+
+.book_btn {
+    background: #ff8400;
+    border-color: #ff8400;
+    padding: 10px 50px;
+}
+
+.trvl-det label {
+    font-weight: normal;
+    margin-top: 7px;
+}
+
+.stat_col {
+    color: #f00;
+    font-size: 14px;
+}
+.stat_col_payment{
+    color: #f00;
+    font-size: 14px;
+}
+.stat_col_payment_cp{
+    color: #f00;
+    font-size: 14px;
+}
+ul.bullets_flight {
+    margin: 0;
+    padding: 0;
+}
+
+.bullets_flight li {
+    background: url(../img/bullet_flight.jpg) no-repeat left 3px;
+    list-style: none;
+    padding-bottom: 5px;
+    padding-left: 20px;
+    margin-left: -15px;
+}
+
+.grey_bg {
+    background: #f2f2f2;
+}
+
+    .grey_bg #tabs-1 {
+        border: 1px solid #cecece;
+        border-radius: 0;
+        background: #fff;
+        margin-bottom: 20px;
+    }
+
+    .grey_bg .lft_title {
+        font-size: 24px;
+        font-weight: 300;
+        padding-bottom: 15px;
+    }
+
+    .grey_bg .green_sel, .grey_sel {
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        line-height: 25px;
+        background: #2fa904;
+        color: #fff;
+        text-align: center;
+        font-size: 14px;
+        padding: 0;
+        margin-top: 5px;
+        float: right;
+        margin-right: 15px;
+    }
+
+.grey_sel {
+    background: #cccccc;
+}
+
+.grey_bg .red_star {
+    color: #f00;
+    font-size: 12px;
+}
+
+.grey_bg .red_star2 {
+    color: #f00;
+}
+
+@media screen and (min-width: 768px) {
+    .carousel-control .glyphicon-chevron-left {
+        margin-left: -45px;
+        margin-top: -70px;
+    }
+
+    .carousel-control .glyphicon-chevron-right {
+        margin-right: -45px;
+        margin-top: -70px;
+    }
+
+    .col-md-50 {
+        width: 12.5%;
+    }
+
+    .col-md-75 {
+        width: 16.6%;
+    }
+}
+
+.ccFormatMonitor.cc_type_vs + p::after {
+    content: "Visa";
+}
+
+.ccFormatMonitor.cc_type_jc + p::after {
+    content: "JCB";
+}
+
+.ccFormatMonitor.cc_type_dc + p::after {
+    content: "Diners Club";
+}
+
+.ccFormatMonitor.cc_type_mc + p::after {
+    content: "Mastercard";
+}
+
+.ccFormatMonitor.cc_type_ax + p::after {
+    content: "American Express";
+}
+
+.ccFormatMonitor.cc_type_unknown + p::after {
+    content: "Unknown";
+}

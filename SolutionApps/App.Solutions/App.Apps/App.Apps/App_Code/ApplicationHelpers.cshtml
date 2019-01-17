@@ -1,0 +1,30 @@
+﻿@helper ShowTime()
+{
+    <div>
+        Current Time: <strong>@DateTime.Now.ToShortTimeString()</strong>
+    </div>
+}
+@helper ShowDate()
+{
+    <div>
+        Current Date: <strong>@DateTime.Now.ToShortDateString()</strong>
+    </div>
+}
+@helper ShowDateTime()
+{
+    <div>
+        (@DateTime.Now.ToShortDateString() :: @DateTime.Now.ToShortTimeString())
+    </div>
+}
+@helper Copyright()
+{
+    <div style="font-size: 12px;">
+        Copyright © 1991 - @DateTime.Now.Year.ToString(). Nanojot Inc. All Rights Reserved.<a href="~/Test">.</a>
+    </div>
+}
+@helper CopyrightHome()
+{
+    <div style="font-size: 12px;">
+        Copyright © 1991 - @DateTime.Now.Year.ToString(). Nanojot Inc. All Rights Reserved.<a href="~/Test">.</a>
+    </div>
+}

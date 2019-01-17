@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap-env:Envelope xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/"><soap-env:Header><eb:MessageHeader xmlns:eb="http://www.ebxml.org/namespaces/messageHeader" eb:version="1.0" soap-env:mustUnderstand="1"><eb:From><eb:PartyId eb:type="URI">123123</eb:PartyId></eb:From><eb:To><eb:PartyId eb:type="urn: x12.org:IO5: 01">999999</eb:PartyId></eb:To><eb:CPAId>6DTH</eb:CPAId><eb:ConversationId>1111111111111111111</eb:ConversationId><eb:Service eb:type="sabreXML">OTA_AirPriceLLSRQ</eb:Service><eb:Action>OTA_AirPriceLLSRS</eb:Action><eb:MessageData><eb:MessageId>1182570577342970150</eb:MessageId><eb:Timestamp>2018-10-11T16:02:17</eb:Timestamp><eb:RefToMessageId>mid:0_2014-09-22T21:43:40m</eb:RefToMessageId></eb:MessageData></eb:MessageHeader><wsse:Security xmlns:wsse="http://schemas.xmlsoap.org/ws/2002/12/secext"><wsse:BinarySecurityToken valueType="String" EncodingType="wsse:Base64Binary">Shared/IDL:IceSess\/SessMgr:1\.0.IDL/Common/!ICESMS\/ACPCRTD!ICESMSLB\/CRT.LB!1539273721231!6785!131073</wsse:BinarySecurityToken></wsse:Security></soap-env:Header><soap-env:Body><OTA_AirPriceRS xmlns="http://webservices.sabre.com/sabreXML/2011/10" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:stl="http://services.sabre.com/STL/v01" Version="2.14.0">
+ <stl:ApplicationResults status="Complete">
+  <stl:Success timeStamp="2018-10-11T11:02:17-05:00"/>
+ </stl:ApplicationResults>
+ <PriceQuote>
+  <MiscInformation>
+   <BaggageInfo>
+    <SubCodeProperties RPH="1" SolutionSequenceNmbr="1">
+     <AncillaryFeeGroupCode>BG</AncillaryFeeGroupCode>
+     <CommercialNameofBaggageItemType>FREE BAGGAGE ALLOWANCE</CommercialNameofBaggageItemType>
+     <EMD_Type>4</EMD_Type>
+     <ExtendedSubCodeKey>0DFAAAI</ExtendedSubCodeKey>
+    </SubCodeProperties>
+    <SubCodeProperties RPH="2" SolutionSequenceNmbr="1">
+     <AncillaryFeeGroupCode>BG</AncillaryFeeGroupCode>
+     <AncillaryService SubGroupCode="CY">
+      <Text>CARRY ON HAND BAGGAGE</Text>
+     </AncillaryService>
+     <CommercialNameofBaggageItemType>CARRYON HAND BAGGAGE ALLOWANCE</CommercialNameofBaggageItemType>
+     <EMD_Type>4</EMD_Type>
+     <ExtendedSubCodeKey>0LNABAI</ExtendedSubCodeKey>
+     <RFIC>C</RFIC>
+    </SubCodeProperties>
+    <SubCodeProperties RPH="3" SolutionSequenceNmbr="1">
+     <AncillaryFeeGroupCode>BG</AncillaryFeeGroupCode>
+     <AncillaryService SubGroupCode="CY">
+      <Text>CARRY ON HAND BAGGAGE</Text>
+     </AncillaryService>
+     <CommercialNameofBaggageItemType>CARRY ON HAND BAGGAGE</CommercialNameofBaggageItemType>
+     <EMD_Type>4</EMD_Type>
+     <ExtendedSubCodeKey>0L5ACAC</ExtendedSubCodeKey>
+     <RFIC>C</RFIC>
+    </SubCodeProperties>
+    <SubCodeProperties RPH="4" SolutionSequenceNmbr="1">
+     <AncillaryFeeGroupCode>BG</AncillaryFeeGroupCode>
+     <AncillaryService SubGroupCode="CY">
+      <Text>CARRY ON HAND BAGGAGE</Text>
+     </AncillaryService>
+     <CommercialNameofBaggageItemType>CARRYON HAND BAGGAGE ALLOWANCE</CommercialNameofBaggageItemType>
+     <EMD_Type>4</EMD_Type>
+     <ExtendedSubCodeKey>0LNABAC</ExtendedSubCodeKey>
+     <RFIC>C</RFIC>
+    </SubCodeProperties>
+   </BaggageInfo>
+   <HeaderInformation SolutionSequenceNmbr="1">
+    <DepartureDate>2018-12-01</DepartureDate>
+    <Text>VALIDATING CARRIER - AI</Text>
+    <Text>BAG ALLOWANCE     -YYZDEL-02P/AI</Text>
+    <Text>BAG ALLOWANCE     -DELYYZ-02P/AI</Text>
+    <Text>CARRY ON ALLOWANCE</Text>
+    <Text>YYZCDG LHRYYZ-02P/AC</Text>
+    <Text>02/EACH PIECE CARRY ON HAND BAGGAGE</Text>
+    <Text>CDGDEL DELLHR-01P/08KG/AI</Text>
+    <Text>CARRY ON CHARGES</Text>
+    <Text>CDGDEL DELLHR-AI-CARRY ON FEES UNKNOWN-CONTACT CARRIER</Text>
+    <Text>ADDITIONAL ALLOWANCES AND/OR DISCOUNTS MAY APPLY DEPENDING ON</Text>
+    <Text>FLYER-SPECIFIC FACTORS /E.G. FREQUENT FLYER STATUS/MILITARY/</Text>
+    <Text>CREDIT CARD FORM OF PAYMENT/EARLY PURCHASE OVER INTERNET,ETC./</Text>
+    <ValidatingCarrier Code="AI"/>
+   </HeaderInformation>
+   <SolutionInformation SolutionSequenceNmbr="1">
+    <CurrencyCode>CAD</CurrencyCode>
+    <RequiresRebook>false</RequiresRebook>
+    <TicketNumber>0</TicketNumber>
+    <TotalAmount>1297.05</TotalAmount>
+   </SolutionInformation>
+  </MiscInformation>
+  <PricedItinerary AlternativePricing="false" CurrencyCode="CAD" MultiTicket="false" TotalAmount="1297.05">
+   <AirItineraryPricingInfo SolutionSequenceNmbr="1">
+    <BaggageProvisions RPH="1">
+     <Associations>
+      <CarrierCode RPH="1">AI</CarrierCode>
+      <CarrierCode RPH="2">AI</CarrierCode>
+      <CountForSegmentAssociatedID>2</CountForSegmentAssociatedID>
+      <DepartureDate RPH="1">2018-12-01</DepartureDate>
+      <DepartureDate RPH="2">2018-12-02</DepartureDate>
+      <DestinationLocation LocationCode="CDG" RPH="1"/>
+      <DestinationLocation LocationCode="DEL" RPH="2"/>
+      <FlightNumber RPH="1">7322</FlightNumber>
+      <FlightNumber RPH="2">142</FlightNumber>
+      <OriginLocation LocationCode="YYZ" RPH="1"/>
+      <OriginLocation LocationCode="CDG" RPH="2"/>
+      <PNR_Segment RPH="1">2</PNR_Segment>
+      <PNR_Segment RPH="2">3</PNR_Segment>
+      <ResBookDesigCode RPH="1">T</ResBookDesigCode>
+      <ResBookDesigCode RPH="2">T</ResBookDesigCode>
+      <StatusCode RPH="1">SS</StatusCode>
+      <StatusCode RPH="2">SS</StatusCode>
+     </Associations>
+     <CarrierWhoseBaggageProvisionsApply>AI</CarrierWhoseBaggageProvisionsApply>
+     <NumPiecesBDI>2</NumPiecesBDI>
+     <ProvisionType>A</ProvisionType>
+     <SubCodeInfo>
+      <SubCodeForChargesOthers>0DFAAAI</SubCodeForChargesOthers>
+     </SubCodeInfo>
+    </BaggageProvisions>
+    <BaggageProvisions RPH="2">
+     <Associations>
+      <CarrierCode RPH="1">AI</CarrierCode>
+      <CarrierCode RPH="2">AI</CarrierCode>
+      <CountForSegmentAssociatedID>2</CountForSegmentAssociatedID>
+      <DepartureDate RPH="1">2018-12-08</DepartureDate>
+      <DepartureDate RPH="2">2018-12-08</DepartureDate>
+      <DestinationLocation LocationCode="LHR" RPH="1"/>
+      <DestinationLocation LocationCode="YYZ" RPH="2"/>
+      <FlightNumber RPH="1">161</FlightNumber>
+      <FlightNumber RPH="2">7343</FlightNumber>
+      <OriginLocation LocationCode="DEL" RPH="1"/>
+      <OriginLocation LocationCode="LHR" RPH="2"/>
+      <PNR_Segment RPH="1">4</PNR_Segment>
+      <PNR_Segment RPH="2">5</PNR_Segment>
+      <ResBookDesigCode RPH="1">T</ResBookDesigCode>
+      <ResBookDesigCode RPH="2">T</ResBookDesigCode>
+      <StatusCode RPH="1">SS</StatusCode>
+      <StatusCode RPH="2">SS</StatusCode>
+     </Associations>
+     <CarrierWhoseBaggageProvisionsApply>AI</CarrierWhoseBaggageProvisionsApply>
+     <NumPiecesBDI>2</NumPiecesBDI>
+     <ProvisionType>A</ProvisionType>
+     <SubCodeInfo>
+      <SubCodeForChargesOthers>0DFAAAI</SubCodeForChargesOthers>
+     </SubCodeInfo>
+    </BaggageProvisions>
+    <BaggageProvisions RPH="3">
+     <Associations>
+      <CarrierCode RPH="1">AI</CarrierCode>
+      <CarrierCode RPH="2">AI</CarrierCode>
+      <CountForSegmentAssociatedID>2</CountForSegmentAssociatedID>
+      <DepartureDate RPH="1">2018-12-01</DepartureDate>
+      <DepartureDate RPH="2">2018-12-08</DepartureDate>
+      <DestinationLocation LocationCode="CDG" RPH="1"/>
+      <DestinationLocation LocationCode="YYZ" RPH="2"/>
+      <FlightNumber RPH="1">7322</FlightNumber>
+      <FlightNumber RPH="2">7343</FlightNumber>
+      <OriginLocation LocationCode="YYZ" RPH="1"/>
+      <OriginLocation LocationCode="LHR" RPH="2"/>
+      <PNR_Segment RPH="1">2</PNR_Segment>
+      <PNR_Segment RPH="2">5</PNR_Segment>
+      <ResBookDesigCode RPH="1">T</ResBookDesigCode>
+      <ResBookDesigCode RPH="2">T</ResBookDesigCode>
+      <StatusCode RPH="1">SS</StatusCode>
+      <StatusCode RPH="2">SS</StatusCode>
+     </Associations>
+     <CarrierWhoseBaggageProvisionsApply>AC</CarrierWhoseBaggageProvisionsApply>
+     <NumPiecesBDI>2</NumPiecesBDI>
+     <NumPiecesITR>2</NumPiecesITR>
+     <ProvisionType>B</ProvisionType>
+     <SubCodeInfo>
+      <SubCodeForAllowance RPH="1">0L5ACAC</SubCodeForAllowance>
+      <SubCodeForChargesOthers>0LNABAC</SubCodeForChargesOthers>
+     </SubCodeInfo>
+    </BaggageProvisions>
+    <BaggageProvisions RPH="4">
+     <Associations>
+      <CarrierCode RPH="1">AI</CarrierCode>
+      <CarrierCode RPH="2">AI</CarrierCode>
+      <CountForSegmentAssociatedID>2</CountForSegmentAssociatedID>
+      <DepartureDate RPH="1">2018-12-02</DepartureDate>
+      <DepartureDate RPH="2">2018-12-08</DepartureDate>
+      <DestinationLocation LocationCode="DEL" RPH="1"/>
+      <DestinationLocation LocationCode="LHR" RPH="2"/>
+      <FlightNumber RPH="1">142</FlightNumber>
+      <FlightNumber RPH="2">161</FlightNumber>
+      <OriginLocation LocationCode="CDG" RPH="1"/>
+      <OriginLocation LocationCode="DEL" RPH="2"/>
+      <PNR_Segment RPH="1">3</PNR_Segment>
+      <PNR_Segment RPH="2">4</PNR_Segment>
+      <ResBookDesigCode RPH="1">T</ResBookDesigCode>
+      <ResBookDesigCode RPH="2">T</ResBookDesigCode>
+      <StatusCode RPH="1">SS</StatusCode>
+      <StatusCode RPH="2">SS</StatusCode>
+     </Associations>
+     <CarrierWhoseBaggageProvisionsApply>AI</CarrierWhoseBaggageProvisionsApply>
+     <NumPiecesBDI>1</NumPiecesBDI>
+     <ProvisionType>B</ProvisionType>
+     <SubCodeInfo>
+      <SubCodeForChargesOthers>0LNABAI</SubCodeForChargesOthers>
+     </SubCodeInfo>
+     <WeightLimit Units="K">8</WeightLimit>
+    </BaggageProvisions>
+    <FareCalculation>
+     <Text>YTO AI X/PAR AI DEL224.30AI X/LON AI YTO224.30NUC448.60END ROE1.315194</Text>
+    </FareCalculation>
+    <FareCalculationBreakdown>
+     <Departure AirlineCode="AI" AirportCode="YYZ" ArrivalAirportCode="CDG" ArrivalCityCode="PAR" CityCode="YTO" GenericInd="X"/>
+     <FareBasis Cabin="Y" Code="TLSPX12" FilingCarrier="AI"/>
+     <FreeBaggageAllowance>PC002</FreeBaggageAllowance>
+    </FareCalculationBreakdown>
+    <FareCalculationBreakdown>
+     <Branch FirstJointCarrier="AI" PCC="6DTH"/>
+     <Departure AirlineCode="AI" AirportCode="CDG" ArrivalAirportCode="DEL" ArrivalCityCode="DEL" CityCode="PAR" GenericInd="O"/>
+     <FareBasis Cabin="Y" Code="TLSPX12" FareAmount="224.30" FarePassengerType="ADT" FareType="P" FilingCarrier="AI" GlobalInd="AT" Market="YTODEL" TripTypeInd="R"/>
+     <FreeBaggageAllowance>PC002</FreeBaggageAllowance>
+     <RuleCategoryIndicator>3</RuleCategoryIndicator>
+     <RuleCategoryIndicator>4</RuleCategoryIndicator>
+     <RuleCategoryIndicator>5</RuleCategoryIndicator>
+     <RuleCategoryIndicator>7</RuleCategoryIndicator>
+     <RuleCategoryIndicator>8</RuleCategoryIndicator>
+     <RuleCategoryIndicator>10</RuleCategoryIndicator>
+     <RuleCategoryIndicator>15</RuleCategoryIndicator>
+     <RuleCategoryIndicator>16</RuleCategoryIndicator>
+     <RuleCategoryIndicator>18</RuleCategoryIndicator>
+    </FareCalculationBreakdown>
+    <FareCalculationBreakdown>
+     <Departure AirlineCode="AI" AirportCode="DEL" ArrivalAirportCode="LHR" ArrivalCityCode="LON" CityCode="DEL" GenericInd="X"/>
+     <FareBasis Cabin="Y" Code="TLSPX12" FilingCarrier="AI"/>
+     <FreeBaggageAllowance>PC002</FreeBaggageAllowance>
+    </FareCalculationBreakdown>
+    <FareCalculationBreakdown>
+     <Branch FirstJointCarrier="AI" PCC="6DTH"/>
+     <Departure AirlineCode="AI" AirportCode="LHR" ArrivalAirportCode="YYZ" ArrivalCityCode="YTO" CityCode="LON" GenericInd="O"/>
+     <FareBasis Cabin="Y" Code="TLSPX12" FareAmount="224.30" FarePassengerType="ADT" FareType="P" FilingCarrier="AI" GlobalInd="AT" Market="YTODEL" TripTypeInd="R"/>
+     <FreeBaggageAllowance>PC002</FreeBaggageAllowance>
+     <RuleCategoryIndicator>3</RuleCategoryIndicator>
+     <RuleCategoryIndicator>4</RuleCategoryIndicator>
+     <RuleCategoryIndicator>5</RuleCategoryIndicator>
+     <RuleCategoryIndicator>7</RuleCategoryIndicator>
+     <RuleCategoryIndicator>8</RuleCategoryIndicator>
+     <RuleCategoryIndicator>10</RuleCategoryIndicator>
+     <RuleCategoryIndicator>15</RuleCategoryIndicator>
+     <RuleCategoryIndicator>16</RuleCategoryIndicator>
+     <RuleCategoryIndicator>18</RuleCategoryIndicator>
+    </FareCalculationBreakdown>
+    <ItinTotalFare NonRefundableInd="N">
+     <BaggageInfo>
+      <US_DOT_Disclosure>
+       <Text>BAG ALLOWANCE     -YYZDEL-02P/AI</Text>
+       <Text>BAG ALLOWANCE     -DELYYZ-02P/AI</Text>
+       <Text>CARRY ON ALLOWANCE</Text>
+       <Text>YYZCDG LHRYYZ-02P/AC</Text>
+       <Text>02/EACH PIECE CARRY ON HAND BAGGAGE</Text>
+       <Text>CDGDEL DELLHR-01P/08KG/AI</Text>
+       <Text>CARRY ON CHARGES</Text>
+       <Text>CDGDEL DELLHR-AI-CARRY ON FEES UNKNOWN-CONTACT CARRIER</Text>
+       <Text>ADDITIONAL ALLOWANCES AND/OR DISCOUNTS MAY APPLY DEPENDING ON</Text>
+       <Text>FLYER-SPECIFIC FACTORS /E.G. FREQUENT FLYER STATUS/MILITARY/</Text>
+       <Text>CREDIT CARD FORM OF PAYMENT/EARLY PURCHASE OVER INTERNET,ETC./</Text>
+      </US_DOT_Disclosure>
+     </BaggageInfo>
+     <BaseFare Amount="590.00" CurrencyCode="CAD"/>
+     <Endorsements>
+      <Text>NON END/VALID AI ONLY</Text>
+     </Endorsements>
+     <Taxes TotalAmount="707.05">
+      <Tax Amount="3.25" TaxCode="RC2" TaxName="HARMONIZED SALES TAX HST ON SQ" TicketingTaxCode="RC"/>
+      <Tax Amount="25.00" TaxCode="SQ" TaxName="AIRPORT IMPROVEMENT FEE  AIF" TicketingTaxCode="SQ"/>
+      <Tax Amount="25.91" TaxCode="CA4" TaxName="AIR TRAVELLERS SECURITY CHARGE" TicketingTaxCode="CA"/>
+      <Tax Amount="549.00" TaxCode="YQF" TaxName="SERVICE FEE - FUEL" TicketingTaxCode="YQ"/>
+      <Tax Amount="11.61" TaxCode="FR7" TaxName="AIRPORT TAX DOMESTIC AND INTER" TicketingTaxCode="FR"/>
+      <Tax Amount="28.46" TaxCode="QX" TaxName="PASSENGER SERVICE CHARGE INTER" TicketingTaxCode="QX"/>
+      <Tax Amount="4.93" TaxCode="WO" TaxName="PASSENGER SERVICE FEE" TicketingTaxCode="WO"/>
+      <Tax Amount="1.43" TaxCode="IN" TaxName="USER DEVELOPMENT FEE DEPARTURE" TicketingTaxCode="IN"/>
+      <Tax Amount="57.46" TaxCode="UB" TaxName="PASSENGER SERVICE CHARGE DEPAR" TicketingTaxCode="UB"/>
+     </Taxes>
+     <TotalFare Amount="1297.05" CurrencyCode="CAD"/>
+     <Warnings>
+      <Warning ShortText="BAG ALLOWANCE     -YYZDEL-02P/AI"/>
+      <Warning ShortText="BAG ALLOWANCE     -DELYYZ-02P/AI"/>
+      <Warning ShortText="CARRY ON ALLOWANCE"/>
+      <Warning ShortText="YYZCDG LHRYYZ-02P/AC"/>
+      <Warning ShortText="02/EACH PIECE CARRY ON HAND BAGGAGE"/>
+      <Warning ShortText="CDGDEL DELLHR-01P/08KG/AI"/>
+      <Warning ShortText="CARRY ON CHARGES"/>
+      <Warning ShortText="CDGDEL DELLHR-AI-CARRY ON FEES UNKNOWN-CONTACT CARRIER"/>
+      <Warning ShortText="ADDITIONAL ALLOWANCES AND/OR DISCOUNTS MAY APPLY DEPENDING ON"/>
+      <Warning ShortText="FLYER-SPECIFIC FACTORS /E.G. FREQUENT FLYER STATUS/MILITARY/"/>
+      <Warning ShortText="CREDIT CARD FORM OF PAYMENT/EARLY PURCHASE OVER INTERNET,ETC./"/>
+     </Warnings>
+    </ItinTotalFare>
+    <PassengerTypeQuantity Code="ADT" Quantity="1"/>
+    <PTC_FareBreakdown>
+     <Cabin>Y</Cabin>
+     <FareBasis Code="TLSPX12" FilingCarrier="AI"/>
+     <FreeBaggageAllowance>PC002</FreeBaggageAllowance>
+    </PTC_FareBreakdown>
+    <PTC_FareBreakdown>
+     <Cabin>Y</Cabin>
+     <FareBasis Code="TLSPX12" FareAmount="224.30" FarePassengerType="ADT" FareType="P" FilingCarrier="AI" GlobalInd="AT" Market="YTODEL"/>
+     <FreeBaggageAllowance>PC002</FreeBaggageAllowance>
+    </PTC_FareBreakdown>
+    <PTC_FareBreakdown>
+     <Cabin>Y</Cabin>
+     <FareBasis Code="TLSPX12" FilingCarrier="AI"/>
+     <FreeBaggageAllowance>PC002</FreeBaggageAllowance>
+    </PTC_FareBreakdown>
+    <PTC_FareBreakdown>
+     <Cabin>Y</Cabin>
+     <FareBasis Code="TLSPX12" FareAmount="224.30" FarePassengerType="ADT" FareType="P" FilingCarrier="AI" GlobalInd="AT" Market="YTODEL"/>
+     <FreeBaggageAllowance>PC002</FreeBaggageAllowance>
+    </PTC_FareBreakdown>
+   </AirItineraryPricingInfo>
+  </PricedItinerary>
+ </PriceQuote>
+</OTA_AirPriceRS></soap-env:Body></soap-env:Envelope>

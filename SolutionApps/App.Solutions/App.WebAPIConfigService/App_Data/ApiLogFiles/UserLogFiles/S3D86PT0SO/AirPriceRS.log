@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap-env:Envelope xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/"><soap-env:Header><eb:MessageHeader xmlns:eb="http://www.ebxml.org/namespaces/messageHeader" eb:version="1.0" soap-env:mustUnderstand="1"><eb:From><eb:PartyId eb:type="URI">123123</eb:PartyId></eb:From><eb:To><eb:PartyId eb:type="urn: x12.org:IO5: 01">999999</eb:PartyId></eb:To><eb:CPAId>3RT2</eb:CPAId><eb:ConversationId>1111111111111111111</eb:ConversationId><eb:Service eb:type="sabreXML">OTA_AirPriceLLSRQ</eb:Service><eb:Action>OTA_AirPriceLLSRS</eb:Action><eb:MessageData><eb:MessageId>875711079966640243</eb:MessageId><eb:Timestamp>2018-11-05T02:13:17</eb:Timestamp><eb:RefToMessageId>mid:0_2014-09-22T21:43:40m</eb:RefToMessageId></eb:MessageData></eb:MessageHeader><wsse:Security xmlns:wsse="http://schemas.xmlsoap.org/ws/2002/12/secext"><wsse:BinarySecurityToken valueType="String" EncodingType="wsse:Base64Binary">Shared/IDL:IceSess\/SessMgr:1\.0.IDL/Common/!ICESMS\/RESF!ICESMSLB\/RES.LB!1541383985027!7532652!262145</wsse:BinarySecurityToken></wsse:Security></soap-env:Header><soap-env:Body><OTA_AirPriceRS xmlns="http://webservices.sabre.com/sabreXML/2011/10" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:stl="http://services.sabre.com/STL/v01" Version="2.14.0">
+ <stl:ApplicationResults status="Complete">
+  <stl:Success timeStamp="2018-11-04T20:13:17-06:00"/>
+ </stl:ApplicationResults>
+ <PriceQuote>
+  <MiscInformation>
+   <BaggageInfo>
+    <SubCodeProperties RPH="1" SolutionSequenceNmbr="1">
+     <AncillaryFeeGroupCode>BG</AncillaryFeeGroupCode>
+     <CommercialNameofBaggageItemType>FREE BAGGAGE ALLOWANCE</CommercialNameofBaggageItemType>
+     <EMD_Type>4</EMD_Type>
+     <ExtendedSubCodeKey>0DFAAUK</ExtendedSubCodeKey>
+    </SubCodeProperties>
+   </BaggageInfo>
+   <HeaderInformation SolutionSequenceNmbr="1">
+    <DepartureDate>2019-02-08</DepartureDate>
+    <LastTicketingDate>11-04T23:59</LastTicketingDate>
+    <Text>VALIDATING CARRIER - UK</Text>
+    <Text>BAG ALLOWANCE     -DELHYD-15KG/UK</Text>
+    <Text>BAG ALLOWANCE     -HYDDEL-15KG/UK</Text>
+    <Text>CARRY ON ALLOWANCE</Text>
+    <Text>DELHYD HYDDEL-UK-CARRY ON ALLOWANCE UNKNOWN-CONTACT CARRIER</Text>
+    <Text>CARRY ON CHARGES</Text>
+    <Text>DELHYD HYDDEL-UK-CARRY ON FEES UNKNOWN-CONTACT CARRIER</Text>
+    <Text>ADDITIONAL ALLOWANCES AND/OR DISCOUNTS MAY APPLY DEPENDING ON</Text>
+    <Text>FLYER-SPECIFIC FACTORS /E.G. FREQUENT FLYER STATUS/MILITARY/</Text>
+    <Text>CREDIT CARD FORM OF PAYMENT/EARLY PURCHASE OVER INTERNET,ETC./</Text>
+    <Text>08FEB DEPARTURE DATE-----LAST DAY TO PURCHASE 04NOV/2359</Text>
+    <ValidatingCarrier Code="UK"/>
+   </HeaderInformation>
+   <SolutionInformation SolutionSequenceNmbr="1">
+    <CurrencyCode>CAD</CurrencyCode>
+    <RequiresRebook>false</RequiresRebook>
+    <TicketNumber>0</TicketNumber>
+    <TotalAmount>143.54</TotalAmount>
+   </SolutionInformation>
+  </MiscInformation>
+  <PricedItinerary AlternativePricing="false" CurrencyCode="CAD" MultiTicket="false" TotalAmount="143.54">
+   <AirItineraryPricingInfo SolutionSequenceNmbr="1">
+    <BaggageProvisions RPH="1">
+     <Associations>
+      <CarrierCode RPH="1">UK</CarrierCode>
+      <CountForSegmentAssociatedID>1</CountForSegmentAssociatedID>
+      <DepartureDate RPH="1">2019-02-08</DepartureDate>
+      <DestinationLocation LocationCode="HYD" RPH="1"/>
+      <FlightNumber RPH="1">899</FlightNumber>
+      <OriginLocation LocationCode="DEL" RPH="1"/>
+      <PNR_Segment RPH="1">2</PNR_Segment>
+      <ResBookDesigCode RPH="1">V</ResBookDesigCode>
+      <StatusCode RPH="1">SS</StatusCode>
+     </Associations>
+     <CarrierWhoseBaggageProvisionsApply>UK</CarrierWhoseBaggageProvisionsApply>
+     <ProvisionType>A</ProvisionType>
+     <SubCodeInfo>
+      <SubCodeForChargesOthers>0DFAAUK</SubCodeForChargesOthers>
+     </SubCodeInfo>
+     <WeightLimit Units="K">15</WeightLimit>
+    </BaggageProvisions>
+    <BaggageProvisions RPH="2">
+     <Associations>
+      <CarrierCode RPH="1">UK</CarrierCode>
+      <CountForSegmentAssociatedID>1</CountForSegmentAssociatedID>
+      <DepartureDate RPH="1">2019-02-22</DepartureDate>
+      <DestinationLocation LocationCode="DEL" RPH="1"/>
+      <FlightNumber RPH="1">860</FlightNumber>
+      <OriginLocation LocationCode="HYD" RPH="1"/>
+      <PNR_Segment RPH="1">3</PNR_Segment>
+      <ResBookDesigCode RPH="1">V</ResBookDesigCode>
+      <StatusCode RPH="1">SS</StatusCode>
+     </Associations>
+     <CarrierWhoseBaggageProvisionsApply>UK</CarrierWhoseBaggageProvisionsApply>
+     <ProvisionType>A</ProvisionType>
+     <SubCodeInfo>
+      <SubCodeForChargesOthers>0DFAAUK</SubCodeForChargesOthers>
+     </SubCodeInfo>
+     <WeightLimit Units="K">15</WeightLimit>
+    </BaggageProvisions>
+    <FareCalculation>
+     <Text>DEL UK HYD Q397 2650UK DEL Q397 2650INR6094END</Text>
+    </FareCalculation>
+    <FareCalculationBreakdown>
+     <Branch FirstJointCarrier="UK" PCC="3RT2"/>
+     <Departure AirlineCode="UK" AirportCode="DEL" ArrivalAirportCode="HYD" ArrivalCityCode="HYD" CityCode="DEL" GenericInd="O"/>
+     <FareBasis Cabin="Y" Code="VL8PYS/YS" FareAmount="2650" FarePassengerType="ADT" FareType="P" FilingCarrier="UK" GlobalInd="EH" Market="DELHYD" TicketDesignator="YS" TripTypeInd="R"/>
+     <FreeBaggageAllowance>KG015</FreeBaggageAllowance>
+     <RuleCategoryIndicator>3</RuleCategoryIndicator>
+     <RuleCategoryIndicator>4</RuleCategoryIndicator>
+     <RuleCategoryIndicator>5</RuleCategoryIndicator>
+     <RuleCategoryIndicator>7</RuleCategoryIndicator>
+     <RuleCategoryIndicator>8</RuleCategoryIndicator>
+     <RuleCategoryIndicator>9</RuleCategoryIndicator>
+     <RuleCategoryIndicator>10</RuleCategoryIndicator>
+     <RuleCategoryIndicator>12</RuleCategoryIndicator>
+     <RuleCategoryIndicator>15</RuleCategoryIndicator>
+     <RuleCategoryIndicator>16</RuleCategoryIndicator>
+     <RuleCategoryIndicator>18</RuleCategoryIndicator>
+     <Surcharges Ind="Q" Type="UNK">397</Surcharges>
+    </FareCalculationBreakdown>
+    <FareCalculationBreakdown>
+     <Branch FirstJointCarrier="UK" PCC="3RT2"/>
+     <Departure AirlineCode="UK" AirportCode="HYD" ArrivalAirportCode="DEL" ArrivalCityCode="DEL" CityCode="HYD" GenericInd="O"/>
+     <FareBasis Cabin="Y" Code="VL8PYS/YS" FareAmount="2650" FarePassengerType="ADT" FareType="P" FilingCarrier="UK" GlobalInd="EH" Market="DELHYD" TicketDesignator="YS" TripTypeInd="R"/>
+     <FreeBaggageAllowance>KG015</FreeBaggageAllowance>
+     <RuleCategoryIndicator>3</RuleCategoryIndicator>
+     <RuleCategoryIndicator>4</RuleCategoryIndicator>
+     <RuleCategoryIndicator>5</RuleCategoryIndicator>
+     <RuleCategoryIndicator>7</RuleCategoryIndicator>
+     <RuleCategoryIndicator>8</RuleCategoryIndicator>
+     <RuleCategoryIndicator>9</RuleCategoryIndicator>
+     <RuleCategoryIndicator>10</RuleCategoryIndicator>
+     <RuleCategoryIndicator>12</RuleCategoryIndicator>
+     <RuleCategoryIndicator>15</RuleCategoryIndicator>
+     <RuleCategoryIndicator>16</RuleCategoryIndicator>
+     <RuleCategoryIndicator>18</RuleCategoryIndicator>
+     <Surcharges Ind="Q" Type="UNK">397</Surcharges>
+    </FareCalculationBreakdown>
+    <ItinTotalFare NonRefundableInd="O">
+     <BaggageInfo>
+      <NonUS_DOT_Disclosure>
+       <Text>BAG ALLOWANCE     -DELHYD-15KG/UK</Text>
+       <Text>BAG ALLOWANCE     -HYDDEL-15KG/UK</Text>
+       <Text>CARRY ON ALLOWANCE</Text>
+       <Text>DELHYD HYDDEL-UK-CARRY ON ALLOWANCE UNKNOWN-CONTACT CARRIER</Text>
+       <Text>CARRY ON CHARGES</Text>
+       <Text>DELHYD HYDDEL-UK-CARRY ON FEES UNKNOWN-CONTACT CARRIER</Text>
+       <Text>ADDITIONAL ALLOWANCES AND/OR DISCOUNTS MAY APPLY DEPENDING ON</Text>
+       <Text>FLYER-SPECIFIC FACTORS /E.G. FREQUENT FLYER STATUS/MILITARY/</Text>
+       <Text>CREDIT CARD FORM OF PAYMENT/EARLY PURCHASE OVER INTERNET,ETC./</Text>
+      </NonUS_DOT_Disclosure>
+     </BaggageInfo>
+     <BaseFare Amount="6094" CurrencyCode="INR"/>
+     <Endorsements>
+      <Text>NON RE-ROUTABLE/REBOOKING SBJCT TO PENALTY/NON ENDORSABLE</Text>
+     </Endorsements>
+     <EquivFare Amount="109.00" CurrencyCode="CAD"/>
+     <Taxes TotalAmount="34.54">
+      <Tax Amount="6.68" TaxCode="YRF" TaxName="SERVICE FEE - FUEL" TicketingTaxCode="YR"/>
+      <Tax Amount="12.72" TaxCode="WO" TaxName="PASSENGER SERVICE FEE" TicketingTaxCode="WO"/>
+      <Tax Amount="5.78" TaxCode="K38" TaxName="GOODS AND SERVICE TAX INTERIM" TicketingTaxCode="K3"/>
+      <Tax Amount="9.36" TaxCode="IN" TaxName="USER DEVELOPMENT FEE DEPARTURE" TicketingTaxCode="IN"/>
+     </Taxes>
+     <TotalFare Amount="143.54" CurrencyCode="CAD"/>
+    </ItinTotalFare>
+    <PassengerTypeQuantity Code="ADT" Quantity="1"/>
+    <PTC_FareBreakdown>
+     <Cabin>Y</Cabin>
+     <FareBasis Code="VL8PYS/YS" FareAmount="2650" FarePassengerType="ADT" FareType="P" FilingCarrier="UK" GlobalInd="EH" Market="DELHYD" TicketDesignator="YS"/>
+     <FreeBaggageAllowance>KG015</FreeBaggageAllowance>
+     <Surcharges Ind="Q" Type="UNK">397</Surcharges>
+    </PTC_FareBreakdown>
+    <PTC_FareBreakdown>
+     <Cabin>Y</Cabin>
+     <FareBasis Code="VL8PYS/YS" FareAmount="2650" FarePassengerType="ADT" FareType="P" FilingCarrier="UK" GlobalInd="EH" Market="DELHYD" TicketDesignator="YS"/>
+     <FreeBaggageAllowance>KG015</FreeBaggageAllowance>
+     <Surcharges Ind="Q" Type="UNK">397</Surcharges>
+    </PTC_FareBreakdown>
+   </AirItineraryPricingInfo>
+  </PricedItinerary>
+ </PriceQuote>
+</OTA_AirPriceRS></soap-env:Body></soap-env:Envelope>

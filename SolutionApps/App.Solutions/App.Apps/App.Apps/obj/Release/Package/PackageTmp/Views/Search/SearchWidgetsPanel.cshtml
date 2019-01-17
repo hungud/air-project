@@ -1,0 +1,704 @@
+﻿ <div class="accordion_head">Modify/Filter<span class="plusminus">+</span></div>
+ <div class="accordion_body"> 
+<div class="tab">
+   <a class="tablinks" onclick="openCity(event, 'Search')" id="defaultOpen">Modify Search</a>
+  <a class="tablinks" onclick="openCity(event, 'Filter')">Filter</a>
+</div>
+ 
+<div id="Search" class="tabcontent">
+
+ 
+<div class=" header-bg">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12">
+            <div class="space-4"></div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 topradio-color">
+                    <div class="row form-group">
+                        
+						<div class="search-widget-tabs">
+                    
+					
+                        <div class="tab-1">
+                            <input type="radio" name="radioSelectionName" value="2" checked="checked" id="round_trip_btn" />
+                             <label for="round_trip_btn">RoundTrip</label><br />
+                        </div>
+						
+						<div class="tab-1">
+                            <input type="radio" name="radioSelectionName" value="1" id="oneway_btn" />
+                             <label for="oneway_btn">Oneway</label><br />
+                        </div>
+                        
+                        <div class="tab-1">
+                            <input type="radio" name="radioSelectionName" value="3" id="muiti_city_btn" />
+                           <label for="muiti_city_btn"> MultiCity</label><br />
+                        </div>
+                        </div>
+						
+						<!--<div class="col-md-12">
+                            <input type="radio" name="radioSelectionName" value="2" checked="checked" id="round_trip_btn" />
+                            RoundTrip<br />
+                        </div>
+                        <div class="col-md-12">
+                            <input type="radio" name="radioSelectionName" value="1" id="oneway_btn" />
+                            Oneway<br />
+                        </div>
+                        <div class="col-md-12">
+                            <input type="radio" name="radioSelectionName" value="3" id="muiti_city_btn" />
+                            MultiCity<br />
+                        </div>-->
+                        <!--<div class="col-md-2 advance-option"> <a href="#" class="advance-btn">More Options <span class="caret"></span></a> ,
+                          <div id="advance" class="col-md-6 arrow_box">
+                            <div class="form-group col-md-2">
+                              <label> Booking <br>
+                                <small>Class:</small> </label>
+                              <select class="form-control AirClass" id="AirClass" style="height: 29px;">
+                                <option>Economy</option>
+                                <option>Business</option>
+                              </select>
+                            </div>
+                            <div class="form-group col-md-2">
+                              <label> Passengers <br>
+                                <small>Adults:</small> </label>
+                              <div class="input-group">
+                                <div class="input-group-addon subAdults"><i class="fa fa-minus" aria-hidden="true"></i></div>
+                                <input type="text" name="noOfAdults" class="form-control noOfAdults" id="#" value="1">
+                                <div class="input-group-addon addAdults"><i class="fa fa-plus" aria-hidden="true"></i></div>
+                              </div>
+                            </div>
+                            <div class="form-group col-md-2 hidden">
+                              <label> &nbsp; <br>
+                                <small>Seniors:</small> </label>
+                              <div class="input-group">
+                                <div class="input-group-addon subSeniors"><i class="fa fa-minus" aria-hidden="true"></i></div>
+                                <input type="text" name="noOfSeniors" class="form-control noOfSeniors" id="#" value="0">
+                                <div class="input-group-addon addSeniors"><i class="fa fa-plus" aria-hidden="true"></i></div>
+                              </div>
+                            </div>
+                            <div class="form-group col-md-2">
+                              <label> &nbsp; <br>
+                                <small>Childrens:</small> </label>
+                              <div class="input-group">
+                                <div class="input-group-addon subChildrens"><i class="fa fa-minus" aria-hidden="true"></i></div>
+                                <input type="text" name="noOfChildrens" class="form-control noOfChildrens" id="#" value="0">
+                                <div class="input-group-addon addChildrens"><i class="fa fa-plus" aria-hidden="true"></i></div>
+                              </div>
+                            </div>
+                            <div class="form-group col-md-2">
+                              <label> <br>
+                                <small>Infants:</small> </label>
+                              <div class="input-group">
+                                <div class="input-group-addon subInfants"><i class="fa fa-minus" aria-hidden="true"></i></div>
+                                <input type="text" name="noOfInfants" class="form-control noOfInfants" id="#" value="0">
+                                <div class="input-group-addon addInfants"><i class="fa fa-plus" aria-hidden="true"></i></div>
+                              </div>
+                            </div>
+                            <div class="form-group col-md-2 hidden">
+                              <label> &nbsp; <br>
+                                <small>On Seat:</small> </label>
+                              <div class="input-group">
+                                <div class="input-group-addon subOnSeats"><i class="fa fa-minus" aria-hidden="true"></i></div>
+                                <input type="text" name="noOfOnSeats" class="form-control noOfOnSeats" id="#" value="0">
+                                <div class="input-group-addon addOnSeats"><i class="fa fa-plus" aria-hidden="true"></i></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>-->
+                    </div>
+                </div>
+            </div>
+           
+		   
+		   
+            <div class="sec-part">
+                <div class="row" style="position:relative;z-index:999;">
+                    <div class="col-xs-12 col-sm-12">
+                        <div id="OneWayReturnWaySearch" class="OneWayReturnWaySearch">
+                            <div class="form-group">
+                                <label>Departure</label>
+                                <input type="text" id="txtOrigin" name="txtOrigin" placeholder="Please Enter Origin" class="col-xs-10 col-sm-5" style="width: 100%;" />
+                            </div>
+                            <div class="form-group">
+                                <label>Destination</label>
+
+                                <input type="text" id="txtDestination" name="txtDestination" placeholder="Please Enter Destination" class="col-xs-10 col-sm-5 Restrictinput" style="width: 100%;" />
+                            </div>
+
+
+                            @*<div class="form-group col-md-6">
+                                <label style="visibility:hidden;">&nbsp;</label>
+                                <div id="root"></div>
+                            </div>*@
+                            <input type="hidden" id="txtOriginDate" name="txtOriginDate" value="" />
+                            <input type="hidden" id="txtDestinationDate" name="txtDestinationDate" value="" />
+							<br>
+                            <div class="form-group">
+                                <label id="lblroundTrip">Departure/Return Date</label>
+                                <br />
+                                <input id="date-range0" size="40" value="" placeholder="Departure date -> Return date">
+                                <input id="date-range1" size="40" value="" placeholder="Departure date" style="display:none;">
+                            </div>
+                          
+
+                                 
+
+                            @*<div class="form-group col-md-3">
+                                    <label>Departure Date</label>
+                                    <div class="input-group col-xs-12 col-sm-12">
+                                        <input class="form-control  date-picker  Restrictinput " id="txtOriginDate" type="text" name="date-range-picker" data-date-format="yyyy-mm-dd" />
+                                        <span class="input-group-addon" id="col_departureDate"> <i class="fa fa-calendar bigger-90"></i> </span>
+                                    </div>
+                                </div>
+                                <div class="form-group col-md-3" id="return_btn">
+                                    <label>Return Date</label>
+                                    <div class="input-group col-xs-12 col-sm-12">
+                                        <input class="form-control  date-picker  Restrictinput " id="txtDestinationDate" type="text" name="date-range-picker" data-date-format="yyyy-mm-dd" />
+                                        <span class="input-group-addon" id="col_returnDate"> <i class="fa fa-calendar bigger-90"></i> </span>
+                                    </div>
+                                </div>*@
+                        </div>
+                        <div id="multicitySearch" class="multicitySearch hidden">
+                            <!-- /.Main-container -->
+                            <!-- /.Main-container -->
+                            <div class="space-4"></div>
+                            <div class="row myrow_1">
+                                <div class="col-xs-12 col-sm-12">
+                                    <div class="form-horizontal">
+                                        <div class="row form-group">
+                                            <div class="col-md-12">
+                                                Origin
+                                                <input type="text" id="txtMLOrigin_1" name="txtmulticityOrigin[]" placeholder="Please Enter Origin" class="col-xs-10 col-sm-5" style="width: 100%;" />
+                                            </div>
+                                            <div class="col-md-12">
+                                                Destination
+                                                <input type="text" id="txtMLDestination_1" name="txtmulticityDestination[]" placeholder="Please Enter Destination" class="col-xs-10 col-sm-5 Restrictinput" style="width: 100%;" />
+                                            </div>
+                                            <div class="col-md-12">
+                                                Departure Date
+                                                <div class="input-group col-xs-12 col-sm-12">
+                                                    <input class="form-control  date-picker  Restrictinput " id="txtMLDate_1" type="text" name="date-range-picker[]" data-date-format="yyyy-mm-dd" />
+
+                                                    <span class="input-group-addon" id="col_txtMLDate_1"> <i class="fa fa-calendar bigger-80"></i> </span>
+                                                    @*<div id="root1">
+                                </div>*@
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12"> </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /.Main-container -->
+                            <!-- /.Main-container -->
+                            <div class="space-4"></div>
+                            <div class="row myrow_2">
+                                <div class="col-xs-12 col-sm-12">
+                                    <div class="form-horizontal">
+                                        <div class="row form-group">
+                                            <div class="col-md-12">
+                                                Origin
+                                                <input type="text" id="txtMLOrigin_2" name="txtmulticityOrigin[]" placeholder="Please Enter Origin" class="col-xs-10 col-sm-5" style="width: 100%;" />
+                                            </div>
+                                            <div class="col-md-12">
+                                                Destination
+                                                <input type="text" id="txtMLDestination_2" name="txtmulticityDestination[]" placeholder="Please Enter Destination" class="col-xs-10 col-sm-5 Restrictinput" style="width: 100%;" />
+                                            </div>
+                                            <div class="col-md-12">
+                                                Departure Date
+                                                <div class="input-group col-xs-12 col-sm-12">
+                                                    <input class="form-control  date-picker  Restrictinput " id="txtMLDate_2" type="text" name="date-range-picker[]" data-date-format="yyyy-mm-dd" />
+                                                    <span class="input-group-addon" id="col_txtMLDate_2"> <i class="fa fa-calendar bigger-80"></i> </span>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12"> <a href="#" class="remove_field"> X </a> </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /.Main-container -->
+                            <!-- /.Main-container -->
+                            <div class="space-4"></div>
+                            <div class="row myrow_3">
+                                <div class="col-xs-12 col-sm-12">
+                                    <div class="form-horizontal">
+                                        <div class="row form-group">
+                                            <div class="col-md-12">
+                                                Origin
+                                                <input type="text" id="txtMLOrigin_3" name="txtmulticityOrigin[]" placeholder="Please Enter Origin" class="col-xs-10 col-sm-5" style="width: 100%;" />
+                                            </div>
+                                            <div class="col-md-12">
+                                                Destination
+                                                <input type="text" id="txtMLDestination_3" name="txtmulticityDestination[]" placeholder="Please Enter Destination" class="col-xs-10 col-sm-5 Restrictinput" style="width: 100%;" />
+                                            </div>
+                                            <div class="col-md-12">
+                                                Departure Date
+                                                <div class="input-group col-xs-12 col-sm-12">
+                                                    <input class="form-control  date-picker  Restrictinput " id="txtMLDate_3" type="text" name="date-range-picker[]" data-date-format="yyyy-mm-dd" />
+                                                    <span class="input-group-addon" id="col_txtMLDate_3"> <i class="fa fa-calendar bigger-80"></i> </span>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12"> <a href="#" class="remove_field"> X </a> </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /.Main-container -->
+                            <!-- /.Main-container -->
+                            <div class="space-4"></div>
+                            <div class="row myrow_4">
+                                <div class="col-xs-12 col-sm-12">
+                                    <div class="form-horizontal">
+                                        <div class="row form-group">
+                                            <div class="col-md-12">
+                                                Origin
+                                                <input type="text" id="txtMLOrigin_4" name="txtmulticityOrigin[]" placeholder="Please Enter Origin" class="col-xs-10 col-sm-5" style="width: 100%;" />
+                                            </div>
+                                            <div class="col-md-12">
+                                                Destination
+                                                <input type="text" id="txtMLDestination_4" name="txtmulticityDestination[]" placeholder="Please Enter Destination" class="col-xs-10 col-sm-5 Restrictinput" style="width: 100%;" />
+                                            </div>
+                                            <div class="col-md-12">
+                                                Departure Date
+                                                <div class="input-group col-xs-12 col-sm-12">
+                                                    <input class="form-control  date-picker  Restrictinput " id="txtMLDate_4" type="text" name="date-range-picker[]" data-date-format="yyyy-mm-dd" />
+                                                    <span class="input-group-addon" id="col_txtMLDate_4"> <i class="fa fa-calendar bigger-80"></i> </span>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12"> <a href="#" class="remove_field"> X </a> </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /.Main-container -->
+                            <!-- /.Main-container -->
+                            <div class="space-4"></div>
+                            @*<div class="row myrow_5">
+                                <div class="col-xs-12 col-sm-12">
+                                    <div class="form-horizontal">
+                                        <div class="row form-group">
+                                            <div class="col-md-12">
+                                                Origin
+                                                <input type="text" id="txtMLOrigin_5" name="txtmulticityOrigin[]" placeholder="Please Enter Origin" class="col-xs-10 col-sm-5" style="width: 100%;" />
+                                            </div>
+                                            <div class="col-md-12">
+                                                Destination:
+                                                <input type="text" id="txtMLDestination_5" name="txtmulticityDestination[]" placeholder="Please Enter Destination" class="col-xs-10 col-sm-5 Restrictinput" style="width: 100%;" />
+                                            </div>
+                                            <div class="col-md-12">
+                                                Departure Date
+                                                <div class="input-group col-xs-12 col-sm-12">
+                                                    <input class="form-control  date-picker  Restrictinput " id="txtMLDate_5" type="text" name="date-range-picker[]" data-date-format="yyyy-mm-dd" />
+                                                    <span class="input-group-addon" id="col_txtMLDate_5"> <i class="fa fa-calendar bigger-80"></i> </span>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12"> <a href="#" class="remove_field"> X </a> </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>*@
+                            <!-- /.Main-container -->
+
+                            <div id="btnmulticitySearch" class="btnmulticitySearch input-group col-xs-12 col-sm-12 hidden">
+                                <input type="submit" value="+" class="btn btn-success plus-btn  pull-right pull_up add_more_field_button" />
+                            </div>
+
+                        </div>
+                    </div>
+                   
+                </div>
+
+                <div class="row">
+                    <div id="advance" class="col-md-12 arrow_box">
+                        <div class="form-group col-md-6">
+                            <label>
+                                 <br>
+                                <small>Airline</small>
+                            </label>
+                            <select class="form-control AirClass" id="ddlAirline" style="height: 29px;">
+                                <option value="All">All</option>                              
+                            </select>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label>
+                                 <br>
+                                <small>Cabin</small>
+                            </label>
+                            <select class="form-control AirClass" id="AirClass" style="height: 29px;">
+                                <option value="Y">Economy</option>
+                                <option value="S">Premium Economy</option>
+                                <option value="F">First</option>
+                                <option value="P">Premium First</option>   
+                                <option value="B">Business</option>                             
+                                <option value="J">Premium Business</option>
+                                
+                                
+                          
+                            </select>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label>
+                                 <br>
+                                <small>Adults</small>
+                            </label>
+                            <div class="input-group">
+                                <div class="input-group-addon subAdults"><i class="fa fa-minus" aria-hidden="true"></i></div>
+                                <input type="text" name="noOfAdults" class="form-control noOfAdults" id="noOfAdults" value="1">
+                                <div class="input-group-addon addAdults"><i class="fa fa-plus" aria-hidden="true"></i></div>
+                            </div>
+                        </div>
+                        <div class="form-group col-md-6 hidden">
+                            <label>
+                                &nbsp; <br>
+                                <small>Seniors</small>
+                            </label>
+                            <div class="input-group">
+                                <div class="input-group-addon subSeniors"><i class="fa fa-minus" aria-hidden="true"></i></div>
+                                <input type="text" name="noOfSeniors" class="form-control noOfSeniors" id="noOfSeniors" value="0">
+                                <div class="input-group-addon addSeniors"><i class="fa fa-plus" aria-hidden="true"></i></div>
+                            </div>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label>
+                                &nbsp; <br>
+                                <small>Children</small>
+                            </label>
+                            <div class="input-group">
+                                <div class="input-group-addon subChildrens"><i class="fa fa-minus" aria-hidden="true"></i></div>
+                                <input type="text" name="noOfChildrens" class="form-control noOfChildrens" id="noOfChildrens" value="0">
+                                <div class="input-group-addon addChildrens"><i class="fa fa-plus" aria-hidden="true"></i></div>
+                            </div>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label>
+                                <br>
+                                <small>Infants</small>
+                            </label>
+                            <div class="input-group">
+                                <div class="input-group-addon subInfants"><i class="fa fa-minus" aria-hidden="true"></i></div>
+                                <input type="text" name="noOfInfants" class="form-control noOfInfants" id="noOfInfants" value="0">
+                                <div class="input-group-addon addInfants"><i class="fa fa-plus" aria-hidden="true"></i></div>
+                            </div>
+                        </div>
+                        <div class="form-group col-md-6 hidden">
+                            <label>
+                                &nbsp; <br>
+                                <small>On Seat</small>
+                            </label>
+                            <div class="input-group">
+                                <div class="input-group-addon subOnSeats"><i class="fa fa-minus" aria-hidden="true"></i></div>
+                                <input type="text" name="noOfOnSeats" class="form-control noOfOnSeats" id="#" value="0">
+                                <div class="input-group-addon addOnSeats"><i class="fa fa-plus" aria-hidden="true"></i></div>
+                            </div>
+                        </div>
+                    
+                        <div class="form-group col-md-6" id="directflight-section">
+                            <label>
+                                <br>
+                                <small>Direct Flight</small>
+                            </label>
+                            <label class="checkBox" style="display:block;"><input type="checkbox" name="directFlight" class="form-control noOfInfants1" id="directFlight" value="0" style="margin:0px;width:40px;">
+                            <div></div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+               
+				
+				 <div class="">
+                        <div class="form-group">
+                           
+                            <button class="btn btn-success-Search btn-sm btn-round search-btn">Search</button>
+                        </div>
+
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div> 
+
+
+<!-- filter panel starts here -->
+
+<div id="Filter" class="tabcontent">
+<div class="row">
+    <div class="col-xs-12"  style="line-height:0;">
+        <div class="widget-box refine-box">
+            <!--<div class="widget-header">
+                <h5 class="widget-title">Refine Your Search</h5>
+            </div>-->
+            <div class="widget-body">
+                <div class="widget-main" style="padding:0px;">
+                    <div class="background-blue">
+                        <div class="col-md-12   hidden">
+                            <h5 class="hidden bolder ">
+                                Stops <span href="#flt_nav1" class="pull-right hidden p-toggle sortable" data-toggle="collapse">
+                                    <i class="fa fa-caret-right fa-fw"></i>
+                                    <i class="fa fa-caret-down fa-fw"></i>
+                                </span>
+                            </h5>
+                            <div id="flt_nav1" class="active collapse in   hidden">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" id="">
+                                        Nonstop
+                                    </label>
+                                    <span class="pull-right">C$1,410.92</span>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" id="">
+                                        1 stop
+                                    </label>
+                                    <span class="pull-right">C$1,410.92</span>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" id="">
+                                        2 + stop
+                                    </label>
+                                    <span class="pull-right">C$1,410.92</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 submenu-btn">
+                            <br />
+                            <h5 class="bolder ">
+                                Price Range <span href="#flt_nav3" class="pull-right p-toggle sortable" data-toggle="collapse">
+                                    <i class="fa fa-caret-right fa-fw"></i>
+                                    <i class="fa fa-caret-down fa-fw"></i>
+                                </span>
+                            </h5>
+                            <div id="flt_nav3" class="active collapse in xxxx">
+                                <div class="layout-slider">
+                                    <input id="Price-range-slider" type="slider" name="area" value="0;10000" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <h5 class="bolder">
+                              Outbound Flight Times <span href="#flt_nav2" class="pull-right p-toggle sortable" data-toggle="collapse">
+                                    <i class="fa fa-caret-right fa-fw"></i>
+                                    <i class="fa fa-caret-down fa-fw"></i>
+                                </span>
+                            </h5>
+                            <div id="flt_nav2" class="active collapse in">
+                                <p>Departure Time</p>
+
+                                <div class="layout-slider">
+                                    <input id="Departure-range-slider" type="slider" name="area" value="000;2400" class="selector" />
+                                </div>
+                                <p>Arrive Time</p>
+                                <div class="layout-slider">
+                                    <input id="Arrive-range-slider" type="slider" name="area" value="000;2400" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12  hidden">
+                            <h5 class="bolder">
+                                Connection Time <span href="#flt_nav4" class="pull-right p-toggle sortable" data-toggle="collapse">
+                                    <i class="fa fa-caret-right fa-fw"></i>
+                                    <i class="fa fa-caret-down fa-fw"></i>
+                                </span>
+                            </h5>
+                            <div id="flt_nav4" class="active collapse in">
+                                <div class="form-group">
+                                    <label> Show Layovers up to: </label>
+                                    <select class="form-control">
+                                        <option>25 Hours</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12  hidden">
+                            <h5 class="bolder">
+                                Dates <span href="#flt_nav5" class="pull-right p-toggle sortable" data-toggle="collapse">
+                                    <i class="fa fa-caret-right fa-fw"></i>
+                                    <i class="fa fa-caret-down fa-fw"></i>
+                                </span>
+                            </h5>
+                            <div id="flt_nav5" class="active collapse in">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" id="">
+                                        Show flexible dates
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12" hidden>
+                            <h5 class="bolder">
+                                Airports <span href="#flt_nav6" class="pull-right p-toggle sortable" data-toggle="collapse">
+                                    <i class="fa fa-caret-right fa-fw"></i>
+                                    <i class="fa fa-caret-down fa-fw"></i>
+                                </span>
+                            </h5>
+                            <div id="flt_nav6" class="active collapse in">
+                                <h6>Departing from</h6>
+                                <div id="Div_Search-Result-Departing">
+                                    No Data...
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12" style="line-height:1.5;">
+                            <h5 class="bolder">
+                                Airlines <span href="#flt_nav7" class="pull-right p-toggle sortable" data-toggle="collapse">
+                                    <i class="fa fa-caret-right fa-fw"></i>
+                                    <i class="fa fa-caret-down fa-fw"></i>
+                                </span>
+                            </h5>
+                            <div id="flt_nav7" class="active collapse in">
+                                <div id="Div_Search-Result-Airlines">
+                                    No Data...
+                                </div>
+                            </div>
+                        </div>
+                        <br />
+                        <div class="col-md-12    hidden">
+                            <button class="btn ">Clear all filters</button>
+                        </div>
+                    </div>
+                    <div class="widget-toolbox clearfix center">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+	</div>
+</div>
+</div>
+<style>
+
+    .checkbox label{line-height: 1.2;}
+.checkbox label input{margin-top:0px;}
+</style>
+
+
+<!-- filter panel ends here -->
+
+
+
+<script>
+    $(document).ready(function () {
+        $('#round_trip_btn').click(function (e) {
+            $('#return_btn').show();
+        });
+        $('#oneway_btn').click(function (e) {
+            $('#return_btn').hide();
+        });
+    });
+</script>
+
+<script>
+
+function openCity(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+
+
+
+<style>
+
+ /* Style the tab */
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab a {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 10px;
+    transition: 0.3s;
+	width:50%;
+	text-align:center;
+	color:#333;
+}
+
+/* Change background color of buttons on hover */
+.tab a:hover {
+    background-color: #ddd;
+	text-decoration: none;
+}
+
+/* Create an active/current tablink class */
+.tab a.active {
+    background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 0px 0px;
+    border: 1px solid #ccc;
+    border-top: none;
+} 
+</style>
+
+<script>
+
+function modify(){
+
+var wd=  $(window).width();
+        $(".accordion_head").click(function () {
+            if ($('.accordion_body').is(':visible')) {
+                $(".accordion_body").slideUp(300);
+                $(".plusminus").text('+');
+            }
+            if ($(this).next(".accordion_body").is(':visible')) {
+                $(this).next(".accordion_body").slideUp(300);
+                $(this).children(".plusminus").text('+');
+            } else {
+                $(this).next(".accordion_body").slideDown(300);
+                $(this).children(".plusminus").text('-');
+            }
+        });
+    
+
+}
+    $(document).ready(function () {
+        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+
+            modify();
+
+            $(".search-btn").click(function () {
+                $(".accordion_head").next(".accordion_body").slideUp(300);
+                $(".accordion_head").children(".plusminus").text('+');
+            });
+        }
+});
+
+
+</script>
+
+<style>
+
+
+    .ui-autocomplete {
+        min-width: 320px;
+    }
+    .ui-datepicker
+    {
+        z-index:999999999999999999 !important;
+    }
+</style>

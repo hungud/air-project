@@ -1,0 +1,198 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?kj6cvh');
+  src:  url('../fonts/icomoon.eot?kj6cvh#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?kj6cvh') format('truetype'),
+    url('../fonts/icomoon.woff?kj6cvh') format('woff'),
+    url('../fonts/icomoon.svg?kj6cvh#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-flight-transfer:before {
+  content: "\e938";
+}
+.icon-multiple-airlines:before {
+  content: "\e937";
+}
+.icon-insurance:before {
+  content: "\e936";
+}
+.icon-piggy-bank:before {
+  content: "\e900";
+}
+.icon-medal:before {
+  content: "\e925";
+}
+.icon-question:before {
+  content: "\e926";
+}
+.icon-telemarketer:before {
+  content: "\e927";
+}
+.icon-megaphone:before {
+  content: "\e928";
+}
+.icon-warning:before {
+  content: "\e929";
+}
+.icon-gift:before {
+  content: "\e92a";
+}
+.icon-worldwide:before {
+  content: "\e92b";
+}
+.icon-calculator:before {
+  content: "\e92c";
+}
+.icon-flag:before {
+  content: "\e92d";
+}
+.icon-file:before {
+  content: "\e92e";
+}
+.icon-edit:before {
+  content: "\e92f";
+}
+.icon-settings:before {
+  content: "\e930";
+}
+.icon-info:before {
+  content: "\e931";
+}
+.icon-like2:before {
+  content: "\e932";
+}
+.icon-users:before {
+  content: "\e933";
+}
+.icon-list:before {
+  content: "\e934";
+}
+.icon-idea:before {
+  content: "\e935";
+}
+.icon-airplane:before {
+  content: "\e901";
+}
+.icon-alarm:before {
+  content: "\e902";
+}
+.icon-baby:before {
+  content: "\e903";
+}
+.icon-boy-smiling:before {
+  content: "\e904";
+}
+.icon-briefcase:before {
+  content: "\e905";
+}
+.icon-bus:before {
+  content: "\e906";
+}
+.icon-calendar:before {
+  content: "\e907";
+}
+.icon-car:before {
+  content: "\e908";
+}
+.icon-clock:before {
+  content: "\e909";
+}
+.icon-customer-service:before {
+  content: "\e90a";
+}
+.icon-diamond:before {
+  content: "\e90b";
+}
+.icon-double-bed:before {
+  content: "\e90c";
+}
+.icon-error:before {
+  content: "\e90d";
+}
+.icon-happy:before {
+  content: "\e90e";
+}
+.icon-hot-air-balloon:before {
+  content: "\e90f";
+}
+.icon-hotel:before {
+  content: "\e910";
+}
+.icon-internet:before {
+  content: "\e911";
+}
+.icon-light-bulb:before {
+  content: "\e912";
+}
+.icon-like:before {
+  content: "\e913";
+}
+.icon-locked:before {
+  content: "\e914";
+}
+.icon-mail:before {
+  content: "\e915";
+}
+.icon-man:before {
+  content: "\e916";
+}
+.icon-menu:before {
+  content: "\e917";
+}
+.icon-minus:before {
+  content: "\e918";
+}
+.icon-paper-plane:before {
+  content: "\e919";
+}
+.icon-placeholder:before {
+  content: "\e91a";
+}
+.icon-plus:before {
+  content: "\e91b";
+}
+.icon-price-tag:before {
+  content: "\e91c";
+}
+.icon-share:before {
+  content: "\e91d";
+}
+.icon-ship:before {
+  content: "\e91e";
+}
+.icon-sign:before {
+  content: "\e91f";
+}
+.icon-stopwatch:before {
+  content: "\e920";
+}
+.icon-success:before {
+  content: "\e921";
+}
+.icon-train:before {
+  content: "\e922";
+}
+.icon-unlocked:before {
+  content: "\e923";
+}
+.icon-wallet-with-card-sticking-out:before {
+  content: "\e924";
+}
+

@@ -1,0 +1,3 @@
+System.Net.WebException: The request was aborted: Could not create SSL/TLS secure channel.
+   at System.Net.HttpWebRequest.GetResponse()
+   at App.Common.CommonHttpClientWebClientHttpWebRequestCommunication.GetTokenHttpWebRequest(String ClientID, String ClientSecret, String RequestID)

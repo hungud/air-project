@@ -1,0 +1,182 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionApps", "SolutionApps", "{BCA96075-3776-49FF-89E3-AD2BF50C33F1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "App.SolutionHelpers", "App.SolutionHelpers", "{5D430326-11D7-4CD0-A107-C488DD065AF9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "App.Solutions", "App.Solutions", "{598A0AE3-C1B7-4FE4-B88A-2A2427C36F0D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App.Base", "SolutionApps\App.SolutionHelpers\App.Base\App.Base.csproj", "{60118416-F385-489D-9603-670428008685}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App.BusinessLayer", "SolutionApps\App.SolutionHelpers\App.BusinessLayer\App.BusinessLayer.csproj", "{90CB160F-DB61-4B83-9A52-6CBDB52F8CDA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App.Common", "SolutionApps\App.SolutionHelpers\App.Common\App.Common.csproj", "{3767526B-6148-4421-8A3D-2593820A3ED5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App.DataLayer", "SolutionApps\App.SolutionHelpers\App.DataLayer\App.DataLayer.csproj", "{6FF2BCF6-EEC1-4AE8-AA5A-2145DA84AEC6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App.Models", "SolutionApps\App.SolutionHelpers\App.Models\App.Models.csproj", "{E325A336-0E7D-4E5B-896C-AC84226B02CD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App.Resources", "SolutionApps\App.SolutionHelpers\App.Resources\App.Resources.csproj", "{251223E9-7F41-4F74-A853-CAC5C65FE675}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App.Apps", "SolutionApps\App.Solutions\App.Apps\App.Apps\App.Apps.csproj", "{5EFB9111-2E20-47BF-A76C-9B48BB7717C8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App.STSValidate", "SolutionApps\App.SolutionHelpers\App.STSValidate\App.STSValidate.csproj", "{3B5F6758-1140-445B-8710-FDEEB3FE07BC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App.SACSLibrary", "SolutionApps\App.SolutionHelpers\App.SACSLibrary\App.SACSLibrary.csproj", "{8D7F98DE-162A-4269-BFF3-166A68DC681B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App.WebAPIConfigService", "SolutionApps\App.Solutions\App.WebAPIConfigService\App.WebAPIConfigService.csproj", "{10DCFD7C-50BA-48F6-810F-102F5EABB75B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "login_functionlity.db", "SolutionApps\App.SolutionHelpers\login_functionlity.db\login_functionlity.db.csproj", "{34AAC83D-B6F0-4531-A4CA-5C12B309D376}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "register_functionlity.DB", "SolutionApps\App.SolutionHelpers\register_functionality\register_functionlity.DB\register_functionlity.DB.csproj", "{42641B3D-5725-4D28-9A62-694869824659}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App.Auth", "SolutionApps\App.Solutions\App.Auth\App.Auth.csproj", "{2C1797AC-7706-40BA-B03E-B3522CD7C48B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App.Services.Auth", "SolutionApps\App.Solutions\App.Services.Auth\App.Services.Auth.csproj", "{0DA29231-EDDA-4F14-BCA1-0DFDA1FCDFBE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{60118416-F385-489D-9603-670428008685}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60118416-F385-489D-9603-670428008685}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60118416-F385-489D-9603-670428008685}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60118416-F385-489D-9603-670428008685}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90CB160F-DB61-4B83-9A52-6CBDB52F8CDA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90CB160F-DB61-4B83-9A52-6CBDB52F8CDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90CB160F-DB61-4B83-9A52-6CBDB52F8CDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90CB160F-DB61-4B83-9A52-6CBDB52F8CDA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3767526B-6148-4421-8A3D-2593820A3ED5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3767526B-6148-4421-8A3D-2593820A3ED5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3767526B-6148-4421-8A3D-2593820A3ED5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3767526B-6148-4421-8A3D-2593820A3ED5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6FF2BCF6-EEC1-4AE8-AA5A-2145DA84AEC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FF2BCF6-EEC1-4AE8-AA5A-2145DA84AEC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FF2BCF6-EEC1-4AE8-AA5A-2145DA84AEC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FF2BCF6-EEC1-4AE8-AA5A-2145DA84AEC6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E325A336-0E7D-4E5B-896C-AC84226B02CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E325A336-0E7D-4E5B-896C-AC84226B02CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E325A336-0E7D-4E5B-896C-AC84226B02CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E325A336-0E7D-4E5B-896C-AC84226B02CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{251223E9-7F41-4F74-A853-CAC5C65FE675}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{251223E9-7F41-4F74-A853-CAC5C65FE675}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{251223E9-7F41-4F74-A853-CAC5C65FE675}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{251223E9-7F41-4F74-A853-CAC5C65FE675}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5EFB9111-2E20-47BF-A76C-9B48BB7717C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5EFB9111-2E20-47BF-A76C-9B48BB7717C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5EFB9111-2E20-47BF-A76C-9B48BB7717C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5EFB9111-2E20-47BF-A76C-9B48BB7717C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B5F6758-1140-445B-8710-FDEEB3FE07BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B5F6758-1140-445B-8710-FDEEB3FE07BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B5F6758-1140-445B-8710-FDEEB3FE07BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B5F6758-1140-445B-8710-FDEEB3FE07BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D7F98DE-162A-4269-BFF3-166A68DC681B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D7F98DE-162A-4269-BFF3-166A68DC681B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D7F98DE-162A-4269-BFF3-166A68DC681B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D7F98DE-162A-4269-BFF3-166A68DC681B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{10DCFD7C-50BA-48F6-810F-102F5EABB75B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10DCFD7C-50BA-48F6-810F-102F5EABB75B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10DCFD7C-50BA-48F6-810F-102F5EABB75B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10DCFD7C-50BA-48F6-810F-102F5EABB75B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{34AAC83D-B6F0-4531-A4CA-5C12B309D376}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34AAC83D-B6F0-4531-A4CA-5C12B309D376}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34AAC83D-B6F0-4531-A4CA-5C12B309D376}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34AAC83D-B6F0-4531-A4CA-5C12B309D376}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42641B3D-5725-4D28-9A62-694869824659}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42641B3D-5725-4D28-9A62-694869824659}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42641B3D-5725-4D28-9A62-694869824659}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42641B3D-5725-4D28-9A62-694869824659}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C1797AC-7706-40BA-B03E-B3522CD7C48B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C1797AC-7706-40BA-B03E-B3522CD7C48B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C1797AC-7706-40BA-B03E-B3522CD7C48B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C1797AC-7706-40BA-B03E-B3522CD7C48B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0DA29231-EDDA-4F14-BCA1-0DFDA1FCDFBE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0DA29231-EDDA-4F14-BCA1-0DFDA1FCDFBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0DA29231-EDDA-4F14-BCA1-0DFDA1FCDFBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0DA29231-EDDA-4F14-BCA1-0DFDA1FCDFBE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5D430326-11D7-4CD0-A107-C488DD065AF9} = {BCA96075-3776-49FF-89E3-AD2BF50C33F1}
+		{598A0AE3-C1B7-4FE4-B88A-2A2427C36F0D} = {BCA96075-3776-49FF-89E3-AD2BF50C33F1}
+		{60118416-F385-489D-9603-670428008685} = {5D430326-11D7-4CD0-A107-C488DD065AF9}
+		{90CB160F-DB61-4B83-9A52-6CBDB52F8CDA} = {5D430326-11D7-4CD0-A107-C488DD065AF9}
+		{3767526B-6148-4421-8A3D-2593820A3ED5} = {5D430326-11D7-4CD0-A107-C488DD065AF9}
+		{6FF2BCF6-EEC1-4AE8-AA5A-2145DA84AEC6} = {5D430326-11D7-4CD0-A107-C488DD065AF9}
+		{E325A336-0E7D-4E5B-896C-AC84226B02CD} = {5D430326-11D7-4CD0-A107-C488DD065AF9}
+		{251223E9-7F41-4F74-A853-CAC5C65FE675} = {5D430326-11D7-4CD0-A107-C488DD065AF9}
+		{5EFB9111-2E20-47BF-A76C-9B48BB7717C8} = {598A0AE3-C1B7-4FE4-B88A-2A2427C36F0D}
+		{3B5F6758-1140-445B-8710-FDEEB3FE07BC} = {5D430326-11D7-4CD0-A107-C488DD065AF9}
+		{8D7F98DE-162A-4269-BFF3-166A68DC681B} = {5D430326-11D7-4CD0-A107-C488DD065AF9}
+		{10DCFD7C-50BA-48F6-810F-102F5EABB75B} = {598A0AE3-C1B7-4FE4-B88A-2A2427C36F0D}
+		{34AAC83D-B6F0-4531-A4CA-5C12B309D376} = {5D430326-11D7-4CD0-A107-C488DD065AF9}
+		{42641B3D-5725-4D28-9A62-694869824659} = {5D430326-11D7-4CD0-A107-C488DD065AF9}
+		{2C1797AC-7706-40BA-B03E-B3522CD7C48B} = {598A0AE3-C1B7-4FE4-B88A-2A2427C36F0D}
+		{0DA29231-EDDA-4F14-BCA1-0DFDA1FCDFBE} = {598A0AE3-C1B7-4FE4-B88A-2A2427C36F0D}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 14
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://khushdeepbhalla.visualstudio.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = SolutionApps\\App.SolutionHelpers\\App.Base\\App.Base.csproj
+		SccProjectTopLevelParentUniqueName1 = SolutionApps.sln
+		SccProjectName1 = SolutionApps/App.SolutionHelpers/App.Base
+		SccLocalPath1 = SolutionApps\\App.SolutionHelpers\\App.Base
+		SccProjectUniqueName2 = SolutionApps\\App.SolutionHelpers\\App.BusinessLayer\\App.BusinessLayer.csproj
+		SccProjectTopLevelParentUniqueName2 = SolutionApps.sln
+		SccProjectName2 = SolutionApps/App.SolutionHelpers/App.BusinessLayer
+		SccLocalPath2 = SolutionApps\\App.SolutionHelpers\\App.BusinessLayer
+		SccProjectUniqueName3 = SolutionApps\\App.SolutionHelpers\\App.Common\\App.Common.csproj
+		SccProjectTopLevelParentUniqueName3 = SolutionApps.sln
+		SccProjectName3 = SolutionApps/App.SolutionHelpers/App.Common
+		SccLocalPath3 = SolutionApps\\App.SolutionHelpers\\App.Common
+		SccProjectUniqueName4 = SolutionApps\\App.SolutionHelpers\\App.DataLayer\\App.DataLayer.csproj
+		SccProjectTopLevelParentUniqueName4 = SolutionApps.sln
+		SccProjectName4 = SolutionApps/App.SolutionHelpers/App.DataLayer
+		SccLocalPath4 = SolutionApps\\App.SolutionHelpers\\App.DataLayer
+		SccProjectUniqueName5 = SolutionApps\\App.SolutionHelpers\\App.Models\\App.Models.csproj
+		SccProjectTopLevelParentUniqueName5 = SolutionApps.sln
+		SccProjectName5 = SolutionApps/App.SolutionHelpers/App.Models
+		SccLocalPath5 = SolutionApps\\App.SolutionHelpers\\App.Models
+		SccProjectUniqueName6 = SolutionApps\\App.SolutionHelpers\\App.Resources\\App.Resources.csproj
+		SccProjectTopLevelParentUniqueName6 = SolutionApps.sln
+		SccProjectName6 = SolutionApps/App.SolutionHelpers/App.Resources
+		SccLocalPath6 = SolutionApps\\App.SolutionHelpers\\App.Resources
+		SccProjectUniqueName7 = SolutionApps\\App.SolutionHelpers\\App.SACSLibrary\\App.SACSLibrary.csproj
+		SccProjectTopLevelParentUniqueName7 = SolutionApps.sln
+		SccProjectName7 = SolutionApps/App.SolutionHelpers/App.SACSLibrary
+		SccLocalPath7 = SolutionApps\\App.SolutionHelpers\\App.SACSLibrary
+		SccProjectUniqueName8 = SolutionApps\\App.SolutionHelpers\\App.STSValidate\\App.STSValidate.csproj
+		SccProjectTopLevelParentUniqueName8 = SolutionApps.sln
+		SccProjectName8 = SolutionApps/App.SolutionHelpers/App.STSValidate
+		SccLocalPath8 = SolutionApps\\App.SolutionHelpers\\App.STSValidate
+		SccProjectUniqueName9 = SolutionApps\\App.SolutionHelpers\\register_functionality\\register_functionlity.DB\\register_functionlity.DB.csproj
+		SccProjectTopLevelParentUniqueName9 = SolutionApps.sln
+		SccProjectName9 = SolutionApps/App.SolutionHelpers/register_functionality/register_functionlity.DB
+		SccLocalPath9 = SolutionApps\\App.SolutionHelpers\\register_functionality\\register_functionlity.DB
+		SccProjectUniqueName10 = SolutionApps\\App.Solutions\\App.Apps\\App.Apps\\App.Apps.csproj
+		SccProjectTopLevelParentUniqueName10 = SolutionApps.sln
+		SccProjectName10 = SolutionApps/App.Solutions/App.Apps/App.Apps
+		SccLocalPath10 = SolutionApps\\App.Solutions\\App.Apps\\App.Apps
+		SccProjectUniqueName11 = SolutionApps\\App.Solutions\\App.Auth\\App.Auth.csproj
+		SccProjectTopLevelParentUniqueName11 = SolutionApps.sln
+		SccProjectName11 = SolutionApps/App.Solutions/App.Auth
+		SccLocalPath11 = SolutionApps\\App.Solutions\\App.Auth
+		SccProjectUniqueName12 = SolutionApps\\App.Solutions\\App.Services.Auth\\App.Services.Auth.csproj
+		SccProjectTopLevelParentUniqueName12 = SolutionApps.sln
+		SccProjectName12 = SolutionApps/App.Solutions/App.Services.Auth
+		SccLocalPath12 = SolutionApps\\App.Solutions\\App.Services.Auth
+		SccProjectUniqueName13 = SolutionApps\\App.Solutions\\App.WebAPIConfigService\\App.WebAPIConfigService.csproj
+		SccProjectTopLevelParentUniqueName13 = SolutionApps.sln
+		SccProjectName13 = SolutionApps/App.Solutions/App.WebAPIConfigService
+		SccLocalPath13 = SolutionApps\\App.Solutions\\App.WebAPIConfigService
+	EndGlobalSection
+EndGlobal

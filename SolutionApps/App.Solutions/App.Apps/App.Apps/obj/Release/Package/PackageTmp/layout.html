@@ -1,0 +1,477 @@
+﻿
+    <div id="header">
+
+
+      
+        <script src="https://use.fontawesome.com/bc61a80826.js"></script>
+
+  
+        <script src="/air/Asset/SkyFlight/js/bootstrap.min.js"></script>
+        <script>
+        $(document).ready(function(){
+
+           $('.dropdown-toggle').dropdown();
+
+           var CompanyTypeID = sessionStorage.getItem("CompanyTypeId");
+
+                if(CompanyTypeID=="1"){
+                  $('#lnk-register').attr("href","http://bookings.skyflight.ca/authentication/Account/Register");
+                }
+                else{
+                  $('#lnk-register').attr("href","http://bookings.skyflight.ca/authentication/Account/MemberAgencyRegister");
+                }
+
+            $('#btn-lg').click(function(){
+          window.location.href = $(this).attr('data-url');
+        });
+            $(window).scroll(function(){
+                 var wd= $(window).scrollTop();
+                 if(wd > 50){
+                    $(".navbar-brand").addClass("logo-left");
+                    $("nav").addClass("fixedset");
+                 }
+                 else{
+                    $(".navbar-brand").removeClass("logo-left");
+                    $("nav").removeClass("fixedset");
+        }
+            });
+
+        });
+        </script>
+    </div>
+
+    <!-- /section:basics/navbar.layout -->
+    <!-- /.Main-container -->
+    <div class="main-container" id="main-container">
+        <!-- /Main-content -->
+
+        <div class="main-content no-margin-left" id="AppMainPageContent">
+            <script src="/Air/Scripts/Payment/PaymentScript.js?@@25A64A08-E65A-4ED5-A8C0-A13FBF3A5A79@@"></script>
+            <script src="/Air/Scripts/Search/BFMXAutoComplete.js?@@25A64A08-E65A-4ED5-A8C0-A13FBF3A5A79@@"></script>
+            <link href="/Air/Content/NanoJot/css/PaymentsStyle.css?@@25A64A08-E65A-4ED5-A8C0-A13FBF3A5A79@@" rel="stylesheet">
+
+            <style>
+                .demo-container {
+                    width: 100%;
+                    max-width: 350px;
+                    margin: 150px auto;
+                }
+
+                form {
+                    margin: 0px;
+                }
+
+                input {
+                    width: 200px;
+                    margin: 10px auto;
+                    display: block;
+                }
+
+                .without_tab.table {
+                    border: none;
+                    margin-bottom:2px !important;
+                }
+
+                ul#ui-id-1 li {
+                    width: 100%;
+                }
+            </style>
+
+            <div class="row">
+                <div class="col-xs-12 col-sm-12">
+                    <div class="widget-body">
+                        <div class="widget-main">
+                           
+                            <div class="row">
+                                <div class="space-8"></div>
+                            </div>
+                            <div class="row AirBokingConfirmation-Panel visible">
+                                <!-- #section:Air_BookingReservationConfurmation -->
+                                <div>
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-md-12 grey_bg">
+                                                <div class="col-md-12 mr-top-30 pd-0">
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <div class="col-md-12 orng_title">
+                                                                <p>
+                                                                </p><div class="col-md-12 error_title" id="error_title_title" style="display:none;">
+                                                                <div class="row">
+                                                                <div class="col-md-12" id="error_content" style="color:red">Payment for the following booking was not successful. Selected Fare is not guaranteed until paid in full. Please contact the agency and provide an alternate payment information to guarantee the selected Fare.</div></div></div>
+                                                                <p></p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row" id="confirmation-section">
+                                                        <div class="col-md-12">
+                                                            <div class="col-md-12 orng_title">
+                                                                <p>
+                                                                </p>
+                                                                <div class="col-md-12 confirmation_title" id="confirmation_title">
+                                                                <p style="padding:5px;">
+                                                                    <span id="html_dep_date"></span><i class="glyphicon glyphicon-play"></i> 
+                                                                    <span id="html_return_date"></span>
+                                                                </p>
+
+                                                                <p style="padding:5px;">
+                                                                    <!--<span id="html_dep_city">ALL AIRPORTS-TORONTO, ON, CANADA - [YTO]</span><i class="glyphicon glyphicon-play"></i>
+                                                                    <span id="html_return_date">INDIRA GANDHI INTERNATIONAL-DELHI, , INDIA - [DEL]</span>-->
+                                                                    <span id="html_dep_city"></span><i class="glyphicon glyphicon-play"></i>
+                                                                    <span id="html_return_city"></span>
+
+                                                               </p>
+                                                                </div>
+                                                                <p></p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row" id="confirmationprepared-section">
+                                                        <div class="col-md-12">
+                                                            <div id="tabs-1">
+                                                                <div class="row">
+                                                                    <div class="col-md-12  Confirmation_PreparedFor" id="Confirmation_PreparedFor">
+                                                                        <div class="col-md-6" id="html_header_Passenger_section">
+                                                                            <p class="prep_for">PREPARED FOR</p>
+                                                                            <p id="html_preparedfor"></p>
+                                                                            <p>Booking Confirmation Code  -  <span id="html_bookingcode"></span><br>Airline Reservation Code  -  <span id="html_reservationcode"></span></p>
+                                                                        </div>
+                                                                        <div class="col-md-6 ">
+                                                                            <p style="padding-top:15px;">
+                                                                                <span id="html_companyname"></span><br>
+                                                                                <span id="html_companyaddress"></span><br>
+                                                                                <span id="html_companymail"></span><br>
+                                                                                <span id="html_companyphone"></span> <br>
+                                                                            </p><h5>DATE &amp; TIME OF BOOKING : <span id="html_bookingtime"></span></h5><p></p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div id="tabs-1">
+                                                                <div class="row">
+                                                                    <div class="col-md-12 Confirmation_FlightDetails" id="Confirmation_FlightDetails">
+
+                                                                        <div id="html_flight_node">
+
+                                                                            <table id="layover-section" width="100%" border="0" cellspacing="0" cellpadding="0" class="table without_tab" style="text-align:center; margin-top:15px;margin-bottom:2px;border-bottom: 1px solid #ddd;">
+                                                                                <tbody>
+                                                                                    <tr>
+                                                                                        <td colspan="4"><i class="fa fa-clock-o" aria-hidden="true"></i><span id="html_layover"></span> </td>
+                                                                                    </tr>
+                                                                                </tbody>
+                                                                            </table>
+                                                                            <table width="100%" id="totaltrip-section1" border="0" cellspacing="0" cellpadding="0" class="table without_tab" style="text-align:center; margin-top:15px;margin-bottom:2px;border-bottom: 1px solid #ddd;">
+                                                                                <tbody>
+                                                                                    <tr>
+                                                                                        <td colspan="4"><i class="fa fa-clock-o" aria-hidden="true"></i> <span id="html_totaltrip_span1"></span></td>
+                                                                                    </tr>
+                                                                                </tbody>
+                                                                            </table>
+                                                                            <div class="row" id="html_iterative_dates_section">
+                                                                                <div class="col-md-12">
+                                                                                    <div class="col-md-12 orng_title">
+                                                                                        <p>
+                                                                                            DEPARTURE: <span id="html_flights_dep_date"></span> <i class="glyphicon glyphicon-play"></i>
+                                                                                            ARRIVAL: <span id="html_flight_arrs_date"> </span>  <i class="fa fa-plane fa-1"></i><br>
+                                                                                            <span>Please verify flight times prior to departure</span>
+                                                                                        </p>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="row">
+                                                                                <div class="col-md-12">
+                                                                                    <div class="col-md-12 no-padding">
+                                                                                        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table without_tab" style="text-align:inherit; margin-top:15px;">
+                                                                                            <tbody>
+                                                                                                <tr>
+                                                                                                    <td rowspan="2">
+                                                                                                        <p><img id="flight-logo" src="Content/Images/Airlines_Logo/9W.gif" alt=""></p>
+                                                                                                        <p id="marketing-airline"></p>
+                                                                                                        <p class="fl_heading_1"><strong id="flight-number"> </strong></p>
+                                                                                                    </td>
+                                                                                                    <td>
+                                                                                                        <p id="des-airline"> Lester B Pearson Intl Toronto Canada (YYZ)</p>
+                                                                                                        <p id="dep-date">Departing: Thu, Nov 01 2018 At 6:30PM</p>
+                                                                                                        <p><strong id="dep-terminal">Terminal:</strong> </p>
+                                                                                                    </td>
+                                                                                                    <td>
+                                                                                                        <p id="arr-airline"></p>
+                                                                                                        <p id="arr-date">Arriving: </p>
+                                                                                                        <p><strong id="arr-terminal">Terminal:</strong></p>
+                                                                                                    </td>
+                                                                                                    <td rowspan="2">
+                                                                                                        <p id="aircraft">Aircraft:</p>
+                                                                                                        <p id="duration">Duration:</p>
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                            </tbody>
+                                                                                        </table>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <table width="100%" id="totaltrip-section" border="0" cellspacing="0" cellpadding="0" class="table without_tab" style="text-align:center; margin-top:15px;">
+                                                                                <tbody>
+                                                                                    <tr>
+                                                                                        <td colspan="4"><i class="fa fa-clock-o" aria-hidden="true"></i> <span id="html_totaltrip_span"></span></td>
+                                                                                    </tr>
+                                                                                </tbody>
+                                                                            </table>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                                    
+                                                                        <div class="col-md-12" id="Confirmation_passengerDetails">
+                                                                            <div class="tabs-1">
+                                                                                <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table table-striped" style="text-align:inherit;">
+                                                                                    <thead class="thead-inverse">
+                                                                                        <tr><th>Passenger Name</th><th>Seats</th><th>Class</th><th>Status</th><th>Meals</th></tr>
+                                                                                    </thead>
+                                                                                    <tbody id="html_Confirmation_passengerDetails">
+                                                                                        <tr id="html_tr_passenger"><td id="html_td_passenger"></td><td>Check-In Required</td><td>Economy</td><td>Confirmed</td><td>Meals</td></tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </div>
+                                                                        </div>
+                                                                     
+                                                                    <div class="row">
+                                                                        <div class="col-md-12 Confirmation_PaymentDetail" id="Confirmation_PaymentDetail">
+                                                                            <div class="row">
+                                                                                <div class="col-md-12">
+                                                                                    <div class="col-md-12 orng_bg top">
+                                                                                        <strong>Payment Detail:</strong>
+                                                                                    </div>
+                                                                                    <div class="col-md-4" id="divNameOnCard">Name On The Card:</div>
+                                                                                    <div class="col-md-6 no-padding" id="html_ccname"></div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="row" id="section_paymentdetails">
+                                                                                <div class="col-md-12" id="divCardCharged">
+                                                                                    <div class="col-md-4">Credit Card Charged:</div>
+                                                                                    <div class="col-md-6 no-padding">****-****-****-<span id="html_ccnumber"></span></div>
+                                                                                </div>
+                                                                                <div class="col-md-12" id="ccfee-node">
+                                                                                    <div class="col-md-4">Credit Card Fee:</div>
+                                                                                    <div class="col-md-6 no-padding" id="html_ccfee"></div>
+                                                                                </div>
+                                                                                <div class="col-md-12" id="servicefee-node">
+                                                                                    <div class="col-md-4">Service Fee:</div>
+                                                                                    <div class="col-md-6 no-padding" id="html_servicefee"></div>
+                                                                                </div>
+                                                                                <div class="col-md-12">
+                                                                                    <div class="col-md-4">Amount Charged:</div>
+                                                                                    <div class="col-md-6 no-padding" id="html_amtcharged"></div>
+                                                                                </div>
+
+                                                                                <div class="col-md-12">
+                                                                                    <div class="col-md-12 orng_bg"><strong>Billing Detail:</strong></div>
+                                                                                    <div class="col-md-6" id="html_billingdetails"></div>
+                                                                                </div>
+
+                                                                                <div class="row">
+                                                                                    <div class="col-md-12">
+                                                                                        <div class="col-md-6 pad_bot25"></div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+
+                                                                
+
+                                                            <!-- flight details -->
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <div class="row text-center hidden" id="footer-buttons">
+                                            <a href="http://bookings.flypapa.com/" id="btn-hotel" class="btn btn-primary">Book Hotel</a>
+                                            <a href="http://bookings.flypapa.com/" id="btn-car" class="btn btn-primary">Book Car</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <style>
+                                    .orng_title {
+                                        font-size: 22px;
+                                        font-weight: 300;
+                                        background: transparent !important;
+                                        color: black !important;
+                                        line-height: 24px;
+                                        padding: 8px 0px;
+                                    }
+                                </style>
+                                <!-- /section:Air_BookingReservationConfurmation -->
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <!-- /Main-content -->
+      
+    </div>
+    <!-- /.Main-container -->
+    <!-- /Application-Main-container -->
+    <!-- /Application-Main-Script-Container -->
+    <!-- page specific plugin scripts -->
+    <script src="http://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <script src="/Air/Content/assets/js/bootstrap.min.js?@@25A64A08-E65A-4ED5-A8C0-A13FBF3A5A79@@" type="text/javascript"></script>
+    <script src="/Air/Content/assets/js/bootstrap-responsive_tabs.js?@@25A64A08-E65A-4ED5-A8C0-A13FBF3A5A79@@" type="text/javascript"></script>
+    <script src="/Air/Content/assets/js/jquery.inputlimiter.1.3.1.min.js?@@25A64A08-E65A-4ED5-A8C0-A13FBF3A5A79@@" type="text/javascript"></script>
+    <script src="/Air/Content/assets/js/jquery-ui.custom.min.js?@@25A64A08-E65A-4ED5-A8C0-A13FBF3A5A79@@" type="text/javascript"></script>
+    <script src="/Air/Content/assets/js/jquery.ui.touch-punch.min.js?@@25A64A08-E65A-4ED5-A8C0-A13FBF3A5A79@@" type="text/javascript"></script>
+
+    <script src="/Air/Content/assets/js/date-time/moment.min.js?@@25A64A08-E65A-4ED5-A8C0-A13FBF3A5A79@@" type="text/javascript"></script>
+    <script src="/Air/Content/NanoJot/js/jquery.daterangepicker.min.js"></script>
+    <script src="/Air/Content/assets/js/date-time/daterangepicker.min.js?@@25A64A08-E65A-4ED5-A8C0-A13FBF3A5A79@@" type="text/javascript"></script>
+
+
+    <script src="/Air/Content/assets/js/date-time/bootstrap-timepicker.min.js?@@25A64A08-E65A-4ED5-A8C0-A13FBF3A5A79@@" type="text/javascript"></script>
+    <script src="/Air/Content/assets/js/date-time/bootstrap-datetimepicker.min.js?@@25A64A08-E65A-4ED5-A8C0-A13FBF3A5A79@@" type="text/javascript"></script>
+    <script src="/Air/Content/assets/js/jquery.maskedinput.min.js?@@25A64A08-E65A-4ED5-A8C0-A13FBF3A5A79@@" type="text/javascript"></script>
+    <script src="/Air/Content/assets/js/jquery.validate.min.js?@@25A64A08-E65A-4ED5-A8C0-A13FBF3A5A79@@" type="text/javascript"></script>
+    <script src="/Air/Content/assets/js/fuelux/fuelux.wizard.min.js?@@25A64A08-E65A-4ED5-A8C0-A13FBF3A5A79@@" type="text/javascript"></script>
+    <script src="/Air/Content/assets/js/bootbox.min.js?@@25A64A08-E65A-4ED5-A8C0-A13FBF3A5A79@@" type="text/javascript"></script>
+    <script src="/Air/Content/assets/js/additional-methods.min.js?@@25A64A08-E65A-4ED5-A8C0-A13FBF3A5A79@@" type="text/javascript"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.9/ace.js" type="text/javascript"></script>
+
+
+    <script src="/Air/Content/assets/js/ace-elements.min.js?@@25A64A08-E65A-4ED5-A8C0-A13FBF3A5A79@@" type="text/javascript"></script>
+    <script src="/Air/Content/assets/js/select2.min.js?@@25A64A08-E65A-4ED5-A8C0-A13FBF3A5A79@@" type="text/javascript"></script>
+    <script src="/Air/Content/assets/js/ace-extra.min.js?@@25A64A08-E65A-4ED5-A8C0-A13FBF3A5A79@@" type="text/javascript"></script>
+    <script src="/Air/Content/assets/js/uncompressed/jquery.slimscroll.js?@@25A64A08-E65A-4ED5-A8C0-A13FBF3A5A79@@" type="text/javascript"></script>
+    <script src="/Air/Content/assets/js/jquery.fileupload.js?@@25A64A08-E65A-4ED5-A8C0-A13FBF3A5A79@@" type="text/javascript"></script>
+    <script src="/Air/Content/PluginJSONViewer/jquery.serializejson.min.js?@@25A64A08-E65A-4ED5-A8C0-A13FBF3A5A79@@" type="text/javascript"></script>
+    <script src="/Air/Content/formatDateTime/jquery.formatDateTime.js?@@25A64A08-E65A-4ED5-A8C0-A13FBF3A5A79@@" type="text/javascript"></script>
+    <script src="/Air/Content/formatDateTime/jqueryYearSelect.js?@@25A64A08-E65A-4ED5-A8C0-A13FBF3A5A79@@" type="text/javascript"></script>
+
+    <script type="text/javascript" src="/Air/Content/NanoJot/js/jshashtable-2.1_src.js?@@25A64A08-E65A-4ED5-A8C0-A13FBF3A5A79@@"></script>
+    <script type="text/javascript" src="/Air/Content/NanoJot/js/jquery.numberformatter-1.2.3.js?@@25A64A08-E65A-4ED5-A8C0-A13FBF3A5A79@@"></script>
+    <script type="text/javascript" src="/Air/Content/NanoJot/js/tmpl.js?@@25A64A08-E65A-4ED5-A8C0-A13FBF3A5A79@@"></script>
+    <script type="text/javascript" src="/Air/Content/NanoJot/js/jquery.dependClass-0.1.js?@@25A64A08-E65A-4ED5-A8C0-A13FBF3A5A79@@"></script>
+    <script type="text/javascript" src="/Air/Content/NanoJot/js/draggable-0.1.js?@@25A64A08-E65A-4ED5-A8C0-A13FBF3A5A79@@"></script>
+    <script type="text/javascript" src="/Air/Content/NanoJot/js/jquery.slider.js?@@25A64A08-E65A-4ED5-A8C0-A13FBF3A5A79@@"></script>
+    <script src="/Air/Content/NanoJot/js/main.js?@@25A64A08-E65A-4ED5-A8C0-A13FBF3A5A79@@"></script>
+
+ 
+    <script src="/Air/Scripts/Apps/CommonFunctions.js?@@25A64A08-E65A-4ED5-A8C0-A13FBF3A5A79@@" type="text/javascript"></script>
+    <script src="/Air/Scripts/Apps/MasterValidation.js?@@25A64A08-E65A-4ED5-A8C0-A13FBF3A5A79@@" type="text/javascript"></script>
+    <script src="/Air/Scripts/Apps/HomeFunctions.js?@@25A64A08-E65A-4ED5-A8C0-A13FBF3A5A79@@" type="text/javascript"></script>
+
+
+
+    <script type="text/javascript">
+        debugger;
+        //CommonFunction.js ->LoadLocalStorageValues
+		 $(".preloader").fadeIn();
+        LoadLocalStorageValues();
+$(".preloader").fadeIn();
+        $(window).on('load', function () {
+            //debugger;
+            // Handler for .load() called.
+            
+            if (localStorage.getItem("is_loggedin")== "True") {
+                console.log($('#btn-lg').text('Logout'));
+                console.log($('#btn-lg').attr('data-url', CommonConfiguration.AuthUrl+'/Account/LogOff'));
+                $('#lnk-register').hide();
+                $('#lnk-forgetpass').hide();
+                $('#lnk-mybookings').show();
+                $('#lnk-myprofile').show();
+
+            }
+            else {
+                console.log($('#btn-lg').text('Login'));
+                console.log($('#btn-lg').attr('data-url', CommonConfiguration.AuthUrl+'/Account/Login?returnurl=' + CommonConfiguration.AirProjectURL));
+                $('#lnk-mybookings').hide();
+                $('#lnk-myprofile').hide();
+                $('#lnk-register').show();
+                $('#lnk-forgetpass').show();
+            }
+
+            var CompanyTypeID = sessionStorage.getItem("CompanyTypeId");
+
+                if (CompanyTypeID == "1") {
+                    $('#lnk-register a').attr("href","http://bookings.skyflight.ca/authentication/Account/Register");
+                }
+                else {
+                    $('#lnk-register a').attr("href","http://bookings.skyflight.ca/authentication/Account/MemberAgencyRegister");
+                }
+				$(".preloader").delay(200).fadeOut();
+
+        });
+
+ 
+    </script>
+    <style>
+        body {
+            
+            padding-bottom: 0px;
+        }
+
+        .jslider-value {
+            background-color: transparent !important;
+        }
+        
+.grey_bg {
+    background: #f2f2f2;
+}
+
+    .grey_bg #tabs-1 {
+        border: 1px solid #cecece;
+        border-radius: 0;
+        background: #fff;
+        margin-bottom: 20px;
+    }
+
+    .grey_bg .lft_title {
+        font-size: 24px;
+        font-weight: 300;
+        padding-bottom: 15px;
+    }
+
+    .grey_bg .green_sel, .grey_sel {
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        line-height: 25px;
+        background: #2fa904;
+        color: #fff;
+        text-align: center;
+        font-size: 14px;
+        padding: 0;
+        margin-top: 5px;
+        float: right;
+        margin-right: 15px;
+    }
+
+.grey_sel {
+    background: #cccccc;
+}
+
+.grey_bg .red_star {
+    color: #f00;
+    font-size: 12px;
+}
+
+.grey_bg .red_star2 {
+    color: #f00;
+}
+
+    </style>
+ 
+
+    </body>
+</html>
+
+
+
+

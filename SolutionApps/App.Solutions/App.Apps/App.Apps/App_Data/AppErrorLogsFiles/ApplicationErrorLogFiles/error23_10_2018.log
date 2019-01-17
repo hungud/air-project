@@ -1,0 +1,24 @@
+|| EXMESSAGE ||:- A task was canceled.  || EXSOURCE ||:- mscorlib || EXTARGETSITE ||:- Void ThrowForNonSuccess(System.Threading.Tasks.Task)  ||  EXData ||:- System.Collections.ListDictionaryInternal
+
+
+||EXInnerException||:-  
+   :::   08:22:00.4882413
+
+|| EXMESSAGE ||:- Object reference not set to an instance of an object.  || EXSOURCE ||:- HtmlAgilityPack || EXTARGETSITE ||:- System.String get_InnerHtml()  ||  EXData ||:- System.Collections.ListDictionaryInternal
+
+
+||EXInnerException||:-  
+   :::   08:57:21.6190748
+
+|| EXMESSAGE ||:- A task was canceled.  || EXSOURCE ||:- mscorlib || EXTARGETSITE ||:- Void ThrowForNonSuccess(System.Threading.Tasks.Task)  ||  EXData ||:- System.Collections.ListDictionaryInternal
+
+
+||EXInnerException||:-  
+   :::   16:41:39.5539983
+
+|| EXMESSAGE ||:- A task was canceled.  || EXSOURCE ||:- mscorlib || EXTARGETSITE ||:- Void ThrowForNonSuccess(System.Threading.Tasks.Task)  ||  EXData ||:- System.Collections.ListDictionaryInternal
+
+
+||EXInnerException||:-  
+   :::   16:46:04.7378703
+

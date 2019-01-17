@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="85e5f198224d4137b1a9a43fa8ac5d53" Name="Diagram1" ZoomLevel="55">
+        <EntityTypeShape EntityType="AirAdminDBModel.UserRole" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AirAdminDBModel.ComapanyDomainDetail" Width="1.5" PointX="3" PointY="9" />
+        <EntityTypeShape EntityType="AirAdminDBModel.CompanyDomain" Width="1.5" PointX="5.375" PointY="0.75" />
+        <EntityTypeShape EntityType="AirAdminDBModel.BookingReport" Width="1.5" PointX="3" PointY="12.5" />
+        <EntityTypeShape EntityType="AirAdminDBModel.User" Width="1.5" PointX="3" PointY="3.5" />
+        <EntityTypeShape EntityType="AirAdminDBModel.ContactDetail" Width="1.5" PointX="5.375" PointY="5.75" />
+        <EntityTypeShape EntityType="AirAdminDBModel.DomainPaymentOptionMapping" Width="1.5" PointX="7.375" PointY="0.75" />
+        <EntityTypeShape EntityType="AirAdminDBModel.PaymentOption" Width="1.5" PointX="7.375" PointY="5.75" />
+        <EntityTypeShape EntityType="AirAdminDBModel.CompanyDetail" Width="1.5" PointX="0.75" PointY="3.875" />
+        <AssociationConnector Association="AirAdminDBModel.FK_BookingReport_CompanyDetails" />
+        <AssociationConnector Association="AirAdminDBModel.FK_Users_CompanyDetails" />
+        <EntityTypeShape EntityType="AirAdminDBModel.AirlineRestrictionAir" Width="1.5" PointX="3" PointY="17.25" />
+        <AssociationConnector Association="AirAdminDBModel.FK_AirlineRestrictionAir_CompanyDetails" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

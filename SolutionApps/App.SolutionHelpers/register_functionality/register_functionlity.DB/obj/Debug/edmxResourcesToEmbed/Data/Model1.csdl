@@ -1,0 +1,263 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AirAdminDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="UserRole">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="AirAdminDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="UserRoles" EntityType="Self.UserRole" />
+    <EntitySet Name="ComapanyDomainDetails" EntityType="AirAdminDBModel.ComapanyDomainDetail" />
+    <EntitySet Name="CompanyDomains" EntityType="AirAdminDBModel.CompanyDomain" />
+    <EntitySet Name="BookingReports" EntityType="AirAdminDBModel.BookingReport" />
+    <EntitySet Name="Users" EntityType="AirAdminDBModel.User" />
+    <EntitySet Name="ContactDetails" EntityType="AirAdminDBModel.ContactDetail" />
+    <EntitySet Name="DomainPaymentOptionMappings" EntityType="AirAdminDBModel.DomainPaymentOptionMapping" />
+    <EntitySet Name="PaymentOptions" EntityType="AirAdminDBModel.PaymentOption" />
+    <EntitySet Name="CompanyDetails" EntityType="AirAdminDBModel.CompanyDetail" />
+    <AssociationSet Name="FK_BookingReport_CompanyDetails" Association="AirAdminDBModel.FK_BookingReport_CompanyDetails">
+      <End Role="CompanyDetail" EntitySet="CompanyDetails" />
+      <End Role="BookingReport" EntitySet="BookingReports" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Users_CompanyDetails" Association="AirAdminDBModel.FK_Users_CompanyDetails">
+      <End Role="CompanyDetail" EntitySet="CompanyDetails" />
+      <End Role="User" EntitySet="Users" />
+    </AssociationSet>
+    <EntitySet Name="AirlineRestrictionAirs" EntityType="AirAdminDBModel.AirlineRestrictionAir" />
+    <AssociationSet Name="FK_AirlineRestrictionAir_CompanyDetails" Association="AirAdminDBModel.FK_AirlineRestrictionAir_CompanyDetails">
+      <End Role="CompanyDetail" EntitySet="CompanyDetails" />
+      <End Role="AirlineRestrictionAir" EntitySet="AirlineRestrictionAirs" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="ComapanyDomainDetail">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DomainName" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="SupplierId" Type="Int64" Nullable="false" />
+    <Property Name="CompanyId" Type="Int64" Nullable="false" />
+    <Property Name="ApplicationId" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CompanyDomain">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DefaultCompanyID" Type="Int64" />
+    <Property Name="DomainName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="DomainURL" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedBy" Type="Int64" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="DeletedBy" Type="Int64" />
+    <Property Name="DeletedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="Int32" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="IsBookingEnabled" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="BookingReport">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="Locator" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="ReservationDate" Type="DateTime" Precision="3" />
+    <Property Name="DepartureDate" Type="DateTime" Precision="3" />
+    <Property Name="Departure" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="Destination" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="Amount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="DefaultCompanyId" Type="Int64" Nullable="false" />
+    <Property Name="BillingEmail" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="BillingPhone" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="UserId" Type="Int64" />
+    <NavigationProperty Name="CompanyDetail" Relationship="AirAdminDBModel.FK_BookingReport_CompanyDetails" FromRole="BookingReport" ToRole="CompanyDetail" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserName" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="CompanyDetailId" Type="Int64" Nullable="false" />
+    <Property Name="UserRoleId" Type="Int32" Nullable="false" />
+    <Property Name="EmailAddress" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="FirstName" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="LastName" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Address" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="PhoneNumber" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="Password" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CanUpdatePassword" Type="Boolean" Nullable="false" />
+    <Property Name="IsTempPEDResetRequest" Type="Boolean" />
+    <Property Name="TempPassword" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="TempPasswordDateTime" Type="DateTime" Precision="3" />
+    <Property Name="IsTempPasswordExpired" Type="Boolean" />
+    <Property Name="ResetPasswordCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Ext" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="CompanyDetail" Relationship="AirAdminDBModel.FK_Users_CompanyDetails" FromRole="User" ToRole="CompanyDetail" />
+  </EntityType>
+  <EntityType Name="ContactDetail">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserID" Type="Int64" Nullable="false" />
+    <Property Name="PaymentMethod" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="CreditCardNumber" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="CreditCardName" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="CreditCardExpDate" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="CVV" Type="Int32" />
+    <Property Name="UserLocation" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="UserStreetAddress" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="UserZip" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="UserPhone" Type="Int64" />
+    <Property Name="ContactEmail" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="DomainPaymentOptionMapping">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DomainID" Type="Int64" />
+    <Property Name="PaymentOptionId" Type="Int64" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="CreatedBy" Type="Int64" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="DeletedDate" Type="DateTime" Precision="3" />
+    <Property Name="DeletedBy" Type="Int64" />
+    <Property Name="ModifyDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifyBy" Type="Int64" />
+    <Property Name="CompanyId" Type="Int64" />
+  </EntityType>
+  <EntityType Name="PaymentOption">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CardType" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="CardFee" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="Logo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="CompanyDetail">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="CityID" Type="Int64" />
+    <Property Name="OtherCity" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="StateID" Type="Int64" />
+    <Property Name="OtherState" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="CountryID" Type="Int64" />
+    <Property Name="OtherCountry" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="StreetAddress" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="IsActive" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="WebsiteURL" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="ApplicationURL" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="SmtpEmailID" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="EMailName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="SMTPHostName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="SmtpServerPort" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="SMTPUserName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="SMTPPassword" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="SMTPUseSsl" Type="Boolean" />
+    <Property Name="GSTRegNo" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="TICORegNo" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="IATANo" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="PhoneNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ParentId" Type="Int64" />
+    <Property Name="CompanyTypeId" Type="Int32" />
+    <Property Name="HeaderURL" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="FooterURL" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="WaitURL" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Air" Type="Boolean" Nullable="false" />
+    <Property Name="Hotel" Type="Boolean" Nullable="false" />
+    <Property Name="CarRental" Type="Boolean" Nullable="false" />
+    <Property Name="Enable" Type="Boolean" Nullable="false" />
+    <Property Name="Fax" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="PrivacyUrl" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="TermsUrl" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="PostalCode" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Dk_Number" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="CurrencyCode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Location" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="IsApproved" Type="Boolean" />
+    <Property Name="FaviconUrl" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="IsSandBox" Type="Boolean" />
+    <Property Name="IsBookingEnabled" Type="Boolean" />
+    <Property Name="Insurance" Type="Boolean" Nullable="false" />
+    <Property Name="IsSandboxAir" Type="Boolean" />
+    <Property Name="IsSandboxCar" Type="Boolean" />
+    <Property Name="IsSandboxInsurance" Type="Boolean" />
+    <Property Name="IsBookingEnabledAir" Type="Boolean" />
+    <Property Name="IsBookingEnabledCar" Type="Boolean" />
+    <Property Name="IsBookingEnabledInsurance" Type="Boolean" />
+    <Property Name="CCEnableHotel" Type="Boolean" />
+    <Property Name="CCEnableAir" Type="Boolean" />
+    <Property Name="CCEnableCar" Type="Boolean" />
+    <Property Name="CCEnableInsurance" Type="Boolean" />
+    <NavigationProperty Name="BookingReports" Relationship="AirAdminDBModel.FK_BookingReport_CompanyDetails" FromRole="CompanyDetail" ToRole="BookingReport" />
+    <NavigationProperty Name="Users" Relationship="AirAdminDBModel.FK_Users_CompanyDetails" FromRole="CompanyDetail" ToRole="User" />
+    <NavigationProperty Name="AirlineRestrictionAirs" Relationship="AirAdminDBModel.FK_AirlineRestrictionAir_CompanyDetails" FromRole="CompanyDetail" ToRole="AirlineRestrictionAir" />
+  </EntityType>
+  <Association Name="FK_BookingReport_CompanyDetails">
+    <End Type="AirAdminDBModel.CompanyDetail" Role="CompanyDetail" Multiplicity="1" />
+    <End Type="AirAdminDBModel.BookingReport" Role="BookingReport" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CompanyDetail">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="BookingReport">
+        <PropertyRef Name="DefaultCompanyId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Users_CompanyDetails">
+    <End Type="AirAdminDBModel.CompanyDetail" Role="CompanyDetail" Multiplicity="1" />
+    <End Type="AirAdminDBModel.User" Role="User" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CompanyDetail">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="User">
+        <PropertyRef Name="CompanyDetailId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="AirlineRestrictionAir">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AirlineName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IATACode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DefaultCompanyId" Type="Int64" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="DeletedBy" Type="Int64" />
+    <Property Name="DeletedDate" Type="DateTime" Precision="3" />
+    <Property Name="IsNetfareMarkup" Type="Boolean" />
+    <Property Name="IsPublicMarkup" Type="Boolean" />
+    <NavigationProperty Name="CompanyDetail" Relationship="AirAdminDBModel.FK_AirlineRestrictionAir_CompanyDetails" FromRole="AirlineRestrictionAir" ToRole="CompanyDetail" />
+  </EntityType>
+  <Association Name="FK_AirlineRestrictionAir_CompanyDetails">
+    <End Type="AirAdminDBModel.CompanyDetail" Role="CompanyDetail" Multiplicity="0..1" />
+    <End Type="AirAdminDBModel.AirlineRestrictionAir" Role="AirlineRestrictionAir" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CompanyDetail">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AirlineRestrictionAir">
+        <PropertyRef Name="DefaultCompanyId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

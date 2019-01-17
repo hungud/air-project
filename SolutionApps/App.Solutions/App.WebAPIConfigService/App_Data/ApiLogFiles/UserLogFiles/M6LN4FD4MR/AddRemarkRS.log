@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Envelope><Header><MessageHeader><From><PartyId type="URI">123123</PartyId></From><To><PartyId type="urn: x12.org:IO5: 01">999999</PartyId></To><CPAId>6DTH</CPAId><ConversationId>1111111111111111111</ConversationId><Service type="sabreXML">AddRemarkLLSRQ</Service><Action>AddRemarkLLSRS</Action><MessageData><MessageId>129849067228120151</MessageId><Timestamp>2018-10-16T01:52:03</Timestamp><RefToMessageId>mid:0_2014-09-22T21:43:40m</RefToMessageId></MessageData></MessageHeader><Security><BinarySecurityToken valueType="String" EncodingType="Base64Binary">Shared/IDL:IceSess\/SessMgr:1\.0.IDL/Common/!ICESMS\/ACPCRTD!ICESMSLB\/CRT.LB!1539654704438!1324150!65537</BinarySecurityToken></Security></Header><Body><AddRemarkRS xmlns="http://webservices.sabre.com/sabreXML/2011/10" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:stl="http://services.sabre.com/STL/v01" Version="2.1.1">
+ <ApplicationResults status="NotProcessed">
+  <Error type="BusinessLogic" timeStamp="2018-10-15T20:52:03-05:00">
+   <SystemSpecificResults>
+    <Message>.INCQT CARD NBR.NOT ENT BGNG WITH</Message>
+    <ShortText>ERR.SWS.HOST.ERROR_IN_RESPONSE</ShortText>
+   </SystemSpecificResults>
+  </Error>
+ </ApplicationResults>
+</AddRemarkRS></Body></Envelope>

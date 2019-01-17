@@ -1,0 +1,465 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Email_id" xml:space="preserve">
+    <value>ID البريد الإلكتروني</value>
+  </data>
+  <data name="Email_is_required" xml:space="preserve">
+    <value>مطلوب ID البريد الإلكتروني !!</value>
+  </data>
+  <data name="Fax" xml:space="preserve">
+    <value>الفاكس:</value>
+  </data>
+  <data name="First_Slide_landpage" xml:space="preserve">
+    <value>مرحبا بكم في افتتاح قطر تصريح الطرق وإشغال (QPRO) الإصدار 2.0</value>
+  </data>
+  <data name="First_Slide_landpage_Text" xml:space="preserve">
+    <value>RO تصريح صادر عن هيئة الأشغال العامة لمقدم الطلب (المقاول) بعد موافقة من جميع وكالات أداة لتنفيذ أعمال الطرق أو تشغل مساحة الطريق لفترة محددة من الوقت.</value>
+  </data>
+  <data name="Five_Slide_landpage" xml:space="preserve">
+    <value>التصديقات وتحليل قوية</value>
+  </data>
+  <data name="Five_Slide_landpage_text" xml:space="preserve">
+    <value>هناك العديد من التصديقات على مستوى البيانات المكانية والسمة التي يتم وضعها في النظام الجديد لضمان دقة وكفاءة معالجة طلبات الحصول على تصاريح RO. تحليل الأثر، وإجراء تحليل القرب لضمان أي نزاعات.</value>
+  </data>
+  <data name="Forgot_Password" xml:space="preserve">
+    <value>نسيت كلمة المرور</value>
+  </data>
+  <data name="Fourth_Slide_landpage" xml:space="preserve">
+    <value>المشاركة / دعوة الوكالات إلى RO عملية الموافقة</value>
+  </data>
+  <data name="Fourth_Slide_landpage_Text" xml:space="preserve">
+    <value>ن أشغال يشعر ينبغي أن تشارك في عملية الموافقة RO، يمكن دعوة أي وكالة لتكون جزءا منها. من ناحية أخرى، إذا كان يشعر أي وكالة ينبغي أن يكون جزءا من عملية الموافقة على RO يمكن طلب للمشاركة في عملية الموافقة.</value>
+  </data>
+  <data name="Get_in_touch_with_us" xml:space="preserve">
+    <value>لحصول على اتصال معنا:</value>
+  </data>
+  <data name="LandingPage" xml:space="preserve">
+    <value>الصفحة المقصودة</value>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>تسجيل الدخول</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>كلمة السر</value>
+  </data>
+  <data name="Pass_is_required" xml:space="preserve">
+    <value>كلمة المرور مطلوبة !!</value>
+  </data>
+  <data name="Please_enter_your_information" xml:space="preserve">
+    <value>يرجى إدخال المعلومات الخاصة بك</value>
+  </data>
+  <data name="QproSystem" xml:space="preserve">
+    <value>Q-PRO النظام</value>
+  </data>
+  <data name="QproSystem_Text" xml:space="preserve">
+    <value>نظام Q-PRO هو نظام التصاريح افتتاح الطريق على الإنترنت تم تصميمها لتسهيل الطريق تصريح الافتتاح. فإن هذا النظام على الانترنت تسمح محل الإجراء رقة القائمة استنادا إلى نظام الشبكة الإلكترونية القائمة. هذا النظام لديه مستودع مركزي للمعلومات تسمح RO RO توفير التطبيقات الإلكترونية ونظام مراجعة أشكال .هذا سوف يقلل بشكل كبير من عملية من عدة أشهر إلى بضعة أيام أو في بعض الحالات لبضع ساعات.</value>
+  </data>
+  <data name="Qpro_newsletter" xml:space="preserve">
+    <value>Q-PRO النشرة الإخبارية</value>
+  </data>
+  <data name="Qpro_newsletter_Text" xml:space="preserve">
+    <value>اشترك في النشرة الإخبارية لتلقي تحديثات منتظمة والإعلانات.</value>
+  </data>
+  <data name="Register" xml:space="preserve">
+    <value>تسجيل</value>
+  </data>
+  <data name="Register_for_Alerts" xml:space="preserve">
+    <value>سجل للحصول على تنبيهات</value>
+  </data>
+  <data name="Register_for_project_Text" xml:space="preserve">
+    <value>على المعلومات التي هو مهم بالنسبة لك.</value>
+  </data>
+  <data name="Remember_me" xml:space="preserve">
+    <value>تذكرني</value>
+  </data>
+  <data name="Second_Slide_landpage" xml:space="preserve">
+    <value>Q-PRO النظام</value>
+  </data>
+  <data name="Second_Slide_landpage_Text" xml:space="preserve">
+    <value>نظام Q-PRO هو نظام التصاريح افتتاح الطريق على الإنترنت تم تصميمها لتسهيل الطريق تصريح الافتتاح. فإن هذا النظام على الانترنت تسمح محل الإجراء رقة القائمة استنادا إلى نظام الشبكة الإلكترونية القائمة. هذا النظام لديه مستودع مركزي للمعلومات تسمح RO RO توفير التطبيقات الإلكترونية ونظام مراجعة أشكال .هذا سوف يقلل بشكل كبير من عملية من عدة أشهر إلى بضعة أيام أو في بعض الحالات لبضع ساعات.</value>
+  </data>
+  <data name="Subscribe" xml:space="preserve">
+    <value>الاشتراك</value>
+  </data>
+  <data name="Support" xml:space="preserve">
+    <value>الدعم:</value>
+  </data>
+  <data name="Telephone" xml:space="preserve">
+    <value>الهاتف:</value>
+  </data>
+  <data name="Third_Slide_landpage" xml:space="preserve">
+    <value>الإلغاء وجدولة تصاريح RO</value>
+  </data>
+  <data name="Third_Slide_landpage_Text" xml:space="preserve">
+    <value>النظام الجديد يسمح للمقاول لكسر المواقع RO في العديد من المراحل لتوفير الراحة للجدولة العمل في كل مرحلة على حدة. وهذا سوف يساعد في الحد الأدنى من حركة تحويل / اضطرابات.</value>
+  </data>
+  <data name="WhoCanApplyForROPermit" xml:space="preserve">
+    <value>الذين يمكن أن تنطبق على تصريح RO؟</value>
+  </data>
+  <data name="WhoCanApplyForROPermit_Text_Li_1" xml:space="preserve">
+    <value>أي شخص الاحتلال أو قطع الأسفلت أو القيام بأعمال الحفر في جزء أو كامل من الطريق الصحيح.</value>
+  </data>
+  <data name="WhoCanApplyForROPermit_Text_Li_2" xml:space="preserve">
+    <value>أي شخص الذين يخططون لعمليات التسريب في كبيرة أو صغيرة</value>
+  </data>
+  <data name="Dashboard" xml:space="preserve">
+    <value>لوحة Q-PRO</value>
+  </data>
+  <data name="Please_select_role_to_login" xml:space="preserve">
+    <value>يرجى تحديد دور للدخول:</value>
+  </data>
+  <data name="Role_1" xml:space="preserve">
+    <value>وكالة المستخدم (مدير الوكالة - أشغال - الطرق)</value>
+  </data>
+  <data name="Role_1_Text" xml:space="preserve">
+    <value>هذا الدور سوف يكون تطبيق الامتيازات فقط</value>
+  </data>
+  <data name="Role_2" xml:space="preserve">
+    <value>لجنة المستخدم (مدير استشاري - لجنة التفتيش على الطرق)</value>
+  </data>
+  <data name="Role_2_Text" xml:space="preserve">
+    <value>وهذا الدور الذي لمراجعة واعتماد الامتيازات فقط.</value>
+  </data>
+  <data name="Role_3" xml:space="preserve">
+    <value>لجنة المستخدم (مسؤول اللجنة - CRA - لجنة الاتحاد)</value>
+  </data>
+  <data name="Role_4" xml:space="preserve">
+    <value>لجنة المستخدم (مدير وكالة - لجنة إشغال الطريق)</value>
+  </data>
+  <data name="Select_role" xml:space="preserve">
+    <value>حدد دور</value>
+  </data>
+  <data name="Back_to_login" xml:space="preserve">
+    <value>لعودة إلى تسجيل الدخول</value>
+  </data>
+  <data name="Enter_Details" xml:space="preserve">
+    <value>إدخال التفاصيل الخاصة بك لتبدأ:</value>
+  </data>
+  <data name="New_User_Registration" xml:space="preserve">
+    <value>تسجيل عضو جديد</value>
+  </data>
+  <data name="Receive_Instructions" xml:space="preserve">
+    <value>أدخل عنوان بريدك الإلكتروني والحصول على تعليمات</value>
+  </data>
+  <data name="Reset" xml:space="preserve">
+    <value>إعادة تعيين</value>
+  </data>
+  <data name="Retrieve_Password" xml:space="preserve">
+    <value>استرجاع كلمة المرور</value>
+  </data>
+  <data name="Send_Me" xml:space="preserve">
+    <value>ارسل إلي!</value>
+  </data>
+  <data name="Documents_Required" xml:space="preserve">
+    <value>وثائق إلزامية</value>
+  </data>
+  <data name="File" xml:space="preserve">
+    <value>ملف</value>
+  </data>
+  <data name="Keywords" xml:space="preserve">
+    <value>الكلمات المفتاحية</value>
+  </data>
+  <data name="Set_Keywords" xml:space="preserve">
+    <value>تعيين كلمات</value>
+  </data>
+  <data name="Set_Validity" xml:space="preserve">
+    <value>تعيين الصلاحية</value>
+  </data>
+  <data name="Upload_Doc" xml:space="preserve">
+    <value>تحميل الوثيقة</value>
+  </data>
+  <data name="Validity_upto" xml:space="preserve">
+    <value>صحة تصل</value>
+  </data>
+  <data name="GIS_TOC" xml:space="preserve">
+    <value>#صحة تصل</value>
+  </data>
+  <data name="GIS_BaseMap_Gallery" xml:space="preserve">
+    <value>BaseMap Gallery  AR</value>
+  </data>
+  <data name="GIS_Draw_RO_Location" xml:space="preserve">
+    <value>Draw RO Location  AR</value>
+  </data>
+  <data name="GIS_Enter_Cordinates" xml:space="preserve">
+    <value>Enter Cordinates  AR</value>
+  </data>
+  <data name="GIS_Legend" xml:space="preserve">
+    <value>Legend AR</value>
+  </data>
+  <data name="GIS_Upload_RO_Location" xml:space="preserve">
+    <value>Upload RO Location  AR</value>
+  </data>
+  <data name="GIS_View_RO_Location" xml:space="preserve">
+    <value>View RO Location  AR</value>
+  </data>
+  <data name="GIS_Draw_RO_Location_Clear" xml:space="preserve">
+    <value>Clear AR</value>
+  </data>
+  <data name="GIS_Draw_RO_Location_Polygon" xml:space="preserve">
+    <value>Polygon AR</value>
+  </data>
+  <data name="GIS_Draw_RO_Location_Save" xml:space="preserve">
+    <value>Save AR</value>
+  </data>
+  <data name="GIS_Enter_Cordinates_DeleteRow" xml:space="preserve">
+    <value>DeleteRow AR</value>
+  </data>
+  <data name="GIS_Enter_Cordinates_Label" xml:space="preserve">
+    <value>Click  to Enter Cordinates AR</value>
+  </data>
+  <data name="GIS_Enter_Cordinates_Add_Rows" xml:space="preserve">
+    <value>Add Row AR</value>
+  </data>
+  <data name="GIS_CLIP_Msg" xml:space="preserve">
+    <value>Overlapping with Parcel Layer... Do you want to Clip the Graphics ? AR</value>
+  </data>
+  <data name="GIS_Search_RO_Location" xml:space="preserve">
+    <value>Search AR</value>
+  </data>
+  <data name="GIS_Search_Text" xml:space="preserve">
+    <value>Search Text AR</value>
+  </data>
+  <data name="GIS_Search_Type" xml:space="preserve">
+    <value>Search Type AR</value>
+  </data>
+  <data name="GIS_Upload_Files" xml:space="preserve">
+    <value>Only Text, DWG, SHP Files are Allowed AR</value>
+  </data>
+  <data name="GIS_Valitdate_Img" xml:space="preserve">
+    <value>Validate File AR</value>
+  </data>
+  <data name="GIS_GP_MSG_DR" xml:space="preserve">
+    <value>With in own Design Review AR</value>
+  </data>
+  <data name="GIS_GP_MSG_LV" xml:space="preserve">
+    <value>Checking Landrow Layer Validation.. AR</value>
+  </data>
+  <data name="GIS_GP_MSG_NDR" xml:space="preserve">
+    <value>Outside own Design Review AR</value>
+  </data>
+  <data name="GIS_GP_MSG_PL" xml:space="preserve">
+    <value>More Than One RO Locations.. Select the primary RO AR</value>
+  </data>
+  <data name="GIS_GP_MSG_R" xml:space="preserve">
+    <value>Graphics Entered by You is Overlapping With Restricted Area. AR</value>
+  </data>
+  <data name="GIS_GP_MSG_RO" xml:space="preserve">
+    <value>Graphics Entered by You is Overlapping With  RO AR</value>
+  </data>
+  <data name="GIS_GP_MSG_WR" xml:space="preserve">
+    <value>Intersect with own RO... Draw Again AR</value>
+  </data>
+  <data name="Action_Required" xml:space="preserve">
+    <value>الإجراء مطلوب</value>
+  </data>
+  <data name="Agency_Response" xml:space="preserve">
+    <value>رد كالة</value>
+  </data>
+  <data name="Assign_app_to_user" xml:space="preserve">
+    <value>تعيين تطبيق إلى العضو</value>
+  </data>
+  <data name="Assign_RO" xml:space="preserve">
+    <value>RO تعيين</value>
+  </data>
+  <data name="Attachments" xml:space="preserve">
+    <value>مرفقات</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>قريب</value>
+  </data>
+  <data name="Comments" xml:space="preserve">
+    <value>تعليقات</value>
+  </data>
+  <data name="Deleted_Successfully" xml:space="preserve">
+    <value>ملف المحذوفة بنجاح</value>
+  </data>
+  <data name="Documents_are_Mandatory" xml:space="preserve">
+    <value>المستندات المطلوبة إلزامية ، يرجى إرفاق جميع الوثائق الإلزامية اليسار</value>
+  </data>
+  <data name="enter_your_comments" xml:space="preserve">
+    <value>أدخل تعليقات</value>
+  </data>
+  <data name="Extensions_check" xml:space="preserve">
+    <value>pdf/doc/docx/dwg/rar/zip وثائق لواحق المطلوبة هي</value>
+  </data>
+  <data name="Map" xml:space="preserve">
+    <value>خريطة</value>
+  </data>
+  <data name="please_fill_the_date_validity" xml:space="preserve">
+    <value>يرجى ملء تاريخ الصلاحية</value>
+  </data>
+  <data name="Please_fill_the_keywords" xml:space="preserve">
+    <value>يرجى ملء كلمات</value>
+  </data>
+  <data name="Please_Upload_the_Doc" xml:space="preserve">
+    <value>يرجى تحميل وثائق إرسال قبل</value>
+  </data>
+  <data name="Received_Permits" xml:space="preserve">
+    <value>تصاريح تلقى</value>
+  </data>
+  <data name="RO_Application_No" xml:space="preserve">
+    <value>رقم الطلب RO</value>
+  </data>
+  <data name="RO_details" xml:space="preserve">
+    <value>رو تفاصيل</value>
+  </data>
+  <data name="Standard_Comments" xml:space="preserve">
+    <value>القياسية تعليقات</value>
+  </data>
+  <data name="Standard_Comment_List" xml:space="preserve">
+    <value>القياسية قائمة تعليق</value>
+  </data>
+  <data name="Submit_Comment" xml:space="preserve">
+    <value>إرسال تعليق</value>
+  </data>
+  <data name="Submit_Response" xml:space="preserve">
+    <value>إرسال الاستجابة</value>
+  </data>
+  <data name="The_Following_Extension_File_Name" xml:space="preserve">
+    <value>تمديد التالية من اسم الملف غير صالح لل كلمة مختارة</value>
+  </data>
+  <data name="Type_of_Work" xml:space="preserve">
+    <value>طبيعة العمل</value>
+  </data>
+  <data name="Upload_Documents" xml:space="preserve">
+    <value>تحميل المستندات</value>
+  </data>
+  <data name="please_save_all_steps" xml:space="preserve">
+    <value>Please save all steps ar</value>
+  </data>
+  <data name="GIS_Extrafields" xml:space="preserve">
+    <value>Extra Fields ar</value>
+  </data>
+  <data name="assignment_details" xml:space="preserve">
+    <value>يتم تحديث تفاصيل تعيين</value>
+  </data>
+  <data name="resc_assignedRO" xml:space="preserve">
+    <value>RO ASSIGNED SUCCESSFULLY</value>
+  </data>
+  <data name="resc_valueError" xml:space="preserve">
+    <value>Invalid Input values !</value>
+  </data>
+  <data name="App_Permit_Applied" xml:space="preserve">
+    <value>تصريح التطبيقية</value>
+  </data>
+  <data name="App_Permit_Received" xml:space="preserve">
+    <value>تصريح تلقى</value>
+  </data>
+</root>

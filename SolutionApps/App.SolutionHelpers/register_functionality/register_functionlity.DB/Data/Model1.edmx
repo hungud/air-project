@@ -1,0 +1,759 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="AirAdminDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="AirlineRestrictionAir">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="AirlineName" Type="nvarchar" MaxLength="50" />
+          <Property Name="IATACode" Type="nvarchar" MaxLength="50" />
+          <Property Name="DefaultCompanyId" Type="bigint" />
+          <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+          <Property Name="IsDeleted" Type="bit" Nullable="false" />
+          <Property Name="DeletedBy" Type="bigint" />
+          <Property Name="DeletedDate" Type="datetime" />
+          <Property Name="IsNetfareMarkup" Type="bit" />
+          <Property Name="IsPublicMarkup" Type="bit" />
+        </EntityType>
+        <EntityType Name="BookingReports">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="256" />
+          <Property Name="Locator" Type="nvarchar" MaxLength="256" />
+          <Property Name="ReservationDate" Type="datetime" />
+          <Property Name="DepartureDate" Type="datetime" />
+          <Property Name="Departure" Type="nvarchar" MaxLength="256" />
+          <Property Name="Destination" Type="nvarchar" MaxLength="256" />
+          <Property Name="Amount" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="DefaultCompanyId" Type="bigint" Nullable="false" />
+          <Property Name="BillingEmail" Type="varchar" MaxLength="250" />
+          <Property Name="BillingPhone" Type="varchar" MaxLength="250" />
+          <Property Name="UserId" Type="bigint" />
+        </EntityType>
+        <EntityType Name="ComapanyDomainDetails">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DomainName" Type="varchar(max)" Nullable="false" />
+          <Property Name="SupplierId" Type="bigint" Nullable="false" />
+          <Property Name="CompanyId" Type="bigint" Nullable="false" />
+          <Property Name="ApplicationId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CompanyDetails">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="250" />
+          <Property Name="CityID" Type="bigint" />
+          <Property Name="OtherCity" Type="varchar" MaxLength="250" />
+          <Property Name="StateID" Type="bigint" />
+          <Property Name="OtherState" Type="varchar" MaxLength="250" />
+          <Property Name="CountryID" Type="bigint" />
+          <Property Name="OtherCountry" Type="varchar" MaxLength="250" />
+          <Property Name="StreetAddress" Type="varchar(max)" Nullable="false" />
+          <Property Name="IsActive" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="WebsiteURL" Type="varchar" MaxLength="250" />
+          <Property Name="ApplicationURL" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="SmtpEmailID" Type="varchar" MaxLength="200" />
+          <Property Name="EMailName" Type="varchar" MaxLength="200" />
+          <Property Name="SMTPHostName" Type="varchar" MaxLength="200" />
+          <Property Name="SmtpServerPort" Type="varchar" MaxLength="200" />
+          <Property Name="SMTPUserName" Type="varchar" MaxLength="200" />
+          <Property Name="SMTPPassword" Type="varchar" MaxLength="200" />
+          <Property Name="SMTPUseSsl" Type="bit" />
+          <Property Name="GSTRegNo" Type="varchar" MaxLength="500" />
+          <Property Name="TICORegNo" Type="varchar" MaxLength="500" />
+          <Property Name="IATANo" Type="varchar" MaxLength="500" />
+          <Property Name="PhoneNumber" Type="varchar" MaxLength="50" />
+          <Property Name="ParentId" Type="bigint" />
+          <Property Name="CompanyTypeId" Type="int" />
+          <Property Name="HeaderURL" Type="varchar" MaxLength="500" />
+          <Property Name="FooterURL" Type="varchar" MaxLength="500" />
+          <Property Name="WaitURL" Type="varchar" MaxLength="500" />
+          <Property Name="Air" Type="bit" Nullable="false" />
+          <Property Name="Hotel" Type="bit" Nullable="false" />
+          <Property Name="CarRental" Type="bit" Nullable="false" />
+          <Property Name="Enable" Type="bit" Nullable="false" />
+          <Property Name="Fax" Type="varchar" MaxLength="10" />
+          <Property Name="PrivacyUrl" Type="varchar" MaxLength="500" />
+          <Property Name="TermsUrl" Type="varchar" MaxLength="500" />
+          <Property Name="PostalCode" Type="varchar" MaxLength="20" />
+          <Property Name="Dk_Number" Type="varchar" MaxLength="20" />
+          <Property Name="CurrencyCode" Type="varchar" MaxLength="10" />
+          <Property Name="Location" Type="varchar" MaxLength="100" />
+          <Property Name="IsApproved" Type="bit" />
+          <Property Name="FaviconUrl" Type="varchar" MaxLength="200" />
+          <Property Name="Insurance" Type="bit" Nullable="false" />
+          <Property Name="IsSandBox" Type="bit" />
+          <Property Name="IsSandboxAir" Type="bit" />
+          <Property Name="IsSandboxCar" Type="bit" />
+          <Property Name="IsSandboxInsurance" Type="bit" />
+          <Property Name="IsBookingEnabled" Type="bit" />
+          <Property Name="IsBookingEnabledAir" Type="bit" />
+          <Property Name="IsBookingEnabledCar" Type="bit" />
+          <Property Name="IsBookingEnabledInsurance" Type="bit" />
+          <Property Name="CCEnableHotel" Type="bit" />
+          <Property Name="CCEnableAir" Type="bit" />
+          <Property Name="CCEnableCar" Type="bit" />
+          <Property Name="CCEnableInsurance" Type="bit" />
+        </EntityType>
+        <EntityType Name="CompanyDomain">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DefaultCompanyID" Type="bigint" />
+          <Property Name="DomainName" Type="varchar" MaxLength="100" />
+          <Property Name="DomainURL" Type="varchar" MaxLength="100" />
+          <Property Name="CreatedBy" Type="bigint" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="IsDeleted" Type="bit" />
+          <Property Name="DeletedBy" Type="bigint" />
+          <Property Name="DeletedDate" Type="datetime" />
+          <Property Name="ModifiedBy" Type="int" />
+          <Property Name="ModifiedDate" Type="datetime" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+          <Property Name="IsBookingEnabled" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ContactDetails">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserID" Type="bigint" Nullable="false" />
+          <Property Name="PaymentMethod" Type="varchar" MaxLength="20" />
+          <Property Name="CreditCardNumber" Type="varchar" MaxLength="20" />
+          <Property Name="CreditCardName" Type="varchar" MaxLength="250" />
+          <Property Name="CreditCardExpDate" Type="varchar" MaxLength="20" />
+          <Property Name="CVV" Type="int" />
+          <Property Name="UserLocation" Type="varchar" MaxLength="250" />
+          <Property Name="UserStreetAddress" Type="varchar" MaxLength="250" />
+          <Property Name="UserZip" Type="varchar" MaxLength="15" />
+          <Property Name="UserPhone" Type="bigint" />
+          <Property Name="ContactEmail" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="DomainPaymentOptionMapping">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DomainID" Type="bigint" />
+          <Property Name="PaymentOptionId" Type="bigint" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="CreatedBy" Type="bigint" />
+          <Property Name="IsActive" Type="bit" />
+          <Property Name="IsDeleted" Type="bit" />
+          <Property Name="DeletedDate" Type="datetime" />
+          <Property Name="DeletedBy" Type="bigint" />
+          <Property Name="ModifyDate" Type="datetime" />
+          <Property Name="ModifyBy" Type="bigint" />
+          <Property Name="CompanyId" Type="bigint" />
+        </EntityType>
+        <EntityType Name="PaymentOption">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CardType" Type="varchar" MaxLength="200" />
+          <Property Name="CardFee" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="IsActive" Type="bit" />
+          <Property Name="Logo" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="UserRoles">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserName" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="CompanyDetailId" Type="bigint" Nullable="false" />
+          <Property Name="UserRoleId" Type="int" Nullable="false" />
+          <Property Name="EmailAddress" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="FirstName" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="LastName" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="Address" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="PhoneNumber" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+          <Property Name="Password" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="CanUpdatePassword" Type="bit" Nullable="false" />
+          <Property Name="IsTempPEDResetRequest" Type="bit" />
+          <Property Name="TempPassword" Type="varchar" MaxLength="250" />
+          <Property Name="TempPasswordDateTime" Type="datetime" />
+          <Property Name="IsTempPasswordExpired" Type="bit" />
+          <Property Name="ResetPasswordCode" Type="varchar" MaxLength="50" />
+          <Property Name="Ext" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <Association Name="FK_AirlineRestrictionAir_CompanyDetails">
+          <End Role="CompanyDetails" Type="Self.CompanyDetails" Multiplicity="0..1" />
+          <End Role="AirlineRestrictionAir" Type="Self.AirlineRestrictionAir" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CompanyDetails">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AirlineRestrictionAir">
+              <PropertyRef Name="DefaultCompanyId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BookingReport_CompanyDetails">
+          <End Role="CompanyDetails" Type="Self.CompanyDetails" Multiplicity="1" />
+          <End Role="BookingReports" Type="Self.BookingReports" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CompanyDetails">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="BookingReports">
+              <PropertyRef Name="DefaultCompanyId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Users_CompanyDetails">
+          <End Role="CompanyDetails" Type="Self.CompanyDetails" Multiplicity="1" />
+          <End Role="Users" Type="Self.Users" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CompanyDetails">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Users">
+              <PropertyRef Name="CompanyDetailId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="AirAdminDBModelStoreContainer">
+          <EntitySet Name="AirlineRestrictionAir" EntityType="Self.AirlineRestrictionAir" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="BookingReports" EntityType="Self.BookingReports" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ComapanyDomainDetails" EntityType="Self.ComapanyDomainDetails" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CompanyDetails" EntityType="Self.CompanyDetails" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CompanyDomain" EntityType="Self.CompanyDomain" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ContactDetails" EntityType="Self.ContactDetails" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DomainPaymentOptionMapping" EntityType="Self.DomainPaymentOptionMapping" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PaymentOption" EntityType="Self.PaymentOption" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UserRoles" EntityType="Self.UserRoles" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_AirlineRestrictionAir_CompanyDetails" Association="Self.FK_AirlineRestrictionAir_CompanyDetails">
+            <End Role="CompanyDetails" EntitySet="CompanyDetails" />
+            <End Role="AirlineRestrictionAir" EntitySet="AirlineRestrictionAir" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BookingReport_CompanyDetails" Association="Self.FK_BookingReport_CompanyDetails">
+            <End Role="CompanyDetails" EntitySet="CompanyDetails" />
+            <End Role="BookingReports" EntitySet="BookingReports" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Users_CompanyDetails" Association="Self.FK_Users_CompanyDetails">
+            <End Role="CompanyDetails" EntitySet="CompanyDetails" />
+            <End Role="Users" EntitySet="Users" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="AirAdminDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="UserRole">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="AirAdminDBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="UserRoles" EntityType="Self.UserRole" />
+          <EntitySet Name="ComapanyDomainDetails" EntityType="AirAdminDBModel.ComapanyDomainDetail" />
+          <EntitySet Name="CompanyDomains" EntityType="AirAdminDBModel.CompanyDomain" />
+          <EntitySet Name="BookingReports" EntityType="AirAdminDBModel.BookingReport" />
+          <EntitySet Name="Users" EntityType="AirAdminDBModel.User" />
+          <EntitySet Name="ContactDetails" EntityType="AirAdminDBModel.ContactDetail" />
+          <EntitySet Name="DomainPaymentOptionMappings" EntityType="AirAdminDBModel.DomainPaymentOptionMapping" />
+          <EntitySet Name="PaymentOptions" EntityType="AirAdminDBModel.PaymentOption" />
+          <EntitySet Name="CompanyDetails" EntityType="AirAdminDBModel.CompanyDetail" />
+          <AssociationSet Name="FK_BookingReport_CompanyDetails" Association="AirAdminDBModel.FK_BookingReport_CompanyDetails">
+            <End Role="CompanyDetail" EntitySet="CompanyDetails" />
+            <End Role="BookingReport" EntitySet="BookingReports" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Users_CompanyDetails" Association="AirAdminDBModel.FK_Users_CompanyDetails">
+            <End Role="CompanyDetail" EntitySet="CompanyDetails" />
+            <End Role="User" EntitySet="Users" />
+          </AssociationSet>
+          <EntitySet Name="AirlineRestrictionAirs" EntityType="AirAdminDBModel.AirlineRestrictionAir" />
+          <AssociationSet Name="FK_AirlineRestrictionAir_CompanyDetails" Association="AirAdminDBModel.FK_AirlineRestrictionAir_CompanyDetails">
+            <End Role="CompanyDetail" EntitySet="CompanyDetails" />
+            <End Role="AirlineRestrictionAir" EntitySet="AirlineRestrictionAirs" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="ComapanyDomainDetail">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DomainName" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="SupplierId" Type="Int64" Nullable="false" />
+          <Property Name="CompanyId" Type="Int64" Nullable="false" />
+          <Property Name="ApplicationId" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CompanyDomain">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DefaultCompanyID" Type="Int64" />
+          <Property Name="DomainName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="DomainURL" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="CreatedBy" Type="Int64" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="IsDeleted" Type="Boolean" />
+          <Property Name="DeletedBy" Type="Int64" />
+          <Property Name="DeletedDate" Type="DateTime" Precision="3" />
+          <Property Name="ModifiedBy" Type="Int32" />
+          <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+          <Property Name="IsBookingEnabled" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityType Name="BookingReport">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="Locator" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="ReservationDate" Type="DateTime" Precision="3" />
+          <Property Name="DepartureDate" Type="DateTime" Precision="3" />
+          <Property Name="Departure" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="Destination" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="Amount" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="DefaultCompanyId" Type="Int64" Nullable="false" />
+          <Property Name="BillingEmail" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="BillingPhone" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="UserId" Type="Int64" />
+          <NavigationProperty Name="CompanyDetail" Relationship="AirAdminDBModel.FK_BookingReport_CompanyDetails" FromRole="BookingReport" ToRole="CompanyDetail" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserName" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="CompanyDetailId" Type="Int64" Nullable="false" />
+          <Property Name="UserRoleId" Type="Int32" Nullable="false" />
+          <Property Name="EmailAddress" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="FirstName" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="LastName" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="Address" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="PhoneNumber" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+          <Property Name="Password" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CanUpdatePassword" Type="Boolean" Nullable="false" />
+          <Property Name="IsTempPEDResetRequest" Type="Boolean" />
+          <Property Name="TempPassword" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="TempPasswordDateTime" Type="DateTime" Precision="3" />
+          <Property Name="IsTempPasswordExpired" Type="Boolean" />
+          <Property Name="ResetPasswordCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Ext" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="CompanyDetail" Relationship="AirAdminDBModel.FK_Users_CompanyDetails" FromRole="User" ToRole="CompanyDetail" />
+        </EntityType>
+        <EntityType Name="ContactDetail">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserID" Type="Int64" Nullable="false" />
+          <Property Name="PaymentMethod" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="CreditCardNumber" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="CreditCardName" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="CreditCardExpDate" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="CVV" Type="Int32" />
+          <Property Name="UserLocation" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="UserStreetAddress" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="UserZip" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="UserPhone" Type="Int64" />
+          <Property Name="ContactEmail" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="DomainPaymentOptionMapping">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DomainID" Type="Int64" />
+          <Property Name="PaymentOptionId" Type="Int64" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="CreatedBy" Type="Int64" />
+          <Property Name="IsActive" Type="Boolean" />
+          <Property Name="IsDeleted" Type="Boolean" />
+          <Property Name="DeletedDate" Type="DateTime" Precision="3" />
+          <Property Name="DeletedBy" Type="Int64" />
+          <Property Name="ModifyDate" Type="DateTime" Precision="3" />
+          <Property Name="ModifyBy" Type="Int64" />
+          <Property Name="CompanyId" Type="Int64" />
+        </EntityType>
+        <EntityType Name="PaymentOption">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CardType" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="CardFee" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="IsActive" Type="Boolean" />
+          <Property Name="Logo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="CompanyDetail">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="CityID" Type="Int64" />
+          <Property Name="OtherCity" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="StateID" Type="Int64" />
+          <Property Name="OtherState" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="CountryID" Type="Int64" />
+          <Property Name="OtherCountry" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="StreetAddress" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="IsActive" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="WebsiteURL" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="ApplicationURL" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="SmtpEmailID" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="EMailName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="SMTPHostName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="SmtpServerPort" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="SMTPUserName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="SMTPPassword" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="SMTPUseSsl" Type="Boolean" />
+          <Property Name="GSTRegNo" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="TICORegNo" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="IATANo" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="PhoneNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ParentId" Type="Int64" />
+          <Property Name="CompanyTypeId" Type="Int32" />
+          <Property Name="HeaderURL" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="FooterURL" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="WaitURL" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="Air" Type="Boolean" Nullable="false" />
+          <Property Name="Hotel" Type="Boolean" Nullable="false" />
+          <Property Name="CarRental" Type="Boolean" Nullable="false" />
+          <Property Name="Enable" Type="Boolean" Nullable="false" />
+          <Property Name="Fax" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="PrivacyUrl" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="TermsUrl" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="PostalCode" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Dk_Number" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="CurrencyCode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Location" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="IsApproved" Type="Boolean" />
+          <Property Name="FaviconUrl" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="IsSandBox" Type="Boolean" />
+          <Property Name="IsBookingEnabled" Type="Boolean" />
+          <Property Name="Insurance" Type="Boolean" Nullable="false" />
+          <Property Name="IsSandboxAir" Type="Boolean" />
+          <Property Name="IsSandboxCar" Type="Boolean" />
+          <Property Name="IsSandboxInsurance" Type="Boolean" />
+          <Property Name="IsBookingEnabledAir" Type="Boolean" />
+          <Property Name="IsBookingEnabledCar" Type="Boolean" />
+          <Property Name="IsBookingEnabledInsurance" Type="Boolean" />
+          <Property Name="CCEnableHotel" Type="Boolean" />
+          <Property Name="CCEnableAir" Type="Boolean" />
+          <Property Name="CCEnableCar" Type="Boolean" />
+          <Property Name="CCEnableInsurance" Type="Boolean" />
+          <NavigationProperty Name="BookingReports" Relationship="AirAdminDBModel.FK_BookingReport_CompanyDetails" FromRole="CompanyDetail" ToRole="BookingReport" />
+          <NavigationProperty Name="Users" Relationship="AirAdminDBModel.FK_Users_CompanyDetails" FromRole="CompanyDetail" ToRole="User" />
+          <NavigationProperty Name="AirlineRestrictionAirs" Relationship="AirAdminDBModel.FK_AirlineRestrictionAir_CompanyDetails" FromRole="CompanyDetail" ToRole="AirlineRestrictionAir" />
+        </EntityType>
+        <Association Name="FK_BookingReport_CompanyDetails">
+          <End Type="AirAdminDBModel.CompanyDetail" Role="CompanyDetail" Multiplicity="1" />
+          <End Type="AirAdminDBModel.BookingReport" Role="BookingReport" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CompanyDetail">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="BookingReport">
+              <PropertyRef Name="DefaultCompanyId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Users_CompanyDetails">
+          <End Type="AirAdminDBModel.CompanyDetail" Role="CompanyDetail" Multiplicity="1" />
+          <End Type="AirAdminDBModel.User" Role="User" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CompanyDetail">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="User">
+              <PropertyRef Name="CompanyDetailId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="AirlineRestrictionAir">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AirlineName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="IATACode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DefaultCompanyId" Type="Int64" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+          <Property Name="DeletedBy" Type="Int64" />
+          <Property Name="DeletedDate" Type="DateTime" Precision="3" />
+          <Property Name="IsNetfareMarkup" Type="Boolean" />
+          <Property Name="IsPublicMarkup" Type="Boolean" />
+          <NavigationProperty Name="CompanyDetail" Relationship="AirAdminDBModel.FK_AirlineRestrictionAir_CompanyDetails" FromRole="AirlineRestrictionAir" ToRole="CompanyDetail" />
+        </EntityType>
+        <Association Name="FK_AirlineRestrictionAir_CompanyDetails">
+          <End Type="AirAdminDBModel.CompanyDetail" Role="CompanyDetail" Multiplicity="0..1" />
+          <End Type="AirAdminDBModel.AirlineRestrictionAir" Role="AirlineRestrictionAir" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CompanyDetail">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AirlineRestrictionAir">
+              <PropertyRef Name="DefaultCompanyId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="AirAdminDBModelStoreContainer" CdmEntityContainer="AirAdminDBEntities">
+          <EntitySetMapping Name="UserRoles">
+            <EntityTypeMapping TypeName="AirAdminDBModel.UserRole">
+              <MappingFragment StoreEntitySet="UserRoles">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ComapanyDomainDetails">
+            <EntityTypeMapping TypeName="AirAdminDBModel.ComapanyDomainDetail">
+              <MappingFragment StoreEntitySet="ComapanyDomainDetails">
+                <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+                <ScalarProperty Name="CompanyId" ColumnName="CompanyId" />
+                <ScalarProperty Name="SupplierId" ColumnName="SupplierId" />
+                <ScalarProperty Name="DomainName" ColumnName="DomainName" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CompanyDomains">
+            <EntityTypeMapping TypeName="AirAdminDBModel.CompanyDomain">
+              <MappingFragment StoreEntitySet="CompanyDomain">
+                <ScalarProperty Name="IsBookingEnabled" ColumnName="IsBookingEnabled" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="DeletedDate" ColumnName="DeletedDate" />
+                <ScalarProperty Name="DeletedBy" ColumnName="DeletedBy" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="DomainURL" ColumnName="DomainURL" />
+                <ScalarProperty Name="DomainName" ColumnName="DomainName" />
+                <ScalarProperty Name="DefaultCompanyID" ColumnName="DefaultCompanyID" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BookingReports">
+            <EntityTypeMapping TypeName="AirAdminDBModel.BookingReport">
+              <MappingFragment StoreEntitySet="BookingReports">
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="BillingPhone" ColumnName="BillingPhone" />
+                <ScalarProperty Name="BillingEmail" ColumnName="BillingEmail" />
+                <ScalarProperty Name="DefaultCompanyId" ColumnName="DefaultCompanyId" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="Destination" ColumnName="Destination" />
+                <ScalarProperty Name="Departure" ColumnName="Departure" />
+                <ScalarProperty Name="DepartureDate" ColumnName="DepartureDate" />
+                <ScalarProperty Name="ReservationDate" ColumnName="ReservationDate" />
+                <ScalarProperty Name="Locator" ColumnName="Locator" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="AirAdminDBModel.User">
+              <MappingFragment StoreEntitySet="Users">
+                <ScalarProperty Name="Ext" ColumnName="Ext" />
+                <ScalarProperty Name="ResetPasswordCode" ColumnName="ResetPasswordCode" />
+                <ScalarProperty Name="IsTempPasswordExpired" ColumnName="IsTempPasswordExpired" />
+                <ScalarProperty Name="TempPasswordDateTime" ColumnName="TempPasswordDateTime" />
+                <ScalarProperty Name="TempPassword" ColumnName="TempPassword" />
+                <ScalarProperty Name="IsTempPEDResetRequest" ColumnName="IsTempPEDResetRequest" />
+                <ScalarProperty Name="CanUpdatePassword" ColumnName="CanUpdatePassword" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
+                <ScalarProperty Name="UserRoleId" ColumnName="UserRoleId" />
+                <ScalarProperty Name="CompanyDetailId" ColumnName="CompanyDetailId" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ContactDetails">
+            <EntityTypeMapping TypeName="AirAdminDBModel.ContactDetail">
+              <MappingFragment StoreEntitySet="ContactDetails">
+                <ScalarProperty Name="ContactEmail" ColumnName="ContactEmail" />
+                <ScalarProperty Name="UserPhone" ColumnName="UserPhone" />
+                <ScalarProperty Name="UserZip" ColumnName="UserZip" />
+                <ScalarProperty Name="UserStreetAddress" ColumnName="UserStreetAddress" />
+                <ScalarProperty Name="UserLocation" ColumnName="UserLocation" />
+                <ScalarProperty Name="CVV" ColumnName="CVV" />
+                <ScalarProperty Name="CreditCardExpDate" ColumnName="CreditCardExpDate" />
+                <ScalarProperty Name="CreditCardName" ColumnName="CreditCardName" />
+                <ScalarProperty Name="CreditCardNumber" ColumnName="CreditCardNumber" />
+                <ScalarProperty Name="PaymentMethod" ColumnName="PaymentMethod" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DomainPaymentOptionMappings">
+            <EntityTypeMapping TypeName="AirAdminDBModel.DomainPaymentOptionMapping">
+              <MappingFragment StoreEntitySet="DomainPaymentOptionMapping">
+                <ScalarProperty Name="CompanyId" ColumnName="CompanyId" />
+                <ScalarProperty Name="ModifyBy" ColumnName="ModifyBy" />
+                <ScalarProperty Name="ModifyDate" ColumnName="ModifyDate" />
+                <ScalarProperty Name="DeletedBy" ColumnName="DeletedBy" />
+                <ScalarProperty Name="DeletedDate" ColumnName="DeletedDate" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="PaymentOptionId" ColumnName="PaymentOptionId" />
+                <ScalarProperty Name="DomainID" ColumnName="DomainID" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PaymentOptions">
+            <EntityTypeMapping TypeName="AirAdminDBModel.PaymentOption">
+              <MappingFragment StoreEntitySet="PaymentOption">
+                <ScalarProperty Name="Logo" ColumnName="Logo" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="CardFee" ColumnName="CardFee" />
+                <ScalarProperty Name="CardType" ColumnName="CardType" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CompanyDetails">
+            <EntityTypeMapping TypeName="AirAdminDBModel.CompanyDetail">
+              <MappingFragment StoreEntitySet="CompanyDetails">
+                <ScalarProperty Name="CCEnableInsurance" ColumnName="CCEnableInsurance" />
+                <ScalarProperty Name="CCEnableCar" ColumnName="CCEnableCar" />
+                <ScalarProperty Name="CCEnableAir" ColumnName="CCEnableAir" />
+                <ScalarProperty Name="CCEnableHotel" ColumnName="CCEnableHotel" />
+                <ScalarProperty Name="IsBookingEnabledInsurance" ColumnName="IsBookingEnabledInsurance" />
+                <ScalarProperty Name="IsBookingEnabledCar" ColumnName="IsBookingEnabledCar" />
+                <ScalarProperty Name="IsBookingEnabledAir" ColumnName="IsBookingEnabledAir" />
+                <ScalarProperty Name="IsSandboxInsurance" ColumnName="IsSandboxInsurance" />
+                <ScalarProperty Name="IsSandboxCar" ColumnName="IsSandboxCar" />
+                <ScalarProperty Name="IsSandboxAir" ColumnName="IsSandboxAir" />
+                <ScalarProperty Name="Insurance" ColumnName="Insurance" />
+                <ScalarProperty Name="IsBookingEnabled" ColumnName="IsBookingEnabled" />
+                <ScalarProperty Name="IsSandBox" ColumnName="IsSandBox" />
+                <ScalarProperty Name="FaviconUrl" ColumnName="FaviconUrl" />
+                <ScalarProperty Name="IsApproved" ColumnName="IsApproved" />
+                <ScalarProperty Name="Location" ColumnName="Location" />
+                <ScalarProperty Name="CurrencyCode" ColumnName="CurrencyCode" />
+                <ScalarProperty Name="Dk_Number" ColumnName="Dk_Number" />
+                <ScalarProperty Name="PostalCode" ColumnName="PostalCode" />
+                <ScalarProperty Name="TermsUrl" ColumnName="TermsUrl" />
+                <ScalarProperty Name="PrivacyUrl" ColumnName="PrivacyUrl" />
+                <ScalarProperty Name="Fax" ColumnName="Fax" />
+                <ScalarProperty Name="Enable" ColumnName="Enable" />
+                <ScalarProperty Name="CarRental" ColumnName="CarRental" />
+                <ScalarProperty Name="Hotel" ColumnName="Hotel" />
+                <ScalarProperty Name="Air" ColumnName="Air" />
+                <ScalarProperty Name="WaitURL" ColumnName="WaitURL" />
+                <ScalarProperty Name="FooterURL" ColumnName="FooterURL" />
+                <ScalarProperty Name="HeaderURL" ColumnName="HeaderURL" />
+                <ScalarProperty Name="CompanyTypeId" ColumnName="CompanyTypeId" />
+                <ScalarProperty Name="ParentId" ColumnName="ParentId" />
+                <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+                <ScalarProperty Name="IATANo" ColumnName="IATANo" />
+                <ScalarProperty Name="TICORegNo" ColumnName="TICORegNo" />
+                <ScalarProperty Name="GSTRegNo" ColumnName="GSTRegNo" />
+                <ScalarProperty Name="SMTPUseSsl" ColumnName="SMTPUseSsl" />
+                <ScalarProperty Name="SMTPPassword" ColumnName="SMTPPassword" />
+                <ScalarProperty Name="SMTPUserName" ColumnName="SMTPUserName" />
+                <ScalarProperty Name="SmtpServerPort" ColumnName="SmtpServerPort" />
+                <ScalarProperty Name="SMTPHostName" ColumnName="SMTPHostName" />
+                <ScalarProperty Name="EMailName" ColumnName="EMailName" />
+                <ScalarProperty Name="SmtpEmailID" ColumnName="SmtpEmailID" />
+                <ScalarProperty Name="ApplicationURL" ColumnName="ApplicationURL" />
+                <ScalarProperty Name="WebsiteURL" ColumnName="WebsiteURL" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="StreetAddress" ColumnName="StreetAddress" />
+                <ScalarProperty Name="OtherCountry" ColumnName="OtherCountry" />
+                <ScalarProperty Name="CountryID" ColumnName="CountryID" />
+                <ScalarProperty Name="OtherState" ColumnName="OtherState" />
+                <ScalarProperty Name="StateID" ColumnName="StateID" />
+                <ScalarProperty Name="OtherCity" ColumnName="OtherCity" />
+                <ScalarProperty Name="CityID" ColumnName="CityID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AirlineRestrictionAirs">
+            <EntityTypeMapping TypeName="AirAdminDBModel.AirlineRestrictionAir">
+              <MappingFragment StoreEntitySet="AirlineRestrictionAir">
+                <ScalarProperty Name="IsPublicMarkup" ColumnName="IsPublicMarkup" />
+                <ScalarProperty Name="IsNetfareMarkup" ColumnName="IsNetfareMarkup" />
+                <ScalarProperty Name="DeletedDate" ColumnName="DeletedDate" />
+                <ScalarProperty Name="DeletedBy" ColumnName="DeletedBy" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="DefaultCompanyId" ColumnName="DefaultCompanyId" />
+                <ScalarProperty Name="IATACode" ColumnName="IATACode" />
+                <ScalarProperty Name="AirlineName" ColumnName="AirlineName" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

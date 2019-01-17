@@ -1,0 +1,304 @@
+﻿
+/*#####################################PreLoaderAndWaiting##########################*/
+#PreLoaderAndWaiting {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: transparent;
+    width: 100%;
+    height: 100%;
+    opacity: 0.9;
+    z-index: 1000;
+}
+
+#PreLoaderAndWaiting_div {
+    width: 384px;
+    height: 144px;
+    border-radius: 10px;
+    border: solid 1px black !important;
+    /* background: url(../Images/perloader.png); */
+    background-color: #fff;
+    position: absolute;
+    left: 45%;
+    top: 44%;
+    vertical-align: middle;
+    text-align: center;
+    z-index: 1000;
+    border: none;
+    /* opacity: 1; */
+}
+
+#gpstatus {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: black;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    z-index: 1000;
+}
+
+#GISPreLoaderAndWaiting_div {
+    width: 180px;
+    height: 55px;
+    border-radius: 5px;
+    background-color: #fff;
+    position: absolute;
+    left: 45%;
+    top: 45%;
+    vertical-align: middle;
+    text-align: center;
+    z-index: 1000;
+    border: none;
+    opacity: 1;
+}
+
+.gisPreloader {
+    position: absolute;
+    left: 125px;
+    top: 52px;
+}
+
+/*#####################################PreLoaderAndWaiting##########################*/
+
+/*#####################################SliderMenuLeftPanel##########################*/
+.SliderMenuLeftPanel {
+        left: 0px;
+        padding: 0px;
+        position: absolute;
+        margin: 0;
+        padding-left: 0;
+        padding-right: 0;
+        border-width: 0;
+        border-radius: 0;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        background: #88165b;
+        z-index: 999;
+        height:89%;
+    }
+
+ .CategoryPanel {
+        left: 0px;
+        padding: 0px;
+        z-index: 111;
+        width: 170px;
+        float: left;
+        position: static;
+        padding-left: 0;
+        padding-right: 0;
+    }
+/*#####################################SliderMenuLeftPanel##########################*/
+
+
+.popup-container {
+    border: 2px solid #88165b;
+    background: #fff;
+    height: 500px;
+    width: 285px;
+    position: absolute;
+    top: 10px;
+    left: 50px;
+    border-radius: 5px;
+}
+
+    .popup-container h3 {
+        background: none repeat scroll 0 0 #438eb9;
+        /* border-radius: 3px 3px 0 0;*/
+        color: #fff;
+        font-size: 14px;
+        line-height: 34px;
+        font-weight: 600;
+        font-style: normal;
+        margin: 0;
+        padding: 0 10px;
+        cursor: all-scroll;
+    }
+
+
+.popup-container_1 {
+    border: 3px solid #88165b;
+    background: #fff;
+    height: 300px;
+    width: 350px;
+    position: absolute;
+     top: 50px;
+    left: 181px;
+    border-radius: 5px;
+    display: none;
+}
+
+    .popup-container_1 h3 {
+        background: #88165b;
+        /* border-radius: 3px 3px 0 0;*/
+        color: #fff;
+        font-size: 14px;
+        line-height: 34px;
+        font-weight: 600;
+        font-style: normal;
+        margin: 0;
+        padding: 0 10px;
+        cursor: all-scroll;
+    }
+
+
+
+
+.popup-container_2 {
+    border: 3px solid #88165b;
+    background: #fff;
+    height: 315px;
+    width: 370px;
+    position: absolute;
+    top: 20px;
+    left: 50px;
+    border-radius: 5px;
+}
+
+
+    .popup-container_2 h3 {
+        background: #88165b;
+        /* border-radius: 3px 3px 0 0;*/
+        color: #fff;
+        font-size: 14px;
+        line-height: 34px;
+        font-weight: 600;
+        font-style: normal;
+        margin: 0;
+        padding: 0 10px;
+        cursor: all-scroll;
+    }
+
+.no-padding-right {
+    padding-right: 0 !important;
+}
+
+.space-4 {
+    margin: 4px 0 3px;
+    max-height: 1px;
+    min-height: 1px;
+    overflow: hidden;
+}
+
+.PopupContainerWrapper {
+    background: rgba(0,0,0,.3);
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: none;
+}
+
+
+
+
+.close-icon {
+    position: relative;
+    top: 8px;
+    right: 3px;
+    height: 16px;
+    padding-left: 3px;
+    border-left: 1px solid #999;
+}
+
+    .close-icon img:hover {
+        cursor: pointer;
+    }
+
+.cross-icon {
+    position: absolute;
+    right: 5px;
+    height: 16px;
+    padding-left: 3px;
+}
+
+    .cross-icon img:hover {
+        cursor: pointer;
+    }
+
+.result-panel-heading {
+    background-color: #88165b;
+    border-bottom: 1px solid transparent;
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
+}
+
+
+#StaticTaskbarLegendPanelOn {
+    background: #D0D0D0 none repeat scroll 0 0;
+    border-top: 1px solid #D0D0D0;
+    bottom: 0;
+    padding: 4px 0;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+}
+
+#StaticTaskbarLegendPanelOff {
+    background: #D0D0D0 none repeat scroll 0 0;
+    border-top: 1px solid #D0D0D0;
+    bottom: 0;
+    padding: 4px 0;
+    position: fixed;
+    width: 15px;
+    z-index: 100;
+}
+
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: block;
+}
+
+.StaticTaskbarLegendPanel-Container {
+    width: 250px;
+    border: 1px solid #920A16;
+    background: #fff;
+    position: absolute;
+    top: 270px;
+    right: 10px;
+    overflow: hidden;
+    display: none;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    padding-bottom: 40px;
+    height: 350px;
+}
+
+    .StaticTaskbarLegendPanel-Container h3 {
+        font-size: 13px;
+        line-height: 20px;
+        padding: 5px;
+        color: #fff;
+        margin-bottom: 10px;
+        background: #920A16;
+        -webkit-border-radius: 3px 3px 0 0;
+        -moz-border-radius: 3px 3px 0 0;
+        border-radius: 3px 3px 0 0;
+    }
+
+.StaticTaskbarLegendPanel-datacontainer {
+    overflow-y: auto;
+    padding: 0 5px;
+    height: 350px;
+}
+
+
+.Usersidebar {
+    width: 170px;
+    float: left;
+    position: static;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.advance-option { margin: -5px 0; }
+
